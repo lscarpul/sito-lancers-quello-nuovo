@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Baseball | Lancers Baseball Club 1982</title>
+    <meta name="description" content="Scopri cos'è il baseball e le sue regole fondamentali">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">LANCERS</span>
+                <span class="logo-year">1982</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="club.html" class="nav__link">Il Club <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="club.html">Chi Siamo</a></li>
+                            <li><a href="club.html#storia">La Nostra Storia</a></li>
+                            <li><a href="piazzamenti.html">Piazzamenti</a></li>
+                            <li><a href="sponsor.html">Diventa Sponsor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="squadre.html" class="nav__link">Squadre <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="squadre.html#serie-b">Serie B</a></li>
+                            <li><a href="squadre.html#under-18">Under 18</a></li>
+                            <li><a href="squadre.html#amatori">Amatori</a></li>
+                            <li><a href="giovanili.html">Settore Giovanile</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="campo.html" class="nav__link">Lancers Field</a></li>
+                    <li class="nav__item"><a href="galleria.html" class="nav__link">Galleria</a></li>
+                    <li class="nav__item"><a href="baseball.html" class="nav__link active">Il Baseball</a></li>
+                    <li class="nav__item"><a href="contatti.html" class="nav__link">Contatti</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="nav__buttons">
+                <a href="gioca-con-noi.html" class="btn btn--primary nav__cta">Gioca con noi</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header page-header--baseball">
+        <div class="container">
+            <div class="page-header__content">
+                <h1 class="page-header__title">IL BASEBALL</h1>
+                <div class="page-header__breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Il Baseball</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section">
+        <div class="container">
+            <div class="baseball-intro" data-aos="fade-up">
+                <div class="baseball-intro__content">
+                    <span class="section__subtitle">Lo sport più bello del mondo</span>
+                    <h2 class="section__title">Cos'è il <span class="text-accent">Baseball</span></h2>
+                    <p>
+                        Il baseball è uno sport di squadra nato negli Stati Uniti nel XIX secolo. È uno degli sport più popolari 
+                        al mondo, praticato in oltre 100 paesi e considerato il passatempo nazionale americano.
+                    </p>
+                    <p>
+                        Due squadre si alternano nei ruoli di attacco e difesa. La squadra in attacco cerca di segnare punti 
+                        colpendo la palla lanciata dall'avversario e correndo attraverso le basi, mentre la difesa cerca di 
+                        eliminare i battitori avversari prima che possano completare il giro delle basi.
+                    </p>
+                    <p>
+                        Una partita regolamentare si articola in <strong>9 inning</strong>. Ogni inning è diviso in due parti: 
+                        nella prima metà attacca la squadra ospite, nella seconda la squadra di casa.
+                    </p>
+                </div>
+                <div class="baseball-intro__image">
+                    <img src="images/galleria/a2_grosseto_1_012.jpg" alt="Baseball">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Field Diagram -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__subtitle">Il Diamante</span>
+                <h2 class="section__title">Il Campo da <span class="text-accent">Gioco</span></h2>
+            </div>
+            
+            <div class="field-explanation" data-aos="fade-up">
+                <div class="field-diagram">
+                    <div class="diamond">
+                        <div class="base home">Casa Base</div>
+                        <div class="base first">1ª Base</div>
+                        <div class="base second">2ª Base</div>
+                        <div class="base third">3ª Base</div>
+                        <div class="pitcher-mound">Monte</div>
+                    </div>
+                </div>
+                <div class="field-info">
+                    <h3>Le Basi</h3>
+                    <ul class="field-list">
+                        <li>
+                            <strong>Casa Base (Home Plate)</strong>
+                            <p>Da qui il battitore colpisce la palla. È anche il punto finale del giro delle basi per segnare un punto.</p>
+                        </li>
+                        <li>
+                            <strong>Prima Base</strong>
+                            <p>La prima tappa che il corridore deve raggiungere dopo aver battuto la palla.</p>
+                        </li>
+                        <li>
+                            <strong>Seconda Base</strong>
+                            <p>Situata al centro del diamante, è la seconda tappa del percorso.</p>
+                        </li>
+                        <li>
+                            <strong>Terza Base</strong>
+                            <p>L'ultima base prima di tornare a casa base per segnare il punto.</p>
+                        </li>
+                        <li>
+                            <strong>Monte di lancio (Pitcher's Mound)</strong>
+                            <p>Il punto rialzato da cui il lanciatore lancia la palla verso il battitore.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roles Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__subtitle">Chi fa cosa</span>
+                <h2 class="section__title">I <span class="text-accent">Ruoli</span></h2>
+            </div>
+
+            <div class="roles-grid">
+                <div class="role-card" data-aos="fade-up">
+                    <div class="role-card__icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Lanciatore (Pitcher)</h3>
+                    <p>Il leader della difesa. Lancia la palla verso il battitore cercando di eliminarlo con strike o inducendolo a colpire male.</p>
+                </div>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="role-card__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Ricevitore (Catcher)</h3>
+                    <p>Si posiziona dietro il battitore e riceve i lanci. Dirige la strategia difensiva e comunica con il lanciatore.</p>
+                </div>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="role-card__icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Interni (Infielders)</h3>
+                    <p>Difendono il diamante interno: prima base, seconda base, interbase e terza base.</p>
+                </div>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="role-card__icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Esterni (Outfielders)</h3>
+                    <p>Coprono l'esterno campo: esterno sinistro, centro e destro. Catturano i lanci lunghi.</p>
+                </div>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="role-card__icon">
+                        <i class="fas fa-baseball"></i>
+                    </div>
+                    <h3>Battitore (Batter)</h3>
+                    <p>Cerca di colpire la palla lanciata dal pitcher e raggiungere la base senza essere eliminato.</p>
+                </div>
+                <div class="role-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="role-card__icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Corridore (Runner)</h3>
+                    <p>Una volta raggiunta una base, cerca di avanzare e tornare a casa per segnare un punto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Terms -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__subtitle">Glossario</span>
+                <h2 class="section__title">Termini <span class="text-accent">Chiave</span></h2>
+            </div>
+
+            <div class="terms-grid" data-aos="fade-up">
+                <div class="term-card">
+                    <h4>Strike</h4>
+                    <p>Lancio valido non colpito dal battitore o colpito in fallo. Tre strike = eliminazione.</p>
+                </div>
+                <div class="term-card">
+                    <h4>Ball</h4>
+                    <p>Lancio fuori dalla zona di strike non colpito. Quattro ball = base su ball (passaggio libero).</p>
+                </div>
+                <div class="term-card">
+                    <h4>Out</h4>
+                    <p>Eliminazione di un giocatore in attacco. Tre out e la squadra passa in difesa.</p>
+                </div>
+                <div class="term-card">
+                    <h4>Home Run</h4>
+                    <p>Battuta che esce dal campo. Il battitore fa il giro completo delle basi e segna un punto.</p>
+                </div>
+                <div class="term-card">
+                    <h4>Inning</h4>
+                    <p>Un turno completo di attacco per entrambe le squadre. Una partita dura 9 inning.</p>
+                </div>
+                <div class="term-card">
+                    <h4>Run</h4>
+                    <p>Punto segnato quando un corridore completa il giro delle basi e torna a casa base.</p>
+                </div>
+                <div class="term-card">
+                    <h4>Hit</h4>
+                    <p>Battuta valida che permette al battitore di raggiungere almeno la prima base.</p>
+                </div>
+                <div class="term-card">
+                    <h4>Double Play</h4>
+                    <p>Azione difensiva che elimina due giocatori avversari con un'unica giocata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__subtitle">Approfondimenti</span>
+                <h2 class="section__title">Scopri di <span class="text-accent">Più</span></h2>
+            </div>
+
+            <div class="baseball-links" data-aos="fade-up">
+                <a href="regole.html" class="baseball-link-card">
+                    <div class="baseball-link-card__icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="baseball-link-card__content">
+                        <h3>Le Regole Complete</h3>
+                        <p>Approfondisci tutte le regole del baseball</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="cinema.html" class="baseball-link-card">
+                    <div class="baseball-link-card__icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="baseball-link-card__content">
+                        <h3>Il Baseball al Cinema</h3>
+                        <p>I migliori film dedicati al baseball</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="download.html" class="baseball-link-card">
+                    <div class="baseball-link-card__icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <div class="baseball-link-card__content">
+                        <h3>Area Download</h3>
+                        <p>Scarica regolamenti e tabelloni</p>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+        <div class="cta__bg"></div>
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <h2 class="cta__title">Vuoi provare il Baseball?</h2>
+                <p class="cta__text">
+                    Vieni a trovarci al Lancers Field! Organizziamo sessioni di prova gratuite per tutti.
+                </p>
+                <div class="cta__buttons">
+                    <a href="gioca-con-noi.html" class="btn btn--white btn--lg">
+                        <i class="fas fa-baseball"></i>
+                        Gioca con noi
+                    </a>
+                    <a href="contatti.html" class="btn btn--outline-white btn--lg">
+                        <i class="fas fa-envelope"></i>
+                        Contattaci
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <span class="logo-text">LANCERS</span>
+                            <span class="logo-year">1982</span>
+                        </a>
+                        <p class="footer__description">Lancers Baseball Club 1982 - I Lancieri di Lastra a Signa.</p>
+                        <div class="footer__social">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__links">
+                        <h4 class="footer__title">Link Utili</h4>
+                        <ul>
+                            <li><a href="club.html">Il Club</a></li>
+                            <li><a href="squadre.html">Le Squadre</a></li>
+                            <li><a href="giovanili.html">Settore Giovanile</a></li>
+                            <li><a href="campo.html">Lancers Field</a></li>
+                            <li><a href="galleria.html">Galleria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__links">
+                        <h4 class="footer__title">Il Baseball</h4>
+                        <ul>
+                            <li><a href="baseball.html">Cos'è il Baseball</a></li>
+                            <li><a href="regole.html">Le Regole</a></li>
+                            <li><a href="cinema.html">Il Baseball al Cinema</a></li>
+                            <li><a href="download.html">Area Download</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact">
+                        <h4 class="footer__title">Contatti</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i><span>Via Livornese, Loc. Porto di Mezzo<br>50055 Lastra a Signa (FI)</span></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:lancers.campo@gmail.com">lancers.campo@gmail.com</a></li>
+                            <li><i class="fas fa-phone"></i><a href="tel:+390558999832">055 8999832</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 Lancers Baseball Club 1982. Tutti i diritti riservati.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    <script src="js/main.js"></script>
+</body>
+</html>

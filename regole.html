@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Regole | Lancers Baseball Club 1982</title>
+    <meta name="description" content="Scopri le regole del baseball">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo-text">LANCERS</span>
+                <span class="logo-year">1982</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item dropdown">
+                        <a href="club.html" class="nav__link">Il Club <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="club.html">Chi Siamo</a></li>
+                            <li><a href="club.html#storia">La Nostra Storia</a></li>
+                            <li><a href="piazzamenti.html">Piazzamenti</a></li>
+                            <li><a href="sponsor.html">Diventa Sponsor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item dropdown">
+                        <a href="squadre.html" class="nav__link">Squadre <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown__menu">
+                            <li><a href="squadre.html#serie-b">Serie B</a></li>
+                            <li><a href="squadre.html#under-18">Under 18</a></li>
+                            <li><a href="squadre.html#amatori">Amatori</a></li>
+                            <li><a href="giovanili.html">Settore Giovanile</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="campo.html" class="nav__link">Lancers Field</a></li>
+                    <li class="nav__item"><a href="galleria.html" class="nav__link">Galleria</a></li>
+                    <li class="nav__item"><a href="baseball.html" class="nav__link active">Il Baseball</a></li>
+                    <li class="nav__item"><a href="contatti.html" class="nav__link">Contatti</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="nav__buttons">
+                <a href="gioca-con-noi.html" class="btn btn--primary nav__cta">Gioca con noi</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__content">
+                <h1 class="page-header__title">LE REGOLE</h1>
+                <div class="page-header__breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="baseball.html">Il Baseball</a>
+                    <span>/</span>
+                    <span>Le Regole</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Navigation -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="rules-nav" data-aos="fade-up">
+                <a href="#obiettivo" class="rules-nav__link">Obiettivo</a>
+                <a href="#squadre" class="rules-nav__link">Le Squadre</a>
+                <a href="#battuta" class="rules-nav__link">La Battuta</a>
+                <a href="#eliminazioni" class="rules-nav__link">Eliminazioni</a>
+                <a href="#punteggio" class="rules-nav__link">Punteggio</a>
+                <a href="#arbitri" class="rules-nav__link">Arbitri</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Content -->
+    <section class="section">
+        <div class="container">
+            <div class="rules-content">
+                <!-- Obiettivo -->
+                <div class="rule-section" id="obiettivo" data-aos="fade-up">
+                    <div class="rule-section__header">
+                        <div class="rule-section__number">01</div>
+                        <h2>L'Obiettivo del Gioco</h2>
+                    </div>
+                    <div class="rule-section__content">
+                        <p>
+                            L'obiettivo del baseball è segnare più punti (run) dell'avversario. Un punto viene segnato 
+                            quando un giocatore in attacco completa con successo il giro delle quattro basi e torna 
+                            a casa base (home plate).
+                        </p>
+                        <div class="rule-highlight">
+                            <i class="fas fa-trophy"></i>
+                            <p><strong>Vincitore:</strong> La squadra che ha segnato più punti alla fine dei 9 inning vince la partita. 
+                            In caso di parità, si giocano inning supplementari.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Squadre -->
+                <div class="rule-section" id="squadre" data-aos="fade-up">
+                    <div class="rule-section__header">
+                        <div class="rule-section__number">02</div>
+                        <h2>Le Squadre</h2>
+                    </div>
+                    <div class="rule-section__content">
+                        <p>Ogni squadra è composta da <strong>9 giocatori in campo</strong> durante la fase difensiva:</p>
+                        <div class="positions-grid">
+                            <div class="position-item">
+                                <span class="position-num">1</span>
+                                <span>Lanciatore (Pitcher)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">2</span>
+                                <span>Ricevitore (Catcher)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">3</span>
+                                <span>Prima Base (1B)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">4</span>
+                                <span>Seconda Base (2B)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">5</span>
+                                <span>Interbase (Shortstop)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">6</span>
+                                <span>Terza Base (3B)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">7</span>
+                                <span>Esterno Sinistro (LF)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">8</span>
+                                <span>Esterno Centro (CF)</span>
+                            </div>
+                            <div class="position-item">
+                                <span class="position-num">9</span>
+                                <span>Esterno Destro (RF)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Battuta -->
+                <div class="rule-section" id="battuta" data-aos="fade-up">
+                    <div class="rule-section__header">
+                        <div class="rule-section__number">03</div>
+                        <h2>La Battuta</h2>
+                    </div>
+                    <div class="rule-section__content">
+                        <p>Il confronto tra lanciatore e battitore è il cuore del baseball:</p>
+                        
+                        <h4>Zona di Strike</h4>
+                        <p>
+                            È l'area sopra casa base, delimitata in altezza dalle ginocchia alle spalle del battitore. 
+                            Se il lancio passa in questa zona e il battitore non tira, è uno <strong>strike</strong>.
+                        </p>
+
+                        <div class="strike-ball-grid">
+                            <div class="strike-ball-card strike">
+                                <h5>Strike</h5>
+                                <ul>
+                                    <li>Lancio nella zona non colpito</li>
+                                    <li>Battitore tira a vuoto</li>
+                                    <li>Palla battuta in foul (eccetto con 2 strike)</li>
+                                </ul>
+                                <div class="count">3 Strike = OUT</div>
+                            </div>
+                            <div class="strike-ball-card ball">
+                                <h5>Ball</h5>
+                                <ul>
+                                    <li>Lancio fuori dalla zona</li>
+                                    <li>Non colpito dal battitore</li>
+                                    <li>Si accumula nel conteggio</li>
+                                </ul>
+                                <div class="count">4 Ball = BASE</div>
+                            </div>
+                        </div>
+
+                        <h4>Tipi di Battuta</h4>
+                        <div class="hit-types">
+                            <div class="hit-type">
+                                <strong>Singolo</strong>
+                                <p>Il battitore raggiunge la prima base</p>
+                            </div>
+                            <div class="hit-type">
+                                <strong>Doppio</strong>
+                                <p>Il battitore raggiunge la seconda base</p>
+                            </div>
+                            <div class="hit-type">
+                                <strong>Triplo</strong>
+                                <p>Il battitore raggiunge la terza base</p>
+                            </div>
+                            <div class="hit-type">
+                                <strong>Home Run</strong>
+                                <p>La palla esce dal campo, giro completo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eliminazioni -->
+                <div class="rule-section" id="eliminazioni" data-aos="fade-up">
+                    <div class="rule-section__header">
+                        <div class="rule-section__number">04</div>
+                        <h2>Le Eliminazioni (Out)</h2>
+                    </div>
+                    <div class="rule-section__content">
+                        <p>La difesa può eliminare i giocatori in attacco in diversi modi:</p>
+                        
+                        <div class="out-grid">
+                            <div class="out-card">
+                                <div class="out-card__icon"><i class="fas fa-fire-alt"></i></div>
+                                <h5>Strikeout</h5>
+                                <p>Il battitore accumula 3 strike</p>
+                            </div>
+                            <div class="out-card">
+                                <div class="out-card__icon"><i class="fas fa-hand-paper"></i></div>
+                                <h5>Fly Out</h5>
+                                <p>La palla battuta viene presa al volo</p>
+                            </div>
+                            <div class="out-card">
+                                <div class="out-card__icon"><i class="fas fa-shoe-prints"></i></div>
+                                <h5>Ground Out</h5>
+                                <p>La palla arriva in base prima del corridore</p>
+                            </div>
+                            <div class="out-card">
+                                <div class="out-card__icon"><i class="fas fa-user-tag"></i></div>
+                                <h5>Tag Out</h5>
+                                <p>Il corridore viene toccato con la palla</p>
+                            </div>
+                            <div class="out-card">
+                                <div class="out-card__icon"><i class="fas fa-bolt"></i></div>
+                                <h5>Force Out</h5>
+                                <p>La base viene toccata quando il corridore è costretto ad avanzare</p>
+                            </div>
+                            <div class="out-card">
+                                <div class="out-card__icon"><i class="fas fa-sync-alt"></i></div>
+                                <h5>Double Play</h5>
+                                <p>Due eliminazioni nella stessa azione</p>
+                            </div>
+                        </div>
+
+                        <div class="rule-highlight">
+                            <i class="fas fa-exchange-alt"></i>
+                            <p><strong>Cambio Campo:</strong> Dopo 3 out, le squadre si scambiano i ruoli. La squadra in attacco passa in difesa e viceversa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Punteggio -->
+                <div class="rule-section" id="punteggio" data-aos="fade-up">
+                    <div class="rule-section__header">
+                        <div class="rule-section__number">05</div>
+                        <h2>Il Punteggio</h2>
+                    </div>
+                    <div class="rule-section__content">
+                        <p>
+                            Un <strong>punto (run)</strong> viene segnato ogni volta che un corridore tocca tutte e quattro 
+                            le basi in ordine (prima, seconda, terza, casa base) senza essere eliminato.
+                        </p>
+
+                        <div class="scoring-examples">
+                            <div class="scoring-example">
+                                <h5><i class="fas fa-star"></i> Grand Slam</h5>
+                                <p>Home run con le basi piene = 4 punti in una sola battuta!</p>
+                            </div>
+                            <div class="scoring-example">
+                                <h5><i class="fas fa-running"></i> Punto Battuto a Casa (RBI)</h5>
+                                <p>Quando una battuta permette a un compagno di segnare.</p>
+                            </div>
+                            <div class="scoring-example">
+                                <h5><i class="fas fa-bolt"></i> Rubata + Punto</h5>
+                                <p>Un corridore può rubare basi e segnare con l'aiuto dei compagni.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arbitri -->
+                <div class="rule-section" id="arbitri" data-aos="fade-up">
+                    <div class="rule-section__header">
+                        <div class="rule-section__number">06</div>
+                        <h2>Gli Arbitri</h2>
+                    </div>
+                    <div class="rule-section__content">
+                        <p>
+                            Gli arbitri sono i giudici della partita. Le loro decisioni sono definitive e devono essere rispettate.
+                        </p>
+
+                        <div class="umpire-grid">
+                            <div class="umpire-card">
+                                <h5>Arbitro di Casa (Home Plate Umpire)</h5>
+                                <p>Si posiziona dietro il ricevitore. Giudica strike e ball, e le giocate a casa base.</p>
+                            </div>
+                            <div class="umpire-card">
+                                <h5>Arbitri di Base</h5>
+                                <p>Si posizionano vicino alle basi e giudicano se i corridori sono salvi o eliminati.</p>
+                            </div>
+                        </div>
+
+                        <div class="umpire-signals">
+                            <h4>Segnali dell'Arbitro</h4>
+                            <div class="signals-grid">
+                                <div class="signal">
+                                    <span class="signal-icon">👆</span>
+                                    <span>Strike / Out</span>
+                                </div>
+                                <div class="signal">
+                                    <span class="signal-icon">🙌</span>
+                                    <span>Safe (Salvo)</span>
+                                </div>
+                                <div class="signal">
+                                    <span class="signal-icon">✊</span>
+                                    <span>Out</span>
+                                </div>
+                                <div class="signal">
+                                    <span class="signal-icon">⏱️</span>
+                                    <span>Time (Pausa)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="section section--gray">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__subtitle">Materiali</span>
+                <h2 class="section__title">Scarica le <span class="text-accent">Regole</span></h2>
+            </div>
+
+            <div class="download-cta" data-aos="fade-up">
+                <div class="download-cta__content">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <h3>Regolamento Ufficiale FIBS</h3>
+                        <p>Consulta il regolamento ufficiale sul sito della Federazione Italiana Baseball e Softball</p>
+                    </div>
+                </div>
+                <a href="http://www.fibs.it/it-it/regolamenti.aspx?IdSection=639" target="_blank" rel="noopener" class="btn btn--primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Sito FIBS
+                </a>
+            </div>
+            <div class="download-cta" data-aos="fade-up" data-aos-delay="100" style="margin-top: 1rem;">
+                <div class="download-cta__content">
+                    <i class="fas fa-download"></i>
+                    <div>
+                        <h3>Area Download</h3>
+                        <p>Scarica modulistica, materiali informativi e altro</p>
+                    </div>
+                </div>
+                <a href="download.html" class="btn btn--outline">
+                    <i class="fas fa-folder-open"></i>
+                    Vai ai Download
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="index.html" class="footer__logo">
+                            <span class="logo-text">LANCERS</span>
+                            <span class="logo-year">1982</span>
+                        </a>
+                        <p class="footer__description">Lancers Baseball Club 1982 - I Lancieri di Lastra a Signa.</p>
+                        <div class="footer__social">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer__links">
+                        <h4 class="footer__title">Link Utili</h4>
+                        <ul>
+                            <li><a href="club.html">Il Club</a></li>
+                            <li><a href="squadre.html">Le Squadre</a></li>
+                            <li><a href="giovanili.html">Settore Giovanile</a></li>
+                            <li><a href="campo.html">Lancers Field</a></li>
+                            <li><a href="galleria.html">Galleria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__links">
+                        <h4 class="footer__title">Il Baseball</h4>
+                        <ul>
+                            <li><a href="baseball.html">Cos'è il Baseball</a></li>
+                            <li><a href="regole.html">Le Regole</a></li>
+                            <li><a href="cinema.html">Il Baseball al Cinema</a></li>
+                            <li><a href="download.html">Area Download</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact">
+                        <h4 class="footer__title">Contatti</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i><span>Via Livornese, Loc. Porto di Mezzo<br>50055 Lastra a Signa (FI)</span></li>
+                            <li><i class="fas fa-envelope"></i><a href="mailto:lancers.campo@gmail.com">lancers.campo@gmail.com</a></li>
+                            <li><i class="fas fa-phone"></i><a href="tel:+390558999832">055 8999832</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 Lancers Baseball Club 1982. Tutti i diritti riservati.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+    <script src="js/main.js"></script>
+</body>
+</html>
