@@ -17,7 +17,7 @@ NAV = [
                              ('Diventa nostro sponsor', 'societa/diventa-nostro-sponsor/'),
                              ('Codice etico', 'societa/codice-etico/'), ('Contatti', 'societa/contatti/')]),
     ('Squadre', 'squadre-senior/', [('Serie B', 'squadre-senior/'), ('Roster Serie B', 'squadre-senior/serie-a2/'),
-                                    ('Calendario Serie B', 'squadre-senior/risultati/'),
+                                    ('Calendario e classifica', 'squadre-senior/risultati/'),
                                     ('Amatori', 'squadre-senior/amatoriale/'),
                                     ('Torneo Lancers BAZ 40', 'squadre-senior/amatoriale/torneo-lancers-baz-40/')]),
     ('Giovanili', 'giovanili/', [('Settore giovanile', 'giovanili/'), ('Under 15', 'giovanili/under-15/'),
@@ -131,13 +131,13 @@ def footer(root):
     return '''<footer class="site-f"><div class="wrap"><div class="g">
 <div><a class="logo" href="%sindex.html"><img src="%simages/logo-lancers.jpg" alt="Lancers" loading="lazy"></a>
 <p class="addr">Lancers Baseball Club A.S.D.<br>Via Livornese, loc. Porto di Mezzo<br>50055 Lastra a Signa (FI)</p>
-<p><a href="tel:+390558999832">055 8999832</a><br><a href="mailto:%s">%s</a></p></div>
+<p><a href="tel:+390558999832">055 8999832</a><br><a href="mailto:%s">%s</a></p><div class="social" data-social></div></div>
 %s%s%s
 </div><div class="copy">© 2026 Lancers Baseball Club 1982 · Sito ufficiale dei Lancieri di Lastra a Signa</div></div></footer>
 <button class="to-top" aria-label="Torna su">↑</button>
 <div class="lb" hidden><button class="lb-x" aria-label="Chiudi">×</button><button class="lb-p" aria-label="Precedente">‹</button>
 <figure><img alt=""><figcaption></figcaption></figure><button class="lb-n" aria-label="Successiva">›</button></div>
-<script src="%sjs/main.js" defer></script>''' % (
+<script src="%sdata/stagione.js"></script><script src="%sjs/main.js" defer></script>''' % (
         root, root, EMAIL, EMAIL,
         col('Il Club', [('La società', 'societa/'), ('Piazzamenti', 'societa/piazzamenti/'),
                         ('Sponsor', 'societa/sponsor/'), ('Codice etico', 'societa/codice-etico/'),
@@ -147,7 +147,7 @@ def footer(root):
                         ('Orari allenamenti', 'ballpark/orari-allenamenti/')]),
         col('Scopri', [('Notizie', 'notizie/'), ('Galleria', 'gallery/'), ('Lancers Field', 'ballpark/'),
                        ('Shop', 'shop/'), ('Area download', 'area-download/')]),
-        root)
+        root, root)
 
 
 def shell(path, title, body, desc='', cls=''):
@@ -237,6 +237,16 @@ def build_page(p):
         content = player(content)
         cls += ' wide'
     if 'gallery-x' in content or path.startswith('gallery') or path == 'shop/':
+        cls += ' wide'
+    if path == 'squadre-senior/risultati/':
+        title = 'Calendario e classifica Serie B'
+        content = re.sub(r'<p>\s*in costruzione\s*</p>', '', content)
+        content = re.sub(r'<h2.*?</h2>', '', content, count=1, flags=re.S)
+        content = ('<div data-season-head></div><div class="tabs" role="tablist"><button class="chip on" data-tab="cal">Calendario e risultati</button>'
+                   '<button class="chip" data-tab="cls">Classifica</button></div>'
+                   '<div data-tabp="cal"><div data-calendar></div></div>'
+                   '<div data-tabp="cls" id="classifica" hidden><div data-standings></div></div>'
+                   '<p class="src" data-source></p><h2 class="has-text-align-center">Il calendario in immagini</h2>') + content
         cls += ' wide'
     if path == 'societa/contatti/':
         extra = ('<section class="alt"><div class="wrap narrow"><div class="sh"><h2>Scrivici</h2></div>%s</div></section>'
@@ -339,31 +349,47 @@ def build_home():
     qc = ''.join('<a class="card reveal" href="%s"><h3>%s</h3><p>%s</p><span class="more">%s →</span></a>' % (link(root, p), t, d, m)
                  for t, d, m, p in quick)
     years = 2026 - 1982
+    seen, ph = set(), []
+    for p in POSTS:
+        for n in re.findall(r'(?:MEDIA|THUMB):([^"]+)', p['html']):
+            if n not in seen and media_ok(n) and len(ph) < 10:
+                seen.add(n)
+                ph.append('<a href="media/%s" data-lb="%s"><img src="media/t/%s" alt="%s" loading="lazy"></a>' % (n, e(p['title']), n, e(p['title'])))
+                break
+    photos = ''.join(ph)
     body = '''<div class="hero"><div class="wrap">
 <div class="kick">Lastra a Signa · dal 1982</div>
 <h1>Lancers <span>Baseball</span> Club</h1>
 <p>Il sito ufficiale dei Lancieri di Lastra a Signa: prima squadra in Serie B, settore giovanile e un campo aperto a tutti.</p>
-<a class="btn r" href="%s">Gioca con noi</a><a class="btn o" href="%s">Calendario Serie B</a>
+<a class="btn r" href="%s">Gioca con noi</a><a class="btn o" href="%s">Calendario e classifica</a>
 </div></div>
 <div class="wrap"><div class="quick">%s</div></div>
 <section><div class="wrap">
 <div class="sh"><h2>Ultime notizie</h2><a class="more" href="%s">Tutte le notizie →</a></div>
 <div class="news">%s</div></div></section>
+<section class="season alt"><div class="wrap">
+<div class="sh"><h2>La stagione</h2><a class="more" href="%s">Calendario completo →</a></div>
+<div class="season-g"><div class="reveal" data-next-game></div><div class="reveal"><h3 class="mini-t">Ultimi risultati</h3><div data-results></div></div>
+<div class="reveal"><h3 class="mini-t">Classifica</h3><div data-standings="mini"></div></div></div></div></section>
 <section class="stats"><div class="wrap"><div class="st reveal"><b data-count="%d">%d</b><span>anni di storia</span></div>
 <div class="st reveal"><b data-count="4">4</b><span>squadre in campo</span></div>
 <div class="st reveal"><b data-count="6">6</b><span>anni: l’età per iniziare</span></div>
 <div class="st reveal"><b data-count="%d">%d</b><span>notizie in archivio</span></div></div></section>
 %s
-<section class="alt"><div class="wrap">
+<section><div class="wrap">
 <div class="sh"><h2>Le nostre squadre</h2></div>
 <div class="teams">%s</div></div></section>
+<section class="alt"><div class="wrap">
+<div class="sh"><h2>Dal campo</h2><div class="social big" data-social="label"></div></div>
+<div class="gallery-x strip-g">%s</div></div></section>
 <div class="spons"><div class="wrap"><h2>I nostri sponsor</h2>
 <a href="%s"><img src="images/banner-sponsor-cso.jpg" alt="CSO Costruzione Strumenti Oftalmici sostiene i Lancers" loading="lazy">
 <img src="images/banner-sponsor-edilpoggianti.jpg" alt="Edilpoggianti sostiene i Lancers" loading="lazy">
 <img src="images/banner-sponsor-panamed.jpg" alt="Panamed sostiene i Lancers" loading="lazy"></a>
 <p><a class="btn o" href="%s">Diventa nostro sponsor</a></p></div></div>''' % (
         link(root, 'gioca-anche-tu/'), link(root, 'squadre-senior/risultati/'), qc, link(root, 'notizie/'), news,
-        years, years, len(POSTS), len(POSTS), cta(root), tm, link(root, 'societa/sponsor/'),
+        link(root, 'squadre-senior/risultati/'),
+        years, years, len(POSTS), len(POSTS), cta(root), tm, photos, link(root, 'societa/sponsor/'),
         link(root, 'societa/diventa-nostro-sponsor/'))
     shell('', '', body, cls='home')
 

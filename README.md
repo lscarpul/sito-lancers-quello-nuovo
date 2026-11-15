@@ -10,3 +10,8 @@ Anteprima: https://lscarpul.github.io/sito-lancers-quello-nuovo/
 - `tools/`: `extract.py` estrae i contenuti dal sito WordPress in `content.json`; `build.py` rigenera tutte le pagine
 
 Per cambiare menu, footer o layout: modificare `tools/build.py` e lanciare `python3 tools/build.py`.
+
+## Aggiornare calendario, risultati, classifica e social
+
+Tutto sta in `data/stagione.js`: basta modificare quel file (anche direttamente da GitHub) e il sito si aggiorna da solo.
+La prossima partita e il conto alla rovescia compaiono in homepage quando c'è una partita futura senza punteggio.

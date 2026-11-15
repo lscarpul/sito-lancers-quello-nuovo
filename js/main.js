@@ -161,4 +161,109 @@
       location.href = 'mailto:' + f.dataset.mailto + '?subject=' + encodeURIComponent('Richiesta dal sito Lancers – ' + d.get('nome')) + '&body=' + encodeURIComponent(body);
     });
   });
+
+  /* ---- stagione: prossima partita, risultati, classifica, social (dati in data/stagione.js) ---- */
+  var L = window.LANCERS;
+  if (L) {
+    var MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+    var GIORNI = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+    var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var nome = function (k) { return esc(L.squadre[k] || k); };
+    var games = L.partite.map(function (g) {
+      var o = Object.create(g), hm = /^\d\d:\d\d$/.test(g.ora) ? g.ora : '12:00';
+      o.when = new Date(g.data + 'T' + hm + ':00');
+      o.played = typeof g.puntiCasa === 'number';
+      o.home = g.casa === 'LAN'; o.opp = o.home ? g.ospiti : g.casa;
+      o.off = g.nota === 'rinviata' || g.nota === 'annullata';
+      if (o.played) { o.us = o.home ? g.puntiCasa : g.puntiOspiti; o.them = o.home ? g.puntiOspiti : g.puntiCasa; o.win = o.us > o.them; }
+      return o;
+    });
+    var played = games.filter(function (g) { return g.played; });
+    var now = new Date();
+    var next = games.filter(function (g) { return !g.played && !g.off && g.when.getTime() + 3 * 3600e3 > now.getTime(); })[0];
+    var W = played.filter(function (g) { return g.win; }).length, Lo = played.length - W;
+    var table = L.classifica.map(function (r) { var o = Object.create(r); o.pct = r.v + r.p ? r.v / (r.v + r.p) : 0; return o; })
+      .sort(function (a, b) { return b.pct - a.pct || b.v - a.v; });
+    var pos = table.map(function (r) { return r.squadra; }).indexOf('LAN') + 1;
+    var dstr = function (d) { return GIORNI[d.getDay()] + ' ' + d.getDate() + ' ' + MESI[d.getMonth()].slice(0, 3); };
+    function row(g) {
+      var cls = g.played ? (g.win ? 'w' : 'l') : '', tag = g.boxscore ? 'a' : 'div';
+      var href = g.boxscore ? ' href="' + L.stagione.boxscore + g.boxscore + '" target="_blank" rel="noopener" title="Apri il tabellino su FIBS"' : '';
+      var score = g.played ? g.us + ' – ' + g.them + '<i>' + (g.win ? 'V' : 'S') + '</i>' : (g.off ? '<i>' + esc(g.nota) + '</i>' : esc(g.ora));
+      var note = g.played && g.nota ? ' · ' + esc(g.nota) : '';
+      return '<' + tag + ' class="g-row ' + cls + '"' + href + ' data-side="' + (g.home ? 'casa' : 'fuori') + '"><span class="d">' + dstr(g.when) + '<br>' + esc(g.ora) +
+        '</span><span class="t">' + (g.home ? 'vs ' : '@ ') + nome(g.opp) + '<small>' + (g.home ? 'In casa' : 'In trasferta') + ' · ' + esc(g.campo) + note + '</small></span><span class="s">' + score + '</span></' + tag + '>';
+    }
+    $$('[data-next-game]').forEach(function (el) {
+      if (next) {
+        el.innerHTML = '<div class="next"><div class="kick">Prossima partita · ' + esc(L.stagione.nome) + '</div><h3>' + nome(next.casa) + ' <span class="vs">vs</span> ' + nome(next.ospiti) +
+          '</h3><p>' + dstr(next.when) + ' ' + next.when.getFullYear() + ' · ore ' + esc(next.ora) + ' · ' + esc(next.campo) + '</p><div class="cd"><div><b data-cd="g">0</b><span>giorni</span></div><div><b data-cd="h">0</b><span>ore</span></div><div><b data-cd="m">0</b><span>minuti</span></div><div><b data-cd="s">0</b><span>secondi</span></div></div></div>';
+        var tick = function () {
+          var t = Math.max(0, next.when - new Date()) / 1000 | 0;
+          var v = { g: t / 86400 | 0, h: (t % 86400) / 3600 | 0, m: (t % 3600) / 60 | 0, s: t % 60 };
+          Object.keys(v).forEach(function (k) { $('[data-cd=' + k + ']', el).textContent = v[k]; });
+        };
+        tick(); setInterval(tick, 1000);
+      } else {
+        el.innerHTML = '<div class="next"><div class="kick">' + esc(L.stagione.nome) + ' · ' + esc(L.stagione.girone) + '</div><h3>Stagione conclusa</h3><p>I Lancers chiudono il campionato al ' + pos +
+          '° posto. Il nuovo calendario comparirà qui appena la FIBS lo pubblica.</p><div class="rec"><div><b>' + W + '</b><span>vittorie</span></div><div><b>' + Lo + '</b><span>sconfitte</span></div><div><b>' + pos + '°</b><span>posto</span></div></div></div>';
+      }
+    });
+    $$('[data-results]').forEach(function (el) { el.innerHTML = '<div class="res">' + played.slice(-4).reverse().map(row).join('') + '</div>'; });
+    $$('[data-season-head]').forEach(function (el) {
+      el.innerHTML = '<h2 class="has-text-align-center">' + esc(L.stagione.nome) + ' – ' + esc(L.stagione.girone) + '</h2><div class="season-h"><div><b>' + W + '</b><span>vittorie</span></div><div><b>' + Lo + '</b><span>sconfitte</span></div><div><b>' + pos + '°</b><span>in classifica</span></div></div>';
+    });
+    $$('[data-calendar]').forEach(function (el) {
+      var h = '<div class="cal-f"><button class="chip on" data-side="">Tutte</button><button class="chip" data-side="casa">In casa</button><button class="chip" data-side="fuori">In trasferta</button></div><div class="cal">', m = -1;
+      games.forEach(function (g) {
+        if (g.when.getMonth() !== m) { m = g.when.getMonth(); h += '<h3 class="month">' + MESI[m] + '</h3>'; }
+        h += row(g);
+      });
+      el.innerHTML = h + '</div>';
+      $$('.cal-f .chip', el).forEach(function (b) {
+        b.addEventListener('click', function () {
+          $$('.cal-f .chip', el).forEach(function (x) { x.classList.toggle('on', x === b); });
+          $$('.g-row', el).forEach(function (r) { r.hidden = b.dataset.side && r.dataset.side !== b.dataset.side; });
+          $$('.month', el).forEach(function (mh) {
+            var n = mh.nextElementSibling, any = false;
+            while (n && !n.classList.contains('month')) { if (!n.hidden) any = true; n = n.nextElementSibling; }
+            mh.hidden = !any;
+          });
+        });
+      });
+    });
+    $$('[data-standings]').forEach(function (el) {
+      var mini = el.dataset.standings === 'mini', top = table[0];
+      var h = '<div class="stand"><div class="table-wrap"><table><thead><tr><th class="n">#</th><th>Squadra</th><th class="n">V</th><th class="n">P</th>' + (mini ? '' : '<th class="n">G</th>') + '<th class="n">%</th>' + (mini ? '' : '<th class="n">Dist.</th>') + '</tr></thead><tbody>';
+      table.forEach(function (r, i) {
+        var gb = ((top.v - r.v) + (r.p - top.p)) / 2;
+        h += '<tr' + (r.squadra === 'LAN' ? ' class="me"' : '') + '><td class="n">' + (i + 1) + '</td><td>' + nome(r.squadra) + '</td><td class="n">' + r.v + '</td><td class="n">' + r.p + '</td>' + (mini ? '' : '<td class="n">' + (r.v + r.p) + '</td>') +
+          '<td class="n">' + r.pct.toFixed(3).replace(/^0/, '') + '</td>' + (mini ? '' : '<td class="n">' + (gb ? String(gb).replace('.', ',') : '–') + '</td>') + '</tr>';
+      });
+      el.innerHTML = h + '</tbody></table></div></div>';
+    });
+    $$('[data-source]').forEach(function (el) {
+      var d = L.stagione.aggiornato.split('-');
+      el.innerHTML = 'Dati aggiornati al ' + (+d[2]) + ' ' + MESI[d[1] - 1] + ' ' + d[0] + '. Fonte: <a href="' + L.stagione.fonte + '" target="_blank" rel="noopener">FIBS</a> · <a href="' + L.stagione.calendarioFibs + '" target="_blank" rel="noopener">calendario ufficiale</a>';
+    });
+    $$('[data-tab]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        $$('[data-tab]').forEach(function (x) { x.classList.toggle('on', x === b); });
+        $$('[data-tabp]').forEach(function (p) { p.hidden = p.dataset.tabp !== b.dataset.tab; });
+      });
+    });
+    if (location.hash === '#classifica' && $('[data-tab=cls]')) $('[data-tab=cls]').click();
+    var ICO = {
+      facebook: '<svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1C16.500 4 15.500 4 14.400 4 12 4 10.300 5.500 10.300 8.200v2.400H7.500v3.200h2.800V22z"/></svg>',
+      instagram: '<svg viewBox="0 0 24 24"><path d="M12 7.300A4.700 4.700 0 1 0 12 16.700 4.700 4.700 0 0 0 12 7.300zm0 7.700a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.900a1.100 1.100 0 1 1-2.200 0 1.100 1.100 0 0 1 2.200 0zM16.500 3h-9A4.500 4.500 0 0 0 3 7.500v9A4.500 4.500 0 0 0 7.500 21h9a4.500 4.500 0 0 0 4.500-4.500v-9A4.500 4.500 0 0 0 16.500 3zm2.800 13.500a2.800 2.800 0 0 1-2.800 2.800h-9a2.800 2.800 0 0 1-2.800-2.800v-9a2.800 2.800 0 0 1 2.800-2.800h9a2.800 2.800 0 0 1 2.800 2.800z"/></svg>',
+      youtube: '<svg viewBox="0 0 24 24"><path d="M21.600 7.200a2.500 2.500 0 0 0-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.800 2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.800zM10 15V9l5.200 3z"/></svg>'
+    };
+    var NOMI = { facebook: 'Facebook', instagram: 'Instagram', youtube: 'YouTube' };
+    $$('[data-social]').forEach(function (el) {
+      var lab = el.dataset.social === 'label';
+      el.innerHTML = Object.keys(ICO).filter(function (k) { return L.social && L.social[k]; }).map(function (k) {
+        return '<a href="' + esc(L.social[k]) + '" target="_blank" rel="noopener" aria-label="' + NOMI[k] + '">' + ICO[k] + (lab ? '<span>' + NOMI[k] + '</span>' : '') + '</a>';
+      }).join('');
+    });
+  }
 })();
