@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html id="ie7" lang="it-IT">
+<![endif]-->
+<!--[if (gt IE 7) | (!IE)]><!-->
+<html lang="it-IT">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://lancersbaseballclub.com/xmlrpc.php" />
+<title>Pagina non trovata &#8211; Lancers Baseball Club 1982</title>
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["Poppins:r:latin,latin-ext","Poppins:r,i,b,bi:latin,latin-ext"]},"api_url":"https:\/\/fonts-api.wp.com\/css"};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = '/wp-content/plugins/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active #header #logo .title{font-family:"Poppins",sans-serif;font-style:normal;font-weight:400;font-family:"Poppins",sans-serif}.wf-active #header #logo .title .site-title, .wf-active #header #logo .title a{font-family:"Poppins",sans-serif;font-style:normal;font-weight:400}.wf-active body{font-family:"Poppins",sans-serif}.wf-active a.button, .wf-active button{font-family:"Poppins",sans-serif}.wf-active #menu{font-family:"Poppins",sans-serif}.wf-active #topbanner .pagetitle_prefix{font-family:"Poppins",sans-serif}.wf-active .post_text blockquote{font-family:"Poppins",sans-serif}.wf-active ol#commentlist li blockquote{font-family:"Poppins",sans-serif}.wf-active .dot{font-family:"Poppins",sans-serif}.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6{font-family:"Poppins",sans-serif;font-style:normal;font-weight:400}.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6{font-family:"Poppins",sans-serif;font-style:normal;font-weight:400}.wf-active h1{font-style:normal;font-weight:400}.wf-active h2{font-style:normal;font-weight:400}.wf-active h3{font-style:normal;font-weight:400}.wf-active h4{font-weight:400;font-style:normal}.wf-active h5{font-weight:400;font-style:normal}.wf-active h6{font-style:normal;font-weight:400}.wf-active h2{font-weight:400;font-style:normal}.wf-active #header #logo .title .desc{font-style:normal;font-weight:400;font-family:"Poppins",sans-serif}.wf-active #topbanner .pagetitle{font-style:normal;font-weight:400;font-family:"Poppins",sans-serif}.wf-active .feat_title{font-style:normal;font-weight:400;font-family:"Poppins",sans-serif}.wf-active #entry-author-info h2{font-weight:400;font-style:normal}.wf-active h2.post_comm{font-weight:400;font-style:normal}.wf-active h2.post_comm2, .wf-active h3#reply-title{font-weight:400;font-style:normal}.wf-active .latest_post_title{font-style:normal;font-weight:400;font-family:"Poppins",sans-serif}.wf-active h3.home_featured{font-weight:400;font-style:normal}.wf-active h3.mast{font-weight:400;font-style:normal}.wf-active h3.mast2{font-weight:400;font-style:normal}.wf-active h3.mast3{font-weight:400;font-style:normal}.wf-active h3.mast4{font-weight:400;font-style:normal}.wf-active h3.mast5{font-weight:400;font-style:normal}.wf-active h3.archive_title a{font-style:normal;font-weight:400;font-family:"Poppins",sans-serif}.wf-active h4.gall{font-weight:400;font-style:normal}</style>
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid='
+					+ '&is_singular=';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9sYW5jZXJzYmFzZWJhbGxjbHViLmNvbQ%3D%3D"
+		+ "&wpcomid=30192242"
+		+ "&time=" + Math.floor( Date.now() / 1000 );
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Lancers Baseball Club 1982 &raquo; Feed" href="https://lancersbaseballclub.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Lancers Baseball Club 1982 &raquo; Feed dei commenti" href="https://lancersbaseballclub.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#3858e9;--wp-admin-theme-color--rgb:56,88,233;--wp-admin-theme-color-darker-10:#2145e6;--wp-admin-theme-color-darker-10--rgb:33.0384615385,68.7307692308,230.4615384615;--wp-admin-theme-color-darker-20:#183ad6;--wp-admin-theme-color-darker-20--rgb:23.6923076923,58.1538461538,214.3076923077;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}body.admin-color-fresh{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){body.admin-color-fresh{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}:root .has-inline-color,:root .has-link-color a,:root .has-text-color{-webkit-text-fill-color:currentColor}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;overflow-wrap:normal!important;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}@supports (not (-webkit-backdrop-filter:blur(1px))) and (not (-moz-appearance:none)){mtd[columnalign=right]{text-align:-webkit-right}mtd[columnalign=left]{text-align:-webkit-left}menclose[notation~=top]{border-top:.065em solid;padding-top:.1em}menclose[notation~=bottom]{border-bottom:.065em solid;padding-bottom:.1em}}
+
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v24.4.0/build/styles/block-library/common.min.css */
+</style>
+<style id="wp-block-library-inline-css-extra">
+.has-text-align-justify {
+	text-align:justify;
+}
+.has-text-align-justify{text-align:justify;}
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+
+<style id="classic-theme-styles-inline-css">
+.wp-block-button__link{background-color:#32373c;border-radius:9999px;box-shadow:none;color:#fff;font-size:1.125em;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-file__button{background:#32373c;color:#fff}.wp-block-accordion-heading{margin:0}.wp-block-accordion-heading__toggle{background-color:inherit!important;color:inherit!important}.wp-block-accordion-heading__toggle:not(:focus-visible){outline:none}.wp-block-accordion-heading__toggle:focus,.wp-block-accordion-heading__toggle:hover{background-color:inherit!important;border:none;box-shadow:none;color:inherit;padding:var(--wp--preset--spacing--20,1em) 0;text-decoration:none}.wp-block-accordion-heading__toggle:focus-visible{outline:auto;outline-offset:0}.wp-block-tab-list button:not(.has-text-color){color:inherit!important}.wp-block-tab-list button:not(.has-background){background-color:inherit!important}.wp-block-tab-list button:focus,.wp-block-tab-list button:hover{text-decoration:none}.wp-block-tab-list button:focus-visible{outline:auto;outline-offset:0}
+/*# sourceURL=/wp-content/plugins/gutenberg-core/v24.4.0/build/styles/block-library/classic.min.css */
+</style>
+
+<style id="coblocks-inline-format-inline-css">
+.uppercase{text-transform:uppercase}
+/*# sourceURL=coblocks-inline-format-inline-css */
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-12-1' href='/_static/??-eJx9jEEOAiEQBD/kQECjeDC+ZWEnijIwYWA3/l72op689KFTVXplCCU3zE1z6reYRYfiUwlP0VYZpwxIJE4IFRd10HOU9iFA2iuhCiI7/ROiDt9WxfETT20jCOc4YUIa2D9t5eGA91xRBMZS7ATtPkTZvCtdzNEZt7f2fHq8Afl7R7w=&cssminify=yes' type='text/css' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--text-shadow--light: 0.05em 0.05em 0.1em rgba(0, 0, 0, 0.3);--wp--preset--text-shadow--strong: 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.5);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}.has-light-text-shadow{text-shadow: var(--wp--preset--text-shadow--light) !important;}.has-strong-text-shadow{text-shadow: var(--wp--preset--text-shadow--strong) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-14-1' href='/wp-content/themes/pub/themorningafter/style.css?m=1789049302i&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='the_morning_after-wpcom-css' href='https://s0.wp.com/wp-content/themes/pub/themorningafter/inc/style-wpcom.css?ver=7.2-alpha-64095' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-16-1' href='/_static/??-eJzTLy/QTc7PK0nNK9HPLdUtyClNz8wr1i9KTcrJTwcy0/WTi5G5ekCujj52Temp+bo5+cmJJZn5eSgc3bScxMwikFb7XFtDE1NLExMLc0OTLACohS2q&cssminify=yes' type='text/css' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='print-css-17-1' href='/wp-content/mu-plugins/global-print/global-print.css?m=1465851035i&cssminify=yes' type='text/css' media='print' />
+<style id="jetpack-global-styles-frontend-style-inline-css">
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+/*# sourceURL=jetpack-global-styles-frontend-style-inline-css */
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-20-1' href='/wp-content/themes/h4/global.css?m=1420737423i&cssminify=yes' type='text/css' media='all' />
+<script id="wpcom-actionbar-placeholder-js-extra">
+var actionbardata = {"siteID":"30192242","postID":"0","siteURL":"https://lancersbaseballclub.com","xhrURL":"https://lancersbaseballclub.com/wp-admin/admin-ajax.php","nonce":"2140f16fa7","isLoggedIn":"","statusMessage":"","statusSubscribed":"","subsEmailDefault":"instantly","proxyScriptUrl":"https://s0.wp.com/wp-content/js/wpcom-proxy-request.js?m=1513050504i&amp;ver=20211021","i18n":{"followedText":"I nuovi articoli del sito saranno visibili sul tuo \u003Ca href=\"https://wordpress.com/reader\"\u003EReader\u003C/a\u003E","foldBar":"Riduci la barra","unfoldBar":"Espandi la barra","shortLinkCopied":"Copiato negli appunti."}};
+//# sourceURL=wpcom-actionbar-placeholder-js-extra
+</script>
+<script id="jetpack-mu-wpcom-settings-js-before">
+var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https://s0.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/moon/jetpack_vendor/automattic/jetpack-mu-wpcom/src/build/"};
+//# sourceURL=jetpack-mu-wpcom-settings-js-before
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='/wp-content/js/rlt-proxy.js?m=1720530689i'></script>
+<script id="rlt-proxy-js-after">
+	rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+//# sourceURL=rlt-proxy-js-after
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lancersbc.wordpress.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress.com" />
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=32" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=32" sizes="16x16" />
+<link rel="apple-touch-icon" href="https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=114" />
+<link rel='openid.server' href='https://lancersbaseballclub.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://lancersbaseballclub.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://lancersbaseballclub.com/osd.xml" title="Lancers Baseball Club 1982" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#191c2f" />
+<meta name="description" content="| sito ufficiale dei Lancieri di Lastra a Signa |" />
+<style id="custom-background-css">
+body.custom-background { background-color: #191c2f; }
+</style>
+<style type="text/css" id="custom-colors-css">a.button:active,.reply a,a#cancel-comment-reply-link { color: #fff;}
+a.button:active,.reply a,a#cancel-comment-reply-link { color: rgba( 255, 255, 255, 0.8 );}
+.filedunder { color: #fff;}
+.filedunder { color: rgba( 255, 255, 255, 0.6 );}
+body { background-color: #191c2f;}
+h3.mast,#navigation ul.rss li a { color: #93b7d1;}
+h3.home_featured,h3.mast2,h4.gall { color: #6F6F47;}
+a, a:visited, a:active,button:hover,a.button:hover,ul.arrow li a,table#wp-calendar caption,.archive_meta a:hover,.archive_post_meta a,#latest_post p a,#post_content p a,#arch_content p a,#author-link a,ol#commentlist cite a,ol#commentlist li .commentauthor a,ol#commentlist li .commenttime a,ol#pinglist .pingback a,.post-navigation a,ul.archives li a,ul.wp-tag-cloud li a { color: #3B6FAE;}
+a.button:active,.reply a,a#cancel-comment-reply-link { background-color: #4c82c2;}
+hr,button:hover,a.button:hover { color: #4c82c2;}
+button:hover,a.button:hover { background-color: #4c82c2;}
+button:hover,a.button:hover { background-color: rgba( 76, 130, 194, 0.4 );}
+.feat_exc a,.post_meta a,.feat_title a,.widget a { color: #3B6FAE;}
+h3.mast3,h1, h2, h3, h4, h5, h6,h3.mast4,.latest_post_meta a,.latest_post_title a,.post-navigation a:hover,h3.archive_title a,h2.post_comm2,h3#reply-title,h2.post_comm,.contact-form label,ul.archives li a:hover,ul.wp-tag-cloud li a:hover,#commentform label,ol#pinglist .pingback a:hover,ol#commentlist li .commentauthor a:hover,ol#commentlist li .commenttime a:hover, #author-link a:hover,#entry-author-info h2,#latest_post p a:hover,#post_content p a:hover,#arch_content p a:hover,.post_text blockquote,.post_meta a:hover,.archive_post_meta a:hover,table#wp-calendar th,table#wp-calendar td#today, .widget a:hover,ul.arrow li a:hover,.feat_title a:hover,#topbanner .pagetitle,#topbanner .pagetitle_prefix,#menu li a,a:hover,#header #logo .title,#header #logo .title a { color: #1B4C77;}
+h3.archive_title a:hover,h3.latest_post_title a:hover,.reply a:hover,a#cancel-comment-reply-link:hover, #header #logo .title a:hover { background: #1B4C77;}
+input.button em,table#wp-calendar th { background: #1b4c77;}
+ol#commentlist li.bypostauthor { border-color: #1b4c77;}
+ol#commentlist li.comment, ol#pinglist li.comment,#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover { border-right-color: #1b4c77;}
+ol#commentlist li.comment, ol#pinglist li.comment,#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,.nav ul li,h2.post_comm2,h3#reply-title,h2.post_comm,ol#commentlist li.alternate { border-bottom-color: #1b4c77;}
+#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,ol#commentlist li.alternate { border-left-color: #1b4c77;}
+#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,ol#commentlist li.alternate { border-left-color: rgba( 27, 76, 119, 0.4 );}
+#entry-author-info,#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,h2.post_comm { border-top-color: #1b4c77;}
+#entry-author-info,#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,h2.post_comm { border-top-color: rgba( 27, 76, 119, 0.5 );}
+.page-navigation a,.wp-caption,.captionleft p,.captionright p,.captionfull p,#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,table#wp-calendar td#today,.nav ul li a:hover,.nav ul li.current_page_item a,.nav ul li.current-menu-item a,.nav ul li,.nav a:hover,.nav li.current_page_item a,.nav li.current_page_parent a,.nav li.current-menu-ancestor a,ul.arrow li a:hover,#home_featured,a.button,button,.box,pre,ul.archives li a:hover,ul.wp-tag-cloud li a:hover { background: #1b4c77;}
+.page-navigation a,.wp-caption,.captionleft p,.captionright p,.captionfull p,#commentform input[type="text"]:focus,#commentform input[type="text"]:hover,#commentform textarea:focus,#commentform textarea:hover,table#wp-calendar td#today,.nav ul li a:hover,.nav ul li.current_page_item a,.nav ul li.current-menu-item a,.nav ul li,.nav a:hover,.nav li.current_page_item a,.nav li.current_page_parent a,.nav li.current-menu-ancestor a,ul.arrow li a:hover,#home_featured,a.button,button,.box,pre,ul.archives li a:hover,ul.wp-tag-cloud li a:hover { background: rgba( 27, 76, 119, 0.1 );}
+#header #logo .title .desc,.captionleft p,.captionright p,.captionfull p,.nav ul a,.nav a,a.button,button { color: #1B4C77;}
+.filedunder { background: #1b4c77;}
+.filedunder { background: rgba( 27, 76, 119, 0.8 );}
+.fright img { background: #1b4c77;}
+.fright img { background: rgba( 27, 76, 119, 0.4 );}
+</style>
+</head>
+
+<body class="error404 custom-background wp-theme-pubthemorningafter customizer-styles-applied jetpack-reblog-enabled custom-colors">
+
+	<div class="container">
+	
+		<div id="header" class="column full-width clear-fix">
+
+			<div id="logo" class="column first">
+				<div class="title">
+										<h3 class="site-title">
+						<a href="https://lancersbaseballclub.com/">Lancers Baseball Club 1982</a>
+					</h3>
+					<div class="site-description desc">| sito ufficiale dei Lancieri di Lastra a Signa |</div>
+				</div>
+			</div><!-- end logo -->
+
+			<div id="search_menu" class="column border_left last">
+				<div id="search" class="column first">
+					<h3 class="mast4">Cerca</h3>
+
+					<div id="search-form">
+						<form method="get" id="searchform" action="https://lancersbaseballclub.com/">
+							<div class="clear-fix">
+								<label for="s" class="none">Cerca per:</label>
+								<input type="text" name="s" id="s" class="search_input" value="" />
+								<label for="searchsubmit" class="none">Vai</label>
+								<input type="submit" id="searchsubmit" class="submit_input" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div><!-- end #search -->
+				<ul id="menu" class="clear-fix">
+					<li><span class="home"><a href="https://lancersbc.wordpress.com/">Home</a></span></li>
+<li><span class="about"><a href="https://lancersbc.wordpress.com/societa/contatti/">Info</a></span></li>
+<li><span class="contact"><a href="mailto:lancers.campo@libero.it">contatto</a></span></li>
+				</ul>
+			</div><!-- end #search_menu -->
+
+		</div><!-- end #header -->
+
+		<div id="navigation" class="clear-fix">
+			<ul class="nav fl">
+<li ><a href="https://lancersbaseballclub.com/">Home</a></li><li class="page_item page-item-190"><a href="https://lancersbaseballclub.com/gioca-anche-tu/">Gioca con noi</a></li>
+<li class="page_item page-item-4 page_item_has_children"><a href="https://lancersbaseballclub.com/societa/">Il Club</a>
+<ul class='children'>
+	<li class="page_item page-item-96"><a href="https://lancersbaseballclub.com/societa/contatti/">Contatti</a></li>
+	<li class="page_item page-item-207"><a href="https://lancersbaseballclub.com/societa/sponsor/">Sponsor</a></li>
+	<li class="page_item page-item-6271"><a href="https://lancersbaseballclub.com/societa/codice-etico/">Codice etico</a></li>
+	<li class="page_item page-item-549"><a href="https://lancersbaseballclub.com/societa/diventa-nostro-sponsor/">Diventa nostro sponsor</a></li>
+	<li class="page_item page-item-161"><a href="https://lancersbaseballclub.com/societa/piazzamenti/">Piazzamenti</a></li>
+</ul>
+</li>
+<li class="page_item page-item-38 page_item_has_children"><a href="https://lancersbaseballclub.com/ballpark/">Lancers Field</a>
+<ul class='children'>
+	<li class="page_item page-item-7839"><a href="https://lancersbaseballclub.com/ballpark/open-field-diamanti-inclusivi/">Open Field &#8211; diamanti&nbsp;inclusivi</a></li>
+	<li class="page_item page-item-6401"><a href="https://lancersbaseballclub.com/ballpark/orari-allenamenti/">Orari allenamenti</a></li>
+</ul>
+</li>
+<li class="page_item page-item-4999 page_item_has_children"><a href="https://lancersbaseballclub.com/squadre-senior/">Squadre Senior</a>
+<ul class='children'>
+	<li class="page_item page-item-16 page_item_has_children"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/">Serie B</a>
+	<ul class='children'>
+		<li class="page_item page-item-616"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/albano-silvano/">Albano Silvano</a></li>
+		<li class="page_item page-item-7142"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/anichini-filippo/">Anichini Filippo</a></li>
+		<li class="page_item page-item-590"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/baratella-simone/">Baratella Simone</a></li>
+		<li class="page_item page-item-7108"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/beudean-giovanni/">Beudean Giovanni</a></li>
+		<li class="page_item page-item-6083"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/biondi-lapo/">Biondi Lapo</a></li>
+		<li class="page_item page-item-7205"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/della-nave-ettore/">Della Nave Ettore</a></li>
+		<li class="page_item page-item-5238"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/ferrini-alessandro/">Ferrini Alessandro</a></li>
+		<li class="page_item page-item-659"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/geri-simone/">Geri Simone</a></li>
+		<li class="page_item page-item-7211"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/grado-yanez-giuseppe/">Grado Yanez Giuseppe</a></li>
+		<li class="page_item page-item-5210"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/grassi-francesco/">Grassi Francesco</a></li>
+		<li class="page_item page-item-7139"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/panichi-tommaso/">Panichi Tommaso</a></li>
+		<li class="page_item page-item-1697"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/parrini-antonio/">Parrini Antonio</a></li>
+		<li class="page_item page-item-7730"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/cosimo-rinaldi/">Rinaldi Cosimo</a></li>
+		<li class="page_item page-item-7648"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/alex-rrethatori/">Rrethatori Alex</a></li>
+		<li class="page_item page-item-5221"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/scarpulla-leonardo/">Scarpulla Leonardo</a></li>
+		<li class="page_item page-item-7200"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/scarpulla-lorenzo/">Scarpulla Lorenzo</a></li>
+		<li class="page_item page-item-6145"><a href="https://lancersbaseballclub.com/squadre-senior/serie-a2/silvestri-daniele/">Silvestri Daniele</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-71"><a href="https://lancersbaseballclub.com/squadre-senior/risultati/">Calendario Serie B</a></li>
+	<li class="page_item page-item-3543 page_item_has_children"><a href="https://lancersbaseballclub.com/squadre-senior/amatoriale/">Amatori</a>
+	<ul class='children'>
+		<li class="page_item page-item-6991"><a href="https://lancersbaseballclub.com/squadre-senior/amatoriale/torneo-lancers-baz-40/">Torneo Lancers BAZ&nbsp;40</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-498 page_item_has_children"><a href="https://lancersbaseballclub.com/giovanili/">Settore giovanile</a>
+<ul class='children'>
+	<li class="page_item page-item-4520"><a href="https://lancersbaseballclub.com/giovanili/under-15/">Under 15</a></li>
+	<li class="page_item page-item-2749"><a href="https://lancersbaseballclub.com/giovanili/calendario-u15-2020/">Calendario U15</a></li>
+	<li class="page_item page-item-4528"><a href="https://lancersbaseballclub.com/giovanili/under-12/">Under 12</a></li>
+	<li class="page_item page-item-2790"><a href="https://lancersbaseballclub.com/giovanili/calendario-u12-2020/">Calendario U12</a></li>
+</ul>
+</li>
+<li class="page_item page-item-262 page_item_has_children"><a href="https://lancersbaseballclub.com/gallery/">Galleria</a>
+<ul class='children'>
+	<li class="page_item page-item-1753"><a href="https://lancersbaseballclub.com/gallery/foto-di-squadra/">Foto di squadra</a></li>
+	<li class="page_item page-item-1767"><a href="https://lancersbaseballclub.com/gallery/video/">Video</a></li>
+</ul>
+</li>
+<li class="page_item page-item-121 page_item_has_children"><a href="https://lancersbaseballclub.com/baseball-2/">Il Baseball</a>
+<ul class='children'>
+	<li class="page_item page-item-84"><a href="https://lancersbaseballclub.com/baseball-2/baseball/">Le regole</a></li>
+	<li class="page_item page-item-740"><a href="https://lancersbaseballclub.com/baseball-2/al-cinema/">Al cinema</a></li>
+</ul>
+</li>
+<li class="page_item page-item-2447"><a href="https://lancersbaseballclub.com/shop/">Shop</a></li>
+<li class="page_item page-item-5384"><a href="https://lancersbaseballclub.com/area-download/">Area Download</a></li>
+</ul>
+					</div><!-- #navigation -->
+
+
+<div id="topbanner" class="column full-width" style="background-image:url(https://lancersbaseballclub.com/wp-content/uploads/2026/01/cropped-banner_sito-03.jpg)">
+
+		<div class="pagetitle_prefix">//</div>
+		<div class="pagetitle">ops!!!</div></div>
+<div id="arch_content" class="column full-width">
+
+	<div class="column archive-info first">
+		<h2 class="archive_name">Lancers Baseball Club 1982</h2>
+
+		<div class="archive_meta">
+
+			<div class="archive_feed">
+				<a href="https://lancersbaseballclub.com/feed/">Feed RSS per Lancers Baseball Club 1982</a>
+			</div>
+
+		</div>
+	</div><!-- end .archive-info -->
+
+	<div class="column mid-column">
+
+		<p><strong>Oops!</strong></p>
+
+		<p>La pagina che cerchi è stata spostata o ne è stato modificato il nome. O magari è destino. Puoi utilizzare il campo di ricerca nella testata per trovare quello che cerchi o ripartire dalla <a href='https://lancersbaseballclub.com/'>homepage</a>.</p>
+	</div><!-- end .mid-column -->
+
+	<div class="column primary-sidebar last">
+
+	
+		<div class="widget widget_categories">
+			<h3 class="mast">Categorie</h3>
+			<ul>
+					<li class="cat-item cat-item-839890"><a href="https://lancersbaseballclub.com/category/giovanili/">Giovanili</a>
+</li>
+	<li class="cat-item cat-item-76285"><a href="https://lancersbaseballclub.com/category/serie-a/">Serie A</a>
+</li>
+	<li class="cat-item cat-item-754084"><a href="https://lancersbaseballclub.com/category/serie-a2/">Serie A2</a>
+</li>
+	<li class="cat-item cat-item-76287"><a href="https://lancersbaseballclub.com/category/serie-b/">Serie B</a>
+</li>
+	<li class="cat-item cat-item-44832"><a href="https://lancersbaseballclub.com/category/sondaggi/">Sondaggi</a>
+</li>
+	<li class="cat-item cat-item-2805"><a href="https://lancersbaseballclub.com/category/varie/">Varie</a>
+</li>
+	<li class="cat-item cat-item-412"><a href="https://lancersbaseballclub.com/category/video/">Video</a>
+</li>
+			</ul>
+		</div>
+
+		<div class="widget widget_archive">
+			<h3 class="mast">Archivi</h3>
+			<ul>
+					<li><a href='https://lancersbaseballclub.com/2026/09/'>settembre 2026</a></li>
+	<li><a href='https://lancersbaseballclub.com/2026/07/'>luglio 2026</a></li>
+	<li><a href='https://lancersbaseballclub.com/2026/06/'>giugno 2026</a></li>
+	<li><a href='https://lancersbaseballclub.com/2026/03/'>marzo 2026</a></li>
+	<li><a href='https://lancersbaseballclub.com/2026/02/'>febbraio 2026</a></li>
+	<li><a href='https://lancersbaseballclub.com/2026/01/'>gennaio 2026</a></li>
+	<li><a href='https://lancersbaseballclub.com/2025/12/'>dicembre 2025</a></li>
+	<li><a href='https://lancersbaseballclub.com/2025/04/'>aprile 2025</a></li>
+	<li><a href='https://lancersbaseballclub.com/2025/02/'>febbraio 2025</a></li>
+	<li><a href='https://lancersbaseballclub.com/2024/08/'>agosto 2024</a></li>
+	<li><a href='https://lancersbaseballclub.com/2024/03/'>marzo 2024</a></li>
+	<li><a href='https://lancersbaseballclub.com/2023/08/'>agosto 2023</a></li>
+	<li><a href='https://lancersbaseballclub.com/2023/02/'>febbraio 2023</a></li>
+	<li><a href='https://lancersbaseballclub.com/2023/01/'>gennaio 2023</a></li>
+	<li><a href='https://lancersbaseballclub.com/2022/12/'>dicembre 2022</a></li>
+	<li><a href='https://lancersbaseballclub.com/2022/04/'>aprile 2022</a></li>
+	<li><a href='https://lancersbaseballclub.com/2022/03/'>marzo 2022</a></li>
+	<li><a href='https://lancersbaseballclub.com/2022/02/'>febbraio 2022</a></li>
+	<li><a href='https://lancersbaseballclub.com/2022/01/'>gennaio 2022</a></li>
+	<li><a href='https://lancersbaseballclub.com/2021/05/'>Maggio 2021</a></li>
+	<li><a href='https://lancersbaseballclub.com/2021/04/'>aprile 2021</a></li>
+	<li><a href='https://lancersbaseballclub.com/2021/03/'>marzo 2021</a></li>
+	<li><a href='https://lancersbaseballclub.com/2021/02/'>febbraio 2021</a></li>
+	<li><a href='https://lancersbaseballclub.com/2021/01/'>gennaio 2021</a></li>
+	<li><a href='https://lancersbaseballclub.com/2020/08/'>agosto 2020</a></li>
+	<li><a href='https://lancersbaseballclub.com/2020/07/'>luglio 2020</a></li>
+	<li><a href='https://lancersbaseballclub.com/2020/05/'>Maggio 2020</a></li>
+	<li><a href='https://lancersbaseballclub.com/2020/04/'>aprile 2020</a></li>
+	<li><a href='https://lancersbaseballclub.com/2020/02/'>febbraio 2020</a></li>
+	<li><a href='https://lancersbaseballclub.com/2020/01/'>gennaio 2020</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/12/'>dicembre 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/10/'>ottobre 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/07/'>luglio 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/06/'>giugno 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/05/'>Maggio 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/04/'>aprile 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/03/'>marzo 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/02/'>febbraio 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2019/01/'>gennaio 2019</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/12/'>dicembre 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/11/'>novembre 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/08/'>agosto 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/07/'>luglio 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/06/'>giugno 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/05/'>Maggio 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/04/'>aprile 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/03/'>marzo 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/02/'>febbraio 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2018/01/'>gennaio 2018</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/12/'>dicembre 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/11/'>novembre 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/10/'>ottobre 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/09/'>settembre 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/06/'>giugno 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/05/'>Maggio 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/04/'>aprile 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/03/'>marzo 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/02/'>febbraio 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2017/01/'>gennaio 2017</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/12/'>dicembre 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/11/'>novembre 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/10/'>ottobre 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/09/'>settembre 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/07/'>luglio 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/06/'>giugno 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/05/'>Maggio 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/04/'>aprile 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/03/'>marzo 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/02/'>febbraio 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2016/01/'>gennaio 2016</a></li>
+	<li><a href='https://lancersbaseballclub.com/2015/12/'>dicembre 2015</a></li>
+	<li><a href='https://lancersbaseballclub.com/2015/11/'>novembre 2015</a></li>
+	<li><a href='https://lancersbaseballclub.com/2015/10/'>ottobre 2015</a></li>
+	<li><a href='https://lancersbaseballclub.com/2015/09/'>settembre 2015</a></li>
+	<li><a href='https://lancersbaseballclub.com/2015/07/'>luglio 2015</a></li>
+	<li><a href='https://lancersbaseballclub.com/2015/06/'>giugno 2015</a></li>
+	<li><a href='https://lancersbaseballclub.com/2014/04/'>aprile 2014</a></li>
+	<li><a href='https://lancersbaseballclub.com/2013/06/'>giugno 2013</a></li>
+	<li><a href='https://lancersbaseballclub.com/2013/05/'>Maggio 2013</a></li>
+	<li><a href='https://lancersbaseballclub.com/2013/04/'>aprile 2013</a></li>
+	<li><a href='https://lancersbaseballclub.com/2013/03/'>marzo 2013</a></li>
+	<li><a href='https://lancersbaseballclub.com/2013/02/'>febbraio 2013</a></li>
+	<li><a href='https://lancersbaseballclub.com/2013/01/'>gennaio 2013</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/12/'>dicembre 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/11/'>novembre 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/10/'>ottobre 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/08/'>agosto 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/05/'>Maggio 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/04/'>aprile 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/03/'>marzo 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2012/01/'>gennaio 2012</a></li>
+	<li><a href='https://lancersbaseballclub.com/2011/12/'>dicembre 2011</a></li>
+	<li><a href='https://lancersbaseballclub.com/2010/12/'>dicembre 2010</a></li>
+	<li><a href='https://lancersbaseballclub.com/2008/12/'>dicembre 2008</a></li>
+	<li><a href='https://lancersbaseballclub.com/2006/12/'>dicembre 2006</a></li>
+			</ul>
+		</div>
+
+		<div class="widget widget_links">
+			<h3 class="mast">I tuoi siti preferiti</h3>
+			<ul class="xoxox">
+				<li><a href="http://www.baseball.it/" rel="noopener" target="_blank">Baseball.it</a></li>
+<li><a href="https://www.bancofiorentino.it/" rel="noopener" target="_blank">BCC</a></li>
+<li><a href="https://www.caffescardigli.it/" rel="noopener" target="_blank">Caffè Scardigli</a></li>
+<li><a href="https://it.linkedin.com/company/cerberus-s-r-l">Cerberus</a></li>
+<li><a href="http://chepalle.gazzetta.it/" rel="noopener" title="Blog ufficiale della Gazzetta dello Sport" target="_blank">ChePalle! Gazzetta.it</a></li>
+<li><a href="https://crinspection.it/" rel="noopener" target="_blank">CR Inspection</a></li>
+<li><a href="https://www.csoitalia.it/" rel="noopener" target="_blank">CSO Italia</a></li>
+<li><a href="https://www.ercoli.net/" rel="noopener" target="_blank">Delfini autolavaggi</a></li>
+<li><a href="https://www.facebook.com/edilpoggiantisrl/?locale=it_IT" rel="noopener" target="_blank">Edilpoggianti</a></li>
+<li><a href="http://www.fibs.it" rel="noopener" title="Sito ufficiale della Federazione Italiana Baseball e Softball" target="_blank">FIBS</a></li>
+<li><a href="http://www.ilbardelbaseball.com/" rel="noopener" title="Il Bar del Baseball" target="_blank">Il Bar del Baseball</a></li>
+<li><a href="http://www.minorleaguebaseball.com" rel="noopener" title="Sito ufficiale delle Leghe Minori Americane" target="_blank">MiLB</a></li>
+<li><a href="http://www.mister-baseball.com/" rel="noopener" title="All about baseball and softball in Europe" target="_blank">Mister Baseball</a></li>
+<li><a href="https://www.mlb.com/" rel="noopener" title="Sito ufficiale della Major League Baseball" target="_blank">MLB</a></li>
+<li><a href="https://www.panamed.it/" rel="noopener" title="Forniture Ospedaliere" target="_blank">Panamed</a></li>
+<li><a href="https://www.piananotizie.it/?s=baseball" rel="noopener" title="Informazione territoriale" target="_blank">Piana Notizie</a></li>
+<li><a href="http://www.playitusa.com/" rel="noopener" title="Sito su gli sport made USA" target="_blank">Play.it USA</a></li>
+<li><a href="http://www.realemutua.it" rel="noopener" target="_blank">Reale Mutua</a></li>
+<li><a href="https://servicepoint.tech/">Service POint</a></li>
+<li><a href="http://www.wbsc.org/" rel="noopener" title="World Baseball SOftball Confederation" target="_blank">WBSC</a></li>
+			</ul>
+		</div>
+
+		<div class="widget widget_meta">
+			<h3 class="mast">Meta</h3>
+			<ul>
+				<li><a class="click-register" href="https://wordpress.com/start/it?ref=wplogin">Crea account</a></li>				<li><a href="https://lancersbc.wordpress.com/wp-login.php">Accedi</a></li>
+							</ul>
+		</div>
+
+	
+</div>
+</div><!-- end #arch_content -->
+
+	<div id="footer" class="column full-width">
+		<div id="copyright" class="column first">
+			<p>
+				<a href="https://lancersbaseballclub.com/" title="Lancers Baseball Club 1982" rel="home">
+					Lancers Baseball Club 1982				</a>
+			</p>
+		</div>
+		<div id="credit" class="column last">
+			<p><a href="https://wordpress.com/?ref=footer_custom_svg" title="Crea un sito web o un blog su WordPress.com" rel="nofollow"><svg style="fill: currentColor; position: relative; top: 1px;" width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-labelledby="title" role="img">
+				<desc id="title">Crea un sito web o un blog su WordPress.com</desc>
+				<path d="M12.5225848,4.97949746 C13.0138466,5.87586309 13.2934037,6.90452431 13.2934037,7.99874074 C13.2934037,10.3205803 12.0351007,12.3476807 10.1640538,13.4385638 L12.0862862,7.88081544 C12.4453251,6.98296834 12.5648813,6.26504621 12.5648813,5.62667922 C12.5648813,5.39497674 12.549622,5.17994084 12.5225848,4.97949746 L12.5225848,4.97949746 Z M7.86730089,5.04801561 C8.24619178,5.02808979 8.58760099,4.98823815 8.58760099,4.98823815 C8.9267139,4.94809022 8.88671369,4.44972248 8.54745263,4.46957423 C8.54745263,4.46957423 7.52803983,4.54957381 6.86996227,4.54957381 C6.25158863,4.54957381 5.21247202,4.46957423 5.21247202,4.46957423 C4.87306282,4.44972248 4.83328483,4.96816418 5.17254589,4.98823815 C5.17254589,4.98823815 5.49358462,5.02808979 5.83269753,5.04801561 L6.81314716,7.73459399 L5.43565839,11.8651647 L3.14394256,5.04801561 C3.52312975,5.02808979 3.86416859,4.98823815 3.86416859,4.98823815 C4.20305928,4.94809022 4.16305906,4.44972248 3.82394616,4.46957423 C3.82394616,4.46957423 2.80475558,4.54957381 2.14660395,4.54957381 C2.02852925,4.54957381 1.88934333,4.54668493 1.74156477,4.54194422 C2.86690406,2.83350881 4.80113651,1.70529256 6.99996296,1.70529256 C8.638342,1.70529256 10.1302017,2.33173369 11.2498373,3.35765419 C11.222726,3.35602457 11.1962815,3.35261718 11.1683554,3.35261718 C10.5501299,3.35261718 10.1114609,3.89113285 10.1114609,4.46957423 C10.1114609,4.98823815 10.4107217,5.42705065 10.7296864,5.94564049 C10.969021,6.36482346 11.248578,6.90326506 11.248578,7.68133501 C11.248578,8.21992476 11.0413918,8.84503256 10.7696866,9.71584277 L10.1417574,11.8132391 L7.86730089,5.04801561 Z M6.99996296,14.2927074 C6.38218192,14.2927074 5.78595654,14.2021153 5.22195356,14.0362644 L7.11048207,8.54925635 L9.04486267,13.8491542 C9.05760348,13.8802652 9.07323319,13.9089317 9.08989995,13.9358945 C8.43574834,14.1661896 7.73285573,14.2927074 6.99996296,14.2927074 L6.99996296,14.2927074 Z M0.706448182,7.99874074 C0.706448182,7.08630113 0.902152921,6.22015756 1.25141403,5.43749503 L4.25357806,13.6627848 C2.15393732,12.6427902 0.706448182,10.4898387 0.706448182,7.99874074 L0.706448182,7.99874074 Z M6.99996296,0.999 C3.14016476,0.999 0,4.13905746 0,7.99874074 C0,11.8585722 3.14016476,14.999 6.99996296,14.999 C10.8596871,14.999 14,11.8585722 14,7.99874074 C14,4.13905746 10.8596871,0.999 6.99996296,0.999 L6.99996296,0.999 Z" id="wordpress-logo-simplified-cmyk" stroke="none" fill=“currentColor” fill-rule="evenodd"></path>
+			</svg></a> </p>
+		</div>
+	</div><!-- end footer -->
+</div><!-- end container -->
+
+<!--  -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/files/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/pub/themorningafter/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="grofiles-cards-js" src="//0.gravatar.com/js/hovercards/hovercards.min.js?ver=202646fffb5f6f8dc7a9c7ad08f16ba2e694fddff32cc1793b3fe3b32aaa232a52550e"></script>
+<script id="wpgroho-js-extra">
+var WPGroHo = {"my_hash":""};
+//# sourceURL=wpgroho-js-extra
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile →': 'Modifica il tuo profilo →',
+							'View profile →': 'Visualizza profilo →',
+							'Contact': 'Contatti',
+							'Send money': 'Invia denaro',
+							'Sorry, we are unable to load this Gravatar profile.': 'Impossibile caricare questo profilo Gravatar.',
+							'Gravatar not found.': 'Gravatar non trovato.',
+							'Too Many Requests.': 'Troppe richieste.',
+							'Internal Server Error.': 'Errore server interno.',
+							'Is this you?': 'Sei tu?',
+							'Claim your free profile.': 'Richiedi il tuo profilo gratuito.',
+							'Email': 'E-mail',
+							'Home Phone': 'Numero di casa',
+							'Work Phone': 'Telefono aziendale',
+							'Cell Phone': 'Numero di cellulare',
+							'Contact Form': 'Modulo di contatto',
+							'Calendar': 'Calendario',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	</div>
+			<div id="actionbar" dir="ltr" style="display: none;"
+				class="actnbr-pub-themorningafter" role="region" aria-label="Azioni del sito">
+			<span class="actnbr-live" aria-live="polite"></span>
+			<ul>
+										<li class="actnbr-btn actnbr-hidden">
+										<a class="actnbr-action actnbr-actn-follow " href="" role="button" aria-haspopup="dialog" aria-expanded="false">
+				<svg class="actnbr-icon actnbr-icon-bell" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 11.5c0 1.353.17 2.368.976 3 .266.209.602.376 1.024.5v1H5v-1c.422-.124.757-.291 1.024-.5.806-.632.976-1.647.976-3V9c0-2.8 2.2-5 5-5s5 2.2 5 5v2.5ZM15.5 9v2.5c0 .93.066 1.98.515 2.897l.053.103H7.932a4.018 4.018 0 0 0 .053-.103c.449-.917.515-1.967.515-2.897V9c0-1.972 1.528-3.5 3.5-3.5s3.5 1.528 3.5 3.5Zm-5.492 9.008c0-.176.023-.346.065-.508h3.854A1.996 1.996 0 0 1 12 20c-1.1 0-1.992-.892-1.992-1.992Z"/></svg>				<span>Abbonati</span>
+			</a>
+			<a class="actnbr-action actnbr-actn-following  no-display" href="" role="button">
+				<svg class="actnbr-icon actnbr-icon-check" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="fill: none" stroke="currentColor" stroke-width="1.5"><path d="M7 12L10 15L17 8" vector-effect="non-scaling-stroke"/></svg>				<span>Abbonato</span>
+			</a>
+									<div class="actnbr-popover actnbr-panel actnbr-notice" id="follow-bubble" role="dialog" aria-label="Iscriviti a Lancers Baseball Club 1982">
+								<div class="actnbr-follow-bubble">
+								<div class="actnbr-panel__group"><a class="actnbr-menu__item actnbr-sitename" href="https://lancersbaseballclub.com"><img loading='lazy' alt='' src='https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=50&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png' srcset='https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=50&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 1x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=75&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 1.5x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=100&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 2x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=150&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 3x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=200&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 4x' class='avatar avatar-50' height='50' width='50' /><span class="actnbr-menu__label">Lancers Baseball Club 1982</span></a></div>																	<div class="actnbr-panel__group">
+										<div class="actnbr-message no-display" aria-live="polite"></div>
+										<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" class="no-display">
+																						<input type="email" name="email" placeholder="Vuoi ricevere aggiornamenti? Inserisci la tua e-mail" class="actnbr-email-field" aria-label="Indirizzo e-mail" />
+											<input type="hidden" name="action" value="subscribe" />
+											<input type="hidden" name="blog_id" value="30192242" />
+											<input type="hidden" name="source" value="https://lancersbaseballclub.com/Users/antonio/Downloads/Convention32018-ProgrammaOK.pdf" />
+											<input type="hidden" name="sub-type" value="actionbar-follow" />
+											<input type="hidden" id="_wpnonce" name="_wpnonce" value="43075b9df1" />											<button type="submit" class="actnbr-button">Registrami</button>
+										</form>
+										<p class="actnbr-login-nudge">
+											Hai un account WordPress.com? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Flancersbaseballclub.com">Accedi ora.</a>										</p>
+									</div>
+																	</div>
+							</div>
+						</li>
+									<li class="actnbr-ellipsis actnbr-hidden">
+					<button type="button" class="actnbr-more-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Altre opzioni">
+						<svg class="actnbr-icon actnbr-icon-more-horizontal" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path d="M11 13h2v-2h-2v2zm-6 0h2v-2H5v2zm12-2v2h2v-2h-2z"/></svg>					</button>
+					<div class="actnbr-popover actnbr-menu" role="menu" aria-label="Opzioni del sito">
+						<div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-sitename" href="https://lancersbaseballclub.com"><img loading='lazy' alt='' src='https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=50&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png' srcset='https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=50&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 1x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=75&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 1.5x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=100&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 2x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=150&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 3x, https://secure.gravatar.com/blavatar/48d9bfdea1bea08736ba4f20224b50aeb7123b483ecd23f22e8043391363400b?s=200&#038;d=https%3A%2F%2Fs-ssl.wordpress.com%2Fi%2Flogo%2Fwpcom-gray-white.png 4x' class='avatar avatar-50' height='50' width='50' /><span class="actnbr-menu__label">Lancers Baseball Club 1982</span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-reader" href="https://wordpress.com/reader/feeds/92829753"><span class="actnbr-menu__label">Visualizza sito nel Reader</span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-subs" href="https://subscribe.wordpress.com/"><span class="actnbr-menu__label">Gestisci gli abbonamenti</span></a><a role="menuitem" class="actnbr-menu__item actnbr-signup" href="https://wordpress.com/start/"><span class="actnbr-menu__label">Registrati</span></a><a role="menuitem" class="actnbr-menu__item actnbr-login" href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Flancersbaseballclub.com"><span class="actnbr-menu__label">Accedi</span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item flb-report" href="https://wordpress.com/abuse/?report_url=https://lancersbaseballclub.com" target="_blank" rel="noopener noreferrer"><span class="actnbr-menu__label">Segnala questo contenuto</span><span class="actnbr-menu__icon"><svg class="actnbr-icon actnbr-icon-external" width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="currentColor"><path d="M19.5 4.5h-7V6h4.44l-5.97 5.97 1.06 1.06L18 7.06v4.44h1.5v-7Zm-13 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3H17v3a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h3V5.5h-3Z"/></svg></span></a></div><div class="actnbr-menu__group" role="group"><a role="menuitem" class="actnbr-menu__item actnbr-fold" href=""><span class="actnbr-menu__label">Riduci la barra</span></a></div>					</div>
+				</li>
+			</ul>
+		</div>
+		<script>
+window.addEventListener( "DOMContentLoaded", function () {
+				var link = document.createElement( "link" );
+				link.href = "\/wp-content\/mu-plugins\/jetpack-plugin\/moon\/jetpack_vendor\/automattic\/jetpack-newsletter\/src\/..\/build\/action-bar.css?ver=35dd33285eb46dc308dd";
+				link.rel = "stylesheet";
+				document.head.appendChild( link );
+
+				var script = document.createElement( "script" );
+				script.src = "\/wp-content\/mu-plugins\/jetpack-plugin\/moon\/jetpack_vendor\/automattic\/jetpack-newsletter\/src\/..\/build\/action-bar.js?ver=35dd33285eb46dc308dd";
+				document.body.appendChild( script );
+			} );
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/","ext":".png","svgUrl":"https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?m=1783090810i&ver=7.2-alpha-64095"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\udec8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+</body>
+
+</html>
