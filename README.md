@@ -19,3 +19,7 @@ La prossima partita e il conto alla rovescia compaiono in homepage quando c'è u
 ## Statistiche dei giocatori
 
 `python3 tools/aggiorna_statistiche.py` legge dal sito FIBS le statistiche di carriera (battuta, lancio, difesa) di ogni giocatore che ha una scheda in `squadre-senior/serie-a2/` e riscrive `data/statistiche.js`. Le tabelle nelle schede sono disegnate da `js/main.js`.
+
+## Schede delle stagioni (Piazzamenti)
+
+`python3 tools/aggiorna_stagioni.py` legge dal sito FIBS classifica, rosa, statistiche e partite di ogni stagione dal 2016 (rose e statistiche esistono solo dal 2020) e le salva in `tools/stagioni.json`. Poi `python3 tools/build.py` genera le schede in `societa/piazzamenti/<anno>/` e i collegamenti nella pagina Piazzamenti. Senza argomenti lo script riscarica solo la stagione in corso; per una nuova stagione va aggiunta una riga a `STAGIONI` nello script.

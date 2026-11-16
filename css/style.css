@@ -417,3 +417,35 @@ a.g-row:hover{transform:translateX(3px);box-shadow:0 6px 18px rgba(13,23,48,.14)
 .content .tl-y{font-size:38px}
 .tl-tx{padding:16px 18px 18px}
 }
+
+/* piazzamenti e schede stagione */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pz{max-width:900px;margin:26px auto 0;display:grid;gap:10px}
+.pz-row{display:grid;grid-template-columns:86px 1fr auto;gap:16px;align-items:center;background:#fff;border-radius:10px;padding:12px 16px 12px 0;box-shadow:0 2px 12px rgba(13,23,48,.08);border-left:5px solid #c9cfdd;transition:transform .15s,box-shadow .15s}
+.pz-row:hover{transform:translateX(3px);box-shadow:0 6px 20px rgba(13,23,48,.13)}
+.pz-row.hl{border-left-color:var(--red);background:linear-gradient(90deg,#fff1f2,#fff 55%)}
+.pz-y{font-family:BC,sans-serif;font-style:italic;font-weight:800;font-size:32px;line-height:1;color:var(--navy);text-align:center}
+.pz-row.hl .pz-y{color:var(--red)}
+.pz-t{font-size:16px;line-height:1.45}
+.content a.pz-b:not(.btn):not([data-lb]){display:block;background:var(--navy);color:#fff;text-decoration:none;font-family:BC,sans-serif;font-weight:600;font-size:17px;letter-spacing:.05em;text-transform:uppercase;padding:8px 16px;border-radius:8px;text-align:center;white-space:nowrap;transition:background .15s}
+.content a.pz-b:not(.btn):not([data-lb]):hover{background:var(--red);color:#fff}
+.pz-b span{display:block;font-family:Inter,sans-serif;font-weight:400;font-size:11.5px;letter-spacing:0;text-transform:none;opacity:.8}
+.sea-lead{text-align:center;font-size:19px;font-weight:600;color:var(--navy);max-width:760px;margin:0 auto 18px}
+.sea-lead:first-letter{text-transform:uppercase}
+.sea-nav{margin-bottom:10px}
+.content a.chip:not(.btn):not([data-lb]){text-decoration:none;color:var(--navy);font-weight:600}
+.content h2[id]{scroll-margin-top:110px;margin-top:1.8em}
+.sea-stand{max-width:760px;margin:0 auto 22px}
+.sea-stand h3{text-align:center;margin:0 0 8px}
+.sea-stand .table-wrap{max-width:none}
+.sea-t .table-wrap{max-width:900px}
+.sea-t [data-tabp] .table-wrap{max-width:none}
+.pstats.sea-t{margin-top:0}
+.sea-t h3{margin:26px 0 0}
+.sea-cal{display:grid;gap:8px}
+.sea-no{text-align:center;max-width:680px;margin:0 auto;background:var(--bg);border-radius:10px;padding:18px 22px;color:var(--mute)}
+@media(max-width:640px){
+.pz-row{grid-template-columns:64px 1fr;padding-right:12px;gap:10px}
+.pz-y{font-size:26px}
+.pz-b{grid-column:1/-1;margin-left:12px}
+}

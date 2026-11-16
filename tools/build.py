@@ -240,6 +240,9 @@ def build_page(p):
     elif path == 'societa/':
         content = storia(content)
         cls += ' wide'
+    if path == 'societa/piazzamenti/':
+        content = piazzamenti(content, root)
+        cls += ' wide'
     if 'gallery-x' in content or path.startswith('gallery') or path == 'shop/':
         cls += ' wide'
     if path == 'squadre-senior/risultati/':
@@ -340,6 +343,181 @@ def storia(content):
         out += '<article class="tl-item reveal" id="anno-%s"><span class="tl-dot"></span><div class="tl-card">%s<div class="tl-tx">%s</div></div></article>' % (
             it['id'], ''.join(it['figs']), ''.join(it['html']))
     return out + '</div><div class="tl-end reveal">%s</div>' % ''.join(coda)
+
+
+# ---------------------------------------------------------------- stagioni (dati FIBS in tools/stagioni.json)
+_SJ = os.path.join(ROOT, 'tools', 'stagioni.json')
+SEAS = json.load(open(_SJ, encoding='utf-8')) if os.path.exists(_SJ) else {'stagioni': {}, 'colonne': {}}
+PZ = 'societa/piazzamenti/'
+PZ_TXT = {}
+
+
+def squadra(n):
+    """Nome di una squadra come lo scrive la FIBS, reso leggibile."""
+    n = re.sub(r'\*+', '', n).strip()
+    if n.upper() == n:
+        n = n.title()
+        n = re.sub(r"(?<=[a-zà-ù])'S\b", "'s", n)
+        n = re.sub(r'\b((?:[A-Za-z]\.){2,}[A-Za-z]?)', lambda m: m.group(1).upper(), n)
+        n = re.sub(r'\b(Asd|Ssd|Bc|Bsc|Cso|Rj|Bbc|Srl)\b', lambda m: m.group(1).upper(), n)
+    return re.sub(r'\s+', ' ', n)
+
+
+def noi(n):
+    return 'LANCERS' in n.upper()
+
+
+def giocatore_link(root, nome):
+    t = set(re.sub(r'[^a-zà-ù ]', '', nome.lower()).split())
+    for k, pg in PAGES.items():
+        if k.startswith('squadre-senior/serie-a2/') and k != 'squadre-senior/serie-a2/':
+            u = set(re.sub(r'[^a-zà-ù ]', '', pg['title'].lower()).split())
+            if len(u) > 1 and (u <= t or t <= u) and len(t) > 1:
+                return '<a href="%s">%s</a>' % (link(root, k), e(nome))
+    return e(nome)
+
+
+def piazzamenti(content, root):
+    """Elenco dei piazzamenti: stessi testi, una riga per anno con il collegamento alla scheda della stagione."""
+    s = BeautifulSoup(content, 'html.parser')
+    ul = s.find('ul')
+    if not ul:
+        return content
+    rows = []
+    for li in ul.find_all('li'):
+        m = re.match(r'\s*(\d{4})\s*:\s*', li.get_text())
+        if not m:
+            rows.append('<div class="pz-row"><div class="pz-t">%s</div></div>' % li.decode_contents())
+            continue
+        y = m.group(1)
+        hl = bool(li.find('strong'))
+        for a in li.find_all('a'):
+            a.unwrap()
+        inner = re.sub(r'^((?:\s*<[^>]+>)*)\s*%s\s*:\s*' % y, r'\1', li.decode_contents(), count=1)
+        PZ_TXT[y] = re.sub(r'^\s*\d{4}\s*:\s*', '', li.get_text()).strip()
+        has = y in SEAS['stagioni']
+        btn = ('<a class="pz-b" href="%s">Scheda stagione<span>rosa, classifica, statistiche</span></a>' % link(root, '%s%s/' % (PZ, y))
+               if has and SEAS['stagioni'][y].get('rosa') else
+               '<a class="pz-b" href="%s">Scheda stagione<span>classifica e risultati</span></a>' % link(root, '%s%s/' % (PZ, y))
+               if has else '')
+        rows.append('<div class="pz-row reveal%s" id="a%s"><div class="pz-y"><span class="sr">%s: </span><b aria-hidden="true">%s</b></div><div class="pz-t">%s</div>%s</div>' % (
+            ' hl' if hl else '', y, y, y, inner, btn))
+    ul.replace_with(BeautifulSoup('<div class="pz">%s</div><p class="src">Le schede delle stagioni usano i dati del sito FIBS, che pubblica le classifiche dal 2016 e rose e statistiche dal 2020. Per gli anni precedenti non ci sono dati ufficiali online.</p>' % ''.join(rows), 'html.parser'))
+    return str(s)
+
+
+def _tab(head, rows, cls=''):
+    return '<div class="table-wrap"><table><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (
+        ''.join(head), ''.join(rows))
+
+
+def build_stagione(y, prima, dopo):
+    st = SEAS['stagioni'][y]
+    path = '%s%s/' % (PZ, y)
+    root = '../' * path.count('/')
+    fatte = [g for g in st['partite'] if 'puntiCasa' in g]
+    v = sum(1 for g in fatte if (g['puntiCasa'] > g['puntiOspiti']) == noi(g['casa']))
+    pf = sum(g['puntiCasa'] if noi(g['casa']) else g['puntiOspiti'] for g in fatte)
+    ps = sum(g['puntiOspiti'] if noi(g['casa']) else g['puntiCasa'] for g in fatte)
+    pos = next((r['pos'] for c in st['classifiche'][:1] for r in c['righe'] if r['noi']), '')
+    box = ['<div><b>%s</b><span>%s</span></div>' % (a, b) for a, b in (
+        (pos + 'º' if pos else '', 'posto nel girone'), (v, 'vittorie'), (len(fatte) - v, 'sconfitte'),
+        (pf, 'punti segnati'), (ps, 'punti subiti')) if a != '']
+    out = ['<div class="season-h">%s</div>' % ''.join(box)]
+    if PZ_TXT.get(y):
+        out.append('<p class="sea-lead">%s</p>' % e(PZ_TXT[y]))
+    sez = [('classifica', 'Classifica', bool(st['classifiche'])), ('rosa', 'Rosa', bool(st.get('rosa'))),
+           ('statistiche', 'Statistiche', bool(st.get('statistiche'))), ('partite', 'Partite', bool(st['partite']))]
+    out.append('<div class="tabs sea-nav">%s</div>' % ''.join(
+        '<a class="chip" href="#%s">%s</a>' % (i, l) for i, l, ok in sez if ok))
+
+    # classifica
+    if st['classifiche']:
+        out.append('<h2 id="classifica" class="has-text-align-center">Classifica</h2>')
+        for i, c in enumerate(st['classifiche']):
+            tit = re.sub(r'\s*-\s*NAZIONALE\s*$', '', c['titolo']).strip()
+            lab = ('%s' % tit) if i == 0 else ('Fase finale' if len(c['righe']) <= 2 else tit)
+            rows = []
+            for r in c['righe']:
+                tot = r['v'] + r['p']
+                rows.append('<tr%s><td class="n">%s</td><td>%s</td><td class="n">%d</td><td class="n">%d</td><td class="n">%d</td><td class="n">%s</td></tr>' % (
+                    ' class="me"' if r['noi'] else '', e(r['pos']), e(squadra(r['nome'] or r['sigla'])), r['v'], r['p'], tot,
+                    ('%.3f' % (r['v'] / tot)).lstrip('0') if tot and r['v'] != tot else ('1.000' if tot else '–')))
+            out.append('<div class="stand sea-stand"><h3>%s</h3>%s</div>' % (e(lab), _tab(
+                ['<th class="n">#</th><th>Squadra</th><th class="n">V</th><th class="n">P</th><th class="n">G</th><th class="n">%</th>'], rows)))
+
+    # rosa
+    if st.get('rosa'):
+        rows = ['<tr><td class="n">%s</td><td>%s</td><td>%s</td><td class="n">%s</td><td class="n">%s</td></tr>' % (
+            e(g['n']), giocatore_link(root, g['nome']), e(g['ruolo']), e(g['bt']), e(g['anno'])) for g in st['rosa']]
+        out.append('<h2 id="rosa" class="has-text-align-center">Rosa %s</h2><div class="pstats sea-t">%s' % (y, _tab(
+            ['<th class="n">#</th><th>Giocatore</th><th>Ruolo</th><th class="n"><abbr title="Batte / Tira">B/T</abbr></th><th class="n">Anno di nascita</th>'], rows)))
+        if st.get('staff'):
+            rows = ['<tr><td class="n">%s</td><td>%s</td><td>%s</td></tr>' % (e(g['n']), e(g['nome']), e(g['ruolo'])) for g in st['staff']]
+            out.append('<h3 class="has-text-align-center">Staff tecnico</h3>%s' % _tab(
+                ['<th class="n">#</th><th>Nome</th><th>Ruolo</th>'], rows))
+        out.append('<p class="pstats-leg has-text-align-center">%d giocatori registrati sul sito FIBS per questa stagione.</p></div>' % len(st['rosa']))
+    else:
+        out.append('<h2 id="rosa" class="has-text-align-center">Rosa e statistiche</h2><p class="sea-no">Per il %s la FIBS non pubblica online né la rosa né le statistiche dei giocatori: sul sito federale ci sono solo classifica e risultati.</p>' % y)
+
+    # statistiche
+    if st.get('statistiche'):
+        tipi = [(k, l) for k, l in (('batting', 'Battuta'), ('pitching', 'Lancio'), ('fielding', 'Difesa')) if st['statistiche'].get(k)]
+        out.append('<h2 id="statistiche" class="has-text-align-center">Statistiche %s</h2><div class="pstats sea-t"><div class="tabs" role="tablist">%s</div>' % (
+            y, ''.join('<button class="chip%s" data-tab="%s">%s</button>' % ('' if i else ' on', k, l) for i, (k, l) in enumerate(tipi))))
+        for i, (k, l) in enumerate(tipi):
+            cols = SEAS['colonne'][k]
+            rows = ['<tr><td>%s</td>%s</tr>' % (giocatore_link(root, r['nome']), ''.join('<td class="n">%s</td>' % e(str(x)) for x in r['v']))
+                    for r in st['statistiche'][k]]
+            out.append('<div data-tabp="%s"%s>%s<p class="pstats-leg">%s</p></div>' % (k, ' hidden' if i else '', _tab(
+                ['<th>Giocatore</th>'] + ['<th class="n"><abbr title="%s">%s</abbr></th>' % (e(d), e(c)) for c, d in cols], rows),
+                ' · '.join('<b>%s</b> %s' % (e(c), e(d)) for c, d in cols)))
+        out.append('</div>')
+
+    # partite
+    if st['partite']:
+        rows = []
+        for g in st['partite']:
+            d = g['data'].split('-')
+            casa = noi(g['casa'])
+            avv = squadra(g['ospiti'] if casa else g['casa'])
+            t = '<div class="t">%s %s<small>%s%s</small></div>' % ('vs' if casa else '@', e(avv), 'In casa' if casa else 'In trasferta',
+                                                                 (' · ' + e(g['campo'])) if g.get('campo') else '')
+            dd = '<div class="d">%d %s<br>%s</div>' % (int(d[2]), MESI[int(d[1]) - 1][:3], e(g.get('ora') or ''))
+            if 'puntiCasa' in g:
+                a, b = (g['puntiCasa'], g['puntiOspiti']) if casa else (g['puntiOspiti'], g['puntiCasa'])
+                w = a > b
+                sc = '<div class="s">%d–%d<i>%s</i></div>' % (a, b, 'V' if w else 'P')
+                if g.get('boxscore'):
+                    rows.append('<a class="g-row %s" href="https://www.fibs.it/it/events/%s/schedule-and-results/box-score/%s" target="_blank" rel="noopener" title="Tabellino sul sito FIBS">%s%s%s</a>' % (
+                        'w' if w else 'l', st['slug'], g['boxscore'], dd, t, sc))
+                else:
+                    rows.append('<div class="g-row %s">%s%s%s</div>' % ('w' if w else 'l', dd, t, sc))
+            else:
+                rows.append('<div class="g-row">%s%s<div class="s"><i>%s</i></div></div>' % (dd, t, e(g.get('nota') or 'non disputata')))
+        out.append('<h2 id="partite" class="has-text-align-center">Partite</h2><div class="cal sea-cal">%s</div>' % ''.join(rows))
+
+    agg = st.get('aggiornato', '').split('-')
+    out.append('<p class="src">%sFonte: <a href="%s" target="_blank" rel="noopener">sito FIBS, %s %s</a></p>' % (
+        'Dati letti il %d/%d/%s. ' % (int(agg[2]), int(agg[1]), agg[0]) if len(agg) == 3 else '', e(st['fibs']), e(st['campionato']), y))
+    nav = '<nav class="pn">%s%s</nav>' % (
+        '<a class="prev" href="%s"><span>← Stagione precedente</span>%s</a>' % (link(root, '%s%s/' % (PZ, prima)), prima) if prima else '<span></span>',
+        '<a class="next" href="%s"><span>Stagione successiva →</span>%s</a>' % (link(root, '%s%s/' % (PZ, dopo)), dopo) if dopo else '')
+    news = [p for p in POSTS if p['date'][:4] == y][:6]
+    extra = ''
+    if news:
+        extra = '<section class="alt"><div class="wrap"><div class="sh"><h2>Le notizie del %s</h2></div><div class="news-grid">%s</div></div></section>' % (
+            y, ''.join(post_card(root, p) for p in news))
+    title = 'Stagione %s' % y
+    body = band(root, path, title, st['campionato']) + '<section class="body"><div class="wrap"><div class="content reveal">%s</div>%s<p class="back"><a class="btn n" href="%s">Tutti i piazzamenti</a></p></div></section>%s%s' % (
+        ''.join(out), nav, link(root, PZ), extra, cta(root))
+    shell(path, title + ' – ' + st['campionato'], body, desc='Lancers Baseball Club, stagione %s in %s: classifica, rosa, statistiche e risultati.' % (y, st['campionato']), cls='page wide')
+
+
+def build_stagioni():
+    anni = sorted(SEAS['stagioni'])
+    for i, y in enumerate(anni):
+        build_stagione(y, anni[i - 1] if i else None, anni[i + 1] if i + 1 < len(anni) else None)
 
 
 def cta(root):
@@ -462,6 +640,7 @@ for p in D['pages']:
     build_page(p)
 for i, p in enumerate(POSTS):
     build_post(i, p)
+build_stagioni()
 build_news()
 build_home()
 print('ok', len(D['pages']), 'pagine,', len(POSTS), 'notizie')
