@@ -1,8 +1,9 @@
-/* DATI DELLA STAGIONE – questo è l'unico file da aggiornare per calendario, risultati, classifica e social.
-   - social: incolla qui i link di Facebook e Instagram (lascia "" per nasconderli).
-   - partite: per una partita da giocare lascia fuori puntiCasa/puntiOspiti; l'ora nel formato "15:30".
-     La prossima partita e il conto alla rovescia compaiono da soli in homepage.
-   - classifica: v = vittorie, p = sconfitte; l'ordine e la percentuale si calcolano da soli. */
+/* DATI DELLA STAGIONE
+   Calendario, risultati e classifica sono aggiornati IN AUTOMATICO dal sito FIBS (tools/aggiorna_fibs.py):
+   le modifiche fatte a mano a "partite" e "classifica" vengono sovrascritte.
+   Si modificano a mano solo:
+   - social: incolla qui i link di Facebook e Instagram (lascia "" per nasconderli);
+   - squadre: il nome breve mostrato sul sito per ogni sigla. */
 window.LANCERS = {
   "social": {
     "facebook": "",
@@ -18,10 +19,10 @@ window.LANCERS = {
     "boxscore": "https://www.fibs.it/it/events/2026-serie-b-baseball-2026/schedule-and-results/box-score/"
   },
   "squadre": {
-    "LAN": "Lancers",
     "LON": "Longbridge Bologna",
     "PAU": "Padule Sesto F.no",
     "PCR": "Cali Roma",
+    "LAN": "Lancers",
     "HLP": "Etruscan Fighters",
     "COL": "Colorno",
     "LIV": "Livorno 1948",
@@ -369,14 +370,6 @@ window.LANCERS = {
       "ospiti": "PAU",
       "campo": "Lastra a Signa",
       "nota": "rinviata"
-    },
-    {
-      "data": "2026-08-02",
-      "ora": "11:00",
-      "casa": "LAN",
-      "ospiti": "PAU",
-      "campo": "Lastra a Signa",
-      "nota": "annullata"
     }
   ]
 };

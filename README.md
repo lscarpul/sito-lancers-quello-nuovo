@@ -13,5 +13,5 @@ Per cambiare menu, footer o layout: modificare `tools/build.py` e lanciare `pyth
 
 ## Aggiornare calendario, risultati, classifica e social
 
-Tutto sta in `data/stagione.js`: basta modificare quel file (anche direttamente da GitHub) e il sito si aggiorna da solo.
+Calendario, risultati e classifica si aggiornano da soli dal sito FIBS (`tools/aggiorna_fibs.py`, lanciato ogni giorno da GitHub Actions; a mano dalla scheda Actions, "Aggiorna dati FIBS", "Run workflow"). In `data/stagione.js` si modificano a mano solo i link social e i nomi brevi delle squadre.
 La prossima partita e il conto alla rovescia compaiono in homepage quando c'è una partita futura senza punteggio.

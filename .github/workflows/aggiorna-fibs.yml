@@ -1,0 +1,49 @@
+name: Aggiorna dati FIBS
+
+# Legge calendario, risultati e classifica dal sito FIBS e aggiorna data/stagione.js.
+on:
+  schedule:
+    - cron: '15 5 * * *'            # ogni giorno alle 6:15 circa (ora italiana)
+    - cron: '45 9-22/2 * * 6,0'     # sabato e domenica ogni due ore, per i risultati di giornata
+  workflow_dispatch:                # avvio a mano dalla scheda Actions
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: aggiorna-fibs
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install --quiet beautifulsoup4
+      - name: Leggi il sito FIBS
+        run: python3 tools/aggiorna_fibs.py
+      - name: Salva i dati se sono cambiati
+        id: salva
+        run: |
+          if git diff --quiet -- data/stagione.js; then
+            echo "Nessuna novità."
+            echo "cambiato=no" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/stagione.js
+            git commit -m "Aggiorna calendario, risultati e classifica dal sito FIBS"
+            git push
+            echo "cambiato=si" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Ripubblica il sito
+        if: steps.salva.outputs.cambiato == 'si'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
