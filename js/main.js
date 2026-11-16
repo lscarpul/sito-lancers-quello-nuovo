@@ -266,4 +266,34 @@
       }).join('');
     });
   }
+  /* ---- statistiche dei giocatori (dati in data/statistiche.js, presi dal sito FIBS) ---- */
+  var ST = window.LANCERS_STATS;
+  $$('[data-player-stats]').forEach(function (el) {
+    var g = ST && ST.giocatori[el.dataset.playerStats];
+    var TIPI = [['batting', 'Battuta'], ['pitching', 'Lancio'], ['fielding', 'Difesa']].filter(function (t) { return g && g[t[0]] && g[t[0]].length; });
+    if (!TIPI.length) return;
+    var e2 = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var d = (ST.aggiornato || '').split('-');
+    var h = '<h2>Statistiche</h2><p class="pstats-sub">Tutte le stagioni registrate sul sito della FIBS, anno per anno.</p>';
+    if (TIPI.length > 1) h += '<div class="tabs" role="tablist">' + TIPI.map(function (t, i) { return '<button class="chip' + (i ? '' : ' on') + '" data-st="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div>';
+    TIPI.forEach(function (t, i) {
+      var cols = ST.colonne[t[0]];
+      h += '<div data-stp="' + t[0] + '"' + (i ? ' hidden' : '') + '>' + (TIPI.length > 1 ? '' : '<h3 class="pstats-one">' + t[1] + '</h3>') +
+        '<div class="table-wrap"><table><thead><tr><th>Anno</th><th>Campionato</th><th>Squadra</th>' +
+        cols.map(function (c) { return '<th class="n"><abbr title="' + e2(c[1]) + '">' + e2(c[0]) + '</abbr></th>'; }).join('') + '</tr></thead><tbody>';
+      g[t[0]].forEach(function (r) {
+        h += '<tr' + (r.tot ? ' class="tot"' : '') + '><td>' + e2(r.anno) + '</td><td>' + e2(r.camp) + '</td><td>' + e2(r.sq) + '</td>' +
+          r.v.map(function (v, k) { return '<td class="n">' + e2(cols[k][0] === 'WHIP' && typeof v === 'number' ? v.toFixed(2) : v) + '</td>'; }).join('') + '</tr>';
+      });
+      h += '</tbody></table></div><p class="pstats-leg">' + cols.map(function (c) { return '<b>' + e2(c[0]) + '</b> ' + e2(c[1]); }).join(' · ') + '</p></div>';
+    });
+    h += '<p class="psrc">' + (d.length === 3 ? 'Dati aggiornati al ' + (+d[2]) + '/' + (+d[1]) + '/' + d[0] + '. ' : '') + 'Fonte: <a href="' + e2(g.fibs) + '" target="_blank" rel="noopener">scheda FIBS del giocatore</a></p>';
+    el.innerHTML = h;
+    $$('[data-st]', el).forEach(function (b) {
+      b.addEventListener('click', function () {
+        $$('[data-st]', el).forEach(function (x) { x.classList.toggle('on', x === b); });
+        $$('[data-stp]', el).forEach(function (x) { x.hidden = x.dataset.stp !== b.dataset.st; });
+      });
+    });
+  });
 })();

@@ -234,7 +234,8 @@ def build_page(p):
                                        'aria-label="Cerca un giocatore" data-filter-table></div>' + content
         cls += ' wide'
     elif path.startswith('squadre-senior/serie-a2/'):
-        content = player(content)
+        content = player(content) + ('<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>'
+                                     % (path[len('squadre-senior/serie-a2/'):].strip('/'), root))
         cls += ' wide'
     if 'gallery-x' in content or path.startswith('gallery') or path == 'shop/':
         cls += ' wide'

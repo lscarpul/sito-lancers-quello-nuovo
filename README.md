@@ -15,3 +15,7 @@ Per cambiare menu, footer o layout: modificare `tools/build.py` e lanciare `pyth
 
 Calendario, risultati e classifica si aggiornano da soli dal sito FIBS (`tools/aggiorna_fibs.py`, lanciato da un'attività programmata di Claude due volte a settimana; GitHub Actions non si può usare perché la FIBS ne blocca i server. In `data/stagione.js` si modificano a mano solo i link social e i nomi brevi delle squadre.
 La prossima partita e il conto alla rovescia compaiono in homepage quando c'è una partita futura senza punteggio.
+
+## Statistiche dei giocatori
+
+`python3 tools/aggiorna_statistiche.py` legge dal sito FIBS le statistiche di carriera (battuta, lancio, difesa) di ogni giocatore che ha una scheda in `squadre-senior/serie-a2/` e riscrive `data/statistiche.js`. Le tabelle nelle schede sono disegnate da `js/main.js`.

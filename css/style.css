@@ -350,3 +350,20 @@ a.g-row:hover{transform:translateX(3px);box-shadow:0 6px 18px rgba(13,23,48,.14)
 .content a.g-row:not(.btn):not([data-lb]){color:var(--ink);text-decoration:none;font-weight:400}
 .content a.g-row .t{font-weight:600}
 @media(max-width:640px){.stand table td,.stand table th{padding:8px 6px;font-size:14px}}
+
+/* statistiche giocatori */
+.pstats{margin-top:38px;clear:both}
+.pstats h2{text-align:center;margin-bottom:4px}
+.pstats-sub{text-align:center;color:var(--mute);margin:0 0 16px}
+.pstats-one{text-align:center}
+.pstats .table-wrap{max-width:none;margin-top:14px}
+.pstats table{font-size:14.5px}
+.pstats td,.pstats th{padding:9px 11px;white-space:nowrap}
+.pstats th{background:var(--navy);color:#fff;font-family:BC,sans-serif;font-size:16px;letter-spacing:.06em;font-weight:600}
+.pstats abbr{text-decoration:none;cursor:help}
+.pstats td.n,.pstats th.n{text-align:center}
+.pstats table:not(.has-head) td:first-child{color:var(--navy);font-weight:700;width:auto}
+.pstats tr.tot td{background:#fff1f2;font-weight:700;color:var(--navy);border-top:2px solid var(--navy)}
+.pstats-leg{font-size:13px;color:var(--mute);line-height:1.7;margin:10px 0 0}
+.pstats-leg b{color:var(--navy)}
+.psrc{text-align:center;font-size:14px;color:var(--mute);margin-top:14px}
