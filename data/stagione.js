@@ -13,7 +13,7 @@ window.LANCERS = {
   "stagione": {
     "nome": "Serie B 2026",
     "girone": "Girone C",
-    "aggiornato": "2026-11-15",
+    "aggiornato": "2026-11-16",
     "fonte": "https://www.fibs.it/it/events/2026-serie-b-baseball-2026/standings",
     "calendarioFibs": "https://www.fibs.it/it/events/2026-serie-b-baseball-2026/calendars?team=39604",
     "boxscore": "https://www.fibs.it/it/events/2026-serie-b-baseball-2026/schedule-and-results/box-score/"
@@ -370,6 +370,14 @@ window.LANCERS = {
       "ospiti": "PAU",
       "campo": "Lastra a Signa",
       "nota": "rinviata"
+    },
+    {
+      "data": "2026-08-02",
+      "ora": "11:00",
+      "casa": "LAN",
+      "ospiti": "PAU",
+      "campo": "Lastra a Signa",
+      "nota": "annullata"
     }
   ]
 };

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Aggiorna data/stagione.js leggendo calendario, risultati e classifica dal sito FIBS.
 
-Viene lanciato in automatico da GitHub (.github/workflows/aggiorna-fibs.yml).
-A mano: pip install beautifulsoup4 && python3 tools/aggiorna_fibs.py
+Uso: pip install beautifulsoup4 && python3 tools/aggiorna_fibs.py
+Nota: il sito FIBS rifiuta le richieste che arrivano dai server di GitHub Actions (errore 403),
+quindi lo script va lanciato da un computer o da un'attività programmata esterna a GitHub.
 
 Cerca da solo il campionato dell'anno in corso (poi quello precedente) in cui gioca la squadra.
 Se il sito FIBS non risponde o cambia struttura, il file dei dati NON viene toccato.
