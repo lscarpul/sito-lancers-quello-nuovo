@@ -237,6 +237,9 @@ def build_page(p):
         content = player(content) + ('<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>'
                                      % (path[len('squadre-senior/serie-a2/'):].strip('/'), root))
         cls += ' wide'
+    elif path == 'societa/':
+        content = storia(content)
+        cls += ' wide'
     if 'gallery-x' in content or path.startswith('gallery') or path == 'shop/':
         cls += ' wide'
     if path == 'squadre-senior/risultati/':
@@ -288,6 +291,55 @@ def player(content):
         return content
     f, t = str(fig.extract()), str(tab.extract())
     return '<div class="pl-top"><div class="pl-photo">%s</div><div class="pl-info">%s</div></div>%s' % (f, t, str(s))
+
+
+def storia(content):
+    """Pagina Il Club: la storia diventa una linea del tempo. I testi restano identici, cambia solo la struttura."""
+    from PIL import Image
+    from bs4 import NavigableString
+    s = BeautifulSoup(content, 'html.parser')
+    intro, items, coda, pend = [], [], [], []
+    for el in [c for c in s.contents if getattr(c, 'name', None)]:
+        testo = el.get_text().strip()
+        m = re.match(r'(\d{4}(?:-\d{4})?)\s*//', testo)
+        if el.name != 'p':
+            intro.append(str(el))
+            continue
+        figs = []
+        for a in el.select('a[data-lb]'):
+            img = a.find('img')
+            img['class'] = []
+            try:
+                w, h = Image.open(os.path.join(ROOT, 'media', a['href'].rsplit('media/', 1)[-1])).size
+            except Exception:
+                w, h = 4, 3
+            figs.append('<figure class="tl-ph%s">%s</figure>' % (' pt' if h > w else '', str(a.extract())))
+        if not testo:                       # paragrafo con la sola foto: va con l'anno che segue
+            pend += figs
+            continue
+        if m:
+            st = el.find('strong')
+            if '//' in st.get_text():
+                st['class'] = ['tl-y']
+            else:                           # "<strong>2019</strong> // testo": la barra entra nell'etichetta dell'anno
+                nxt = st.next_sibling
+                i = str(nxt).index('//') + 2
+                span = s.new_tag('span')
+                span['class'] = ['tl-y']
+                st.wrap(span)
+                span.append(NavigableString(str(nxt)[:i]))
+                nxt.replace_with(NavigableString(str(nxt)[i:]))
+            items.append({'id': m.group(1), 'figs': pend + figs, 'html': [str(el)]})
+            pend = []
+        elif items and el.find('strong') is None:
+            items[-1]['html'].append(str(el))   # es. il link al video della festa
+        else:
+            coda.append(str(el))
+    out = ''.join(intro) + '<div class="tl" data-timeline><div class="tl-line"><i></i></div>'
+    for it in items:
+        out += '<article class="tl-item reveal" id="anno-%s"><span class="tl-dot"></span><div class="tl-card">%s<div class="tl-tx">%s</div></div></article>' % (
+            it['id'], ''.join(it['figs']), ''.join(it['html']))
+    return out + '</div><div class="tl-end reveal">%s</div>' % ''.join(coda)
 
 
 def cta(root):

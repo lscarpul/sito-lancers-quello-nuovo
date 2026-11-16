@@ -296,4 +296,35 @@
       });
     });
   });
+  /* ---- linea del tempo (pagina Il Club): la riga rossa si riempie scorrendo ---- */
+  $$('[data-timeline]').forEach(function (tl) {
+    var bar = $('.tl-line i', tl), tick = false;
+    function lay() {
+      /* su schermi larghi ogni scheda sale accanto alla precedente, senza sovrapporsi a quella sopra dello stesso lato */
+      var it = $$('.tl-item', tl), wide = window.innerWidth > 820, side = [0, 0], prevTop = 0, flow = 0;
+      it.forEach(function (x) { x.style.marginTop = ''; });
+      tl.style.paddingBottom = '';
+      if (wide) {
+        it.forEach(function (x, i) {
+          var t = i ? Math.max(prevTop + 110, side[i % 2]) : 0;
+          if (i) x.style.marginTop = (t - flow) + 'px';
+          prevTop = t; flow = t + x.offsetHeight; side[i % 2] = flow;
+        });
+        tl.style.paddingBottom = (30 + Math.max(0, Math.max(side[0], side[1]) - flow)) + 'px';
+      }
+      upd();
+    }
+    function upd() {
+      tick = false;
+      var r = tl.getBoundingClientRect(), mid = window.innerHeight * 0.6;
+      var f = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+      bar.style.height = (f * 100) + '%';
+      $$('.tl-item', tl).forEach(function (it) { it.classList.toggle('past', it.getBoundingClientRect().top + 30 < mid); });
+    }
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true });
+    window.addEventListener('resize', lay);
+    window.addEventListener('load', lay);
+    $$('img', tl).forEach(function (im) { im.addEventListener('load', lay); });
+    lay();
+  });
 })();
