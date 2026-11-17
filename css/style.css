@@ -454,3 +454,14 @@ a.g-row:hover{transform:translateX(3px);box-shadow:0 6px 18px rgba(13,23,48,.14)
 .pl-sea{text-align:center;margin:26px 0 0;font-size:16px}
 .pl-sea b{display:block;font-family:BC,sans-serif;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:2px}
 .gp td:first-child{font-weight:600}
+
+/* stagioni giovanili */
+.gv-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;max-width:1000px;margin:0 auto 26px}
+.content a.gv-c:not(.btn):not([data-lb]){display:block;background:#fff;border-radius:10px;padding:16px 18px;box-shadow:0 2px 12px rgba(13,23,48,.08);border-top:4px solid var(--navy);color:var(--ink);text-decoration:none;font-weight:400;transition:transform .15s,box-shadow .15s,border-color .15s}
+.content a.gv-c:not(.btn):not([data-lb]):hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(13,23,48,.15);border-top-color:var(--red)}
+.content a.gv-c.hl:not(.btn):not([data-lb]){border-top-color:var(--red)}
+.gv-c b{display:block;font-family:BC,sans-serif;font-style:italic;font-weight:800;font-size:38px;line-height:1;color:var(--navy)}
+.gv-c.hl b{color:var(--red)}
+.gv-c span{display:block;font-weight:600;color:var(--navy);margin-top:6px}
+.gv-c em{display:block;font-style:normal;font-size:13.5px;color:var(--mute);margin-top:2px}
+.gv-box{margin-top:40px;padding-top:10px;border-top:1px solid var(--line)}

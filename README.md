@@ -27,3 +27,7 @@ La prossima partita e il conto alla rovescia compaiono in homepage quando c'è u
 ## Giocatori passati
 
 `tools/aggiorna_statistiche.py` scarica le statistiche di carriera di tutti i giocatori comparsi nelle stagioni di `tools/stagioni.json` (non solo di quelli con una scheda scritta dalla società) e salva l'elenco in `tools/giocatori.json`. `tools/build.py` genera una scheda in `squadre-senior/giocatori/<nome>/` per chi non ha una pagina propria e l'elenco `squadre-senior/giocatori-passati/` con chi non è nella rosa dell'ultima stagione. Va lanciato dopo `aggiorna_stagioni.py`.
+
+## Stagioni giovanili
+
+`python3 tools/aggiorna_giovanili.py` legge dal sito FIBS classifica, partite e (quando c'è) rosa delle squadre Under 12, Under 15 e Under 18 e le salva in `tools/giovanili.json`; `tools/build.py` genera le schede in `giovanili/stagioni/<categoria>-<anno>/`. Senza argomenti aggiorna solo l'anno in corso e cerca da solo se i Lancers sono iscritti; `--tutte` riscarica tutto. Per i ragazzi non vengono mostrati l'anno di nascita né collegamenti a schede personali.

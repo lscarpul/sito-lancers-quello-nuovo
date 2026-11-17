@@ -21,7 +21,7 @@ NAV = [
                                     ('Calendario e classifica', 'squadre-senior/risultati/'),
                                     ('Amatori', 'squadre-senior/amatoriale/'),
                                     ('Torneo Lancers BAZ 40', 'squadre-senior/amatoriale/torneo-lancers-baz-40/')]),
-    ('Giovanili', 'giovanili/', [('Settore giovanile', 'giovanili/'), ('Under 15', 'giovanili/under-15/'),
+    ('Giovanili', 'giovanili/', [('Settore giovanile', 'giovanili/'), ('Stagioni e risultati', 'giovanili/stagioni/'), ('Under 15', 'giovanili/under-15/'),
                                  ('Calendario U15', 'giovanili/calendario-u15-2020/'),
                                  ('Under 12', 'giovanili/under-12/'),
                                  ('Calendario U12', 'giovanili/calendario-u12-2020/')]),
@@ -242,6 +242,10 @@ def build_page(p):
         cls += ' wide'
     elif path == 'societa/':
         content = storia(content)
+        cls += ' wide'
+    if path == 'giovanili/' and GIOV['stagioni']:
+        content += '<div class="gv-box"><h2 class="has-text-align-center">Le stagioni anno per anno</h2>%s<p class="has-text-align-center"><a class="btn r" href="%s">Tutte le stagioni giovanili</a></p></div>' % (
+            giov_elenco(root), link(root, 'giovanili/stagioni/'))
         cls += ' wide'
     if path == 'societa/piazzamenti/':
         content = piazzamenti(content, root)
@@ -488,10 +492,8 @@ def _tab(head, rows, cls=''):
         ''.join(head), ''.join(rows))
 
 
-def build_stagione(y, prima, dopo):
-    st = SEAS['stagioni'][y]
-    path = '%s%s/' % (PZ, y)
-    root = '../' * path.count('/')
+def sea_out(st, root, y, lead, cols_all, ragazzi=False, rosa_club=''):
+    """Contenuto di una scheda stagione: riepilogo, classifica, rosa, statistiche, partite."""
     fatte = [g for g in st['partite'] if 'puntiCasa' in g]
     v = sum(1 for g in fatte if (g['puntiCasa'] > g['puntiOspiti']) == noi(g['casa']))
     pf = sum(g['puntiCasa'] if noi(g['casa']) else g['puntiOspiti'] for g in fatte)
@@ -501,9 +503,9 @@ def build_stagione(y, prima, dopo):
         (pos + 'º' if pos else '', 'posto nel girone'), (v, 'vittorie'), (len(fatte) - v, 'sconfitte'),
         (pf, 'punti segnati'), (ps, 'punti subiti')) if a != '']
     out = ['<div class="season-h">%s</div>' % ''.join(box)]
-    if PZ_TXT.get(y):
-        out.append('<p class="sea-lead">%s</p>' % e(PZ_TXT[y]))
-    sez = [('classifica', 'Classifica', bool(st['classifiche'])), ('rosa', 'Rosa', bool(st.get('rosa'))),
+    if lead:
+        out.append('<p class="sea-lead">%s</p>' % e(lead))
+    sez = [('classifica', 'Classifica', bool(st['classifiche'])), ('rosa', 'Rosa', bool(st.get('rosa')) or bool(rosa_club)),
            ('statistiche', 'Statistiche', bool(st.get('statistiche'))), ('partite', 'Partite', bool(st['partite']))]
     out.append('<div class="tabs sea-nav">%s</div>' % ''.join(
         '<a class="chip" href="#%s">%s</a>' % (i, l) for i, l, ok in sez if ok))
@@ -513,7 +515,13 @@ def build_stagione(y, prima, dopo):
         out.append('<h2 id="classifica" class="has-text-align-center">Classifica</h2>')
         for i, c in enumerate(st['classifiche']):
             tit = re.sub(r'\s*-\s*NAZIONALE\s*$', '', c['titolo']).strip()
-            lab = ('%s' % tit) if i == 0 else ('Fase finale' if len(c['righe']) <= 2 else tit)
+            m = re.match(r'(.*?)\s*-\s*TOSCANA$', tit)
+            if m:
+                tit = ('%s · Toscana' % m.group(1).replace('Toscana - ', '')).strip(' ·') if m.group(1) else 'Toscana'
+                tit = re.sub(r'^([A-Z]) · ', r'Girone \1 · ', tit)
+            elif ragazzi and re.match(r'Girone \d+$', tit):
+                tit = 'Finali nazionali, %s' % tit.lower()
+            lab = tit if (i == 0 or ragazzi) else ('Fase finale' if len(c['righe']) <= 2 else tit)
             rows = []
             for r in c['righe']:
                 tot = r['v'] + r['p']
@@ -524,7 +532,17 @@ def build_stagione(y, prima, dopo):
                 ['<th class="n">#</th><th>Squadra</th><th class="n">V</th><th class="n">P</th><th class="n">G</th><th class="n">%</th>'], rows)))
 
     # rosa
-    if st.get('rosa'):
+    if ragazzi and st.get('rosa'):
+        rows = ['<tr><td class="n">%s</td><td>%s</td><td>%s</td><td class="n">%s</td></tr>' % (
+            e(g['n']), e(squadra(g['nome'])), e(g['ruolo']), e(g['bt'])) for g in st['rosa']]
+        out.append('<h2 id="rosa" class="has-text-align-center">Rosa %s</h2><div class="pstats sea-t">%s' % (y, _tab(
+            ['<th class="n">#</th><th>Giocatore</th><th>Ruolo</th><th class="n"><abbr title="Batte / Tira">B/T</abbr></th>'], rows)))
+        if st.get('staff'):
+            rows = ['<tr><td class="n">%s</td><td>%s</td><td>%s</td></tr>' % (e(g['n']), e(squadra(g['nome'])), e(g['ruolo'])) for g in st['staff']]
+            out.append('<h3 class="has-text-align-center">Staff tecnico</h3>%s' % _tab(['<th class="n">#</th><th>Nome</th><th>Ruolo</th>'], rows))
+        out.append('<p class="pstats-leg has-text-align-center">%d giocatori registrati sul sito FIBS.%s</p></div>' % (
+            len(st['rosa']), (' ' + rosa_club) if rosa_club else ''))
+    elif st.get('rosa'):
         rows = ['<tr><td class="n">%s</td><td>%s</td><td>%s</td><td class="n">%s</td><td class="n">%s</td></tr>' % (
             e(g['n']), giocatore_link(root, g['nome']), e(g['ruolo']), e(g['bt']), e(g['anno'])) for g in st['rosa']]
         out.append('<h2 id="rosa" class="has-text-align-center">Rosa %s</h2><div class="pstats sea-t">%s' % (y, _tab(
@@ -533,7 +551,12 @@ def build_stagione(y, prima, dopo):
             rows = ['<tr><td class="n">%s</td><td>%s</td><td>%s</td></tr>' % (e(g['n']), e(g['nome']), e(g['ruolo'])) for g in st['staff']]
             out.append('<h3 class="has-text-align-center">Staff tecnico</h3>%s' % _tab(
                 ['<th class="n">#</th><th>Nome</th><th>Ruolo</th>'], rows))
-        out.append('<p class="pstats-leg has-text-align-center">%d giocatori registrati sul sito FIBS per questa stagione.</p></div>' % len(st['rosa']))
+        out.append('<p class="pstats-leg has-text-align-center">%d giocatori registrati sul sito FIBS per questa stagione.%s</p></div>' % (
+            len(st['rosa']), (' ' + rosa_club) if rosa_club else ''))
+    elif ragazzi and rosa_club:
+        out.append('<h2 id="rosa" class="has-text-align-center">Rosa %s</h2><p class="sea-no">La FIBS non pubblica la rosa di questa squadra. %s</p>' % (y, rosa_club))
+    elif ragazzi:
+        out.append('<h2 id="rosa" class="has-text-align-center">Rosa e statistiche</h2><p class="sea-no">Per i campionati regionali la FIBS non pubblica online né la rosa né le statistiche dei giocatori: ci sono solo classifica e risultati.</p>')
     else:
         out.append('<h2 id="rosa" class="has-text-align-center">Rosa e statistiche</h2><p class="sea-no">Per il %s la FIBS non pubblica online né la rosa né le statistiche dei giocatori: sul sito federale ci sono solo classifica e risultati.</p>' % y)
 
@@ -543,8 +566,8 @@ def build_stagione(y, prima, dopo):
         out.append('<h2 id="statistiche" class="has-text-align-center">Statistiche %s</h2><div class="pstats sea-t"><div class="tabs" role="tablist">%s</div>' % (
             y, ''.join('<button class="chip%s" data-tab="%s">%s</button>' % ('' if i else ' on', k, l) for i, (k, l) in enumerate(tipi))))
         for i, (k, l) in enumerate(tipi):
-            cols = SEAS['colonne'][k]
-            rows = ['<tr><td>%s</td>%s</tr>' % (giocatore_link(root, r['nome']), ''.join('<td class="n">%s</td>' % e(str(x)) for x in r['v']))
+            cols = cols_all[k]
+            rows = ['<tr><td>%s</td>%s</tr>' % (e(squadra(r['nome'])) if ragazzi else giocatore_link(root, r['nome']), ''.join('<td class="n">%s</td>' % e(str(x)) for x in r['v']))
                     for r in st['statistiche'][k]]
             out.append('<div data-tabp="%s"%s>%s<p class="pstats-leg">%s</p></div>' % (k, ' hidden' if i else '', _tab(
                 ['<th>Giocatore</th>'] + ['<th class="n"><abbr title="%s">%s</abbr></th>' % (e(d), e(c)) for c, d in cols], rows),
@@ -573,7 +596,14 @@ def build_stagione(y, prima, dopo):
             else:
                 rows.append('<div class="g-row">%s%s<div class="s"><i>%s</i></div></div>' % (dd, t, e(g.get('nota') or 'non disputata')))
         out.append('<h2 id="partite" class="has-text-align-center">Partite</h2><div class="cal sea-cal">%s</div>' % ''.join(rows))
+    return out
 
+
+def build_stagione(y, prima, dopo):
+    st = SEAS['stagioni'][y]
+    path = '%s%s/' % (PZ, y)
+    root = '../' * path.count('/')
+    out = sea_out(st, root, y, PZ_TXT.get(y), SEAS['colonne'])
     agg = st.get('aggiornato', '').split('-')
     out.append('<p class="src">%sFonte: <a href="%s" target="_blank" rel="noopener">sito FIBS, %s %s</a></p>' % (
         'Dati letti il %d/%d/%s. ' % (int(agg[2]), int(agg[1]), agg[0]) if len(agg) == 3 else '', e(st['fibs']), e(st['campionato']), y))
@@ -589,6 +619,85 @@ def build_stagione(y, prima, dopo):
     body = band(root, path, title, st['campionato']) + '<section class="body"><div class="wrap"><div class="content reveal">%s</div>%s<p class="back"><a class="btn n" href="%s">Tutti i piazzamenti</a></p></div></section>%s%s' % (
         ''.join(out), nav, link(root, PZ), extra, cta(root))
     shell(path, title + ' – ' + st['campionato'], body, desc='Lancers Baseball Club, stagione %s in %s: classifica, rosa, statistiche e risultati.' % (y, st['campionato']), cls='page wide')
+
+
+_GV = os.path.join(ROOT, 'tools', 'giovanili.json')
+GIOV = json.load(open(_GV, encoding='utf-8')) if os.path.exists(_GV) else {'stagioni': {}, 'colonne': {}}
+GV = 'giovanili/stagioni/'
+
+
+def rosa_club(root, cat, y):
+    """Collegamento al roster pubblicato dalla società (pagine giovanili/under-12/ e under-15/), se è di quell'anno."""
+    pth = {'u12': 'giovanili/under-12/', 'u15': 'giovanili/under-15/'}.get(cat)
+    pg = PAGES.get(pth)
+    if pg and re.search(r'\b%s\b' % y, BeautifulSoup(pg['html'], 'html.parser').get_text()):
+        return 'La società ha pubblicato la <a href="%s">foto del roster %s %s</a>.' % (link(root, pth), CAT_NOMI[cat], y)
+    return ''
+
+
+CAT_NOMI = {'u12': 'Under 12', 'u15': 'Under 15', 'u18': 'Under 18'}
+
+
+def build_giovanile(key, st, prima, dopo):
+    path = '%s%s/' % (GV, key)
+    root = '../' * path.count('/')
+    y = str(st['anno'])
+    if len(st.get('rosa', [])) < 9:      # rosa parziale sul sito FIBS (pochi nomi): meglio non mostrarla
+        st = dict(st, rosa=[], staff=[])
+    out = sea_out(st, root, y, '', GIOV['colonne'], ragazzi=True, rosa_club=rosa_club(root, st['categoria'], y))
+    agg = st.get('aggiornato', '').split('-')
+    out.append('<p class="src">%sFonte: <a href="%s" target="_blank" rel="noopener">sito FIBS, %s %s</a></p>' % (
+        'Dati letti il %d/%d/%s. ' % (int(agg[2]), int(agg[1]), agg[0]) if len(agg) == 3 else '', e(st['fibs']), e(st['nome']), y))
+    nm = lambda k: '%s %s' % (CAT_NOMI[GIOV['stagioni'][k]['categoria']], GIOV['stagioni'][k]['anno'])
+    nav = '<nav class="pn">%s%s</nav>' % (
+        '<a class="prev" href="%s"><span>← Stagione precedente</span>%s</a>' % (link(root, '%s%s/' % (GV, prima)), nm(prima)) if prima else '<span></span>',
+        '<a class="next" href="%s"><span>Stagione successiva →</span>%s</a>' % (link(root, '%s%s/' % (GV, dopo)), nm(dopo)) if dopo else '')
+    title = '%s %s' % (st['nome'], y)
+    body = band(root, path, title, 'Settore giovanile') + '<section class="body"><div class="wrap"><div class="content reveal">%s</div>%s<p class="back"><a class="btn n" href="%s">Tutte le stagioni giovanili</a></p></div></section>%s' % (
+        ''.join(out), nav, link(root, GV), cta(root))
+    shell(path, title, body, desc='Lancers Baseball Club, %s stagione %s: classifica, partite e risultati.' % (st['nome'], y), cls='page wide')
+
+
+def giov_elenco(root):
+    """Riquadri di tutte le stagioni giovanili, per categoria."""
+    out = []
+    for cat in ('u12', 'u15', 'u18'):
+        ks = sorted((k for k, v in GIOV['stagioni'].items() if v['categoria'] == cat), reverse=True)
+        if not ks:
+            continue
+        cards = []
+        for k in ks:
+            st = GIOV['stagioni'][k]
+            pos = next((r['pos'] for c in st['classifiche'][:1] for r in c['righe'] if r['noi']), '')
+            naz = any('NAZIONALE' in c['titolo'] for c in st['classifiche'])
+            fatte = [g for g in st['partite'] if 'puntiCasa' in g]
+            v = sum(1 for g in fatte if (g['puntiCasa'] > g['puntiOspiti']) == noi(g['casa']))
+            cards.append('<a class="gv-c reveal%s" href="%s"><b>%s</b><span>%s</span><em>%s</em></a>' % (
+                ' hl' if naz else '', link(root, '%s%s/' % (GV, k)), st['anno'],
+                ('%sº posto in Toscana' % pos) if pos else 'Campionato regionale',
+                ('%d vittorie, %d sconfitte' % (v, len(fatte) - v) if fatte else '') + (' · finali nazionali' if naz else '')))
+        out.append('<h2 class="has-text-align-center">%s</h2><div class="gv-g">%s</div>' % (CAT_NOMI[cat], ''.join(cards)))
+    return ''.join(out)
+
+
+def build_giovanili():
+    ks = sorted(GIOV['stagioni'], key=lambda k: (k.split('-')[0], k.split('-')[1]))
+    for i, k in enumerate(ks):
+        c = k.split('-')[0]
+        stessa = [x for x in ks if x.split('-')[0] == c]
+        j = stessa.index(k)
+        build_giovanile(k, GIOV['stagioni'][k], stessa[j - 1] if j else None, stessa[j + 1] if j + 1 < len(stessa) else None)
+    if not ks:
+        return
+    path = GV
+    root = '../' * path.count('/')
+    content = ('<p class="sea-lead">Le stagioni delle squadre giovanili dei Lancers registrate sul sito FIBS: classifica, calendario e risultati di ogni anno.</p>'
+               '<p class="has-text-align-center">Sul sito federale le squadre giovanili dei Lancers compaiono dal 2022. La rosa c\'è solo per le squadre arrivate alle finali nazionali; '
+               'per i campionati regionali la FIBS pubblica classifica e risultati. In rosso le stagioni con le finali nazionali.</p>' + giov_elenco(root))
+    body = band(root, path, 'Stagioni giovanili', 'Settore giovanile') + \
+        '<section class="body"><div class="wrap"><div class="content reveal">%s</div><p class="back"><a class="btn n" href="%s">Settore giovanile</a></p></div></section>%s' % (
+            content, link(root, 'giovanili/'), cta(root))
+    shell(path, 'Stagioni giovanili', body, desc='Le stagioni delle squadre giovanili dei Lancers: Under 12, Under 15 e Under 18, con classifica e risultati.', cls='page wide')
 
 
 def build_stagioni():
@@ -718,6 +827,7 @@ for p in D['pages']:
 for i, p in enumerate(POSTS):
     build_post(i, p)
 build_stagioni()
+build_giovanili()
 build_giocatori()
 build_news()
 build_home()

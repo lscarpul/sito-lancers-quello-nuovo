@@ -1,0 +1,2544 @@
+{
+ "colonne": {
+  "batting": [
+   [
+    "G",
+    "Partite"
+   ],
+   [
+    "AB",
+    "Turni alla battuta"
+   ],
+   [
+    "R",
+    "Punti segnati"
+   ],
+   [
+    "H",
+    "Valide"
+   ],
+   [
+    "2B",
+    "Doppi"
+   ],
+   [
+    "3B",
+    "Tripli"
+   ],
+   [
+    "HR",
+    "Fuoricampo"
+   ],
+   [
+    "RBI",
+    "Punti battuti a casa"
+   ],
+   [
+    "BB",
+    "Basi su ball"
+   ],
+   [
+    "SO",
+    "Strikeout"
+   ],
+   [
+    "SB",
+    "Basi rubate"
+   ],
+   [
+    "AVG",
+    "Media battuta"
+   ],
+   [
+    "OBP",
+    "Percentuale arrivi in base"
+   ],
+   [
+    "SLG",
+    "Media bombardieri"
+   ],
+   [
+    "OPS",
+    "OBP + SLG"
+   ]
+  ],
+  "fielding": [
+   [
+    "G",
+    "Partite"
+   ],
+   [
+    "TC",
+    "Occasioni totali"
+   ],
+   [
+    "PO",
+    "Eliminazioni"
+   ],
+   [
+    "A",
+    "Assistenze"
+   ],
+   [
+    "E",
+    "Errori"
+   ],
+   [
+    "FLD%",
+    "Media difesa"
+   ],
+   [
+    "DP",
+    "Doppi giochi"
+   ]
+  ],
+  "pitching": [
+   [
+    "V",
+    "Vittorie"
+   ],
+   [
+    "P",
+    "Sconfitte"
+   ],
+   [
+    "ERA",
+    "Media PGL"
+   ],
+   [
+    "G",
+    "Presenze"
+   ],
+   [
+    "GS",
+    "Partenze"
+   ],
+   [
+    "SV",
+    "Salvezze"
+   ],
+   [
+    "IP",
+    "Inning lanciati"
+   ],
+   [
+    "H",
+    "Valide concesse"
+   ],
+   [
+    "R",
+    "Punti concessi"
+   ],
+   [
+    "ER",
+    "Punti guadagnati"
+   ],
+   [
+    "BB",
+    "Basi su ball"
+   ],
+   [
+    "SO",
+    "Strikeout"
+   ],
+   [
+    "WHIP",
+    "Basi concesse per inning"
+   ]
+  ]
+ },
+ "stagioni": {
+  "u12-2022": {
+   "aggiornato": "2026-11-17",
+   "anno": 2022,
+   "categoria": "u12",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "B.S.C. GROSSETO 1952 BIG MAT ESORDIENTI",
+       "p": 1,
+       "pos": "1",
+       "sigla": "GRO",
+       "v": 6
+      },
+      {
+       "noi": false,
+       "nome": "POLISPORTIVA PADULE BASEBALL ASD *",
+       "p": 2,
+       "pos": "2",
+       "sigla": "PAU",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "DRAGHETTI CAPANNORI",
+       "p": 2,
+       "pos": "3",
+       "sigla": "DRK",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "ESTRA SIENA B.C.",
+       "p": 3,
+       "pos": "4",
+       "sigla": "SNA",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "U12 Red FIORENTINA BASEBALL S.S.D. ARL",
+       "p": 4,
+       "pos": "5",
+       "sigla": "FIO",
+       "v": 4
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 4,
+       "pos": "5",
+       "sigla": "LIV",
+       "v": 4
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 5,
+       "pos": "7",
+       "sigla": "LAN",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "FIRENZE SOFTBALL A.S.D.",
+       "p": 6,
+       "pos": "8",
+       "sigla": "FIR",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "NUOVE PANTERE LUCCA",
+       "p": 7,
+       "pos": "9",
+       "sigla": "NPL",
+       "v": 1
+      }
+     ],
+     "titolo": "Girone A - TOSCANA"
+    },
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "B.S.C. GROSSETO 1952 BIG MAT ESORDIENTI",
+       "p": 0,
+       "pos": "1",
+       "sigla": "GRO",
+       "v": 1
+      },
+      {
+       "noi": false,
+       "nome": "NUOVE PANTERE LUCCA",
+       "p": 1,
+       "pos": "2",
+       "sigla": "NPL",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "FIRENZE SOFTBALL A.S.D.",
+       "p": 1,
+       "pos": "3",
+       "sigla": "FIR",
+       "v": 1
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 2,
+       "pos": "4",
+       "sigla": "LAN",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone B - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2022-fibs-u12-baseball-misti/teams/20669",
+   "nome": "Under 12",
+   "partite": [
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-04-03",
+     "fase": "Toscana - Esordienti - Regular Season I",
+     "ora": "10:30",
+     "ospiti": "POLISPORTIVA PADULE BASEBALL ASD *",
+     "puntiCasa": 4,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Capannori",
+     "casa": "DRAGHETTI CAPANNORI",
+     "data": "2022-04-10",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 9,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-04-23",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "16:30",
+     "ospiti": "B.S.C. GROSSETO 1952 BIG MAT ESORDIENTI",
+     "puntiCasa": 1,
+     "puntiOspiti": 16
+    },
+    {
+     "campo": "Firenze",
+     "casa": "U12 Red FIORENTINA BASEBALL S.S.D. ARL",
+     "data": "2022-05-01",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "15:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 12,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Bagno a Ripoli",
+     "casa": "FIRENZE SOFTBALL A.S.D.",
+     "data": "2022-05-08",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 20,
+     "puntiOspiti": 13
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-15",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "10:30",
+     "ospiti": "NUOVE PANTERE LUCCA",
+     "puntiCasa": 6,
+     "puntiOspiti": 0
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-22",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "10:30",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD",
+     "puntiCasa": 13,
+     "puntiOspiti": 14
+    },
+    {
+     "campo": "Monteriggioni",
+     "casa": "ESTRA SIENA B.C.",
+     "data": "2022-05-29",
+     "fase": "Esordienti Bas - Toscana",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 0,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-06-12",
+     "fase": "Toscana - Esordienti - Regular Season II",
+     "ora": "10:30",
+     "ospiti": "FIRENZE SOFTBALL A.S.D.",
+     "puntiCasa": 8,
+     "puntiOspiti": 14
+    },
+    {
+     "campo": "Lucca",
+     "casa": "NUOVE PANTERE LUCCA",
+     "data": "2022-06-26",
+     "fase": "Toscana - Esordienti - Regular Season II",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 16,
+     "puntiOspiti": 14
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "B.S.C. GROSSETO 1952 BIG MAT ESORDIENTI",
+     "data": "2022-07-02",
+     "fase": "Toscana - Esordienti - Regular Season II",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D."
+    }
+   ],
+   "rosa": [],
+   "slug": "2022-fibs-u12-baseball-misti",
+   "staff": [],
+   "statistiche": {},
+   "team": 20669
+  },
+  "u12-2023": {
+   "aggiornato": "2026-11-17",
+   "anno": 2023,
+   "categoria": "u12",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "FIORENTINA BASEBALL S.S.D Srl",
+       "p": 0,
+       "pos": "1",
+       "sigla": "FIO",
+       "v": 9
+      },
+      {
+       "noi": false,
+       "nome": "BSC GROSSETO 1952",
+       "p": 1,
+       "pos": "2",
+       "sigla": "GRO",
+       "v": 8
+      },
+      {
+       "noi": false,
+       "nome": "POLISPORTIVA PADULE BASEBALL ASD *",
+       "p": 2,
+       "pos": "3",
+       "sigla": "PAU",
+       "v": 7
+      },
+      {
+       "noi": false,
+       "nome": "DRAGHETTI CAPANNORI",
+       "p": 3,
+       "pos": "4",
+       "sigla": "DRK",
+       "v": 6
+      },
+      {
+       "noi": false,
+       "nome": "ESTRA SIENA B.C.",
+       "p": 6,
+       "pos": "5",
+       "sigla": "SNA",
+       "v": 5
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 5,
+       "pos": "6",
+       "sigla": "LAN",
+       "v": 4
+      },
+      {
+       "noi": false,
+       "nome": "CHIANTELLA",
+       "p": 8,
+       "pos": "7",
+       "sigla": "ANT",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 8,
+       "pos": "7",
+       "sigla": "LIV",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+       "p": 8,
+       "pos": "7",
+       "sigla": "SIE",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "SEAGULLS & TOWERS",
+       "p": 9,
+       "pos": "10",
+       "sigla": "DRK",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone A - TOSCANA"
+    },
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 1,
+       "pos": "1",
+       "sigla": "LAN",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 2,
+       "pos": "2",
+       "sigla": "LIV",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "ESTRA SIENA B.C.",
+       "p": 3,
+       "pos": "3",
+       "sigla": "SNA",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+       "p": 4,
+       "pos": "4",
+       "sigla": "SIE",
+       "v": 0
+      }
+     ],
+     "titolo": "Toscana - Finali B - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2023-u12-baseball-2023/teams/24346",
+   "nome": "Under 12",
+   "partite": [
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-03-26",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "CHIANTELLA",
+     "puntiCasa": 16,
+     "puntiOspiti": 13
+    },
+    {
+     "campo": "Firenze",
+     "casa": "FIORENTINA BASEBALL S.S.D Srl",
+     "data": "2023-04-02",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 20,
+     "puntiOspiti": 3
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-04-16",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+     "puntiCasa": 20,
+     "puntiOspiti": 14
+    },
+    {
+     "campo": "Massa",
+     "casa": "SEAGULLS & TOWERS",
+     "data": "2023-04-23",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 0,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD",
+     "data": "2023-04-30",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 0,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "POLISPORTIVA PADULE BASEBALL ASD *",
+     "data": "2023-05-07",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 16,
+     "puntiOspiti": 12
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-05-14",
+     "fase": "Toscana - Regular season",
+     "nota": "rinviata",
+     "ora": "10:30",
+     "ospiti": "BSC GROSSETO 1952"
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-05-21",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "ESTRA SIENA B.C.",
+     "puntiCasa": 10,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-05-24",
+     "fase": "Toscana - Regular season",
+     "ora": "16:30",
+     "ospiti": "BSC GROSSETO 1952",
+     "puntiCasa": 1,
+     "puntiOspiti": 20
+    },
+    {
+     "campo": "Capannori",
+     "casa": "DRAGHETTI CAPANNORI",
+     "data": "2023-05-28",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 15,
+     "puntiOspiti": 2
+    },
+    {
+     "campo": "Monteriggioni",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-06-11",
+     "fase": "Toscana - Finali",
+     "ora": "10:30",
+     "ospiti": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+     "puntiCasa": 20,
+     "puntiOspiti": 15
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-06-18",
+     "fase": "Toscana - Finali",
+     "ora": "10:30",
+     "ospiti": "ESTRA SIENA B.C.",
+     "puntiCasa": 16,
+     "puntiOspiti": 15
+    },
+    {
+     "campo": "San Casciano in Val di Pesa",
+     "casa": "ESTRA SIENA B.C.",
+     "data": "2023-06-25",
+     "fase": "Toscana - Finali",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 16,
+     "puntiOspiti": 9
+    }
+   ],
+   "rosa": [],
+   "slug": "2023-u12-baseball-2023",
+   "staff": [],
+   "statistiche": {},
+   "team": 24346
+  },
+  "u12-2024": {
+   "aggiornato": "2026-11-17",
+   "anno": 2024,
+   "categoria": "u12",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 3,
+       "pos": "1",
+       "sigla": "LAN",
+       "v": 9
+      },
+      {
+       "noi": false,
+       "nome": "NOVA SA.CA.",
+       "p": 4,
+       "pos": "2",
+       "sigla": "DRK",
+       "v": 7
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 5,
+       "pos": "3",
+       "sigla": "LIV",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "PADULE BASEBALL",
+       "p": 8,
+       "pos": "4",
+       "sigla": "PAU",
+       "v": 3
+      },
+      {
+       "noi": false,
+       "nome": "CHIANTELLA",
+       "p": 9,
+       "pos": "5",
+       "sigla": "ANT",
+       "v": 2
+      }
+     ],
+     "titolo": "Girone A - TOSCANA"
+    },
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "POOL 77 BOLZANO",
+       "p": 0,
+       "pos": "1",
+       "sigla": "PBZ",
+       "v": 1
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 1,
+       "pos": "2",
+       "sigla": "LAN",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone 5 - NAZIONALE"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2024-u12-baseball-2024/teams/29297",
+   "nome": "Under 12",
+   "partite": [
+    {
+     "campo": "Firenze",
+     "casa": "CHIANTELLA",
+     "data": "2024-03-24",
+     "fase": "Toscana - Regular season",
+     "ora": "14:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 1,
+     "puntiOspiti": 16
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-04-07",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD",
+     "puntiCasa": 13,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-04-13",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "NOVA SA.CA.",
+     "puntiCasa": 8,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Monteriggioni",
+     "casa": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+     "data": "2024-04-21",
+     "fase": "Toscana - Regular season",
+     "ora": "10:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 6,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-04-28",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "PADULE BASEBALL",
+     "puntiCasa": 21,
+     "puntiOspiti": 8
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "BSC GROSSETO",
+     "data": "2024-05-05",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 18,
+     "puntiOspiti": 5
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-05-12",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LUPI AUTO FIORENTINA",
+     "puntiCasa": 2,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-05-18",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "ESTRA SIENA B.C.",
+     "puntiCasa": 20,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-06-02",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "CHIANTELLA",
+     "puntiCasa": 15,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD",
+     "data": "2024-06-16",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 11,
+     "puntiOspiti": 21
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "NOVA SA.CA.",
+     "data": "2024-06-22",
+     "fase": "Toscana - Regular season",
+     "ora": "16:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 4,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "PADULE BASEBALL",
+     "data": "2024-07-07",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 11,
+     "puntiOspiti": 13
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2024-07-14",
+     "fase": "Toscana - Qualificazioni",
+     "ora": "10:30",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD"
+    },
+    {
+     "campo": "Bolzano/Bozen",
+     "casa": "POOL 77 BOLZANO",
+     "data": "2024-08-31",
+     "fase": "Finali Giovanili Nazionali - Qualificazioni",
+     "ora": "15:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 5,
+     "puntiOspiti": 0
+    }
+   ],
+   "rosa": [],
+   "slug": "2024-u12-baseball-2024",
+   "staff": [],
+   "statistiche": {},
+   "team": 29297
+  },
+  "u12-2025": {
+   "aggiornato": "2026-11-17",
+   "anno": 2025,
+   "categoria": "u12",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 0,
+       "pos": "1",
+       "sigla": "YMC",
+       "v": 14
+      },
+      {
+       "noi": false,
+       "nome": "DRK CAPANNORI-ELETTONICA LUCENSE",
+       "p": 3,
+       "pos": "2",
+       "sigla": "DRK",
+       "v": 11
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD**",
+       "p": 6,
+       "pos": "3",
+       "sigla": "LIV",
+       "v": 8
+      },
+      {
+       "noi": false,
+       "nome": "Padule Royal",
+       "p": 6,
+       "pos": "3",
+       "sigla": "PAU",
+       "v": 8
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 8,
+       "pos": "5",
+       "sigla": "LAN",
+       "v": 6
+      },
+      {
+       "noi": false,
+       "nome": "CHIANTELLA",
+       "p": 9,
+       "pos": "6",
+       "sigla": "ANT",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "LUPI AUTO FIORENTINA BASEBALL",
+       "p": 10,
+       "pos": "7",
+       "sigla": "FIO",
+       "v": 4
+      },
+      {
+       "noi": false,
+       "nome": "Padule Red",
+       "p": 14,
+       "pos": "8",
+       "sigla": "PAU",
+       "v": 0
+      }
+     ],
+     "titolo": "A - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2025-u12-baseball-2025/teams/34721",
+   "nome": "Under 12",
+   "partite": [
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-03-29",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "DRK CAPANNORI-ELETTONICA LUCENSE",
+     "puntiCasa": 7,
+     "puntiOspiti": 15
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-04-06",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "Padule Red",
+     "puntiCasa": 6,
+     "puntiOspiti": 0
+    },
+    {
+     "campo": "Monteriggioni",
+     "casa": "CHIANTELLA",
+     "data": "2025-04-13",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 8,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "Padule Royal",
+     "data": "2025-04-17",
+     "fase": "Toscana - Regular season",
+     "nota": "rinviata",
+     "ora": "16:30",
+     "ospiti": "LANCERS B.C. A.S.D."
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-04-27",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD**",
+     "puntiCasa": 18,
+     "puntiOspiti": 17
+    },
+    {
+     "campo": "Castiglione della Pescaia",
+     "casa": "ETRUSCAN FIGHTERS",
+     "data": "2025-05-04",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 16,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-05-11",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LUPI AUTO FIORENTINA BASEBALL",
+     "puntiCasa": 16,
+     "puntiOspiti": 15
+    },
+    {
+     "campo": "Capannori",
+     "casa": "DRK CAPANNORI-ELETTONICA LUCENSE",
+     "data": "2025-05-18",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 17,
+     "puntiOspiti": 4
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "Padule Royal",
+     "data": "2025-05-21",
+     "fase": "Toscana - Regular season",
+     "ora": "17:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 5,
+     "puntiOspiti": 12
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-05-24",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "Padule Royal",
+     "puntiCasa": 8,
+     "puntiOspiti": 20
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "Padule Red",
+     "data": "2025-06-01",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 5,
+     "puntiOspiti": 20
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-06-15",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "CHIANTELLA",
+     "puntiCasa": 7,
+     "puntiOspiti": 0
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD**",
+     "data": "2025-06-22",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 14,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-06-29",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 6,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Firenze",
+     "casa": "LUPI AUTO FIORENTINA BASEBALL",
+     "data": "2025-07-06",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 15,
+     "puntiOspiti": 9
+    }
+   ],
+   "rosa": [],
+   "slug": "2025-u12-baseball-2025",
+   "staff": [],
+   "statistiche": {},
+   "team": 34721
+  },
+  "u12-2026": {
+   "aggiornato": "2026-11-17",
+   "anno": 2026,
+   "categoria": "u12",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "Padule Mosquitos",
+       "p": 0,
+       "pos": "1",
+       "sigla": "PAU",
+       "v": 12
+      },
+      {
+       "noi": true,
+       "nome": "Lancers Baseball Club A.S.D.",
+       "p": 2,
+       "pos": "2",
+       "sigla": "LAN",
+       "v": 10
+      },
+      {
+       "noi": false,
+       "nome": "CHIANTELLERONI",
+       "p": 6,
+       "pos": "3",
+       "sigla": "ANT",
+       "v": 6
+      },
+      {
+       "noi": false,
+       "nome": "DRK CAPANNORI-ELETTONICA LUCENSE",
+       "p": 7,
+       "pos": "4",
+       "sigla": "DRK",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 7,
+       "pos": "4",
+       "sigla": "LIV",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "FIORENTINA BASEBALL E SOFTBALL",
+       "p": 8,
+       "pos": "6",
+       "sigla": "FIO",
+       "v": 4
+      },
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 12,
+       "pos": "7",
+       "sigla": "YMC",
+       "v": 0
+      }
+     ],
+     "titolo": "A - TOSCANA"
+    },
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "LIONS 2.0 NETTUNO BAS. E SOFT. ASD",
+       "p": 0,
+       "pos": "1",
+       "sigla": "LIO",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "REGGIA CASERTA",
+       "p": 1,
+       "pos": "2",
+       "sigla": "REC",
+       "v": 1
+      },
+      {
+       "noi": true,
+       "nome": "Lancers Baseball Club A.S.D.",
+       "p": 2,
+       "pos": "3",
+       "sigla": "LAN",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone 9 - NAZIONALE"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2026-u12-baseball-2026/teams/40273",
+   "nome": "Under 12",
+   "partite": [
+    {
+     "campo": "Lastra a Signa",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-03-15",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "Padule Mosquitos",
+     "puntiCasa": 9,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "ETRUSCAN FIGHTERS",
+     "data": "2026-03-22",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 0,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD",
+     "data": "2026-03-29",
+     "fase": "Toscana - Regular season",
+     "ora": "11:00",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 7,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-04-12",
+     "fase": "Toscana - Regular season",
+     "ora": "10:00",
+     "ospiti": "CHIANTELLERONI",
+     "puntiCasa": 11,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-04-25",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "FIORENTINA BASEBALL E SOFTBALL",
+     "puntiCasa": 12,
+     "puntiOspiti": 3
+    },
+    {
+     "campo": "Capannori",
+     "casa": "DRK CAPANNORI-ELETTONICA LUCENSE",
+     "data": "2026-05-03",
+     "fase": "Toscana - Regular season",
+     "ora": "11:00",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 8,
+     "puntiOspiti": 20
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "Padule Mosquitos",
+     "data": "2026-05-09",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 10,
+     "puntiOspiti": 8
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-05-23",
+     "fase": "Toscana - Regular season",
+     "ora": "11:00",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD",
+     "puntiCasa": 9,
+     "puntiOspiti": 2
+    },
+    {
+     "campo": "Bagno a Ripoli",
+     "casa": "CHIANTELLERONI",
+     "data": "2026-05-31",
+     "fase": "Toscana - Regular season",
+     "ora": "11:00",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 6,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Bagno a Ripoli",
+     "casa": "FIORENTINA BASEBALL E SOFTBALL",
+     "data": "2026-06-14",
+     "fase": "Toscana - Regular season",
+     "ora": "10:00",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 8,
+     "puntiOspiti": 14
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-06-17",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 6,
+     "puntiOspiti": 0
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-06-21",
+     "fase": "Toscana - Regular season",
+     "ora": "10:00",
+     "ospiti": "DRK CAPANNORI-ELETTONICA LUCENSE",
+     "puntiCasa": 14,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Nettuno",
+     "casa": "REGGIA CASERTA",
+     "data": "2026-09-05",
+     "fase": "",
+     "ora": "10:00",
+     "ospiti": "Lancers Baseball Club A.S.D.",
+     "puntiCasa": 12,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Nettuno",
+     "casa": "Lancers Baseball Club A.S.D.",
+     "data": "2026-09-05",
+     "fase": "",
+     "ora": "10:00",
+     "ospiti": "LIONS 2.0 NETTUNO BAS. E SOFT. ASD",
+     "puntiCasa": 0,
+     "puntiOspiti": 12
+    }
+   ],
+   "rosa": [
+    {
+     "bt": "R/R",
+     "n": "22",
+     "nome": "BARBARA SAI ACHARI",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "99",
+     "nome": "CASCIONE NICCOLO'",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "27",
+     "nome": "CILIBRASI EMANUELE",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "24",
+     "nome": "Colonia Pena Liam Adriel",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "14",
+     "nome": "DAIDONE MANUELE",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "6",
+     "nome": "LUCCI OLIVER",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "21",
+     "nome": "MORETTI MATTIA",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "93",
+     "nome": "Mucelli Daniel",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "16",
+     "nome": "NARDI BRIAN",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "15",
+     "nome": "PISANI GIOVANNI BASTIANO",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "7",
+     "nome": "ROSI GUIDO",
+     "ruolo": "UTL"
+    },
+    {
+     "bt": "R/R",
+     "n": "25",
+     "nome": "Zunno Gabriele",
+     "ruolo": "UTL"
+    }
+   ],
+   "slug": "2026-u12-baseball-2026",
+   "staff": [
+    {
+     "n": "71",
+     "nome": "Baccili Claudio",
+     "ruolo": "Allenatore"
+    },
+    {
+     "n": "43",
+     "nome": "BELLUGI SARA",
+     "ruolo": "Allenatore"
+    },
+    {
+     "n": "55",
+     "nome": "Lugo Ramirez Wladimir Jose",
+     "ruolo": "Allenatore"
+    },
+    {
+     "n": "33",
+     "nome": "Nerbini Gabriele",
+     "ruolo": "Allenatore"
+    },
+    {
+     "n": "9",
+     "nome": "Sanchez Pacheco Carlos Daniel",
+     "ruolo": "Allenatore"
+    }
+   ],
+   "statistiche": {},
+   "team": 40273
+  },
+  "u15-2022": {
+   "aggiornato": "2026-11-17",
+   "anno": 2022,
+   "categoria": "u15",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "POLISPORTIVA PADULE BASEBALL ASD *",
+       "p": 0,
+       "pos": "1",
+       "sigla": "PAU",
+       "v": 10
+      },
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 1,
+       "pos": "2",
+       "sigla": "YMC",
+       "v": 9
+      },
+      {
+       "noi": false,
+       "nome": "B.S.C. GROSSETO 1952 Villa Croci",
+       "p": 2,
+       "pos": "3",
+       "sigla": "GRO",
+       "v": 8
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 3,
+       "pos": "4",
+       "sigla": "LIV",
+       "v": 7
+      },
+      {
+       "noi": false,
+       "nome": "U15 Black FIORENTINA BASEBALL S.S.D. ARL",
+       "p": 4,
+       "pos": "5",
+       "sigla": "FIO",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "ABC MASSA BC",
+       "p": 5,
+       "pos": "6",
+       "sigla": "MAS",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "BASEBALL CHIANTI A.S.D.",
+       "p": 6,
+       "pos": "7",
+       "sigla": "CHI",
+       "v": 4
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 7,
+       "pos": "8",
+       "sigla": "LAN",
+       "v": 3
+      },
+      {
+       "noi": false,
+       "nome": "A.S.D. BASEBALL S.C. AREZZO",
+       "p": 7,
+       "pos": "9",
+       "sigla": "BSA",
+       "v": 1
+      },
+      {
+       "noi": false,
+       "nome": "NUOVE PANTERE LUCCA",
+       "p": 9,
+       "pos": "10",
+       "sigla": "NPL",
+       "v": 1
+      },
+      {
+       "noi": false,
+       "nome": "U15 Red FIORENTINA BASEBALL S.S.D. ARL",
+       "p": 9,
+       "pos": "11",
+       "sigla": "FIO",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone A - TOSCANA"
+    },
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "BASEBALL CHIANTI A.S.D.",
+       "p": 1,
+       "pos": "1",
+       "sigla": "CHI",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "ABC MASSA BC",
+       "p": 1,
+       "pos": "1",
+       "sigla": "MAS",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "U15 Black FIORENTINA BASEBALL S.S.D. ARL",
+       "p": 2,
+       "pos": "3",
+       "sigla": "FIO",
+       "v": 1
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 2,
+       "pos": "3",
+       "sigla": "LAN",
+       "v": 1
+      }
+     ],
+     "titolo": "Girone B - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2022-fibs-u15-baseball-misti/teams/20619",
+   "nome": "Under 15",
+   "partite": [
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "POLISPORTIVA PADULE BASEBALL ASD *",
+     "data": "2022-04-09",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 11,
+     "puntiOspiti": 5
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-04-13",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:30",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 5,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Massa",
+     "casa": "ABC MASSA BC",
+     "data": "2022-04-23",
+     "fase": "",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 15,
+     "puntiOspiti": 10
+    },
+    {
+     "campo": "Lucca",
+     "casa": "NUOVE PANTERE LUCCA",
+     "data": "2022-04-30",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 10,
+     "puntiOspiti": 22
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-07",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "A.S.D. BASEBALL S.C. AREZZO",
+     "puntiCasa": 17,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-17",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:30",
+     "ospiti": "B.S.C. GROSSETO 1952 Villa Croci",
+     "puntiCasa": 5,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "San Casciano in Val di Pesa",
+     "casa": "U15 Black FIORENTINA BASEBALL S.S.D. ARL",
+     "data": "2022-05-21",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 20,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-28",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD",
+     "puntiCasa": 5,
+     "puntiOspiti": 17
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-06-04",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "U15 Red FIORENTINA BASEBALL S.S.D. ARL",
+     "puntiCasa": 20,
+     "puntiOspiti": 3
+    },
+    {
+     "campo": "San Casciano in Val di Pesa",
+     "casa": "BASEBALL CHIANTI A.S.D.",
+     "data": "2022-06-25",
+     "fase": "U15 Bas - Toscana",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 15,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-07-02",
+     "fase": "Toscana - Regular Season Ii",
+     "ora": "16:00",
+     "ospiti": "U15 Black FIORENTINA BASEBALL S.S.D. ARL",
+     "puntiCasa": 11,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-07-09",
+     "fase": "Toscana - Regular Season Ii",
+     "ora": "16:00",
+     "ospiti": "BASEBALL CHIANTI A.S.D.",
+     "puntiCasa": 5,
+     "puntiOspiti": 12
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-07-16",
+     "fase": "Toscana - Regular Season Ii",
+     "ora": "16:00",
+     "ospiti": "ABC MASSA BC",
+     "puntiCasa": 12,
+     "puntiOspiti": 11
+    }
+   ],
+   "rosa": [],
+   "slug": "2022-fibs-u15-baseball-misti",
+   "staff": [],
+   "statistiche": {},
+   "team": 20619
+  },
+  "u15-2025": {
+   "aggiornato": "2026-11-17",
+   "anno": 2025,
+   "categoria": "u15",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "BIG MAT BSCGROSSETO",
+       "p": 0,
+       "pos": "1",
+       "sigla": "GRO",
+       "v": 14
+      },
+      {
+       "noi": false,
+       "nome": "Polisportiva Padule Baseball",
+       "p": 2,
+       "pos": "2",
+       "sigla": "PAU",
+       "v": 12
+      },
+      {
+       "noi": false,
+       "nome": "LUPI AUTO FIORENTINA BASEBALL",
+       "p": 4,
+       "pos": "3",
+       "sigla": "FIO",
+       "v": 10
+      },
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 6,
+       "pos": "4",
+       "sigla": "YMC",
+       "v": 8
+      },
+      {
+       "noi": false,
+       "nome": "DRK CAPANNORI-NUOVA SA.CA",
+       "p": 8,
+       "pos": "5",
+       "sigla": "DRK",
+       "v": 6
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 12,
+       "pos": "6",
+       "sigla": "LAN",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD**",
+       "p": 12,
+       "pos": "6",
+       "sigla": "LIV",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+       "p": 13,
+       "pos": "8",
+       "sigla": "SIE",
+       "v": 2
+      }
+     ],
+     "titolo": "A - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2025-u15-baseball-2025/teams/34719",
+   "nome": "Under 15",
+   "partite": [
+    {
+     "campo": "Livorno",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-03-29",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD**",
+     "puntiCasa": 13,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-04-05",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "DRK CAPANNORI-NUOVA SA.CA",
+     "puntiCasa": 8,
+     "puntiOspiti": 21
+    },
+    {
+     "campo": "Firenze",
+     "casa": "LUPI AUTO FIORENTINA BASEBALL",
+     "data": "2025-04-12",
+     "fase": "Toscana - Regular season",
+     "ora": "16:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 17,
+     "puntiOspiti": 4
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-04-25",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "Polisportiva Padule Baseball",
+     "puntiCasa": 2,
+     "puntiOspiti": 15
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "BIG MAT BSCGROSSETO",
+     "data": "2025-05-03",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 19,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-05-10",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+     "puntiCasa": 19,
+     "puntiOspiti": 10
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD**",
+     "data": "2025-05-17",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 19,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "Castiglione della Pescaia",
+     "casa": "ETRUSCAN FIGHTERS",
+     "data": "2025-05-24",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 13,
+     "puntiOspiti": 1
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "DRK CAPANNORI-NUOVA SA.CA",
+     "data": "2025-05-31",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 13,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-06-07",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 4,
+     "puntiOspiti": 17
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-06-14",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LUPI AUTO FIORENTINA BASEBALL",
+     "puntiCasa": 13,
+     "puntiOspiti": 22
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "Polisportiva Padule Baseball",
+     "data": "2025-06-21",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 20,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2025-06-27",
+     "fase": "Toscana - Regular season",
+     "ora": "17:00",
+     "ospiti": "BIG MAT BSCGROSSETO",
+     "puntiCasa": 4,
+     "puntiOspiti": 22
+    },
+    {
+     "campo": "Monteriggioni",
+     "casa": "SIENA BASEBALL MONTERIGGIONI A.S.D.",
+     "data": "2025-07-05",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 17,
+     "puntiOspiti": 14
+    }
+   ],
+   "rosa": [
+    {
+     "bt": "R/R",
+     "n": "0",
+     "nome": "Bucci Niccolò",
+     "ruolo": "UTL"
+    }
+   ],
+   "slug": "2025-u15-baseball-2025",
+   "staff": [],
+   "statistiche": {},
+   "team": 34719
+  },
+  "u15-2026": {
+   "aggiornato": "2026-11-17",
+   "anno": 2026,
+   "categoria": "u15",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "Polisportiva Padule Baseball",
+       "p": 1,
+       "pos": "1",
+       "sigla": "PAU",
+       "v": 13
+      },
+      {
+       "noi": false,
+       "nome": "BIG MAT BSCGROSSETO",
+       "p": 3,
+       "pos": "2",
+       "sigla": "GRO",
+       "v": 11
+      },
+      {
+       "noi": false,
+       "nome": "C.S.D. YMCA",
+       "p": 3,
+       "pos": "2",
+       "sigla": "YMC",
+       "v": 11
+      },
+      {
+       "noi": false,
+       "nome": "FIORENTINA BASEBALL E SOFTBALL",
+       "p": 5,
+       "pos": "4",
+       "sigla": "FIO",
+       "v": 9
+      },
+      {
+       "noi": false,
+       "nome": "DRK CAPANNORI-NUOVA SA.CA",
+       "p": 9,
+       "pos": "5",
+       "sigla": "DRK",
+       "v": 5
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 10,
+       "pos": "6",
+       "sigla": "LIV",
+       "v": 4
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 11,
+       "pos": "7",
+       "sigla": "LAN",
+       "v": 3
+      },
+      {
+       "noi": false,
+       "nome": "SB MONTECHIANTI",
+       "p": 14,
+       "pos": "8",
+       "sigla": "CHI",
+       "v": 0
+      }
+     ],
+     "titolo": "A - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2026-u15-baseball-2026/teams/40275",
+   "nome": "Under 15",
+   "partite": [
+    {
+     "campo": "Monteriggioni",
+     "casa": "SB MONTECHIANTI",
+     "data": "2026-03-15",
+     "fase": "Toscana - Regular season",
+     "ora": "10:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 5,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-03-21",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "Polisportiva Padule Baseball",
+     "puntiCasa": 4,
+     "puntiOspiti": 6
+    },
+    {
+     "campo": "Livorno",
+     "casa": "DRK CAPANNORI-NUOVA SA.CA",
+     "data": "2026-03-28",
+     "fase": "Toscana - Regular season",
+     "ora": "15:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 12,
+     "puntiOspiti": 14
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-04-11",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "BIG MAT BSCGROSSETO",
+     "puntiCasa": 0,
+     "puntiOspiti": 18
+    },
+    {
+     "campo": "Castiglione della Pescaia",
+     "casa": "C.S.D. YMCA",
+     "data": "2026-04-18",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 24,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-04-25",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD",
+     "puntiCasa": 10,
+     "puntiOspiti": 17
+    },
+    {
+     "campo": "Firenze",
+     "casa": "FIORENTINA BASEBALL E SOFTBALL",
+     "data": "2026-05-02",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 14,
+     "puntiOspiti": 4
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-05-09",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "SB MONTECHIANTI",
+     "puntiCasa": 21,
+     "puntiOspiti": 13
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "Polisportiva Padule Baseball",
+     "data": "2026-05-16",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 19,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-05-23",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "DRK CAPANNORI-NUOVA SA.CA",
+     "puntiCasa": 9,
+     "puntiOspiti": 10
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "BIG MAT BSCGROSSETO",
+     "data": "2026-05-30",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 17,
+     "puntiOspiti": 2
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-06-06",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "C.S.D. YMCA",
+     "puntiCasa": 6,
+     "puntiOspiti": 9
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD",
+     "data": "2026-06-13",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 11,
+     "puntiOspiti": 10
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2026-06-20",
+     "fase": "Toscana - Regular season",
+     "ora": "16:00",
+     "ospiti": "FIORENTINA BASEBALL E SOFTBALL",
+     "puntiCasa": 8,
+     "puntiOspiti": 15
+    }
+   ],
+   "rosa": [],
+   "slug": "2026-u15-baseball-2026",
+   "staff": [],
+   "statistiche": {},
+   "team": 40275
+  },
+  "u18-2022": {
+   "aggiornato": "2026-11-17",
+   "anno": 2022,
+   "categoria": "u18",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "B.S.C. GROSSETO 1952 Villa Croci",
+       "p": 0,
+       "pos": "1",
+       "sigla": "GRO",
+       "v": 8
+      },
+      {
+       "noi": false,
+       "nome": "U18 BSBL FIORENTINA BASEBALL S.S.D. ARL",
+       "p": 2,
+       "pos": "2",
+       "sigla": "FIO",
+       "v": 6
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 5,
+       "pos": "3",
+       "sigla": "LAN",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 6,
+       "pos": "4",
+       "sigla": "YMC",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "POLISPORTIVA PADULE BASEBALL ASD *",
+       "p": 6,
+       "pos": "5",
+       "sigla": "PAU",
+       "v": 1
+      }
+     ],
+     "titolo": "Girone A - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2022-fibs-u18-baseball-maschile/teams/20621",
+   "nome": "Under 18",
+   "partite": [
+    {
+     "campo": "Firenze",
+     "casa": "U18 BSBL FIORENTINA BASEBALL S.S.D. ARL",
+     "data": "2022-04-20",
+     "fase": "Toscana - Regular Season",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 11,
+     "puntiOspiti": 4
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-04-27",
+     "fase": "U18 Bas - Toscana",
+     "ora": "16:30",
+     "ospiti": "B.S.C. GROSSETO 1952 Villa Croci",
+     "puntiCasa": 3,
+     "puntiOspiti": 19
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-11",
+     "fase": "U18 Bas - Toscana",
+     "ora": "17:00",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 2,
+     "puntiOspiti": 13
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-05-25",
+     "fase": "U18 Bas - Toscana",
+     "ora": "16:30",
+     "ospiti": "U18 BSBL FIORENTINA BASEBALL S.S.D. ARL",
+     "puntiCasa": 3,
+     "puntiOspiti": 10
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "B.S.C. GROSSETO 1952 Villa Croci",
+     "data": "2022-06-01",
+     "fase": "U18 Bas - Toscana",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 9,
+     "puntiOspiti": 3
+    },
+    {
+     "campo": "Castiglione della Pescaia",
+     "casa": "ETRUSCAN FIGHTERS",
+     "data": "2022-06-22",
+     "fase": "U18 Bas - Toscana",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 0,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Sesto Fiorentino",
+     "casa": "POLISPORTIVA PADULE BASEBALL ASD *",
+     "data": "2022-06-29",
+     "fase": "U18 Bas - Toscana",
+     "ora": "17:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 4,
+     "puntiOspiti": 12
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2022-07-06",
+     "fase": "U18 Bas - Toscana",
+     "ora": "17:00",
+     "ospiti": "POLISPORTIVA PADULE BASEBALL ASD *"
+    }
+   ],
+   "rosa": [],
+   "slug": "2022-fibs-u18-baseball-maschile",
+   "staff": [],
+   "statistiche": {},
+   "team": 20621
+  },
+  "u18-2023": {
+   "aggiornato": "2026-11-17",
+   "anno": 2023,
+   "categoria": "u18",
+   "classifiche": [
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "BSC GROSSETO 1952",
+       "p": 0,
+       "pos": "1",
+       "sigla": "GRO",
+       "v": 8
+      },
+      {
+       "noi": false,
+       "nome": "FIORENTINA BASEBALL S.S.D Srl",
+       "p": 2,
+       "pos": "2",
+       "sigla": "FIO",
+       "v": 6
+      },
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 4,
+       "pos": "3",
+       "sigla": "YMC",
+       "v": 4
+      },
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 6,
+       "pos": "4",
+       "sigla": "LIV",
+       "v": 2
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 8,
+       "pos": "5",
+       "sigla": "LAN",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone A - TOSCANA"
+    },
+    {
+     "fase": "",
+     "righe": [
+      {
+       "noi": false,
+       "nome": "LIVORNO 1948 BASEBALL ASD",
+       "p": 0,
+       "pos": "1",
+       "sigla": "LIV",
+       "v": 2
+      },
+      {
+       "noi": false,
+       "nome": "ETRUSCAN FIGHTERS",
+       "p": 1,
+       "pos": "2",
+       "sigla": "YMC",
+       "v": 1
+      },
+      {
+       "noi": true,
+       "nome": "LANCERS B.C. A.S.D.",
+       "p": 2,
+       "pos": "3",
+       "sigla": "LAN",
+       "v": 0
+      }
+     ],
+     "titolo": "Girone B - TOSCANA"
+    }
+   ],
+   "fibs": "https://www.fibs.it/it/events/2023-u18-baseball/teams/24348",
+   "nome": "Under 18",
+   "partite": [
+    {
+     "campo": "Firenze",
+     "casa": "FIORENTINA BASEBALL S.S.D Srl",
+     "data": "2023-03-29",
+     "fase": "Toscana - Regular season",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 7,
+     "puntiOspiti": 0
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD",
+     "data": "2023-04-19",
+     "fase": "Toscana - Regular season",
+     "ora": "16:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 7,
+     "puntiOspiti": 0
+    },
+    {
+     "campo": "Lucca",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-04-26",
+     "fase": "Toscana - Regular season",
+     "ora": "16:45",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 0,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-05-03",
+     "fase": "Toscana - Regular season",
+     "ora": "16:30",
+     "ospiti": "BSC GROSSETO 1952",
+     "puntiCasa": 0,
+     "puntiOspiti": 11
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-05-10",
+     "fase": "Toscana - Regular season",
+     "nota": "rinviata",
+     "ora": "17:00",
+     "ospiti": "FIORENTINA BASEBALL S.S.D Srl"
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-05-31",
+     "fase": "Toscana - Regular season",
+     "ora": "16:30",
+     "ospiti": "FIORENTINA BASEBALL S.S.D Srl",
+     "puntiCasa": 0,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Lucca",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-06-07",
+     "fase": "Toscana - Regular season",
+     "ora": "16:45",
+     "ospiti": "LIVORNO 1948 BASEBALL ASD",
+     "puntiCasa": 0,
+     "puntiOspiti": 7
+    },
+    {
+     "campo": "Castiglione della Pescaia",
+     "casa": "ETRUSCAN FIGHTERS",
+     "data": "2023-06-14",
+     "fase": "Toscana - Regular season",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 17,
+     "puntiOspiti": 3
+    },
+    {
+     "campo": "Grosseto",
+     "casa": "BSC GROSSETO 1952",
+     "data": "2023-06-21",
+     "fase": "Toscana - Regular season",
+     "ora": "17:00",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 12,
+     "puntiOspiti": 2
+    },
+    {
+     "campo": "Livorno",
+     "casa": "LIVORNO 1948 BASEBALL ASD",
+     "data": "2023-06-28",
+     "fase": "Toscana - Finali",
+     "ora": "16:30",
+     "ospiti": "LANCERS B.C. A.S.D.",
+     "puntiCasa": 12,
+     "puntiOspiti": 2
+    },
+    {
+     "campo": "Lastra a Signa",
+     "casa": "LANCERS B.C. A.S.D.",
+     "data": "2023-07-05",
+     "fase": "Toscana - Finali",
+     "ora": "16:30",
+     "ospiti": "ETRUSCAN FIGHTERS",
+     "puntiCasa": 0,
+     "puntiOspiti": 7
+    }
+   ],
+   "rosa": [],
+   "slug": "2023-u18-baseball",
+   "staff": [],
+   "statistiche": {},
+   "team": 24348
+  }
+ },
+ "trovate": {}
+}

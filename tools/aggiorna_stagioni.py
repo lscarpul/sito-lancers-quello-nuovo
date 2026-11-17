@@ -102,9 +102,9 @@ def classifiche(slug, team):
     return out
 
 
-def partite(slug, team):
+def partite(slug, team, extra=''):
     """Come aggiorna_fibs.partite, ma con i nomi interi (negli anni vecchi la FIBS non ha le sigle) e la fase."""
-    s = BeautifulSoup(get('%s%s/calendars?team=%s' % (BASE, slug, team)), 'html.parser')
+    s = BeautifulSoup(get('%s%s/calendars?team=%s%s' % (BASE, slug, team, extra)), 'html.parser')
     out = []
     for it in s.select('.schedule-item'):
         teams = it.select('.team-info')
