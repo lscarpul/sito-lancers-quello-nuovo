@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Genera il sito statico a partire da tools/content.json.  Uso: python3 tools/build.py"""
-import os, re, json, html as H
+import os, re, json, hashlib, html as H
 from bs4 import BeautifulSoup
+
+_D = os.path.dirname(os.path.abspath(__file__)) + "/../"
+VER = hashlib.md5(open(_D + "css/style.css", "rb").read() + open(_D + "js/main.js", "rb").read()).hexdigest()[:8]
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = json.load(open(os.path.join(ROOT, 'tools', 'content.json')))
@@ -138,7 +141,7 @@ def footer(root):
 <button class="to-top" aria-label="Torna su">↑</button>
 <div class="lb" hidden><button class="lb-x" aria-label="Chiudi">×</button><button class="lb-p" aria-label="Precedente">‹</button>
 <figure><img alt=""><figcaption></figcaption></figure><button class="lb-n" aria-label="Successiva">›</button></div>
-<script src="%sdata/stagione.js"></script><script src="%sjs/main.js" defer></script>''' % (
+<script src="%sdata/stagione.js"></script><script src="%sjs/main.js?v=__VER__" defer></script>''' % (
         root, root, EMAIL, EMAIL,
         col('Il Club', [('La società', 'societa/'), ('Piazzamenti', 'societa/piazzamenti/'),
                         ('Sponsor', 'societa/sponsor/'), ('Codice etico', 'societa/codice-etico/'),
@@ -158,7 +161,7 @@ def shell(path, title, body, desc='', cls=''):
     doc = '''<!doctype html>
 <html lang="it" class="no-js"><head><script>document.documentElement.classList.remove("no-js")</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%s</title><meta name="description" content="%s">
-<link rel="icon" href="%simages/logo-lancers.jpg"><link rel="stylesheet" href="%scss/style.css">
+<link rel="icon" href="%simages/logo-lancers.jpg"><link rel="stylesheet" href="%scss/style.css?v=__VER__">
 </head><body class="%s">
 %s
 <main id="main">
@@ -170,7 +173,7 @@ def shell(path, title, body, desc='', cls=''):
        root, root, cls, header(root, path), body, footer(root))
     out = os.path.join(ROOT, path, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf-8').write(doc)
+    open(out, 'w', encoding='utf-8').write(doc.replace('__VER__', VER))
     return root
 
 
@@ -244,6 +247,7 @@ def build_page(p):
         content = storia(content)
         cls += ' wide'
     content = pagina_speciale(path, content, root)
+    content = spezza_a_capo(content, path)
     content = ritocchi_extra(path, content, root)
     if path in ('giovanili/', 'squadre-senior/', 'giovanili/calendario-u12-2020/', 'giovanili/calendario-u15-2020/', 'ballpark/',
                 'ballpark/open-field-diamanti-inclusivi/', 'squadre-senior/amatoriale/', 'baseball-2/al-cinema/'):
@@ -613,18 +617,21 @@ def sez_nav(path, root):
 
 
 # posizioni in difesa sul diamante (coordinate su 300x300, casa base in basso)
-POS_XY = {1: (150, 182), 2: (150, 268), 3: (222, 172), 4: (186, 136), 5: (78, 172), 6: (114, 136), 7: (78, 98), 8: (150, 70), 9: (222, 98)}
+POS_XY = {1: (150, 205), 2: (150, 286), 3: (216, 186), 4: (182, 148), 5: (84, 186), 6: (118, 148), 7: (74, 118), 8: (150, 98), 9: (226, 118)}
 
 
 def diamante():
-    pts = ''.join('<g><circle cx="%d" cy="%d" r="15"/><text x="%d" y="%d">%d</text></g>' % (x, y, x, y + 5, n) for n, (x, y) in POS_XY.items())
-    return ('<svg class="dia" viewBox="0 0 300 300" role="img" aria-label="Le posizioni in difesa sul campo">'
-            '<path class="grass" d="M150 290 L10 150 Q150 -40 290 150 Z"/>'
-            '<path class="dirt" d="M150 270 L68 188 Q150 70 232 188 Z"/>'
-            '<path class="lines" d="M150 250 L215 185 L150 120 L85 185 Z"/>'
-            '<rect class="base" x="144" y="244" width="12" height="12"/><rect class="base" x="209" y="179" width="12" height="12" transform="rotate(45 215 185)"/>'
-            '<rect class="base" x="144" y="114" width="12" height="12" transform="rotate(45 150 120)"/><rect class="base" x="79" y="179" width="12" height="12" transform="rotate(45 85 185)"/>'
-            '%s</svg>') % pts
+    """Disegno del campo visto dall'alto: casa base in basso, posizioni numerate da 1 a 9."""
+    pts = ''.join('<g><circle cx="%d" cy="%d" r="13"/><text x="%d" y="%d">%d</text></g>' % (x, y, x, y + 5, n) for n, (x, y) in POS_XY.items())
+    base = lambda x, y: '<rect class="base" x="%.1f" y="%.1f" width="9" height="9" transform="rotate(45 %.1f %.1f)"/>' % (x - 4.5, y - 4.5, x, y)
+    return ('<svg class="dia" viewBox="0 64 300 240" role="img" aria-label="Le posizioni in difesa sul campo">'
+            '<path class="grass" d="M150 262 L20 132 A184 184 0 0 1 280 132 Z"/>'
+            '<path class="dirt" d="M150 262 L61.6 173.6 A125 125 0 0 1 238.4 173.6 Z"/>'
+            '<path class="infield" d="M150 250 L194 206 L150 162 L106 206 Z"/>'
+            '<path class="foul" d="M150 262 L20 132 M150 262 L280 132"/>'
+            '<circle class="mound" cx="150" cy="205" r="9"/>'
+            '%s%s%s<path class="home" d="M145 258h10v4l-5 5-5-5z"/>%s</svg>') % (
+        base(206.6, 205.4), base(150, 148.9), base(93.4, 205.4), pts)
 
 
 def regole_card(p):
@@ -645,6 +652,23 @@ def regole_card(p):
         mm = re.match(r'\s*<em><strong>(.*?)</strong></em>\s*(.*)', x, re.S)
         items.append('<li><b>%s</b> %s</li>' % (mm.group(1), mm.group(2).strip()) if mm else '<li>%s</li>' % x)
     return '<div class="rule reveal"><h3>%s</h3><p>%s</p>%s</div>' % (tit, intro, '<ul>%s</ul>' % ''.join(items) if items else '')
+
+
+
+def spezza_a_capo(html, path=''):
+    """Paragrafi lunghi con molti 'a capo' diventano paragrafi separati: stesse parole, lettura più ariosa."""
+    if path == 'baseball-2/al-cinema/':
+        return html
+    sq = BeautifulSoup(html, 'html.parser')
+    for p in sq.find_all('p'):
+        if p.find_parent(['li', 'td', 'form']) or not p.find('br') or len(p.get_text()) < 250 or re.search(r'<br/>\s*<em><strong>', str(p)):
+            continue
+        parti = [x for x in re.split(r'<br/?>', p.decode_contents()) if BeautifulSoup(x, 'html.parser').get_text(strip=True)]
+        if len(parti) < 2:
+            continue
+        cls = (' class="%s"' % ' '.join(p['class'])) if p.get('class') else ''
+        p.replace_with(BeautifulSoup(''.join('<p%s>%s</p>' % (cls if i == 0 else '', x.strip()) for i, x in enumerate(parti)), 'html.parser'))
+    return str(sq)
 
 
 def ritocchi_extra(path, content, root):
