@@ -243,6 +243,11 @@ def build_page(p):
     elif path == 'societa/':
         content = storia(content)
         cls += ' wide'
+    content = pagina_speciale(path, content, root)
+    content = ritocchi_extra(path, content, root)
+    if path in ('giovanili/', 'squadre-senior/', 'giovanili/calendario-u12-2020/', 'giovanili/calendario-u15-2020/', 'ballpark/',
+                'ballpark/open-field-diamanti-inclusivi/', 'squadre-senior/amatoriale/', 'baseball-2/al-cinema/'):
+        cls += ' wide'
     if path == 'giovanili/' and GIOV['stagioni']:
         content += '<div class="gv-box"><h2 class="has-text-align-center">Le stagioni anno per anno</h2>%s<p class="has-text-align-center"><a class="btn r" href="%s">Tutte le stagioni giovanili</a></p></div>' % (
             giov_elenco(root), link(root, 'giovanili/stagioni/'))
@@ -458,6 +463,313 @@ def build_giocatori():
     shell(path, 'Giocatori passati', body, desc='I giocatori che hanno vestito la maglia dei Lancers negli anni passati, con stagioni e statistiche.', cls='page wide')
 
 
+ICO = {
+    'cal': '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+    'tab': '<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+    'team': '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.6c2.8-.2 4.8 1.5 5.5 4.4"/></svg>',
+    'clock': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    'star': '<svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>',
+    'hist': '<svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></svg>',
+    'ball': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M6 5.5c2.2 3.6 2.2 9.4 0 13M18 5.5c-2.2 3.6-2.2 9.4 0 13"/></svg>',
+    'pdf': '<svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15l3 3 3-3"/></svg>',
+    'mail': '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+}
+
+
+def hub(root, items, cls=''):
+    """Riquadri di collegamento: (icona, titolo, sottotitolo, percorso)."""
+    out = []
+    for ic, t, sub, pth in items:
+        if pth is None:
+            continue
+        href = pth if pth.startswith('http') else link(root, pth)
+        ext = ' target="_blank" rel="noopener"' if pth.startswith('http') else ''
+        out.append('<a class="hub-c reveal" href="%s"%s><i>%s</i><span><b>%s</b>%s</span></a>' % (
+            href, ext, ICO[ic], e(t), '<em>%s</em>' % e(sub) if sub else ''))
+    return '<div class="hub %s">%s</div>' % (cls, ''.join(out))
+
+
+def giov_corrente(cat):
+    ks = sorted((k for k, v in GIOV['stagioni'].items() if v['categoria'] == cat), reverse=True)
+    return (ks[0], GIOV['stagioni'][ks[0]]) if ks else (None, None)
+
+
+def riepilogo(st):
+    fatte = [g for g in st['partite'] if 'puntiCasa' in g]
+    v = sum(1 for g in fatte if (g['puntiCasa'] > g['puntiOspiti']) == noi(g['casa']))
+    pos = next((r['pos'] for c in st['classifiche'][:1] for r in c['righe'] if r['noi']), '')
+    box = [(pos + 'º', 'in Toscana') if pos else None, (v, 'vittorie'), (len(fatte) - v, 'sconfitte')]
+    return '<div class="season-h">%s</div>' % ''.join('<div><b>%s</b><span>%s</span></div>' % x for x in box if x)
+
+
+def prima_img(html, root):
+    m = re.search(r'<img[^>]+src="([^"]+)"', resolve(html, root))
+    return m.group(1) if m else ''
+
+
+def pagina_speciale(path, content, root):
+    """Ritocchi grafici di singole pagine: i testi della società restano identici, cambia solo l'impaginazione."""
+    if path == 'giovanili/':
+        sq = BeautifulSoup(content, 'html.parser')
+        btns = sq.select_one('.wp-block-buttons')
+        cards = []
+        if btns:
+            for a in btns.find_all('a'):
+                href = a['href']
+                key = 'u15' if 'under-15' in href else 'u12'
+                pg = PAGES.get('giovanili/under-15/' if key == 'u15' else 'giovanili/under-12/')
+                img = prima_img(pg['html'], root) if pg else ''
+                k, st = giov_corrente(key)
+                info = ''
+                if st:
+                    pos = next((r['pos'] for c in st['classifiche'][:1] for r in c['righe'] if r['noi']), '')
+                    info = 'Stagione %s%s' % (st['anno'], (' · %sº posto in Toscana' % pos) if pos else '')
+                cards.append('<a class="team-c reveal" href="%s"><span class="im" style="background-image:url(%s)"></span><span class="b"><strong>%s</strong><em>%s</em><i>Roster, calendario e risultati →</i></span></a>' % (
+                    href, img, a.get_text(strip=True), e(info)))
+            btns.replace_with(BeautifulSoup('<div class="team-g">%s</div>' % ''.join(cards), 'html.parser'))
+        # testo e foto affiancati
+        ps = [x for x in sq.find_all('p', recursive=False)]
+        fig = sq.find('div', recursive=False) if sq.find('div', recursive=False) and sq.find('div', recursive=False).find('figure') else None
+        figs = [d for d in sq.find_all('div', recursive=False) if d.find('figure')]
+        if ps and figs:
+            fig = figs[-1].extract()
+            testo = ''.join(str(x.extract()) for x in ps)
+            sq.append(BeautifulSoup('<div class="split reveal"><div class="split-t">%s</div><div class="split-i">%s</div></div>' % (testo, fig.decode_contents()), 'html.parser'))
+        return str(sq)
+    if path in ('giovanili/under-12/', 'giovanili/under-15/'):
+        cat = 'u15' if 'under-15' in path else 'u12'
+        k, st = giov_corrente(cat)
+        cal = 'giovanili/calendario-u15-2020/' if cat == 'u15' else 'giovanili/calendario-u12-2020/'
+        extra = ''
+        if st:
+            extra += '<h2 class="has-text-align-center">Stagione %s</h2>%s' % (st['anno'], riepilogo(st))
+        extra += hub(root, [
+            ('cal', 'Calendario', 'Le partite della stagione', cal if cal in PAGES else None),
+            ('tab', 'Classifica e risultati', 'Scheda della stagione %s' % st['anno'] if st else '', '%s%s/' % (GV, k) if k else None),
+            ('hist', 'Le stagioni passate', 'Tutti gli anni dal 2022', GV if GIOV['stagioni'] else None),
+            ('clock', 'Orari allenamenti', 'Quando e dove ci alleniamo', 'ballpark/orari-allenamenti/' if 'ballpark/orari-allenamenti/' in PAGES else None),
+        ])
+        return content.replace('<figure', '<figure class="team-photo"', 1) + extra
+    if path in ('giovanili/calendario-u12-2020/', 'giovanili/calendario-u15-2020/'):
+        cat = 'u15' if 'u15' in path else 'u12'
+        k, st = giov_corrente(cat)
+        if st and st['partite']:
+            m = re.search(r'(<figure.*?</figure>)', content, re.S)
+            if m:
+                content = content.replace(m.group(1), '')
+                content += ('<div class="cal-split"><div class="cal-img reveal">%s</div><div class="reveal"><h3>Partite e risultati %s</h3>%s'
+                            '<div class="cal sea-cal">%s</div><p class="src">Risultati dal sito FIBS · <a href="%s">scheda completa della stagione</a></p></div></div>') % (
+                    m.group(1), st['anno'], riepilogo(st), partite_rows(st), link(root, '%s%s/' % (GV, k)))
+        return content
+    if path == 'squadre-senior/':
+        sq = BeautifulSoup(content, 'html.parser')
+        h5 = sq.find('h5')
+        if h5:
+            h5['class'] = ['has-text-align-center', 'team-link']
+        figs = sq.find_all('figure')
+        if figs:
+            figs[0]['class'] = figs[0].get('class', []) + ['team-photo']
+        return '<div data-season-head></div>' + str(sq) + hub(root, [
+            ('team', 'Roster Serie B', 'I giocatori della prima squadra', 'squadre-senior/serie-a2/'),
+            ('cal', 'Calendario e classifica', 'Partite, risultati e girone', 'squadre-senior/risultati/'),
+            ('star', 'Piazzamenti', 'Le stagioni dal 2002 a oggi', 'societa/piazzamenti/'),
+            ('hist', 'Giocatori passati', 'Chi ha vestito la nostra maglia', GPAS if GIOC else None),
+        ])
+    if path == 'area-download/':
+        sq = BeautifulSoup(content, 'html.parser')
+        for a in sq.select('a.download'):
+            par = a.find_parent('p')
+            if par:
+                par['class'] = ['dl-card']
+                a.insert(0, BeautifulSoup('<i>%s</i>' % ICO['pdf'], 'html.parser'))
+        return str(sq)
+    if path == 'squadre-senior/amatoriale/torneo-lancers-baz-40/':
+        return '<div class="soon reveal"><i>%s</i>%s</div>' % (ICO['ball'], content)
+    return content
+
+
+
+ICO.update({
+    'pin': '<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+    'film': '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>',
+    'book': '<svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21h15"/></svg>',
+    'heart': '<svg viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9-9.4C2 7.1 4.3 4 7.6 4c2 0 3.4 1.1 4.4 2.6C13 5.1 14.4 4 16.4 4 19.7 4 22 7.1 21 10.6 19.5 15.4 12 20 12 20z"/></svg>',
+    'phone': '<svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
+})
+
+SEZ_NAV = {
+    'baseball-2/': [('baseball-2/', 'Qualcosa sul baseball'), ('baseball-2/baseball/', 'Le regole'), ('baseball-2/al-cinema/', 'Al cinema')],
+    'ballpark/': [('ballpark/', 'Lancers Field'), ('ballpark/open-field-diamanti-inclusivi/', 'Open Field'), ('ballpark/orari-allenamenti/', 'Orari allenamenti')],
+}
+
+
+def sez_nav(path, root):
+    for k, items in SEZ_NAV.items():
+        if path.startswith(k):
+            return '<nav class="secnav" aria-label="In questa sezione">%s</nav>' % ''.join(
+                '<a class="chip%s" href="%s"%s>%s</a>' % (' on' if p == path else '', link(root, p), ' aria-current="page"' if p == path else '', e(t))
+                for p, t in items if p in PAGES)
+    return ''
+
+
+# posizioni in difesa sul diamante (coordinate su 300x300, casa base in basso)
+POS_XY = {1: (150, 182), 2: (150, 268), 3: (222, 172), 4: (186, 136), 5: (78, 172), 6: (114, 136), 7: (78, 98), 8: (150, 70), 9: (222, 98)}
+
+
+def diamante():
+    pts = ''.join('<g><circle cx="%d" cy="%d" r="15"/><text x="%d" y="%d">%d</text></g>' % (x, y, x, y + 5, n) for n, (x, y) in POS_XY.items())
+    return ('<svg class="dia" viewBox="0 0 300 300" role="img" aria-label="Le posizioni in difesa sul campo">'
+            '<path class="grass" d="M150 290 L10 150 Q150 -40 290 150 Z"/>'
+            '<path class="dirt" d="M150 270 L68 188 Q150 70 232 188 Z"/>'
+            '<path class="lines" d="M150 250 L215 185 L150 120 L85 185 Z"/>'
+            '<rect class="base" x="144" y="244" width="12" height="12"/><rect class="base" x="209" y="179" width="12" height="12" transform="rotate(45 215 185)"/>'
+            '<rect class="base" x="144" y="114" width="12" height="12" transform="rotate(45 150 120)"/><rect class="base" x="79" y="179" width="12" height="12" transform="rotate(45 85 185)"/>'
+            '%s</svg>') % pts
+
+
+def regole_card(p):
+    """Paragrafo 'LA DIFESA – … <br/><em><strong>Voce;</strong></em> testo…' diviso in titolo, introduzione ed elenco: stesse parole."""
+    parts = re.split(r'<br/>\s*(?=<em><strong>)', p.decode_contents())
+    head = parts[0]
+    m = re.match(r'\s*<em><strong>(?:<br/>)?\s*(.*?)\s*</strong></em>\s*(.*)', head, re.S)
+    if not m:
+        return None
+    tit = m.group(1).strip()
+    intro = m.group(2).strip()
+    if tit.endswith('–'):
+        tit = tit[:-1].strip()
+    else:
+        intro = re.sub(r'^–\s*', '', intro)
+    items = []
+    for x in parts[1:]:
+        mm = re.match(r'\s*<em><strong>(.*?)</strong></em>\s*(.*)', x, re.S)
+        items.append('<li><b>%s</b> %s</li>' % (mm.group(1), mm.group(2).strip()) if mm else '<li>%s</li>' % x)
+    return '<div class="rule reveal"><h3>%s</h3><p>%s</p>%s</div>' % (tit, intro, '<ul>%s</ul>' % ''.join(items) if items else '')
+
+
+def ritocchi_extra(path, content, root):
+    """Ritocchi grafici per Lancers Field, Open Field, Il Baseball, Le regole, Al cinema, Amatori. I testi restano identici."""
+    nav = sez_nav(path, root)
+    if path == 'ballpark/':
+        sq = BeautifulSoup(content, 'html.parser')
+        ps = sq.find_all('p', recursive=False)
+        emb = sq.find('div', class_='embed')
+        gal = sq.find('div', class_='gallery-x')
+        h2 = sq.find('h2')
+        if len(ps) >= 3 and emb:
+            addr = ps[0].decode_contents()
+            steps = ''.join('<li>%s</li>' % x.decode_contents() for x in ps[1:])
+            out = (str(h2) if h2 else '') + (
+                '<div class="place"><div class="place-t reveal"><div class="addr"><i>%s</i><p>%s</p></div>'
+                '<h3>Come arrivare</h3><ol class="steps">%s</ol>'
+                '<a class="btn r" href="https://www.google.com/maps/dir/?api=1&amp;destination=Campo+da+baseball+Lancers+Field+Porto+di+Mezzo" target="_blank" rel="noopener">Indicazioni stradali</a></div>'
+                '<div class="place-m reveal">%s</div></div>') % (ICO['pin'], addr, steps, emb.decode_contents())
+            if gal:
+                out += '<h2 class="has-text-align-center">Il campo in foto</h2>' + str(gal)
+            return nav + out
+    if path == 'ballpark/open-field-diamanti-inclusivi/':
+        sq = BeautifulSoup(content, 'html.parser')
+        ps = sq.find_all('p', recursive=False)
+        emb = sq.find('div', class_='embed')
+        if emb and len(ps) >= 2:
+            q = ps[-1].get_text().strip()
+            q = q.strip('“”"')
+            return nav + ('<div class="of"><div class="of-v reveal">%s</div><div class="of-t reveal"><span class="kick">Fondazione CR Firenze · volontari Lancers</span>%s</div></div>'
+                          '<blockquote class="bigq reveal"><p>“%s”</p></blockquote>') % (
+                str(emb), ''.join(str(x) for x in ps[:-1]), e(q)) + hub(root, [
+                ('pin', 'Lancers Field', 'Dove si trova il campo', 'ballpark/'),
+                ('clock', 'Orari allenamenti', 'Vieni a provare', 'ballpark/orari-allenamenti/' if 'ballpark/orari-allenamenti/' in PAGES else None),
+                ('ball', 'Gioca con noi', 'Il baseball è per tutti', 'gioca-anche-tu/' if 'gioca-anche-tu/' in PAGES else None),
+            ])
+    if path == 'ballpark/orari-allenamenti/':
+        return nav + content
+    if path == 'squadre-senior/amatoriale/':
+        sq = BeautifulSoup(content, 'html.parser')
+        sl = sq.find('div', class_='slider')
+        ps = sq.find_all('p', recursive=False)
+        form = sq.find('form', class_='contact')
+        if sl and ps:
+            h2 = sq.find('h2')
+            txt = []
+            for p in ps:
+                h = p.decode_contents()
+                h = re.sub(r'(\+39 [\d ]{9,13}\d)', lambda m: '<a class="tel" href="tel:%s">%s</a>' % (m.group(1).replace(' ', ''), m.group(1)), h)
+                cls = ' class="callout"' if p.get_text().startswith('Cerchiamo te') else ''
+                txt.append('<p%s>%s</p>' % (cls, h))
+            out = (str(h2) if h2 else '') + '<div class="am"><div class="am-s reveal">%s</div><div class="am-t reveal">%s</div></div>' % (str(sl), ''.join(txt))
+            if form:
+                out += '<h2 class="has-text-align-center">Scrivici per provare</h2>' + str(form)
+            return out
+    if path == 'baseball-2/':
+        sq = BeautifulSoup(content, 'html.parser')
+        ps = sq.find_all('p', recursive=False)
+        if ps:
+            ps[0]['class'] = ['dropcap']
+            ps[-1]['class'] = ['closing']
+        for f in sq.find_all('figure'):
+            f['class'] = f.get('class', []) + ['pic']
+        return nav + '<article class="essay">%s</article>' % str(sq)
+    if path == 'baseball-2/baseball/':
+        sq = BeautifulSoup(content, 'html.parser')
+        for p in sq.find_all('p', recursive=False):
+            t = p.get_text()
+            if t.startswith('Lanciatore (1)'):
+                nomi = [x.strip() for x in t.split(',')]
+                leg = ''.join('<li><b>%s</b>%s</li>' % (re.search(r'\((\d)\)', x).group(1), e(x)) if re.search(r'\((\d)\)', x) else '<li>%s</li>' % e(x) for x in nomi)
+                p.replace_with(BeautifulSoup('<div class="field reveal">%s<ol class="pos">%s</ol></div>' % (diamante(), leg), 'html.parser'))
+            elif p.find('em') and p.find('strong') and re.match(r'\s*(LA DIFESA|L’ATTACCO|L\'ATTACCO)', t):
+                card = regole_card(p)
+                if card:
+                    prev = p.find_previous_sibling()
+                    nb = BeautifulSoup(card, 'html.parser')
+                    if prev is not None and prev.name == 'div' and prev.find('figure') and not prev.get_text(strip=True):
+                        f = prev.find('figure').extract()
+                        f['class'] = ['rule-pic']
+                        prev.decompose()
+                        nb.find('h3').insert_before(f)
+                    p.replace_with(nb)
+            elif p.find('a') and 'fibs.it' in str(p) and len(t) < 80:
+                a = p.find('a')
+                a['class'] = ['btn', 'r']
+                p['class'] = ['has-text-align-center']
+        for f in sq.find_all('figure'):
+            f['class'] = f.get('class', []) + ['pic']
+        return nav + '<article class="essay rules">%s</article>' % str(sq)
+    if path == 'baseball-2/al-cinema/':
+        sq = BeautifulSoup(content, 'html.parser')
+        kids = [k for k in sq.children if getattr(k, 'name', None)]
+        out, films, i = [], [], 0
+        while i < len(kids):
+            k = kids[i]
+            if k.name == 'div' and k.find('figure') and i + 1 < len(kids) and kids[i + 1].name == 'p':
+                p = kids[i + 1]
+                h = re.sub(r'<br/>\s*_{5,}\s*$', '', p.decode_contents().strip())
+                h = re.sub(r'^<strong><strong>(.*?)</strong></strong>', r'<strong>\1</strong>', h)
+                h = h.replace('</strong><strong>', '')
+                m = re.match(r'\s*<strong>(.*?)</strong>\s*(?:–\s*)?(.*)', h, re.S)
+                tit, txt = (m.group(1), m.group(2)) if m else ('', h)
+                ym = re.search(r'(\d{4})\)?\s*$', re.sub(r'<.*?>', '', tit))
+                a = k.find('a')
+                img = k.find('img')
+                poster = '<a class="poster" href="%s" target="_blank" rel="noopener"><img src="%s" alt="%s" loading="lazy"></a>' % (
+                    a['href'] if a else '#', img['src'], e(re.sub(r'<.*?>', '', tit))) if img else ''
+                films.append('<div class="film reveal">%s<div class="film-b">%s<h3>%s</h3><p>%s</p></div></div>' % (
+                    poster, '<span class="yr">%s</span>' % ym.group(1) if ym else '', tit, txt))
+                i += 2
+                continue
+            if films:
+                out.append('<div class="films">%s</div>' % ''.join(films))
+                films = []
+            if k.name == 'p' and not out[1:]:
+                k['class'] = ['lead-box']
+            out.append(str(k))
+            i += 1
+        if films:
+            out.append('<div class="films">%s</div>' % ''.join(films))
+        return nav + ''.join(out)
+    return nav + content if nav else content
+
+
 def piazzamenti(content, root):
     """Elenco dei piazzamenti: stessi testi, una riga per anno con il collegamento alla scheda della stagione."""
     s = BeautifulSoup(content, 'html.parser')
@@ -576,6 +888,12 @@ def sea_out(st, root, y, lead, cols_all, ragazzi=False, rosa_club=''):
 
     # partite
     if st['partite']:
+        out.append('<h2 id="partite" class="has-text-align-center">Partite</h2><div class="cal sea-cal">%s</div>' % partite_rows(st))
+    return out
+
+
+def partite_rows(st):
+    if True:
         rows = []
         for g in st['partite']:
             d = g['data'].split('-')
@@ -595,8 +913,7 @@ def sea_out(st, root, y, lead, cols_all, ragazzi=False, rosa_club=''):
                     rows.append('<div class="g-row %s">%s%s%s</div>' % ('w' if w else 'l', dd, t, sc))
             else:
                 rows.append('<div class="g-row">%s%s<div class="s"><i>%s</i></div></div>' % (dd, t, e(g.get('nota') or 'non disputata')))
-        out.append('<h2 id="partite" class="has-text-align-center">Partite</h2><div class="cal sea-cal">%s</div>' % ''.join(rows))
-    return out
+        return ''.join(rows)
 
 
 def build_stagione(y, prima, dopo):
