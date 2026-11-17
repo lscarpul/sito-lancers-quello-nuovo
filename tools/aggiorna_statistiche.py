@@ -3,7 +3,8 @@
 
 Uso: python3 tools/aggiorna_statistiche.py
 Per ogni giocatore con una pagina in squadre-senior/serie-a2/ (link "Statistiche FIBS.IT" della scheda) e per
-tutti quelli comparsi nelle stagioni di tools/stagioni.json (elenco salvato in tools/giocatori.json) ricava il codice giocatore e chiede alla FIBS le statistiche di ogni anno e campionato.
+tutti quelli comparsi nelle stagioni di tools/stagioni.json (elenco salvato in tools/giocatori.json).
+I giocatori passati (non nell'ultima stagione) si riscaricano solo una volta l'anno, a ottobre, o con --tutti; ricava il codice giocatore e chiede alla FIBS le statistiche di ogni anno e campionato.
 Se un giocatore non risponde restano i dati precedenti.
 """
 import datetime
@@ -175,7 +176,16 @@ def main():
             print('%-34s ERRORE: %s' % (nome, ex))
     # 2) tutti gli altri giocatori delle stagioni registrate sul sito FIBS
     usati = set(meta)
-    for q in sorted(persone().values(), key=lambda x: x['nome']):
+    tutte = persone()
+    ultima = max((y for q in tutte.values() for y in q['stagioni']), default='')
+    oggi = datetime.date.today()
+    # i giocatori passati si aggiornano una volta l'anno, a ottobre (o con --tutti)
+    passati = '--tutti' in sys.argv or (oggi.month == 10 and old.get('aggiornatoPassati', '')[:4] != str(oggi.year))
+    noti = {v.get('nomeFibs', '').lower() for v in meta.values()} | {a for v in meta.values() for a in v.get('alias', [])}
+    print('Giocatori passati: %s' % ('aggiorno anche loro' if passati else 'salto quelli già presenti (si aggiornano a ottobre)'))
+    for q in sorted(tutte.values(), key=lambda x: x['nome']):
+        if not passati and ultima not in q['stagioni'] and q['nome'].lower() in noti:
+            continue
         try:
             r = prendi(q['nome'], q['url'])
         except Exception as ex:
@@ -206,8 +216,10 @@ def main():
         json.dump(meta, open(META, 'w', encoding='utf-8'), ensure_ascii=False, indent=1, sort_keys=True)
         print('Salvato tools/giocatori.json: ora lancia python3 tools/build.py')
     new = {'aggiornato': old.get('aggiornato', ''),
+           'aggiornatoPassati': oggi.isoformat() if passati and not errori else old.get('aggiornatoPassati', ''),
            'colonne': {t: [[l, d] for _, l, d in c] for t, c in COLONNE.items()}, 'giocatori': players}
-    if new == old:
+    if {k: v for k, v in new.items() if k != 'aggiornatoPassati'} == {k: v for k, v in old.items() if k != 'aggiornatoPassati'} \
+            and new.get('aggiornatoPassati') == old.get('aggiornatoPassati'):
         print('Nessuna novità nelle statistiche.')
         return 0
     new['aggiornato'] = datetime.date.today().isoformat()
