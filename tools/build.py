@@ -17,6 +17,7 @@ NAV = [
                              ('Diventa nostro sponsor', 'societa/diventa-nostro-sponsor/'),
                              ('Codice etico', 'societa/codice-etico/'), ('Contatti', 'societa/contatti/')]),
     ('Squadre', 'squadre-senior/', [('Serie B', 'squadre-senior/'), ('Roster Serie B', 'squadre-senior/serie-a2/'),
+                                    ('Giocatori passati', 'squadre-senior/giocatori-passati/'),
                                     ('Calendario e classifica', 'squadre-senior/risultati/'),
                                     ('Amatori', 'squadre-senior/amatoriale/'),
                                     ('Torneo Lancers BAZ 40', 'squadre-senior/amatoriale/torneo-lancers-baz-40/')]),
@@ -234,8 +235,10 @@ def build_page(p):
                                        'aria-label="Cerca un giocatore" data-filter-table></div>' + content
         cls += ' wide'
     elif path.startswith('squadre-senior/serie-a2/'):
-        content = player(content) + ('<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>'
-                                     % (path[len('squadre-senior/serie-a2/'):].strip('/'), root))
+        _slug = path[len('squadre-senior/serie-a2/'):].strip('/')
+        _anni = anni_link(root, GIOC.get(_slug, {}))
+        content = player(content) + ('<p class="pl-sea"><b>Stagioni in prima squadra</b> %s</p>' % _anni if _anni else '') + (
+            '<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>' % (_slug, root))
         cls += ' wide'
     elif path == 'societa/':
         content = storia(content)
@@ -367,14 +370,88 @@ def noi(n):
     return 'LANCERS' in n.upper()
 
 
+_GJ = os.path.join(ROOT, 'tools', 'giocatori.json')
+GIOC = json.load(open(_GJ, encoding='utf-8')) if os.path.exists(_GJ) else {}
+GDIR = 'squadre-senior/giocatori/'
+GPAS = 'squadre-senior/giocatori-passati/'
+ULTIMA = max(SEAS['stagioni']) if SEAS['stagioni'] else ''
+GMAP = {}
+for _k, _v in GIOC.items():
+    _v['path'] = _v.get('pagina') or '%s%s/' % (GDIR, _k)
+    for _n in [_v['nome'].lower()] + _v.get('alias', []):
+        GMAP[_n] = _v['path']
+
+
+def passato(v):
+    return not v.get('pagina') and ULTIMA not in v.get('stagioni', {})
+
+
 def giocatore_link(root, nome):
-    t = set(re.sub(r'[^a-zà-ù ]', '', nome.lower()).split())
-    for k, pg in PAGES.items():
-        if k.startswith('squadre-senior/serie-a2/') and k != 'squadre-senior/serie-a2/':
-            u = set(re.sub(r'[^a-zà-ù ]', '', pg['title'].lower()).split())
-            if len(u) > 1 and (u <= t or t <= u) and len(t) > 1:
-                return '<a href="%s">%s</a>' % (link(root, k), e(nome))
-    return e(nome)
+    pth = GMAP.get(nome.lower())
+    return '<a href="%s">%s</a>' % (link(root, pth), e(nome)) if pth else e(nome)
+
+
+def anni_link(root, v):
+    return ' · '.join('<a href="%s">%s</a>' % (link(root, '%s%s/' % (PZ, y)), y) for y in sorted(v.get('stagioni', {})))
+
+
+def intervalli(anni):
+    anni = sorted(int(y) for y in anni)
+    out, i = [], 0
+    while i < len(anni):
+        k = i
+        while k + 1 < len(anni) and anni[k + 1] == anni[k] + 1:
+            k += 1
+        out.append(str(anni[i]) if k == i else '%d–%d' % (anni[i], anni[k]))
+        i = k + 1
+    return ', '.join(out)
+
+
+def build_giocatore(slug, v):
+    path = v['path']
+    root = '../' * path.count('/')
+    st = v.get('stagioni', {})
+    ult = next((st[y] for y in sorted(st, reverse=True) if st[y].get('rosa')), {})
+    righe = [('Anno di nascita', e(v.get('nascita', ''))), ('Ruolo', e(ult.get('ruolo', ''))),
+             ('Batte / Tira', e(ult.get('bt', ''))), ('Ultima casacca #', e(ult.get('n', ''))),
+             ('Stagioni con i Lancers', anni_link(root, v))]
+    tab = '<div class="table-wrap"><table><tbody>%s</tbody></table></div>' % ''.join(
+        '<tr><td>%s</td><td>%s</td></tr>' % (a, b) for a, b in righe if b)
+    pas = passato(v)
+    content = ('%s<p class="pstats-leg has-text-align-center">Dati della scheda dal sito FIBS, che pubblica le rose dal 2020.</p>'
+               '<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>' % (tab, slug, root))
+    back = (GPAS, 'Tutti i giocatori passati') if pas else ('squadre-senior/serie-a2/', 'Roster Serie B')
+    body = band(root, path, v['nome'], 'Giocatore passato' if pas else 'Prima squadra %s' % ULTIMA) + \
+        '<section class="body"><div class="wrap"><div class="content reveal">%s</div><p class="back"><a class="btn n" href="%s">%s</a></p></div></section>%s' % (
+            content, link(root, back[0]), back[1], cta(root))
+    shell(path, v['nome'], body, desc='%s, giocatore dei Lancers Baseball Club: stagioni e statistiche dal sito FIBS.' % v['nome'], cls='page wide')
+
+
+def build_giocatori():
+    for slug, v in GIOC.items():
+        if not v.get('pagina'):
+            build_giocatore(slug, v)
+    path = GPAS
+    root = '../' * path.count('/')
+    pas = sorted([v for v in GIOC.values() if passato(v)], key=lambda v: v['nome'])
+    rows = []
+    for v in pas:
+        st = v.get('stagioni', {})
+        ult = next((st[y] for y in sorted(st, reverse=True) if st[y].get('rosa')), {})
+        rows.append('<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td class="n">%s</td><td class="n">%s</td></tr>' % (
+            link(root, v['path']), e(v['nome']), intervalli(st), e(ult.get('ruolo', '')), e(ult.get('n', '')), e(v.get('nascita', ''))))
+    primo = min(SEAS['stagioni'][y]['anno'] for y in SEAS['stagioni'] if SEAS['stagioni'][y].get('rosa')) if rows else ''
+    content = ('<p class="sea-lead">I %d giocatori che hanno vestito la maglia della prima squadra dal %s e che non fanno parte della rosa %s.</p>'
+               '<p class="has-text-align-center">Ogni nome apre la scheda con le stagioni giocate e le statistiche di carriera prese dal sito FIBS. '
+               'L\'elenco parte dal %s perché per gli anni precedenti la FIBS non pubblica le rose online.</p>'
+               '<div class="filter"><input type="search" placeholder="Cerca un giocatore…" aria-label="Cerca un giocatore" data-filter-table></div>'
+               '<div class="pstats sea-t gp"><div class="table-wrap"><table><thead><tr><th>Giocatore</th><th>Stagioni con i Lancers</th><th>Ruolo</th>'
+               '<th class="n">Casacca #</th><th class="n">Anno di nascita</th></tr></thead><tbody>%s</tbody></table></div></div>' % (
+                   len(pas), primo, ULTIMA, primo, ''.join(rows)))
+    body = band(root, path, 'Giocatori passati', 'Prima squadra') + \
+        '<section class="body"><div class="wrap"><div class="content reveal">%s</div><p class="back"><a class="btn n" href="%s">Roster Serie B</a></p></div></section>%s' % (
+            content, link(root, 'squadre-senior/serie-a2/'), cta(root))
+    shell(path, 'Giocatori passati', body, desc='I giocatori che hanno vestito la maglia dei Lancers negli anni passati, con stagioni e statistiche.', cls='page wide')
 
 
 def piazzamenti(content, root):
@@ -641,6 +718,7 @@ for p in D['pages']:
 for i, p in enumerate(POSTS):
     build_post(i, p)
 build_stagioni()
+build_giocatori()
 build_news()
 build_home()
 print('ok', len(D['pages']), 'pagine,', len(POSTS), 'notizie')

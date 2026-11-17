@@ -1,0 +1,2112 @@
+{
+ "albano-silvano": {
+  "alias": [
+   "albano silvano"
+  ],
+  "nascita": "1993",
+  "nome": "Albano Silvano",
+  "nomeFibs": "Albano Silvano",
+  "pagina": "squadre-senior/serie-a2/albano-silvano/",
+  "pid": 57140,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "7",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "7",
+    "rosa": true,
+    "ruolo": "1B/DH"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "7",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "7",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "7",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "7",
+    "rosa": true,
+    "ruolo": "IF"
+   }
+  }
+ },
+ "alex-rrethatori": {
+  "alias": [
+   "rrethatori alessandro"
+  ],
+  "nascita": "2009",
+  "nome": "Rrethatori Alex",
+  "nomeFibs": "Rrethatori Alessandro",
+  "pagina": "squadre-senior/serie-a2/alex-rrethatori/",
+  "pid": 514560,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "90",
+    "rosa": true,
+    "ruolo": "C"
+   }
+  }
+ },
+ "ancillotti-jacopo": {
+  "alias": [
+   "ancillotti jacopo"
+  ],
+  "nascita": "2003",
+  "nome": "Ancillotti Jacopo",
+  "nomeFibs": "Ancillotti Jacopo",
+  "pagina": "",
+  "pid": 556132,
+  "stagioni": {
+   "2022": {
+    "bt": "L/L",
+    "campo": true,
+    "n": "81",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "anichini-filippo": {
+  "alias": [
+   "anichini filippo"
+  ],
+  "nascita": "2000",
+  "nome": "Anichini Filippo",
+  "nomeFibs": "Anichini Filippo",
+  "pagina": "squadre-senior/serie-a2/anichini-filippo/",
+  "pid": 54304,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "32",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "32",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "32",
+    "rosa": true,
+    "ruolo": "IF"
+   }
+  }
+ },
+ "araujo-cano-jose-gustavo": {
+  "alias": [
+   "araujo cano jose gustavo"
+  ],
+  "nascita": "1993",
+  "nome": "Araujo Cano Jose Gustavo",
+  "nomeFibs": "Araujo Cano Jose Gustavo",
+  "pagina": "",
+  "pid": 451232,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "15",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "15",
+    "rosa": true,
+    "ruolo": "SS"
+   }
+  }
+ },
+ "baccili-giulio": {
+  "alias": [
+   "baccili giulio"
+  ],
+  "nascita": "2001",
+  "nome": "Baccili Giulio",
+  "nomeFibs": "Baccili Giulio",
+  "pagina": "",
+  "pid": 482948,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "88",
+    "rosa": true,
+    "ruolo": "OF/UTL"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "88",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "banci-riccardo": {
+  "alias": [
+   "banci riccardo"
+  ],
+  "nascita": "2004",
+  "nome": "Banci Riccardo",
+  "nomeFibs": "Banci Riccardo",
+  "pagina": "",
+  "pid": 54324,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "43",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "43",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "baratella-simone": {
+  "alias": [
+   "baratella simone"
+  ],
+  "nascita": "1993",
+  "nome": "Baratella Simone",
+  "nomeFibs": "Baratella Simone",
+  "pagina": "squadre-senior/serie-a2/baratella-simone/",
+  "pid": 57148,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "1B"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "P/1B/DH"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "19",
+    "rosa": true,
+    "ruolo": "IF"
+   }
+  }
+ },
+ "becattini-manuele": {
+  "alias": [
+   "becattini manuele"
+  ],
+  "nascita": "1996",
+  "nome": "Becattini Manuele",
+  "nomeFibs": "Becattini Manuele",
+  "pagina": "",
+  "pid": 57152,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "2",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "2",
+    "rosa": true,
+    "ruolo": "C"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "2",
+    "rosa": true,
+    "ruolo": "P/DH/OF"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "2",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "beconcini-alessio": {
+  "alias": [
+   "beconcini alessio"
+  ],
+  "nascita": "1970",
+  "nome": "Beconcini Alessio",
+  "nomeFibs": "Beconcini Alessio",
+  "pagina": "",
+  "pid": 273708,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "70",
+    "rosa": true,
+    "ruolo": "C"
+   },
+   "2022": {
+    "bt": "R/R",
+    "n": "70",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "belnabe-torres-maicol-desmin": {
+  "alias": [
+   "belnabe torres maicol desmin"
+  ],
+  "nascita": "1995",
+  "nome": "Belnabe Torres Maicol Desmin",
+  "nomeFibs": "Belnabe Torres Maicol Desmin",
+  "pagina": "",
+  "pid": 539896,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "31",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/L",
+    "campo": true,
+    "n": "31",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "beudean-giovanni": {
+  "alias": [
+   "beudean giovanni gabriel"
+  ],
+  "nascita": "2004",
+  "nome": "Beudean Giovanni",
+  "nomeFibs": "Beudean Giovanni Gabriel",
+  "pagina": "squadre-senior/serie-a2/beudean-giovanni/",
+  "pid": 499520,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "4",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "4",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "4",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "4",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "4",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "bini-alessandro": {
+  "alias": [
+   "bini alessandro"
+  ],
+  "nascita": "1983",
+  "nome": "Bini Alessandro",
+  "nomeFibs": "Bini Alessandro",
+  "pagina": "",
+  "pid": 57160,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "17",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "n": "17",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "17",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "n": "17",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "17",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "biondi-lapo": {
+  "alias": [
+   "biondi lapo"
+  ],
+  "nascita": "2001",
+  "nome": "Biondi Lapo",
+  "nomeFibs": "Biondi Lapo",
+  "pagina": "squadre-senior/serie-a2/biondi-lapo/",
+  "pid": 57164,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "59",
+    "rosa": true,
+    "ruolo": "IF"
+   }
+  }
+ },
+ "boncompagni-jacopo": {
+  "alias": [
+   "boncompagni jacopo"
+  ],
+  "nascita": "2010",
+  "nome": "Boncompagni Jacopo",
+  "nomeFibs": "Boncompagni Jacopo",
+  "pagina": "",
+  "pid": 527800,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "48",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "borri-ismaele": {
+  "alias": [
+   "borri ismaele"
+  ],
+  "nascita": "2008",
+  "nome": "Borri Ismaele",
+  "nomeFibs": "Borri Ismaele",
+  "pagina": "",
+  "pid": 535648,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "82",
+    "rosa": true,
+    "ruolo": "OF"
+   }
+  }
+ },
+ "brecka-jakub-jan": {
+  "alias": [
+   "břečka jakub jan"
+  ],
+  "nascita": "",
+  "nome": "Břečka Jakub Jan",
+  "nomeFibs": "Břečka Jakub Jan",
+  "pagina": "",
+  "pid": 765612,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "bucci-niccolo": {
+  "alias": [
+   "bucci niccolò"
+  ],
+  "nascita": "2010",
+  "nome": "Bucci Niccolò",
+  "nomeFibs": "Bucci Niccolò",
+  "pagina": "",
+  "pid": 552252,
+  "stagioni": {
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "0",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "castillo-farias-yohar-edoardo": {
+  "alias": [
+   "castillo farias yohar edoardo"
+  ],
+  "nascita": "2001",
+  "nome": "Castillo Farias Yohar Edoardo",
+  "nomeFibs": "Castillo Farias Yohar Edoardo",
+  "pagina": "",
+  "pid": 643188,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "32",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "ciappi-daniele": {
+  "alias": [
+   "ciappi daniele"
+  ],
+  "nascita": "1978",
+  "nome": "Ciappi Daniele",
+  "nomeFibs": "Ciappi Daniele",
+  "pagina": "",
+  "pid": 59616,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "n": "0",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "colasante-moises-vicente": {
+  "alias": [
+   "colasante moises vicente"
+  ],
+  "nascita": "1994",
+  "nome": "Colasante Moises Vicente",
+  "nomeFibs": "Colasante Moises Vicente",
+  "pagina": "",
+  "pid": 521712,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "74",
+    "rosa": true,
+    "ruolo": "P/CF"
+   }
+  }
+ },
+ "cordero-puentes-gilberto": {
+  "alias": [
+   "cordero puentes gilberto"
+  ],
+  "nascita": "1975",
+  "nome": "Cordero Puentes Gilberto",
+  "nomeFibs": "Cordero Puentes Gilberto",
+  "pagina": "",
+  "pid": 352408,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "74",
+    "rosa": true,
+    "ruolo": "2B"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "74",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "cosimo-rinaldi": {
+  "alias": [
+   "rinaldi cosimo"
+  ],
+  "nascita": "2006",
+  "nome": "Rinaldi Cosimo",
+  "nomeFibs": "Rinaldi Cosimo",
+  "pagina": "squadre-senior/serie-a2/cosimo-rinaldi/",
+  "pid": 516760,
+  "stagioni": {
+   "2026": {
+    "bt": "L/L",
+    "campo": true,
+    "n": "60",
+    "rosa": true,
+    "ruolo": "OF"
+   }
+  }
+ },
+ "da-prato-witting-edoardo": {
+  "alias": [
+   "da prato witting edoardo"
+  ],
+  "nascita": "2008",
+  "nome": "Da Prato Witting Edoardo",
+  "nomeFibs": "Da Prato Witting Edoardo",
+  "pagina": "",
+  "pid": 537636,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "64",
+    "rosa": true,
+    "ruolo": "C"
+   }
+  }
+ },
+ "degl-innocenti-giacomo": {
+  "alias": [
+   "degl'innocenti giacomo"
+  ],
+  "nascita": "1993",
+  "nome": "Degl'innocenti Giacomo",
+  "nomeFibs": "Degl'innocenti Giacomo",
+  "pagina": "",
+  "pid": 57168,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "58",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "58",
+    "rosa": true,
+    "ruolo": "P"
+   },
+   "2022": {
+    "bt": "S/R",
+    "campo": true,
+    "n": "58",
+    "rosa": true,
+    "ruolo": "P/IF"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "58",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "della-nave-ettore": {
+  "alias": [
+   "della nave ettore"
+  ],
+  "nascita": "2004",
+  "nome": "Della Nave Ettore",
+  "nomeFibs": "Della Nave Ettore",
+  "pagina": "squadre-senior/serie-a2/della-nave-ettore/",
+  "pid": 54328,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "3",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "3",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "3",
+    "rosa": true,
+    "ruolo": "OF"
+   }
+  }
+ },
+ "di-pietro-tommaso-alberto": {
+  "alias": [
+   "di pietro tommaso alberto"
+  ],
+  "nascita": "",
+  "nome": "Di Pietro Tommaso Alberto",
+  "nomeFibs": "Di Pietro Tommaso Alberto",
+  "pagina": "",
+  "pid": 500564,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "di-stefano-bravo-giuseppe-andreas": {
+  "alias": [
+   "di stefano bravo giuseppe andreas"
+  ],
+  "nascita": "2001",
+  "nome": "Di Stefano Bravo Giuseppe Andreas",
+  "nomeFibs": "Di Stefano Bravo Giuseppe Andreas",
+  "pagina": "",
+  "pid": 643192,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "43",
+    "rosa": true,
+    "ruolo": "C"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "43",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "diaz-diaz-marcos-antonio": {
+  "alias": [
+   "diaz diaz marcos antonio"
+  ],
+  "nascita": "1996",
+  "nome": "Diaz Diaz Marcos Antonio",
+  "nomeFibs": "Diaz Diaz Marcos Antonio",
+  "pagina": "",
+  "pid": 58300,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "36",
+    "rosa": true,
+    "ruolo": "SS"
+   }
+  }
+ },
+ "dragoni-alessandro": {
+  "alias": [
+   "dragoni alessandro"
+  ],
+  "nascita": "",
+  "nome": "Dragoni Alessandro",
+  "nomeFibs": "Dragoni Alessandro",
+  "pagina": "",
+  "pid": 532156,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "ferrini-alessandro": {
+  "alias": [
+   "ferrini alessandro"
+  ],
+  "nascita": "2003",
+  "nome": "Ferrini Alessandro",
+  "nomeFibs": "Ferrini Alessandro",
+  "pagina": "squadre-senior/serie-a2/ferrini-alessandro/",
+  "pid": 57172,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "1",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "1",
+    "rosa": true,
+    "ruolo": "P/UTL"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "1",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "1",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "1",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "1",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "fioravanti-leone": {
+  "alias": [
+   "fioravanti leone"
+  ],
+  "nascita": "2008",
+  "nome": "Fioravanti Leone",
+  "nomeFibs": "Fioravanti Leone",
+  "pagina": "",
+  "pid": 526440,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "n": "0",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "francesconi-leonardo": {
+  "alias": [
+   "francesconi leonardo"
+  ],
+  "nascita": "2005",
+  "nome": "Francesconi Leonardo",
+  "nomeFibs": "Francesconi Leonardo",
+  "pagina": "",
+  "pid": 501576,
+  "stagioni": {
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "98",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "65",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "francini-daniel": {
+  "alias": [
+   "francini daniel"
+  ],
+  "nascita": "2006",
+  "nome": "Francini Daniel",
+  "nomeFibs": "Francini Daniel",
+  "pagina": "",
+  "pid": 471052,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "98",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "gentili-riccardo": {
+  "alias": [
+   "gentili riccardo"
+  ],
+  "nascita": "1992",
+  "nome": "Gentili Riccardo",
+  "nomeFibs": "Gentili Riccardo",
+  "pagina": "",
+  "pid": 54496,
+  "stagioni": {
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "34",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "geri-simone": {
+  "alias": [
+   "geri simone"
+  ],
+  "nascita": "1991",
+  "nome": "Geri Simone",
+  "nomeFibs": "Geri Simone",
+  "pagina": "squadre-senior/serie-a2/geri-simone/",
+  "pid": 57176,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "LF"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "CF/OF"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "6",
+    "rosa": true,
+    "ruolo": "OF"
+   }
+  }
+ },
+ "grado-yanez-giuseppe": {
+  "alias": [
+   "grado giuseppe gabriel"
+  ],
+  "nascita": "2003",
+  "nome": "Grado Yanez Giuseppe",
+  "nomeFibs": "Grado Giuseppe Gabriel",
+  "pagina": "squadre-senior/serie-a2/grado-yanez-giuseppe/",
+  "pid": 635424,
+  "stagioni": {
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "32",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "22",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "22",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "L/L",
+    "campo": true,
+    "n": "22",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "grassi-francesco": {
+  "alias": [
+   "grassi francesco"
+  ],
+  "nascita": "2002",
+  "nome": "Grassi Francesco",
+  "nomeFibs": "Grassi Francesco",
+  "pagina": "squadre-senior/serie-a2/grassi-francesco/",
+  "pid": 57180,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "12",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "12",
+    "rosa": true,
+    "ruolo": "1B/DH"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "12",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "12",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "12",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "12",
+    "rosa": true,
+    "ruolo": "IF"
+   }
+  }
+ },
+ "lopez-antonio-gerardo": {
+  "alias": [
+   "lopez antonio gerardo"
+  ],
+  "nascita": "2003",
+  "nome": "Lopez Antonio Gerardo",
+  "nomeFibs": "Lopez Antonio Gerardo",
+  "pagina": "",
+  "pid": 472432,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "n": "34",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "lupo-takuma": {
+  "alias": [
+   "lupo takuma"
+  ],
+  "nascita": "",
+  "nome": "Lupo Takuma",
+  "nomeFibs": "Lupo Takuma",
+  "pagina": "",
+  "pid": 521092,
+  "stagioni": {
+   "2026": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "marashi-klisman": {
+  "alias": [
+   "marashi klisman"
+  ],
+  "nascita": "1997",
+  "nome": "Marashi Klisman",
+  "nomeFibs": "Marashi Klisman",
+  "pagina": "",
+  "pid": 474368,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "25",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "margheri-manuele": {
+  "alias": [
+   "margheri manuele"
+  ],
+  "nascita": "1981",
+  "nome": "Margheri Manuele",
+  "nomeFibs": "Margheri Manuele",
+  "pagina": "",
+  "pid": 57188,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "11",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "11",
+    "rosa": true,
+    "ruolo": "P"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "11",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "mastroianni-marco": {
+  "alias": [
+   "mastroianni marco"
+  ],
+  "nascita": "2005",
+  "nome": "Mastroianni Marco",
+  "nomeFibs": "Mastroianni Marco",
+  "pagina": "",
+  "pid": 543284,
+  "stagioni": {
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "5",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "5",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "5",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "mata-ortiz-victor-paul": {
+  "alias": [
+   "mata ortiz victor paul"
+  ],
+  "nascita": "1987",
+  "nome": "Mata Ortiz Victor Paul",
+  "nomeFibs": "Mata Ortiz Victor Paul",
+  "pagina": "",
+  "pid": 462672,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "90",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "90",
+    "rosa": true,
+    "ruolo": "1B"
+   }
+  }
+ },
+ "menoni-leonardo": {
+  "alias": [
+   "menoni leonardo"
+  ],
+  "nascita": "2001",
+  "nome": "Menoni Leonardo",
+  "nomeFibs": "Menoni Leonardo",
+  "pagina": "",
+  "pid": 57196,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "99",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "99",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "meucci-stefano": {
+  "alias": [
+   "meucci stefano"
+  ],
+  "nascita": "1995",
+  "nome": "Meucci Stefano",
+  "nomeFibs": "Meucci Stefano",
+  "pagina": "",
+  "pid": 57200,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "26",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "nannucci-guido": {
+  "alias": [
+   "nannucci guido"
+  ],
+  "nascita": "1985",
+  "nome": "Nannucci Guido",
+  "nomeFibs": "Nannucci Guido",
+  "pagina": "",
+  "pid": 57208,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "24",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "nerbini-gabriele": {
+  "alias": [
+   "nerbini gabriele"
+  ],
+  "nascita": "1979",
+  "nome": "Nerbini Gabriele",
+  "nomeFibs": "Nerbini Gabriele",
+  "pagina": "",
+  "pid": 57212,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "n": "33",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "33",
+    "rosa": true,
+    "ruolo": "OF"
+   },
+   "2023": {
+    "bt": "R/R",
+    "n": "33",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "33",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "orlandini-lorenzo": {
+  "alias": [
+   "orlandini lorenzo"
+  ],
+  "nascita": "",
+  "nome": "Orlandini Lorenzo",
+  "nomeFibs": "Orlandini Lorenzo",
+  "pagina": "",
+  "pid": 533264,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "ortega-baez-starlin": {
+  "alias": [
+   "ortega baez starlin"
+  ],
+  "nascita": "1988",
+  "nome": "Ortega Baez Starlin",
+  "nomeFibs": "Ortega Baez Starlin",
+  "pagina": "",
+  "pid": 524144,
+  "stagioni": {
+   "2020": {
+    "bt": "L/L",
+    "campo": true,
+    "n": "83",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "ovalles-luna-esdar-luis": {
+  "alias": [
+   "ovalles luna esdar luis"
+  ],
+  "nascita": "1997",
+  "nome": "Ovalles Luna Esdar Luis",
+  "nomeFibs": "Ovalles Luna Esdar Luis",
+  "pagina": "",
+  "pid": 462720,
+  "stagioni": {
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "53",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "panichi-tommaso": {
+  "alias": [
+   "panichi tommaso"
+  ],
+  "nascita": "1999",
+  "nome": "Panichi Tommaso",
+  "nomeFibs": "Panichi Tommaso",
+  "pagina": "squadre-senior/serie-a2/panichi-tommaso/",
+  "pid": 54308,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "8",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "8",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "8",
+    "rosa": true,
+    "ruolo": "OF"
+   }
+  }
+ },
+ "panti-niccolo": {
+  "alias": [
+   "panti niccolò"
+  ],
+  "nascita": "2008",
+  "nome": "Panti Niccolò",
+  "nomeFibs": "Panti Niccolò",
+  "pagina": "",
+  "pid": 527508,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "91",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "paperini-federico-tatsuya": {
+  "alias": [
+   "paperini federico tatsuya"
+  ],
+  "nascita": "2006",
+  "nome": "Paperini Federico Tatsuya",
+  "nomeFibs": "Paperini Federico Tatsuya",
+  "pagina": "",
+  "pid": 552356,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "35",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "parrini-antonio": {
+  "alias": [
+   "parrini antonio"
+  ],
+  "nascita": "1987",
+  "nome": "Parrini Antonio",
+  "nomeFibs": "Parrini Antonio",
+  "pagina": "squadre-senior/serie-a2/parrini-antonio/",
+  "pid": 57216,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "3B"
+   },
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "SS/IF"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "38",
+    "rosa": true,
+    "ruolo": "IF"
+   }
+  }
+ },
+ "pasquini-sweed-maor-luca": {
+  "alias": [
+   "pasquini sweed maor luca"
+  ],
+  "nascita": "2003",
+  "nome": "Pasquini Sweed Maor Luca",
+  "nomeFibs": "Pasquini Sweed Maor Luca",
+  "pagina": "",
+  "pid": 436552,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "18",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "18",
+    "rosa": true,
+    "ruolo": "CF"
+   }
+  }
+ },
+ "pena-nunez-kelvin-jose": {
+  "alias": [
+   "pena nunez kelvin jose"
+  ],
+  "nascita": "2002",
+  "nome": "Pena Nunez Kelvin Jose",
+  "nomeFibs": "Pena Nunez Kelvin Jose",
+  "pagina": "",
+  "pid": 562476,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "27",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "53",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "piccinelli-tommaso": {
+  "alias": [
+   "piccinelli tommaso"
+  ],
+  "nascita": "",
+  "nome": "Piccinelli Tommaso",
+  "nomeFibs": "Piccinelli Tommaso",
+  "pagina": "",
+  "pid": 431632,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "pucci-gabriele": {
+  "alias": [
+   "pucci gabriele"
+  ],
+  "nascita": "2011",
+  "nome": "Pucci Gabriele",
+  "nomeFibs": "Pucci Gabriele",
+  "pagina": "",
+  "pid": 528568,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "5",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "ramirez-reyes-joshua-manuel": {
+  "alias": [
+   "ramirez reyes joshua manuel"
+  ],
+  "nascita": "2000",
+  "nome": "Ramirez Reyes Joshua Manuel",
+  "nomeFibs": "Ramirez Reyes Joshua Manuel",
+  "pagina": "",
+  "pid": 532864,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "83",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "rassizad-niccolo-amir": {
+  "alias": [
+   "rassizad niccolò amir"
+  ],
+  "nascita": "1990",
+  "nome": "Rassizad Niccolò Amir",
+  "nomeFibs": "Rassizad Niccolò Amir",
+  "pagina": "",
+  "pid": 57224,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "35",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "repetti-flavio": {
+  "alias": [
+   "repetti flavio"
+  ],
+  "nascita": "2001",
+  "nome": "Repetti Flavio",
+  "nomeFibs": "Repetti Flavio",
+  "pagina": "",
+  "pid": 57228,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "77",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "77",
+    "rosa": true,
+    "ruolo": "C/RF"
+   }
+  }
+ },
+ "ricci-manuel": {
+  "alias": [
+   "ricci manuel"
+  ],
+  "nascita": "1997",
+  "nome": "Ricci Manuel",
+  "nomeFibs": "Ricci Manuel",
+  "pagina": "",
+  "pid": 60192,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "42",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "rinaldi-riccardo": {
+  "alias": [
+   "rinaldi riccardo"
+  ],
+  "nascita": "",
+  "nome": "Rinaldi Riccardo",
+  "nomeFibs": "Rinaldi Riccardo",
+  "pagina": "",
+  "pid": 522080,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "risico-riccardo": {
+  "alias": [
+   "risico riccardo"
+  ],
+  "nascita": "",
+  "nome": "Risico Riccardo",
+  "nomeFibs": "Risico Riccardo",
+  "pagina": "",
+  "pid": 552564,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "rosario-ramirez-yeison": {
+  "alias": [
+   "rosario ramirez yeison"
+  ],
+  "nascita": "1995",
+  "nome": "Rosario Ramirez Yeison",
+  "nomeFibs": "Rosario Ramirez Yeison",
+  "pagina": "",
+  "pid": 449836,
+  "stagioni": {
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "50",
+    "rosa": true,
+    "ruolo": "C"
+   }
+  }
+ },
+ "rudaj-arberim": {
+  "alias": [
+   "rudaj arberim"
+  ],
+  "nascita": "1996",
+  "nome": "Rudaj Arberim",
+  "nomeFibs": "Rudaj Arberim",
+  "pagina": "",
+  "pid": 497824,
+  "stagioni": {
+   "2020": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "20",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2021": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "20",
+    "rosa": true,
+    "ruolo": "2B"
+   }
+  }
+ },
+ "ruocco-patient-vincent": {
+  "alias": [
+   "ruocco patient vincent"
+  ],
+  "nascita": "2006",
+  "nome": "Ruocco Patient Vincent",
+  "nomeFibs": "Ruocco Patient Vincent",
+  "pagina": "",
+  "pid": 483328,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "61",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "scarpulla-leonardo": {
+  "alias": [
+   "scarpulla leonardo"
+  ],
+  "nascita": "2002",
+  "nome": "Scarpulla Leonardo",
+  "nomeFibs": "Scarpulla Leonardo",
+  "pagina": "squadre-senior/serie-a2/scarpulla-leonardo/",
+  "pid": 472452,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "14",
+    "rosa": true,
+    "ruolo": "2B/UTL"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "14",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "14",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "14",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "14",
+    "rosa": true,
+    "ruolo": "OF"
+   }
+  }
+ },
+ "scarpulla-lorenzo": {
+  "alias": [
+   "scarpulla lorenzo"
+  ],
+  "nascita": "2005",
+  "nome": "Scarpulla Lorenzo",
+  "nomeFibs": "Scarpulla Lorenzo",
+  "pagina": "squadre-senior/serie-a2/scarpulla-lorenzo/",
+  "pid": 472448,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "25",
+    "rosa": true,
+    "ruolo": "C"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "25",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "25",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "25",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "severino-mooa-cristian-alberto": {
+  "alias": [
+   "severino mooa cristian alberto"
+  ],
+  "nascita": "",
+  "nome": "Severino Mooa Cristian Alberto",
+  "nomeFibs": "Severino Mooa Cristian Alberto",
+  "pagina": "",
+  "pid": 522612,
+  "stagioni": {
+   "2025": {
+    "campo": true,
+    "rosa": false
+   }
+  }
+ },
+ "silvestri-daniele": {
+  "alias": [
+   "silvestri daniele"
+  ],
+  "nascita": "2004",
+  "nome": "Silvestri Daniele",
+  "nomeFibs": "Silvestri Daniele",
+  "pagina": "squadre-senior/serie-a2/silvestri-daniele/",
+  "pid": 498592,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "89",
+    "rosa": true,
+    "ruolo": "P/OF"
+   },
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "89",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "89",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2025": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "89",
+    "rosa": true,
+    "ruolo": "UTL"
+   },
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "89",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "tutino-sifontes-giuseppe-antonell": {
+  "alias": [
+   "tutino sifontes giuseppe antonell"
+  ],
+  "nascita": "2006",
+  "nome": "Tutino Sifontes Giuseppe Antonell",
+  "nomeFibs": "Tutino Sifontes Giuseppe Antonell",
+  "pagina": "",
+  "pid": 1068476,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "27",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "vannini-leonardo": {
+  "alias": [
+   "vannini leonardo"
+  ],
+  "nascita": "1986",
+  "nome": "Vannini Leonardo",
+  "nomeFibs": "Vannini Leonardo",
+  "pagina": "",
+  "pid": 58364,
+  "stagioni": {
+   "2023": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "27",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "vannuzzi-innocenti-matteo": {
+  "alias": [
+   "vannuzzi innocenti matteo"
+  ],
+  "nascita": "1985",
+  "nome": "Vannuzzi Innocenti Matteo",
+  "nomeFibs": "Vannuzzi Innocenti Matteo",
+  "pagina": "",
+  "pid": 348668,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "n": "44",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ },
+ "vergara-pinto-daniel-alejandro": {
+  "alias": [
+   "vergara pinto daniel alejandro"
+  ],
+  "nascita": "2007",
+  "nome": "Vergara Pinto Daniel Alejandro",
+  "nomeFibs": "Vergara Pinto Daniel Alejandro",
+  "pagina": "",
+  "pid": 977128,
+  "stagioni": {
+   "2026": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "46",
+    "rosa": true,
+    "ruolo": "C/IF"
+   }
+  }
+ },
+ "verlengieri-flavio-gabriel": {
+  "alias": [
+   "verlengieri flavio gabriel"
+  ],
+  "nascita": "1986",
+  "nome": "Verlengieri Flavio Gabriel",
+  "nomeFibs": "Verlengieri Flavio Gabriel",
+  "pagina": "",
+  "pid": 55612,
+  "stagioni": {
+   "2024": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "37",
+    "rosa": true,
+    "ruolo": "UTL"
+   }
+  }
+ },
+ "vernaccini-aessio": {
+  "alias": [
+   "vernaccini aessio"
+  ],
+  "nascita": "2002",
+  "nome": "Vernaccini Aessio",
+  "nomeFibs": "Vernaccini Aessio",
+  "pagina": "",
+  "pid": 481576,
+  "stagioni": {
+   "2022": {
+    "bt": "R/R",
+    "campo": true,
+    "n": "39",
+    "rosa": true,
+    "ruolo": "P"
+   }
+  }
+ }
+}

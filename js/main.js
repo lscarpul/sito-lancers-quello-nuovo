@@ -148,7 +148,7 @@
       $$('.content table.has-head tr').forEach(function (tr, i) {
         if (i) tr.hidden = t && tr.textContent.toLowerCase().indexOf(t) < 0;
       });
-      $$('.player').forEach(function (p) { p.hidden = t && p.textContent.toLowerCase().indexOf(t) < 0; });
+      $$('.player, .gp tbody tr').forEach(function (p) { p.hidden = t && p.textContent.toLowerCase().indexOf(t) < 0; });
     });
   });
 

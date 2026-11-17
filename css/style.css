@@ -449,3 +449,8 @@ a.g-row:hover{transform:translateX(3px);box-shadow:0 6px 18px rgba(13,23,48,.14)
 .pz-y{font-size:26px}
 .pz-b{grid-column:1/-1;margin-left:12px}
 }
+
+/* giocatori passati */
+.pl-sea{text-align:center;margin:26px 0 0;font-size:16px}
+.pl-sea b{display:block;font-family:BC,sans-serif;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:600;margin-bottom:2px}
+.gp td:first-child{font-weight:600}

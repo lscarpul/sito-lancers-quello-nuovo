@@ -151,6 +151,9 @@ def rosa(slug, team):
             td = [txt(x) for x in tr.find_all('td')]
             if len(td) >= 5 and 'YOB' in head:
                 gioc.append({'n': td[0], 'nome': td[1], 'ruolo': td[2], 'bt': td[3], 'anno': td[4]})
+                a = tr.find('a', href=re.compile(r'/players/\d+$'))
+                if a:
+                    gioc[-1]['pid'] = int(a['href'].rsplit('/', 1)[-1])
             elif len(td) == 3 and 'YOB' not in head:
                 staff.append({'n': td[0], 'nome': td[1], 'ruolo': td[2]})
     return gioc, staff
@@ -183,7 +186,8 @@ def statistiche(slug, team):
         rows = [r for r in rows if r.get(chiave) or (tipo == 'batting' and r.get('g'))]
         rows.sort(key=lambda r: nome(r.get('name', '')))
         if rows:
-            out[tipo] = [{'nome': nome(r.get('name', '')), 'v': [fmt(k, r.get(k, '')) for k, _, _ in cols]} for r in rows]
+            out[tipo] = [{'nome': nome(r.get('name', '')), 'pid': int(str(r.get('link', '0')).rsplit('/', 1)[-1] or 0),
+                          'v': [fmt(k, r.get(k, '')) for k, _, _ in cols]} for r in rows]
     return out
 
 

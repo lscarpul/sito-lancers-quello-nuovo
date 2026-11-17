@@ -1838,7 +1838,7 @@
    "slug": "2020-fibs-serie-a2-baseball-maschile",
    "team": 2306,
    "fibs": "https://www.fibs.it/it/events/2020-fibs-serie-a2-baseball-maschile/calendars?team=2306",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone D - NAZIONALE",
@@ -2053,175 +2053,200 @@
      "nome": "Albano Silvano",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 32619
     },
     {
      "n": "15",
      "nome": "Araujo Cano Jose Gustavo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 32620
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 32621
     },
     {
      "n": "2",
      "nome": "Becattini Manuele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 32622
     },
     {
      "n": "31",
      "nome": "Belnabe Torres Maicol Desmin",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1995"
+     "anno": "1995",
+     "pid": 32623
     },
     {
      "n": "17",
      "nome": "Bini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1983"
+     "anno": "1983",
+     "pid": 32624
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 32625
     },
     {
      "n": "58",
      "nome": "Degl'innocenti Giacomo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 32626
     },
     {
      "n": "1",
      "nome": "Ferrini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 32627
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 32628
     },
     {
      "n": "12",
      "nome": "Grassi Francesco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 32629
     },
     {
      "n": "25",
      "nome": "Marashi Klisman",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1997"
+     "anno": "1997",
+     "pid": 32630
     },
     {
      "n": "11",
      "nome": "Margheri Manuele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1981"
+     "anno": "1981",
+     "pid": 32631
     },
     {
      "n": "90",
      "nome": "Mata Ortiz Victor Paul",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 32632
     },
     {
      "n": "99",
      "nome": "Menoni Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 32633
     },
     {
      "n": "26",
      "nome": "Meucci Stefano",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1995"
+     "anno": "1995",
+     "pid": 32634
     },
     {
      "n": "24",
      "nome": "Nannucci Guido",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1985"
+     "anno": "1985",
+     "pid": 32636
     },
     {
      "n": "33",
      "nome": "Nerbini Gabriele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1970"
+     "anno": "1970",
+     "pid": 32637
     },
     {
      "n": "83",
      "nome": "Ortega Baez Starlin",
      "ruolo": "UTL",
      "bt": "L/L",
-     "anno": "1988"
+     "anno": "1988",
+     "pid": 32635
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 32638
     },
     {
      "n": "18",
      "nome": "Pasquini Sweed Maor Luca",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 32639
     },
     {
      "n": "35",
      "nome": "Rassizad Niccolò Amir",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1990"
+     "anno": "1990",
+     "pid": 32640
     },
     {
      "n": "77",
      "nome": "Repetti Flavio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 32641
     },
     {
      "n": "42",
      "nome": "Ricci Manuel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1997"
+     "anno": "1997",
+     "pid": 33300
     },
     {
      "n": "20",
      "nome": "Rudaj Arberim",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 32642
     }
    ],
    "staff": [
@@ -2250,6 +2275,7 @@
     "batting": [
      {
       "nome": "Araujo Cano Jose Gustavo",
+      "pid": 32620,
       "v": [
        14,
        47,
@@ -2270,6 +2296,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 32621,
       "v": [
        14,
        45,
@@ -2290,6 +2317,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 32622,
       "v": [
        14,
        53,
@@ -2310,6 +2338,7 @@
      },
      {
       "nome": "Belnabe Torres Maicol Desmin",
+      "pid": 32623,
       "v": [
        3,
        4,
@@ -2330,6 +2359,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 32625,
       "v": [
        1,
        1,
@@ -2350,6 +2380,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 32626,
       "v": [
        3,
        3,
@@ -2370,6 +2401,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 32627,
       "v": [
        2,
        0,
@@ -2390,6 +2422,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 32628,
       "v": [
        14,
        36,
@@ -2410,6 +2443,7 @@
      },
      {
       "nome": "Mata Ortiz Victor Paul",
+      "pid": 32632,
       "v": [
        12,
        37,
@@ -2430,6 +2464,7 @@
      },
      {
       "nome": "Meucci Stefano",
+      "pid": 32634,
       "v": [
        2,
        1,
@@ -2450,6 +2485,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 32638,
       "v": [
        14,
        46,
@@ -2470,6 +2506,7 @@
      },
      {
       "nome": "Pasquini Sweed Maor Luca",
+      "pid": 32639,
       "v": [
        14,
        51,
@@ -2490,6 +2527,7 @@
      },
      {
       "nome": "Rassizad Niccolò Amir",
+      "pid": 32640,
       "v": [
        13,
        37,
@@ -2510,6 +2548,7 @@
      },
      {
       "nome": "Repetti Flavio",
+      "pid": 32641,
       "v": [
        5,
        8,
@@ -2530,6 +2569,7 @@
      },
      {
       "nome": "Ricci Manuel",
+      "pid": 33300,
       "v": [
        6,
        18,
@@ -2550,6 +2590,7 @@
      },
      {
       "nome": "Rudaj Arberim",
+      "pid": 32642,
       "v": [
        13,
        37,
@@ -2572,6 +2613,7 @@
     "pitching": [
      {
       "nome": "Belnabe Torres Maicol Desmin",
+      "pid": 32623,
       "v": [
        1,
        1,
@@ -2590,6 +2632,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 32626,
       "v": [
        0,
        2,
@@ -2608,6 +2651,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 32627,
       "v": [
        0,
        0,
@@ -2626,6 +2670,7 @@
      },
      {
       "nome": "Menoni Leonardo",
+      "pid": 32633,
       "v": [
        1,
        4,
@@ -2644,6 +2689,7 @@
      },
      {
       "nome": "Ortega Baez Starlin",
+      "pid": 32635,
       "v": [
        0,
        4,
@@ -2662,6 +2708,7 @@
      },
      {
       "nome": "Ricci Manuel",
+      "pid": 33300,
       "v": [
        0,
        1,
@@ -2682,6 +2729,7 @@
     "fielding": [
      {
       "nome": "Araujo Cano Jose Gustavo",
+      "pid": 32620,
       "v": [
        14,
        57,
@@ -2694,6 +2742,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 32621,
       "v": [
        14,
        115,
@@ -2706,6 +2755,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 32622,
       "v": [
        14,
        109,
@@ -2718,6 +2768,7 @@
      },
      {
       "nome": "Belnabe Torres Maicol Desmin",
+      "pid": 32623,
       "v": [
        5,
        5,
@@ -2730,6 +2781,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 32625,
       "v": [
        1,
        0,
@@ -2742,6 +2794,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 32626,
       "v": [
        7,
        15,
@@ -2754,6 +2807,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 32627,
       "v": [
        3,
        1,
@@ -2766,6 +2820,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 32628,
       "v": [
        14,
        25,
@@ -2778,6 +2833,7 @@
      },
      {
       "nome": "Mata Ortiz Victor Paul",
+      "pid": 32632,
       "v": [
        12,
        1,
@@ -2790,6 +2846,7 @@
      },
      {
       "nome": "Menoni Leonardo",
+      "pid": 32633,
       "v": [
        6,
        8,
@@ -2802,6 +2859,7 @@
      },
      {
       "nome": "Meucci Stefano",
+      "pid": 32634,
       "v": [
        2,
        2,
@@ -2814,6 +2872,7 @@
      },
      {
       "nome": "Ortega Baez Starlin",
+      "pid": 32635,
       "v": [
        3,
        4,
@@ -2826,6 +2885,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 32638,
       "v": [
        14,
        60,
@@ -2838,6 +2898,7 @@
      },
      {
       "nome": "Pasquini Sweed Maor Luca",
+      "pid": 32639,
       "v": [
        14,
        34,
@@ -2850,6 +2911,7 @@
      },
      {
       "nome": "Rassizad Niccolò Amir",
+      "pid": 32640,
       "v": [
        13,
        21,
@@ -2862,6 +2924,7 @@
      },
      {
       "nome": "Repetti Flavio",
+      "pid": 32641,
       "v": [
        5,
        3,
@@ -2874,6 +2937,7 @@
      },
      {
       "nome": "Ricci Manuel",
+      "pid": 33300,
       "v": [
        7,
        23,
@@ -2886,6 +2950,7 @@
      },
      {
       "nome": "Rudaj Arberim",
+      "pid": 32642,
       "v": [
        13,
        44,
@@ -2905,7 +2970,7 @@
    "slug": "2021-fibs-serie-a-baseball-maschile",
    "team": 19360,
    "fibs": "https://www.fibs.it/it/events/2021-fibs-serie-a-baseball-maschile/calendars?team=19360",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone G - NAZIONALE",
@@ -3371,147 +3436,168 @@
      "nome": "Araujo Cano Jose Gustavo",
      "ruolo": "SS",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 49551
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "1B",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 49507
     },
     {
      "n": "2",
      "nome": "Becattini Manuele",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 49508
     },
     {
      "n": "70",
      "nome": "Beconcini Alessio",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "1970"
+     "anno": "1970",
+     "pid": 49536
     },
     {
      "n": "31",
      "nome": "Belnabe Torres Maicol Desmin",
      "ruolo": "P",
      "bt": "R/L",
-     "anno": "1995"
+     "anno": "1995",
+     "pid": 49543
     },
     {
      "n": "4",
      "nome": "Beudean Giovanni Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 49510
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 49512
     },
     {
      "n": "0",
      "nome": "Ciappi Daniele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1978"
+     "anno": "1978",
+     "pid": 49513
     },
     {
      "n": "74",
      "nome": "Colasante Moises Vicente",
      "ruolo": "P/CF",
      "bt": "R/R",
-     "anno": "1994"
+     "anno": "1994",
+     "pid": 49540
     },
     {
      "n": "58",
      "nome": "Degl'innocenti Giacomo",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 49514
     },
     {
      "n": "36",
      "nome": "Diaz Diaz Marcos Antonio",
      "ruolo": "SS",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 49541
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "LF",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 49516
     },
     {
      "n": "11",
      "nome": "Margheri Manuele",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "1981"
+     "anno": "1981",
+     "pid": 49545
     },
     {
      "n": "90",
      "nome": "Mata Ortiz Victor Paul",
      "ruolo": "1B",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 49542
     },
     {
      "n": "99",
      "nome": "Menoni Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 49522
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "3B",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 49526
     },
     {
      "n": "18",
      "nome": "Pasquini Sweed Maor Luca",
      "ruolo": "CF",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 49548
     },
     {
      "n": "83",
      "nome": "Ramirez Reyes Joshua Manuel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2000"
+     "anno": "2000",
+     "pid": 71889
     },
     {
      "n": "77",
      "nome": "Repetti Flavio",
      "ruolo": "C/RF",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 49547
     },
     {
      "n": "50",
      "nome": "Rosario Ramirez Yeison",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "1995"
+     "anno": "1995",
+     "pid": 49552
     },
     {
      "n": "20",
      "nome": "Rudaj Arberim",
      "ruolo": "2B",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 49550
     }
    ],
    "staff": [],
@@ -3519,6 +3605,7 @@
     "batting": [
      {
       "nome": "Araujo Cano Jose Gustavo",
+      "pid": 49551,
       "v": [
        20,
        53,
@@ -3539,6 +3626,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 49507,
       "v": [
        32,
        112,
@@ -3559,6 +3647,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 49508,
       "v": [
        29,
        104,
@@ -3579,6 +3668,7 @@
      },
      {
       "nome": "Beconcini Alessio",
+      "pid": 49536,
       "v": [
        1,
        1,
@@ -3599,6 +3689,7 @@
      },
      {
       "nome": "Belnabe Torres Maicol Desmin",
+      "pid": 49543,
       "v": [
        12,
        34,
@@ -3619,6 +3710,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 49510,
       "v": [
        1,
        1,
@@ -3639,6 +3731,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 49512,
       "v": [
        2,
        2,
@@ -3659,6 +3752,7 @@
      },
      {
       "nome": "Colasante Moises Vicente",
+      "pid": 49540,
       "v": [
        22,
        64,
@@ -3679,6 +3773,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 49514,
       "v": [
        2,
        2,
@@ -3699,6 +3794,7 @@
      },
      {
       "nome": "Diaz Diaz Marcos Antonio",
+      "pid": 49541,
       "v": [
        32,
        94,
@@ -3719,6 +3815,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 49516,
       "v": [
        27,
        64,
@@ -3739,6 +3836,7 @@
      },
      {
       "nome": "Mata Ortiz Victor Paul",
+      "pid": 49542,
       "v": [
        29,
        101,
@@ -3759,6 +3857,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 49526,
       "v": [
        27,
        77,
@@ -3779,6 +3878,7 @@
      },
      {
       "nome": "Pasquini Sweed Maor Luca",
+      "pid": 49548,
       "v": [
        17,
        68,
@@ -3799,6 +3899,7 @@
      },
      {
       "nome": "Ramirez Reyes Joshua Manuel",
+      "pid": 71889,
       "v": [
        19,
        53,
@@ -3819,6 +3920,7 @@
      },
      {
       "nome": "Repetti Flavio",
+      "pid": 49547,
       "v": [
        26,
        94,
@@ -3839,6 +3941,7 @@
      },
      {
       "nome": "Rosario Ramirez Yeison",
+      "pid": 49552,
       "v": [
        5,
        6,
@@ -3859,6 +3962,7 @@
      },
      {
       "nome": "Rudaj Arberim",
+      "pid": 49550,
       "v": [
        24,
        67,
@@ -3881,6 +3985,7 @@
     "pitching": [
      {
       "nome": "Belnabe Torres Maicol Desmin",
+      "pid": 49543,
       "v": [
        2,
        3,
@@ -3899,6 +4004,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 49512,
       "v": [
        0,
        0,
@@ -3917,6 +4023,7 @@
      },
      {
       "nome": "Colasante Moises Vicente",
+      "pid": 49540,
       "v": [
        1,
        6,
@@ -3935,6 +4042,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 49514,
       "v": [
        2,
        9,
@@ -3953,6 +4061,7 @@
      },
      {
       "nome": "Margheri Manuele",
+      "pid": 49545,
       "v": [
        1,
        3,
@@ -3971,6 +4080,7 @@
      },
      {
       "nome": "Menoni Leonardo",
+      "pid": 49522,
       "v": [
        1,
        3,
@@ -3989,6 +4099,7 @@
      },
      {
       "nome": "Ramirez Reyes Joshua Manuel",
+      "pid": 71889,
       "v": [
        0,
        1,
@@ -4009,6 +4120,7 @@
     "fielding": [
      {
       "nome": "Araujo Cano Jose Gustavo",
+      "pid": 49551,
       "v": [
        20,
        43,
@@ -4021,6 +4133,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 49507,
       "v": [
        32,
        246,
@@ -4033,6 +4146,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 49508,
       "v": [
        29,
        191,
@@ -4045,6 +4159,7 @@
      },
      {
       "nome": "Beconcini Alessio",
+      "pid": 49536,
       "v": [
        1,
        0,
@@ -4057,6 +4172,7 @@
      },
      {
       "nome": "Belnabe Torres Maicol Desmin",
+      "pid": 49543,
       "v": [
        14,
        49,
@@ -4069,6 +4185,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 49510,
       "v": [
        1,
        0,
@@ -4081,6 +4198,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 49512,
       "v": [
        3,
        1,
@@ -4093,6 +4211,7 @@
      },
      {
       "nome": "Colasante Moises Vicente",
+      "pid": 49540,
       "v": [
        27,
        23,
@@ -4105,6 +4224,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 49514,
       "v": [
        10,
        11,
@@ -4117,6 +4237,7 @@
      },
      {
       "nome": "Diaz Diaz Marcos Antonio",
+      "pid": 49541,
       "v": [
        32,
        133,
@@ -4129,6 +4250,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 49516,
       "v": [
        27,
        42,
@@ -4141,6 +4263,7 @@
      },
      {
       "nome": "Margheri Manuele",
+      "pid": 49545,
       "v": [
        8,
        14,
@@ -4153,6 +4276,7 @@
      },
      {
       "nome": "Mata Ortiz Victor Paul",
+      "pid": 49542,
       "v": [
        29,
        45,
@@ -4165,6 +4289,7 @@
      },
      {
       "nome": "Menoni Leonardo",
+      "pid": 49522,
       "v": [
        5,
        5,
@@ -4177,6 +4302,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 49526,
       "v": [
        27,
        78,
@@ -4189,6 +4315,7 @@
      },
      {
       "nome": "Pasquini Sweed Maor Luca",
+      "pid": 49548,
       "v": [
        17,
        42,
@@ -4201,6 +4328,7 @@
      },
      {
       "nome": "Ramirez Reyes Joshua Manuel",
+      "pid": 71889,
       "v": [
        20,
        18,
@@ -4213,6 +4341,7 @@
      },
      {
       "nome": "Repetti Flavio",
+      "pid": 49547,
       "v": [
        26,
        86,
@@ -4225,6 +4354,7 @@
      },
      {
       "nome": "Rosario Ramirez Yeison",
+      "pid": 49552,
       "v": [
        5,
        7,
@@ -4237,6 +4367,7 @@
      },
      {
       "nome": "Rudaj Arberim",
+      "pid": 49550,
       "v": [
        24,
        95,
@@ -4256,7 +4387,7 @@
    "slug": "2022-fibs-serie-b-baseball-maschile",
    "team": 19926,
    "fibs": "https://www.fibs.it/it/events/2022-fibs-serie-b-baseball-maschile/calendars?team=19926",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone D - NAZIONALE",
@@ -4694,175 +4825,200 @@
      "nome": "Albano Silvano",
      "ruolo": "1B/DH",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 102983
     },
     {
      "n": "81",
      "nome": "Ancillotti Jacopo",
      "ruolo": "UTL",
      "bt": "L/L",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 152277
     },
     {
      "n": "88",
      "nome": "Baccili Giulio",
      "ruolo": "OF/UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 102984
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "P/1B/DH",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 137721
     },
     {
      "n": "2",
      "nome": "Becattini Manuele",
      "ruolo": "P/DH/OF",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 102985
     },
     {
      "n": "70",
      "nome": "Beconcini Alessio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1970"
+     "anno": "1970",
+     "pid": 137722
     },
     {
      "n": "4",
      "nome": "Beudean Giovanni Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 102986
     },
     {
      "n": "17",
      "nome": "Bini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1983"
+     "anno": "1983",
+     "pid": 102987
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 102988
     },
     {
      "n": "32",
      "nome": "CASTILLO FARIAS YOHAR EDOARDO",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 139498
     },
     {
      "n": "74",
      "nome": "Cordero Puentes Gilberto",
      "ruolo": "2B",
      "bt": "R/R",
-     "anno": "1975"
+     "anno": "1975",
+     "pid": 103007
     },
     {
      "n": "58",
      "nome": "Degl'innocenti Giacomo",
      "ruolo": "P/IF",
      "bt": "S/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 102989
     },
     {
      "n": "43",
      "nome": "DI STEFANO BRAVO GIUSEPPE ANDREAS",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 139504
     },
     {
      "n": "1",
      "nome": "Ferrini Alessandro",
      "ruolo": "P/UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 102990
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "CF/OF",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 137723
     },
     {
      "n": "12",
      "nome": "Grassi Francesco",
      "ruolo": "1B/DH",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 102992
     },
     {
      "n": "34",
      "nome": "Lopez Antonio Gerardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 102993
     },
     {
      "n": "11",
      "nome": "Margheri Manuele",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "1981"
+     "anno": "1981",
+     "pid": 102994
     },
     {
      "n": "33",
      "nome": "Nerbini Gabriele",
      "ruolo": "OF",
      "bt": "R/R",
-     "anno": "1979"
+     "anno": "1979",
+     "pid": 137724
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "SS/IF",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 137725
     },
     {
      "n": "25",
      "nome": "Scarpulla Lorenzo",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 103000
     },
     {
      "n": "14",
      "nome": "Scarpulla Leonardo",
      "ruolo": "2B/UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 102999
     },
     {
      "n": "89",
      "nome": "Silvestri Daniele",
      "ruolo": "P/OF",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 103001
     },
     {
      "n": "44",
      "nome": "Vannuzzi Innocenti Matteo",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "1985"
+     "anno": "1985",
+     "pid": 103002
     },
     {
      "n": "39",
      "nome": "Vernaccini Aessio",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 103003
     }
    ],
    "staff": [
@@ -4886,6 +5042,7 @@
     "batting": [
      {
       "nome": "Albano Silvano",
+      "pid": 102983,
       "v": [
        11,
        19,
@@ -4906,6 +5063,7 @@
      },
      {
       "nome": "Ancillotti Jacopo",
+      "pid": 152277,
       "v": [
        3,
        1,
@@ -4926,6 +5084,7 @@
      },
      {
       "nome": "Baccili Giulio",
+      "pid": 102984,
       "v": [
        16,
        14,
@@ -4946,6 +5105,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 137721,
       "v": [
        20,
        60,
@@ -4966,6 +5126,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 102985,
       "v": [
        23,
        87,
@@ -4986,6 +5147,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 102986,
       "v": [
        23,
        64,
@@ -5006,6 +5168,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 102988,
       "v": [
        26,
        109,
@@ -5026,6 +5189,7 @@
      },
      {
       "nome": "Cordero Puentes Gilberto",
+      "pid": 103007,
       "v": [
        23,
        75,
@@ -5046,6 +5210,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 102989,
       "v": [
        22,
        67,
@@ -5066,6 +5231,7 @@
      },
      {
       "nome": "Di Stefano Bravo Giuseppe Andreas",
+      "pid": 139504,
       "v": [
        26,
        102,
@@ -5086,6 +5252,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 102990,
       "v": [
        7,
        16,
@@ -5106,6 +5273,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 137723,
       "v": [
        25,
        91,
@@ -5126,6 +5294,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 102992,
       "v": [
        22,
        64,
@@ -5146,6 +5315,7 @@
      },
      {
       "nome": "Nerbini Gabriele",
+      "pid": 137724,
       "v": [
        1,
        1,
@@ -5166,6 +5336,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 137725,
       "v": [
        27,
        104,
@@ -5186,6 +5357,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 102999,
       "v": [
        18,
        34,
@@ -5206,6 +5378,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 103000,
       "v": [
        9,
        9,
@@ -5226,6 +5399,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 103001,
       "v": [
        6,
        5,
@@ -5246,6 +5420,7 @@
      },
      {
       "nome": "Vernaccini Aessio",
+      "pid": 103003,
       "v": [
        5,
        0,
@@ -5268,6 +5443,7 @@
     "pitching": [
      {
       "nome": "Baratella Simone",
+      "pid": 137721,
       "v": [
        2,
        0,
@@ -5286,6 +5462,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 102985,
       "v": [
        2,
        1,
@@ -5304,6 +5481,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 102986,
       "v": [
        0,
        1,
@@ -5322,6 +5500,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 102988,
       "v": [
        1,
        0,
@@ -5340,6 +5519,7 @@
      },
      {
       "nome": "Castillo Farias Yohar Edoardo",
+      "pid": 139498,
       "v": [
        4,
        2,
@@ -5358,6 +5538,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 102989,
       "v": [
        2,
        2,
@@ -5376,6 +5557,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 102990,
       "v": [
        1,
        2,
@@ -5394,6 +5576,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 137723,
       "v": [
        0,
        0,
@@ -5412,6 +5595,7 @@
      },
      {
       "nome": "Margheri Manuele",
+      "pid": 102994,
       "v": [
        1,
        1,
@@ -5430,6 +5614,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 102999,
       "v": [
        0,
        0,
@@ -5448,6 +5633,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 103001,
       "v": [
        0,
        3,
@@ -5466,6 +5652,7 @@
      },
      {
       "nome": "Vernaccini Aessio",
+      "pid": 103003,
       "v": [
        0,
        1,
@@ -5486,6 +5673,7 @@
     "fielding": [
      {
       "nome": "Albano Silvano",
+      "pid": 102983,
       "v": [
        11,
        6,
@@ -5498,6 +5686,7 @@
      },
      {
       "nome": "Ancillotti Jacopo",
+      "pid": 152277,
       "v": [
        3,
        1,
@@ -5510,6 +5699,7 @@
      },
      {
       "nome": "Baccili Giulio",
+      "pid": 102984,
       "v": [
        16,
        9,
@@ -5522,6 +5712,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 137721,
       "v": [
        20,
        102,
@@ -5534,6 +5725,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 102985,
       "v": [
        24,
        59,
@@ -5546,6 +5738,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 102986,
       "v": [
        23,
        23,
@@ -5558,6 +5751,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 102988,
       "v": [
        26,
        58,
@@ -5570,6 +5764,7 @@
      },
      {
       "nome": "Castillo Farias Yohar Edoardo",
+      "pid": 139498,
       "v": [
        7,
        11,
@@ -5582,6 +5777,7 @@
      },
      {
       "nome": "Cordero Puentes Gilberto",
+      "pid": 103007,
       "v": [
        23,
        87,
@@ -5594,6 +5790,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 102989,
       "v": [
        22,
        68,
@@ -5606,6 +5803,7 @@
      },
      {
       "nome": "Di Stefano Bravo Giuseppe Andreas",
+      "pid": 139504,
       "v": [
        26,
        212,
@@ -5618,6 +5816,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 102990,
       "v": [
        12,
        15,
@@ -5630,6 +5829,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 137723,
       "v": [
        25,
        44,
@@ -5642,6 +5842,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 102992,
       "v": [
        22,
        121,
@@ -5654,6 +5855,7 @@
      },
      {
       "nome": "Margheri Manuele",
+      "pid": 102994,
       "v": [
        1,
        3,
@@ -5666,6 +5868,7 @@
      },
      {
       "nome": "Nerbini Gabriele",
+      "pid": 137724,
       "v": [
        1,
        0,
@@ -5678,6 +5881,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 137725,
       "v": [
        27,
        136,
@@ -5690,6 +5894,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 102999,
       "v": [
        18,
        20,
@@ -5702,6 +5907,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 103000,
       "v": [
        9,
        9,
@@ -5714,6 +5920,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 103001,
       "v": [
        7,
        6,
@@ -5726,6 +5933,7 @@
      },
      {
       "nome": "Vernaccini Aessio",
+      "pid": 103003,
       "v": [
        5,
        0,
@@ -5745,7 +5953,7 @@
    "slug": "2023-serie-b-baseball",
    "team": 23657,
    "fibs": "https://www.fibs.it/it/events/2023-serie-b-baseball/calendars?team=23657",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone D - NAZIONALE",
@@ -6172,168 +6380,192 @@
      "nome": "Albano Silvano",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 205501
     },
     {
      "n": "88",
      "nome": "Baccili Giulio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 205503
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 205504
     },
     {
      "n": "2",
      "nome": "Becattini Manuele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1996"
+     "anno": "1996",
+     "pid": 205505
     },
     {
      "n": "4",
      "nome": "Beudean Giovanni Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 205935
     },
     {
      "n": "17",
      "nome": "Bini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1983"
+     "anno": "1983",
+     "pid": 242197
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 205506
     },
     {
      "n": "74",
      "nome": "Cordero Puentes Gilberto",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1975"
+     "anno": "1975",
+     "pid": 242191
     },
     {
      "n": "58",
      "nome": "Degl'innocenti Giacomo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 205507
     },
     {
      "n": "43",
      "nome": "DI STEFANO BRAVO GIUSEPPE ANDREAS",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 205516
     },
     {
      "n": "1",
      "nome": "Ferrini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 205508
     },
     {
      "n": "98",
      "nome": "Francesconi Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 274498
     },
     {
      "n": "34",
      "nome": "Gentili Riccardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1992"
+     "anno": "1992",
+     "pid": 268386
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 205509
     },
     {
      "n": "32",
      "nome": "Grado Giuseppe Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 242204
     },
     {
      "n": "12",
      "nome": "Grassi Francesco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 205510
     },
     {
      "n": "5",
      "nome": "Mastroianni Marco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 274500
     },
     {
      "n": "33",
      "nome": "Nerbini Gabriele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1979"
+     "anno": "1979",
+     "pid": 242203
     },
     {
      "n": "53",
      "nome": "Ovalles Luna Esdar Luis",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1997"
+     "anno": "1997",
+     "pid": 242212
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 205513
     },
     {
      "n": "14",
      "nome": "Scarpulla Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 205514
     },
     {
      "n": "25",
      "nome": "Scarpulla Lorenzo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 205515
     },
     {
      "n": "89",
      "nome": "Silvestri Daniele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 205936
     },
     {
      "n": "27",
      "nome": "Vannini Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1986"
+     "anno": "1986",
+     "pid": 242205
     }
    ],
    "staff": [
@@ -6352,6 +6584,7 @@
     "batting": [
      {
       "nome": "Albano Silvano",
+      "pid": 205501,
       "v": [
        12,
        28,
@@ -6372,6 +6605,7 @@
      },
      {
       "nome": "Baccili Giulio",
+      "pid": 205503,
       "v": [
        8,
        3,
@@ -6392,6 +6626,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 205504,
       "v": [
        27,
        98,
@@ -6412,6 +6647,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 205505,
       "v": [
        19,
        65,
@@ -6432,6 +6668,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 205935,
       "v": [
        17,
        47,
@@ -6452,6 +6689,7 @@
      },
      {
       "nome": "Bini Alessandro",
+      "pid": 242197,
       "v": [
        1,
        3,
@@ -6472,6 +6710,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 205506,
       "v": [
        27,
        101,
@@ -6492,6 +6731,7 @@
      },
      {
       "nome": "Cordero Puentes Gilberto",
+      "pid": 242191,
       "v": [
        10,
        26,
@@ -6512,6 +6752,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 205507,
       "v": [
        5,
        11,
@@ -6532,6 +6773,7 @@
      },
      {
       "nome": "Di Stefano Bravo Giuseppe Andreas",
+      "pid": 205516,
       "v": [
        27,
        101,
@@ -6552,6 +6794,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 205508,
       "v": [
        9,
        22,
@@ -6572,6 +6815,7 @@
      },
      {
       "nome": "Francesconi Leonardo",
+      "pid": 274498,
       "v": [
        2,
        3,
@@ -6592,6 +6836,7 @@
      },
      {
       "nome": "Gentili Riccardo",
+      "pid": 268386,
       "v": [
        24,
        85,
@@ -6612,6 +6857,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 205509,
       "v": [
        27,
        98,
@@ -6632,6 +6878,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 205510,
       "v": [
        12,
        41,
@@ -6652,6 +6899,7 @@
      },
      {
       "nome": "Mastroianni Marco",
+      "pid": 274500,
       "v": [
        1,
        0,
@@ -6672,6 +6920,7 @@
      },
      {
       "nome": "Ovalles Luna Esdar Luis",
+      "pid": 242212,
       "v": [
        3,
        2,
@@ -6692,6 +6941,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 205513,
       "v": [
        27,
        107,
@@ -6712,6 +6962,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 205514,
       "v": [
        18,
        42,
@@ -6732,6 +6983,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 205515,
       "v": [
        6,
        16,
@@ -6752,6 +7004,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 205936,
       "v": [
        2,
        0,
@@ -6774,6 +7027,7 @@
     "pitching": [
      {
       "nome": "Baratella Simone",
+      "pid": 205504,
       "v": [
        0,
        1,
@@ -6792,6 +7046,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 205505,
       "v": [
        0,
        0,
@@ -6810,6 +7065,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 205935,
       "v": [
        0,
        0,
@@ -6828,6 +7084,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 205507,
       "v": [
        5,
        4,
@@ -6846,6 +7103,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 205508,
       "v": [
        0,
        1,
@@ -6864,6 +7122,7 @@
      },
      {
       "nome": "Francesconi Leonardo",
+      "pid": 274498,
       "v": [
        0,
        0,
@@ -6882,6 +7141,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 242204,
       "v": [
        7,
        3,
@@ -6900,6 +7160,7 @@
      },
      {
       "nome": "Ovalles Luna Esdar Luis",
+      "pid": 242212,
       "v": [
        2,
        0,
@@ -6918,6 +7179,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 205936,
       "v": [
        0,
        0,
@@ -6936,6 +7198,7 @@
      },
      {
       "nome": "Vannini Leonardo",
+      "pid": 242205,
       "v": [
        2,
        2,
@@ -6956,6 +7219,7 @@
     "fielding": [
      {
       "nome": "Albano Silvano",
+      "pid": 205501,
       "v": [
        12,
        2,
@@ -6968,6 +7232,7 @@
      },
      {
       "nome": "Baccili Giulio",
+      "pid": 205503,
       "v": [
        8,
        1,
@@ -6980,6 +7245,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 205504,
       "v": [
        27,
        182,
@@ -6992,6 +7258,7 @@
      },
      {
       "nome": "Becattini Manuele",
+      "pid": 205505,
       "v": [
        19,
        36,
@@ -7004,6 +7271,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 205935,
       "v": [
        17,
        6,
@@ -7016,6 +7284,7 @@
      },
      {
       "nome": "Bini Alessandro",
+      "pid": 242197,
       "v": [
        1,
        0,
@@ -7028,6 +7297,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 205506,
       "v": [
        27,
        89,
@@ -7040,6 +7310,7 @@
      },
      {
       "nome": "Cordero Puentes Gilberto",
+      "pid": 242191,
       "v": [
        10,
        46,
@@ -7052,6 +7323,7 @@
      },
      {
       "nome": "Degl'Innocenti Giacomo",
+      "pid": 205507,
       "v": [
        10,
        21,
@@ -7064,6 +7336,7 @@
      },
      {
       "nome": "Di Stefano Bravo Giuseppe Andreas",
+      "pid": 205516,
       "v": [
        27,
        293,
@@ -7076,6 +7349,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 205508,
       "v": [
        12,
        13,
@@ -7088,6 +7362,7 @@
      },
      {
       "nome": "Francesconi Leonardo",
+      "pid": 274498,
       "v": [
        3,
        3,
@@ -7100,6 +7375,7 @@
      },
      {
       "nome": "Gentili Riccardo",
+      "pid": 268386,
       "v": [
        24,
        67,
@@ -7112,6 +7388,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 205509,
       "v": [
        27,
        39,
@@ -7124,6 +7401,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 242204,
       "v": [
        10,
        21,
@@ -7136,6 +7414,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 205510,
       "v": [
        12,
        23,
@@ -7148,6 +7427,7 @@
      },
      {
       "nome": "Mastroianni Marco",
+      "pid": 274500,
       "v": [
        1,
        0,
@@ -7160,6 +7440,7 @@
      },
      {
       "nome": "Ovalles Luna Esdar Luis",
+      "pid": 242212,
       "v": [
        3,
        2,
@@ -7172,6 +7453,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 205513,
       "v": [
        27,
        108,
@@ -7184,6 +7466,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 205514,
       "v": [
        18,
        17,
@@ -7196,6 +7479,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 205515,
       "v": [
        6,
        5,
@@ -7208,6 +7492,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 205936,
       "v": [
        2,
        0,
@@ -7220,6 +7505,7 @@
      },
      {
       "nome": "Vannini Leonardo",
+      "pid": 242205,
       "v": [
        7,
        10,
@@ -7239,7 +7525,7 @@
    "slug": "2024-serie-b-baseball-2024",
    "team": 28785,
    "fibs": "https://www.fibs.it/it/events/2024-serie-b-baseball-2024/calendars?team=28785",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone C - NAZIONALE",
@@ -7632,161 +7918,184 @@
      "nome": "Albano Silvano",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 375641
     },
     {
      "n": "32",
      "nome": "Anichini Filippo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2000"
+     "anno": "2000",
+     "pid": 375625
     },
     {
      "n": "43",
      "nome": "Banci Riccardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 377325
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 375639
     },
     {
      "n": "4",
      "nome": "Beudean Giovanni Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 375648
     },
     {
      "n": "17",
      "nome": "Bini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1983"
+     "anno": "1983",
+     "pid": 381385
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 375645
     },
     {
      "n": "3",
      "nome": "Della Nave Ettore",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 375590
     },
     {
      "n": "1",
      "nome": "Ferrini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 375644
     },
     {
      "n": "65",
      "nome": "Francesconi Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 419094
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 375649
     },
     {
      "n": "22",
      "nome": "Grado Giuseppe Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 375647
     },
     {
      "n": "12",
      "nome": "Grassi Francesco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 375642
     },
     {
      "n": "5",
      "nome": "Mastroianni Marco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 419095
     },
     {
      "n": "33",
      "nome": "Nerbini Gabriele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1979"
+     "anno": "1979",
+     "pid": 425032
     },
     {
      "n": "8",
      "nome": "Panichi Tommaso",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1999"
+     "anno": "1999",
+     "pid": 425025
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 375638
     },
     {
      "n": "27",
      "nome": "Pena Nunez Kelvin Jose",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 425022
     },
     {
      "n": "61",
      "nome": "Ruocco Patient Vincent",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2006"
+     "anno": "2006",
+     "pid": 425023
     },
     {
      "n": "25",
      "nome": "Scarpulla Lorenzo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 375643
     },
     {
      "n": "14",
      "nome": "Scarpulla Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 375637
     },
     {
      "n": "89",
      "nome": "Silvestri Daniele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 375646
     },
     {
      "n": "37",
      "nome": "Verlengieri Flavio Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1986"
+     "anno": "1986",
+     "pid": 375640
     }
    ],
    "staff": [
@@ -7805,6 +8114,7 @@
     "batting": [
      {
       "nome": "Albano Silvano",
+      "pid": 375641,
       "v": [
        23,
        74,
@@ -7825,6 +8135,7 @@
      },
      {
       "nome": "Anichini Filippo",
+      "pid": 375625,
       "v": [
        23,
        42,
@@ -7845,6 +8156,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 375639,
       "v": [
        28,
        101,
@@ -7865,6 +8177,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 375648,
       "v": [
        18,
        43,
@@ -7885,6 +8198,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 375645,
       "v": [
        28,
        110,
@@ -7905,6 +8219,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 375590,
       "v": [
        27,
        95,
@@ -7925,6 +8240,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 375644,
       "v": [
        2,
        0,
@@ -7945,6 +8261,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 375649,
       "v": [
        22,
        66,
@@ -7965,6 +8282,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 375642,
       "v": [
        24,
        69,
@@ -7985,6 +8303,7 @@
      },
      {
       "nome": "Mastroianni Marco",
+      "pid": 419095,
       "v": [
        22,
        48,
@@ -8005,6 +8324,7 @@
      },
      {
       "nome": "Nerbini Gabriele",
+      "pid": 425032,
       "v": [
        2,
        3,
@@ -8025,6 +8345,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 425025,
       "v": [
        22,
        33,
@@ -8045,6 +8366,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 375638,
       "v": [
        20,
        63,
@@ -8065,6 +8387,7 @@
      },
      {
       "nome": "Pena Nunez Kelvin Jose",
+      "pid": 425022,
       "v": [
        27,
        86,
@@ -8085,6 +8408,7 @@
      },
      {
       "nome": "Ruocco Patient Vincent",
+      "pid": 425023,
       "v": [
        6,
        6,
@@ -8105,6 +8429,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 375637,
       "v": [
        20,
        51,
@@ -8125,6 +8450,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 375643,
       "v": [
        7,
        23,
@@ -8147,6 +8473,7 @@
     "pitching": [
      {
       "nome": "Banci Riccardo",
+      "pid": 377325,
       "v": [
        0,
        0,
@@ -8165,6 +8492,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 375644,
       "v": [
        3,
        5,
@@ -8183,6 +8511,7 @@
      },
      {
       "nome": "Francesconi Leonardo",
+      "pid": 419094,
       "v": [
        1,
        1,
@@ -8201,6 +8530,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 375647,
       "v": [
        9,
        5,
@@ -8219,6 +8549,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 375646,
       "v": [
        0,
        1,
@@ -8237,6 +8568,7 @@
      },
      {
       "nome": "Verlengieri Flavio Gabriel",
+      "pid": 375640,
       "v": [
        0,
        3,
@@ -8257,6 +8589,7 @@
     "fielding": [
      {
       "nome": "Albano Silvano",
+      "pid": 375641,
       "v": [
        23,
        10,
@@ -8269,6 +8602,7 @@
      },
      {
       "nome": "Anichini Filippo",
+      "pid": 375625,
       "v": [
        23,
        40,
@@ -8281,6 +8615,7 @@
      },
      {
       "nome": "Banci Riccardo",
+      "pid": 377325,
       "v": [
        1,
        1,
@@ -8293,6 +8628,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 375639,
       "v": [
        28,
        117,
@@ -8305,6 +8641,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 375648,
       "v": [
        18,
        13,
@@ -8317,6 +8654,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 375645,
       "v": [
        28,
        103,
@@ -8329,6 +8667,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 375590,
       "v": [
        27,
        47,
@@ -8341,6 +8680,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 375644,
       "v": [
        10,
        21,
@@ -8353,6 +8693,7 @@
      },
      {
       "nome": "Francesconi Leonardo",
+      "pid": 419094,
       "v": [
        7,
        9,
@@ -8365,6 +8706,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 375649,
       "v": [
        22,
        27,
@@ -8377,6 +8719,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 375647,
       "v": [
        14,
        32,
@@ -8389,6 +8732,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 375642,
       "v": [
        24,
        143,
@@ -8401,6 +8745,7 @@
      },
      {
       "nome": "Mastroianni Marco",
+      "pid": 419095,
       "v": [
        22,
        66,
@@ -8413,6 +8758,7 @@
      },
      {
       "nome": "Nerbini Gabriele",
+      "pid": 425032,
       "v": [
        2,
        1,
@@ -8425,6 +8771,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 425025,
       "v": [
        22,
        24,
@@ -8437,6 +8784,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 375638,
       "v": [
        20,
        38,
@@ -8449,6 +8797,7 @@
      },
      {
       "nome": "Pena Nunez Kelvin Jose",
+      "pid": 425022,
       "v": [
        27,
        286,
@@ -8461,6 +8810,7 @@
      },
      {
       "nome": "Ruocco Patient Vincent",
+      "pid": 425023,
       "v": [
        6,
        7,
@@ -8473,6 +8823,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 375637,
       "v": [
        20,
        16,
@@ -8485,6 +8836,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 375643,
       "v": [
        7,
        35,
@@ -8497,6 +8849,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 375646,
       "v": [
        2,
        3,
@@ -8509,6 +8862,7 @@
      },
      {
       "nome": "Verlengieri Flavio Gabriel",
+      "pid": 375640,
       "v": [
        6,
        7,
@@ -8528,7 +8882,7 @@
    "slug": "2025-serie-b-baseball-2025",
    "team": 34083,
    "fibs": "https://www.fibs.it/it/events/2025-serie-b-baseball-2025/calendars?team=34083",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone C - NAZIONALE",
@@ -8943,140 +9297,160 @@
      "nome": "Albano Silvano",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 502353
     },
     {
      "n": "32",
      "nome": "Anichini Filippo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2000"
+     "anno": "2000",
+     "pid": 502354
     },
     {
      "n": "43",
      "nome": "Banci Riccardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 551438
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 502355
     },
     {
      "n": "4",
      "nome": "Beudean Giovanni Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 497389
     },
     {
      "n": "17",
      "nome": "Bini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1983"
+     "anno": "1983",
+     "pid": 502356
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 502358
     },
     {
      "n": "0",
      "nome": "Bucci Niccolò",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2010"
+     "anno": "2010",
+     "pid": 614557
     },
     {
      "n": "3",
      "nome": "Della Nave Ettore",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 551443
     },
     {
      "n": "1",
      "nome": "Ferrini Alessandro",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 511315
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 502363
     },
     {
      "n": "22",
      "nome": "Grado Giuseppe Gabriel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 506778
     },
     {
      "n": "12",
      "nome": "Grassi Francesco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 497390
     },
     {
      "n": "5",
      "nome": "Mastroianni Marco",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 545820
     },
     {
      "n": "8",
      "nome": "Panichi Tommaso",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1999"
+     "anno": "1999",
+     "pid": 502364
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 502365
     },
     {
      "n": "53",
      "nome": "Pena Nunez Kelvin Jose",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 545821
     },
     {
      "n": "14",
      "nome": "Scarpulla Leonardo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 511322
     },
     {
      "n": "25",
      "nome": "Scarpulla Lorenzo",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2005"
+     "anno": "2005",
+     "pid": 511321
     },
     {
      "n": "89",
      "nome": "Silvestri Daniele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 497391
     }
    ],
    "staff": [
@@ -9100,6 +9474,7 @@
     "batting": [
      {
       "nome": "Albano Silvano",
+      "pid": 502353,
       "v": [
        24,
        63,
@@ -9120,6 +9495,7 @@
      },
      {
       "nome": "Anichini Filippo",
+      "pid": 502354,
       "v": [
        21,
        38,
@@ -9140,6 +9516,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 502355,
       "v": [
        27,
        84,
@@ -9160,6 +9537,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 497389,
       "v": [
        17,
        37,
@@ -9180,6 +9558,7 @@
      },
      {
       "nome": "Bini Alessandro",
+      "pid": 502356,
       "v": [
        4,
        4,
@@ -9200,6 +9579,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 502358,
       "v": [
        25,
        63,
@@ -9220,6 +9600,7 @@
      },
      {
       "nome": "Bucci Niccolò",
+      "pid": 614557,
       "v": [
        2,
        7,
@@ -9240,6 +9621,7 @@
      },
      {
       "nome": "Břečka Jakub Jan",
+      "pid": 544977,
       "v": [
        1,
        2,
@@ -9260,6 +9642,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 551443,
       "v": [
        27,
        73,
@@ -9280,6 +9663,7 @@
      },
      {
       "nome": "Dragoni Alessandro",
+      "pid": 544979,
       "v": [
        12,
        25,
@@ -9300,6 +9684,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 502363,
       "v": [
        25,
        68,
@@ -9320,6 +9705,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 497390,
       "v": [
        19,
        49,
@@ -9340,6 +9726,7 @@
      },
      {
       "nome": "Mastroianni Marco",
+      "pid": 545820,
       "v": [
        25,
        56,
@@ -9360,6 +9747,7 @@
      },
      {
       "nome": "Nannucci Guido",
+      "pid": 551446,
       "v": [
        2,
        1,
@@ -9380,6 +9768,7 @@
      },
      {
       "nome": "Orlandini Lorenzo",
+      "pid": 544986,
       "v": [
        3,
        4,
@@ -9400,6 +9789,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 502364,
       "v": [
        19,
        38,
@@ -9420,6 +9810,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 502365,
       "v": [
        25,
        71,
@@ -9440,6 +9831,7 @@
      },
      {
       "nome": "Pena Nunez Kelvin Jose",
+      "pid": 545821,
       "v": [
        22,
        68,
@@ -9460,6 +9852,7 @@
      },
      {
       "nome": "Piccinelli Tommaso",
+      "pid": 544988,
       "v": [
        5,
        8,
@@ -9480,6 +9873,7 @@
      },
      {
       "nome": "Risico Riccardo",
+      "pid": 544994,
       "v": [
        2,
        5,
@@ -9500,6 +9894,7 @@
      },
      {
       "nome": "Rrethatori Alessandro",
+      "pid": 544995,
       "v": [
        18,
        29,
@@ -9520,6 +9915,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 511322,
       "v": [
        17,
        35,
@@ -9540,6 +9936,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 511321,
       "v": [
        17,
        42,
@@ -9560,6 +9957,7 @@
      },
      {
       "nome": "Severino Mooa Cristian Alberto",
+      "pid": 544997,
       "v": [
        24,
        53,
@@ -9580,6 +9978,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 497391,
       "v": [
        1,
        0,
@@ -9602,6 +10001,7 @@
     "pitching": [
      {
       "nome": "Banci Riccardo",
+      "pid": 551438,
       "v": [
        0,
        4,
@@ -9620,6 +10020,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 502355,
       "v": [
        1,
        1,
@@ -9638,6 +10039,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 502358,
       "v": [
        0,
        0,
@@ -9656,6 +10058,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 551443,
       "v": [
        0,
        0,
@@ -9674,6 +10077,7 @@
      },
      {
       "nome": "Di Pietro Tommaso Alberto",
+      "pid": 544978,
       "v": [
        0,
        0,
@@ -9692,6 +10096,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 511315,
       "v": [
        3,
        5,
@@ -9710,6 +10115,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 506778,
       "v": [
        6,
        2,
@@ -9728,6 +10134,7 @@
      },
      {
       "nome": "Nannucci Guido",
+      "pid": 551446,
       "v": [
        0,
        0,
@@ -9746,6 +10153,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 502364,
       "v": [
        0,
        0,
@@ -9764,6 +10172,7 @@
      },
      {
       "nome": "Rinaldi Riccardo",
+      "pid": 544990,
       "v": [
        0,
        5,
@@ -9782,6 +10191,7 @@
      },
      {
       "nome": "Severino Mooa Cristian Alberto",
+      "pid": 544997,
       "v": [
        0,
        0,
@@ -9800,6 +10210,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 497391,
       "v": [
        0,
        1,
@@ -9820,6 +10231,7 @@
     "fielding": [
      {
       "nome": "Albano Silvano",
+      "pid": 502353,
       "v": [
        24,
        44,
@@ -9832,6 +10244,7 @@
      },
      {
       "nome": "Anichini Filippo",
+      "pid": 502354,
       "v": [
        21,
        42,
@@ -9844,6 +10257,7 @@
      },
      {
       "nome": "Banci Riccardo",
+      "pid": 551438,
       "v": [
        5,
        9,
@@ -9856,6 +10270,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 502355,
       "v": [
        28,
        98,
@@ -9868,6 +10283,7 @@
      },
      {
       "nome": "Beudean Giovanni Gabriel",
+      "pid": 497389,
       "v": [
        17,
        7,
@@ -9880,6 +10296,7 @@
      },
      {
       "nome": "Bini Alessandro",
+      "pid": 502356,
       "v": [
        4,
        0,
@@ -9892,6 +10309,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 502358,
       "v": [
        25,
        68,
@@ -9904,6 +10322,7 @@
      },
      {
       "nome": "Bucci Niccolò",
+      "pid": 614557,
       "v": [
        2,
        0,
@@ -9916,6 +10335,7 @@
      },
      {
       "nome": "Břečka Jakub Jan",
+      "pid": 544977,
       "v": [
        1,
        0,
@@ -9928,6 +10348,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 551443,
       "v": [
        27,
        37,
@@ -9940,6 +10361,7 @@
      },
      {
       "nome": "Di Pietro Tommaso Alberto",
+      "pid": 544978,
       "v": [
        1,
        2,
@@ -9952,6 +10374,7 @@
      },
      {
       "nome": "Dragoni Alessandro",
+      "pid": 544979,
       "v": [
        12,
        19,
@@ -9964,6 +10387,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 511315,
       "v": [
        8,
        10,
@@ -9976,6 +10400,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 502363,
       "v": [
        25,
        28,
@@ -9988,6 +10413,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 506778,
       "v": [
        9,
        21,
@@ -10000,6 +10426,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 497390,
       "v": [
        19,
        92,
@@ -10012,6 +10439,7 @@
      },
      {
       "nome": "Mastroianni Marco",
+      "pid": 545820,
       "v": [
        25,
        63,
@@ -10024,6 +10452,7 @@
      },
      {
       "nome": "Nannucci Guido",
+      "pid": 551446,
       "v": [
        2,
        1,
@@ -10036,6 +10465,7 @@
      },
      {
       "nome": "Orlandini Lorenzo",
+      "pid": 544986,
       "v": [
        3,
        8,
@@ -10048,6 +10478,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 502364,
       "v": [
        20,
        23,
@@ -10060,6 +10491,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 502365,
       "v": [
        25,
        56,
@@ -10072,6 +10504,7 @@
      },
      {
       "nome": "Pena Nunez Kelvin Jose",
+      "pid": 545821,
       "v": [
        22,
        222,
@@ -10084,6 +10517,7 @@
      },
      {
       "nome": "Piccinelli Tommaso",
+      "pid": 544988,
       "v": [
        5,
        3,
@@ -10096,6 +10530,7 @@
      },
      {
       "nome": "Rinaldi Riccardo",
+      "pid": 544990,
       "v": [
        6,
        8,
@@ -10108,6 +10543,7 @@
      },
      {
       "nome": "Risico Riccardo",
+      "pid": 544994,
       "v": [
        2,
        3,
@@ -10120,6 +10556,7 @@
      },
      {
       "nome": "Rrethatori Alessandro",
+      "pid": 544995,
       "v": [
        18,
        59,
@@ -10132,6 +10569,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 511322,
       "v": [
        17,
        16,
@@ -10144,6 +10582,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 511321,
       "v": [
        17,
        63,
@@ -10156,6 +10595,7 @@
      },
      {
       "nome": "Severino Mooa Cristian Alberto",
+      "pid": 544997,
       "v": [
        24,
        27,
@@ -10168,6 +10608,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 497391,
       "v": [
        4,
        7,
@@ -10187,7 +10628,7 @@
    "slug": "2026-serie-b-baseball-2026",
    "team": 39604,
    "fibs": "https://www.fibs.it/it/events/2026-serie-b-baseball-2026/calendars?team=39604",
-   "aggiornato": "2026-11-16",
+   "aggiornato": "2026-11-17",
    "classifiche": [
     {
      "titolo": "Girone C - NAZIONALE",
@@ -10607,175 +11048,200 @@
      "nome": "Albano Silvano",
      "ruolo": "IF",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 685421
     },
     {
      "n": "32",
      "nome": "Anichini Filippo",
      "ruolo": "IF",
      "bt": "R/R",
-     "anno": "2000"
+     "anno": "2000",
+     "pid": 675010
     },
     {
      "n": "19",
      "nome": "Baratella Simone",
      "ruolo": "IF",
      "bt": "R/R",
-     "anno": "1993"
+     "anno": "1993",
+     "pid": 685416
     },
     {
      "n": "59",
      "nome": "Biondi Lapo",
      "ruolo": "IF",
      "bt": "R/R",
-     "anno": "2001"
+     "anno": "2001",
+     "pid": 685430
     },
     {
      "n": "48",
      "nome": "Boncompagni Jacopo",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "2010"
+     "anno": "2010",
+     "pid": 714617
     },
     {
      "n": "82",
      "nome": "Borri Ismaele",
      "ruolo": "OF",
      "bt": "R/R",
-     "anno": "2008"
+     "anno": "2008",
+     "pid": 714619
     },
     {
      "n": "64",
      "nome": "Da Prato Witting Edoardo",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "2008"
+     "anno": "2008",
+     "pid": 714621
     },
     {
      "n": "3",
      "nome": "Della Nave Ettore",
      "ruolo": "OF",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 741967
     },
     {
      "n": "1",
      "nome": "Ferrini Alessandro",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 685425
     },
     {
      "n": "0",
      "nome": "Fioravanti Leone",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2008"
+     "anno": "2008",
+     "pid": 714623
     },
     {
      "n": "98",
      "nome": "Francini Daniel",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2006"
+     "anno": "2006",
+     "pid": 714624
     },
     {
      "n": "6",
      "nome": "Geri Simone",
      "ruolo": "OF",
      "bt": "R/R",
-     "anno": "1991"
+     "anno": "1991",
+     "pid": 685429
     },
     {
      "n": "22",
      "nome": "Grado Giuseppe Gabriel",
      "ruolo": "P",
      "bt": "L/L",
-     "anno": "2003"
+     "anno": "2003",
+     "pid": 685426
     },
     {
      "n": "12",
      "nome": "Grassi Francesco",
      "ruolo": "IF",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 658007
     },
     {
      "n": "8",
      "nome": "Panichi Tommaso",
      "ruolo": "OF",
      "bt": "R/R",
-     "anno": "1999"
+     "anno": "1999",
+     "pid": 675028
     },
     {
      "n": "91",
      "nome": "Panti Niccolò",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2008"
+     "anno": "2008",
+     "pid": 714656
     },
     {
      "n": "35",
      "nome": "Paperini Federico Tatsuya",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2006"
+     "anno": "2006",
+     "pid": 675007
     },
     {
      "n": "38",
      "nome": "Parrini Antonio",
      "ruolo": "IF",
      "bt": "R/R",
-     "anno": "1987"
+     "anno": "1987",
+     "pid": 685428
     },
     {
      "n": "5",
      "nome": "Pucci Gabriele",
      "ruolo": "UTL",
      "bt": "R/R",
-     "anno": "2011"
+     "anno": "2011",
+     "pid": 714660
     },
     {
      "n": "60",
      "nome": "Rinaldi Cosimo",
      "ruolo": "OF",
      "bt": "L/L",
-     "anno": "2006"
+     "anno": "2006",
+     "pid": 675011
     },
     {
      "n": "90",
      "nome": "Rrethatori Alessandro",
      "ruolo": "C",
      "bt": "R/R",
-     "anno": "2009"
+     "anno": "2009",
+     "pid": 675018
     },
     {
      "n": "14",
      "nome": "Scarpulla Leonardo",
      "ruolo": "OF",
      "bt": "R/R",
-     "anno": "2002"
+     "anno": "2002",
+     "pid": 685423
     },
     {
      "n": "89",
      "nome": "Silvestri Daniele",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "2004"
+     "anno": "2004",
+     "pid": 675021
     },
     {
      "n": "27",
      "nome": "Tutino Sifontes Giuseppe Antonell",
      "ruolo": "P",
      "bt": "R/R",
-     "anno": "2006"
+     "anno": "2006",
+     "pid": 685427
     },
     {
      "n": "46",
      "nome": "VERGARA PINTO DANIEL ALEJANDRO",
      "ruolo": "C/IF",
      "bt": "R/R",
-     "anno": "2007"
+     "anno": "2007",
+     "pid": 683210
     }
    ],
    "staff": [
@@ -10799,6 +11265,7 @@
     "batting": [
      {
       "nome": "Albano Silvano",
+      "pid": 685421,
       "v": [
        23,
        64,
@@ -10819,6 +11286,7 @@
      },
      {
       "nome": "Anichini Filippo",
+      "pid": 675010,
       "v": [
        18,
        27,
@@ -10839,6 +11307,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 685416,
       "v": [
        25,
        86,
@@ -10859,6 +11328,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 685430,
       "v": [
        26,
        88,
@@ -10879,6 +11349,7 @@
      },
      {
       "nome": "Borri Ismaele",
+      "pid": 714619,
       "v": [
        9,
        11,
@@ -10899,6 +11370,7 @@
      },
      {
       "nome": "Da Prato Witting Edoardo",
+      "pid": 714621,
       "v": [
        8,
        13,
@@ -10919,6 +11391,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 741967,
       "v": [
        24,
        81,
@@ -10939,6 +11412,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 685429,
       "v": [
        25,
        73,
@@ -10959,6 +11433,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 658007,
       "v": [
        10,
        30,
@@ -10979,6 +11454,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 675028,
       "v": [
        23,
        53,
@@ -10999,6 +11475,7 @@
      },
      {
       "nome": "Panti Niccolò",
+      "pid": 714656,
       "v": [
        11,
        21,
@@ -11019,6 +11496,7 @@
      },
      {
       "nome": "Paperini Federico Tatsuya",
+      "pid": 675007,
       "v": [
        2,
        0,
@@ -11039,6 +11517,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 685428,
       "v": [
        27,
        107,
@@ -11059,6 +11538,7 @@
      },
      {
       "nome": "Pucci Gabriele",
+      "pid": 714660,
       "v": [
        3,
        8,
@@ -11079,6 +11559,7 @@
      },
      {
       "nome": "Rinaldi Cosimo",
+      "pid": 675011,
       "v": [
        19,
        35,
@@ -11099,6 +11580,7 @@
      },
      {
       "nome": "Rrethatori Alessandro",
+      "pid": 675018,
       "v": [
        23,
        67,
@@ -11119,6 +11601,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 685423,
       "v": [
        20,
        27,
@@ -11139,6 +11622,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 685424,
       "v": [
        4,
        7,
@@ -11159,6 +11643,7 @@
      },
      {
       "nome": "Vergara Pinto Daniel Alejandro",
+      "pid": 683210,
       "v": [
        27,
        116,
@@ -11181,6 +11666,7 @@
     "pitching": [
      {
       "nome": "Baratella Simone",
+      "pid": 685416,
       "v": [
        1,
        1,
@@ -11199,6 +11685,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 685430,
       "v": [
        1,
        0,
@@ -11217,6 +11704,7 @@
      },
      {
       "nome": "Boncompagni Jacopo",
+      "pid": 714617,
       "v": [
        0,
        0,
@@ -11235,6 +11723,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 685425,
       "v": [
        4,
        5,
@@ -11253,6 +11742,7 @@
      },
      {
       "nome": "Francini Daniel",
+      "pid": 714624,
       "v": [
        0,
        0,
@@ -11271,6 +11761,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 685426,
       "v": [
        8,
        2,
@@ -11289,6 +11780,7 @@
      },
      {
       "nome": "Lupo Takuma",
+      "pid": 714627,
       "v": [
        0,
        0,
@@ -11307,6 +11799,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 675028,
       "v": [
        0,
        1,
@@ -11325,6 +11818,7 @@
      },
      {
       "nome": "Rinaldi Cosimo",
+      "pid": 675011,
       "v": [
        0,
        0,
@@ -11343,6 +11837,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 675021,
       "v": [
        0,
        2,
@@ -11361,6 +11856,7 @@
      },
      {
       "nome": "Tutino Sifontes Giuseppe Antonell",
+      "pid": 685427,
       "v": [
        2,
        0,
@@ -11381,6 +11877,7 @@
     "fielding": [
      {
       "nome": "Albano Silvano",
+      "pid": 685421,
       "v": [
        23,
        1,
@@ -11393,6 +11890,7 @@
      },
      {
       "nome": "Anichini Filippo",
+      "pid": 675010,
       "v": [
        18,
        28,
@@ -11405,6 +11903,7 @@
      },
      {
       "nome": "Baratella Simone",
+      "pid": 685416,
       "v": [
        25,
        115,
@@ -11417,6 +11916,7 @@
      },
      {
       "nome": "Biondi Lapo",
+      "pid": 685430,
       "v": [
        26,
        84,
@@ -11429,6 +11929,7 @@
      },
      {
       "nome": "Boncompagni Jacopo",
+      "pid": 714617,
       "v": [
        2,
        4,
@@ -11441,6 +11942,7 @@
      },
      {
       "nome": "Borri Ismaele",
+      "pid": 714619,
       "v": [
        9,
        0,
@@ -11453,6 +11955,7 @@
      },
      {
       "nome": "Da Prato Witting Edoardo",
+      "pid": 714621,
       "v": [
        8,
        14,
@@ -11465,6 +11968,7 @@
      },
      {
       "nome": "Della Nave Ettore",
+      "pid": 741967,
       "v": [
        24,
        41,
@@ -11477,6 +11981,7 @@
      },
      {
       "nome": "Ferrini Alessandro",
+      "pid": 685425,
       "v": [
        10,
        20,
@@ -11489,6 +11994,7 @@
      },
      {
       "nome": "Francini Daniel",
+      "pid": 714624,
       "v": [
        1,
        1,
@@ -11501,6 +12007,7 @@
      },
      {
       "nome": "Geri Simone",
+      "pid": 685429,
       "v": [
        25,
        44,
@@ -11513,6 +12020,7 @@
      },
      {
       "nome": "Grado Giuseppe Gabriel",
+      "pid": 685426,
       "v": [
        3,
        4,
@@ -11525,6 +12033,7 @@
      },
      {
       "nome": "Grassi Francesco",
+      "pid": 658007,
       "v": [
        10,
        35,
@@ -11537,6 +12046,7 @@
      },
      {
       "nome": "Panichi Tommaso",
+      "pid": 675028,
       "v": [
        23,
        17,
@@ -11549,6 +12059,7 @@
      },
      {
       "nome": "Panti Niccolò",
+      "pid": 714656,
       "v": [
        11,
        6,
@@ -11561,6 +12072,7 @@
      },
      {
       "nome": "Paperini Federico Tatsuya",
+      "pid": 675007,
       "v": [
        2,
        0,
@@ -11573,6 +12085,7 @@
      },
      {
       "nome": "Parrini Antonio",
+      "pid": 685428,
       "v": [
        27,
        98,
@@ -11585,6 +12098,7 @@
      },
      {
       "nome": "Pucci Gabriele",
+      "pid": 714660,
       "v": [
        3,
        17,
@@ -11597,6 +12111,7 @@
      },
      {
       "nome": "Rinaldi Cosimo",
+      "pid": 675011,
       "v": [
        19,
        6,
@@ -11609,6 +12124,7 @@
      },
      {
       "nome": "Rrethatori Alessandro",
+      "pid": 675018,
       "v": [
        23,
        125,
@@ -11621,6 +12137,7 @@
      },
      {
       "nome": "Scarpulla Leonardo",
+      "pid": 685423,
       "v": [
        20,
        8,
@@ -11633,6 +12150,7 @@
      },
      {
       "nome": "Scarpulla Lorenzo",
+      "pid": 685424,
       "v": [
        4,
        1,
@@ -11645,6 +12163,7 @@
      },
      {
       "nome": "Silvestri Daniele",
+      "pid": 675021,
       "v": [
        2,
        2,
@@ -11657,6 +12176,7 @@
      },
      {
       "nome": "Tutino Sifontes Giuseppe Antonell",
+      "pid": 685427,
       "v": [
        1,
        1,
@@ -11669,6 +12189,7 @@
      },
      {
       "nome": "Vergara Pinto Daniel Alejandro",
+      "pid": 683210,
       "v": [
        27,
        273,
