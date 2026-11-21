@@ -154,6 +154,111 @@ def footer(root):
         root, root)
 
 
+
+# ---- calendario, risultati e classifica già scritti nell'HTML (prima li disegnava solo il JavaScript) ----
+MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']
+GIORNI = ['lun', 'mar', 'mer', 'gio', 'ven', 'sab', 'dom']
+
+
+def _stagione():
+    import datetime as DT
+    t = open(_D + 'data/stagione.js', encoding='utf-8').read()
+    L = json.loads(t[t.index('{'):t.rindex('}') + 1])
+    games = []
+    for g in L['partite']:
+        o = dict(g)
+        hm = g['ora'] if re.match(r'^\d\d:\d\d$', g.get('ora', '')) else '12:00'
+        o['when'] = DT.datetime.fromisoformat(g['data'] + 'T' + hm)
+        o['played'] = isinstance(g.get('puntiCasa'), int)
+        o['home'] = g['casa'] == 'LAN'
+        o['opp'] = g['ospiti'] if o['home'] else g['casa']
+        o['off'] = g.get('nota') in ('rinviata', 'annullata')
+        if o['played']:
+            o['us'] = g['puntiCasa'] if o['home'] else g['puntiOspiti']
+            o['them'] = g['puntiOspiti'] if o['home'] else g['puntiCasa']
+            o['win'] = o['us'] > o['them']
+        games.append(o)
+    table = sorted(({**r, 'pct': r['v'] / (r['v'] + r['p']) if r['v'] + r['p'] else 0} for r in L['classifica']),
+                   key=lambda r: (-r['pct'], -r['v']))
+    return L, games, table
+
+
+def prerender(doc):
+    """Riempie i segnaposto della stagione con l'HTML vero: si legge anche senza JavaScript (il JavaScript poi lo ridisegna uguale)."""
+    if not re.search(r'data-(results|standings|calendar|next-game|season-head|source)', doc):
+        return doc
+    import datetime as DT
+    L, games, table = _stagione()
+    nome = lambda k: e(L['squadre'].get(k, k))
+    played = [g for g in games if g['played']]
+    W = sum(1 for g in played if g['win'])
+    Lo = len(played) - W
+    pos = next((i + 1 for i, r in enumerate(table) if r['squadra'] == 'LAN'), 0)
+    now = DT.datetime.now()
+    nxt = next((g for g in games if not g['played'] and not g['off'] and g['when'] + DT.timedelta(hours=3) > now), None)
+    dstr = lambda d: '%s %d %s' % (GIORNI[d.weekday()], d.day, MESI[d.month - 1][:3])
+
+    def row(g):
+        cls = ('w' if g['win'] else 'l') if g['played'] else ''
+        tag = 'a' if g.get('boxscore') else 'div'
+        href = (' href="%s%s" target="_blank" rel="noopener" title="Apri il tabellino su FIBS"' % (L['stagione']['boxscore'], g['boxscore'])) if g.get('boxscore') else ''
+        if g['played']:
+            score = '%s – %s<i>%s</i>' % (g['us'], g['them'], 'V' if g['win'] else 'S')
+        else:
+            score = '<i>%s</i>' % e(g['nota']) if g['off'] else e(g['ora'])
+        note = (' · ' + e(g['nota'])) if g['played'] and g.get('nota') else ''
+        return ('<%s class="g-row %s"%s data-side="%s"><span class="d">%s<br>%s</span><span class="t">%s%s<small>%s · %s%s</small></span>'
+                '<span class="s">%s</span></%s>') % (tag, cls, href, 'casa' if g['home'] else 'fuori', dstr(g['when']), e(g['ora']),
+                                                    'vs ' if g['home'] else '@ ', nome(g['opp']), 'In casa' if g['home'] else 'In trasferta',
+                                                    e(g['campo']), note, score, tag)
+
+    def standings(mini):
+        top = table[0]
+        h = ['<div class="stand"><div class="table-wrap"><table><thead><tr><th class="n">#</th><th>Squadra</th><th class="n">V</th><th class="n">P</th>%s<th class="n">%%</th>%s</tr></thead><tbody>' % (
+            '' if mini else '<th class="n">G</th>', '' if mini else '<th class="n">Dist.</th>')]
+        for i, r in enumerate(table):
+            gb = ((top['v'] - r['v']) + (r['p'] - top['p'])) / 2
+            gbs = ('%g' % gb).replace('.', ',') if gb else '–'
+            h.append('<tr%s><td class="n">%d</td><td>%s</td><td class="n">%d</td><td class="n">%d</td>%s<td class="n">%s</td>%s</tr>' % (
+                ' class="me"' if r['squadra'] == 'LAN' else '', i + 1, nome(r['squadra']), r['v'], r['p'],
+                '' if mini else '<td class="n">%d</td>' % (r['v'] + r['p']), ('%.3f' % r['pct']).lstrip('0') if r['pct'] < 1 else '1.000',
+                '' if mini else '<td class="n">%s</td>' % gbs))
+        return ''.join(h) + '</tbody></table></div></div>'
+
+    def cal():
+        h, m = ['<div class="cal-f"><button class="chip on" data-side="">Tutte</button><button class="chip" data-side="casa">In casa</button>'
+                '<button class="chip" data-side="fuori">In trasferta</button></div><div class="cal">'], -1
+        for g in games:
+            if g['when'].month != m:
+                m = g['when'].month
+                h.append('<h3 class="month">%s</h3>' % MESI[m - 1])
+            h.append(row(g))
+        return ''.join(h) + '</div>'
+
+    if nxt:
+        ng = ('<div class="next"><div class="kick">Prossima partita · %s</div><h3>%s <span class="vs">vs</span> %s</h3><p>%s %d · ore %s · %s</p></div>') % (
+            e(L['stagione']['nome']), nome(nxt['casa']), nome(nxt['ospiti']), dstr(nxt['when']), nxt['when'].year, e(nxt['ora']), e(nxt['campo']))
+    else:
+        ng = ('<div class="next"><div class="kick">%s · %s</div><h3>Stagione conclusa</h3><p>I Lancers chiudono il campionato al %d° posto. Il nuovo calendario comparirà qui appena la FIBS lo pubblica.</p>'
+              '<div class="rec"><div><b>%d</b><span>vittorie</span></div><div><b>%d</b><span>sconfitte</span></div><div><b>%d°</b><span>posto</span></div></div></div>') % (
+            e(L['stagione']['nome']), e(L['stagione']['girone']), pos, W, Lo, pos)
+    head = ('<h2 class="has-text-align-center">%s – %s</h2><div class="season-h"><div><b>%d</b><span>vittorie</span></div><div><b>%d</b><span>sconfitte</span></div>'
+            '<div><b>%d°</b><span>in classifica</span></div></div>') % (e(L['stagione']['nome']), e(L['stagione']['girone']), W, Lo, pos)
+    y, mo, d = L['stagione']['aggiornato'].split('-')
+    src = 'Dati aggiornati al %d %s %s. Fonte: <a href="%s" target="_blank" rel="noopener">FIBS</a> · <a href="%s" target="_blank" rel="noopener">calendario ufficiale</a>' % (
+        int(d), MESI[int(mo) - 1], y, L['stagione']['fonte'], L['stagione']['calendarioFibs'])
+    res = '<div class="res">%s</div>' % ''.join(row(g) for g in played[-4:][::-1])
+
+    doc = re.sub(r'(<div[^>]*\bdata-next-game(?:="")?[^>]*>)(</div>)', lambda m: m.group(1) + ng + m.group(2), doc)
+    doc = re.sub(r'(<div data-results(?:="")?>)(</div>)', lambda m: m.group(1) + res + m.group(2), doc)
+    doc = re.sub(r'(<div data-standings="mini">)(</div>)', lambda m: m.group(1) + standings(True) + m.group(2), doc)
+    doc = re.sub(r'(<div data-standings(?:="")?>)(</div>)', lambda m: m.group(1) + standings(False) + m.group(2), doc)
+    doc = re.sub(r'(<div data-calendar(?:="")?>)(</div>)', lambda m: m.group(1) + cal() + m.group(2), doc)
+    doc = re.sub(r'(<div data-season-head(?:="")?>)(</div>)', lambda m: m.group(1) + head + m.group(2), doc)
+    doc = re.sub(r'(<p class="src" data-source(?:="")?>)(</p>)', lambda m: m.group(1) + src + m.group(2), doc)
+    return doc
+
+
 def shell(path, title, body, desc='', cls=''):
     depth = path.count('/')
     root = '../' * depth
@@ -173,7 +278,7 @@ def shell(path, title, body, desc='', cls=''):
        root, root, cls, header(root, path), body, footer(root))
     out = os.path.join(ROOT, path, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf-8').write(doc.replace('__VER__', VER))
+    open(out, 'w', encoding='utf-8').write(prerender(doc.replace('__VER__', VER)))
     return root
 
 
@@ -265,10 +370,9 @@ def build_page(p):
         title = 'Calendario e classifica Serie B'
         content = re.sub(r'<p>\s*in costruzione\s*</p>', '', content)
         content = re.sub(r'<h2.*?</h2>', '', content, count=1, flags=re.S)
-        content = ('<div data-season-head></div><div class="tabs" role="tablist"><button class="chip on" data-tab="cal">Calendario e risultati</button>'
-                   '<button class="chip" data-tab="cls">Classifica</button></div>'
-                   '<div data-tabp="cal"><div data-calendar></div></div>'
-                   '<div data-tabp="cls" id="classifica" hidden><div data-standings></div></div>'
+        content = ('<div data-season-head></div><div class="sb-grid"><div class="sb-cal"><h3>Calendario e risultati</h3><div data-calendar></div></div>'
+                   '<div class="sb-cls" id="classifica"><h3>Classifica</h3><div data-standings></div>'
+                   '<p class="sb-leg">V vinte · P perse · G giocate · Dist. partite di distacco dalla prima. Tocca una partita giocata per aprire il tabellino FIBS.</p></div></div>'
                    '<p class="src" data-source></p><h2 class="has-text-align-center">Il calendario in immagini</h2>') + content
         cls += ' wide'
     if path == 'societa/contatti/':

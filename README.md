@@ -13,7 +13,7 @@ Per cambiare menu, footer o layout: modificare `tools/build.py` e lanciare `pyth
 
 ## Aggiornare calendario, risultati, classifica e social
 
-Calendario, risultati e classifica si aggiornano da soli dal sito FIBS (`tools/aggiorna_fibs.py`, lanciato da un'attività programmata di Claude due volte a settimana; GitHub Actions non si può usare perché la FIBS ne blocca i server. In `data/stagione.js` si modificano a mano solo i link social e i nomi brevi delle squadre.
+Calendario, risultati e classifica si aggiornano da soli dal sito FIBS (`tools/aggiorna_fibs.py`, lanciato da un'attività programmata di Claude due volte a settimana; GitHub Actions non si può usare perché la FIBS ne blocca i server. In `data/stagione.js` si modificano a mano solo i link social e i nomi brevi delle squadre. `build.py` scrive calendario, risultati e classifica direttamente nell'HTML (homepage e Calendario e classifica Serie B), quindi dopo ogni cambio di `data/stagione.js` va rilanciato.
 La prossima partita e il conto alla rovescia compaiono in homepage quando c'è una partita futura senza punteggio.
 
 ## Statistiche dei giocatori

@@ -612,3 +612,11 @@ a.g-row:hover{transform:translateX(3px);box-shadow:0 6px 18px rgba(13,23,48,.14)
 .content p strong{color:var(--navy)}
 .content p em{color:inherit}
 .tl-card{display:flex;flex-direction:column}.tl-card>.tl-ph{order:2;margin:0}
+/* Calendario e classifica Serie B */
+.sb-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:34px;align-items:start;max-width:1120px;margin:26px auto 0}
+.sb-grid h3{margin:0 0 14px;font-size:28px}
+.sb-cls{position:sticky;top:calc(var(--hh,80px) + 16px)}
+.sb-leg{font-size:13.5px;color:var(--mute);margin:10px 0 0}
+.sb-grid .cal .month{margin:22px 0 8px}
+.sb-grid .cal .month:first-of-type{margin-top:6px}
+@media(max-width:900px){.sb-grid{grid-template-columns:1fr;gap:30px}.sb-cls{position:static;order:-1}}
