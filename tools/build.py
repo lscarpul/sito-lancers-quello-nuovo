@@ -278,7 +278,7 @@ def shell(path, title, body, desc='', cls=''):
        root, root, cls, header(root, path), body, footer(root))
     out = os.path.join(ROOT, path, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    open(out, 'w', encoding='utf-8').write(prerender(doc.replace('__VER__', VER)))
+    open(out, 'w', encoding='utf-8').write(prerender(doc.replace('__VER__', VER).replace('__LIVE__', live_btn())))
     return root
 
 
@@ -370,7 +370,7 @@ def build_page(p):
         title = 'Calendario e classifica Serie B'
         content = re.sub(r'<p>\s*in costruzione\s*</p>', '', content)
         content = re.sub(r'<h2.*?</h2>', '', content, count=1, flags=re.S)
-        content = ('<div data-season-head></div><div class="sb-grid"><div class="sb-cal"><h3>Calendario e risultati</h3><div data-calendar></div></div>'
+        content = ('<div data-season-head></div><div class="live-p">' + live_btn() + '</div><div class="sb-grid"><div class="sb-cal"><h3>Calendario e risultati</h3><div data-calendar></div></div>'
                    '<div class="sb-cls" id="classifica"><h3>Classifica</h3><div data-standings></div>'
                    '<p class="sb-leg">V vinte · P perse · G giocate · Dist. partite di distacco dalla prima. Tocca una partita giocata per aprire il tabellino FIBS.</p></div></div>'
                    '<p class="src" data-source></p><h2 class="has-text-align-center">Il calendario in immagini</h2>') + content
@@ -582,6 +582,18 @@ ICO = {
     'pdf': '<svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M12 12v6M9 15l3 3 3-3"/></svg>',
     'mail': '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
 }
+
+
+LIVE = 'https://www.youtube.com/@LancersBC-nh4wu/live'
+
+
+def live_btn(extra=''):
+    """Pulsante per la diretta YouTube delle partite (il link /live apre la diretta in corso, se c'è)."""
+    return ('<a class="live-btn%s" href="%s" target="_blank" rel="noopener" data-live hidden><span class="live-dot" aria-hidden="true"></span>'
+            '<span><b>Siamo in diretta: guarda la partita</b><em>In streaming ora sul canale YouTube dei Lancers</em></span></a>') % (extra, LIVE)
+
+
+ICO['play'] = '<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9v6l5-3z"/></svg>'
 
 
 def hub(root, items, cls=''):
@@ -1231,7 +1243,7 @@ def build_home():
 <div class="news">%s</div></div></section>
 <section class="season alt"><div class="wrap">
 <div class="sh"><h2>La stagione</h2><a class="more" href="%s">Calendario completo →</a></div>
-<div class="season-g"><div class="reveal" data-next-game></div><div class="reveal"><h3 class="mini-t">Ultimi risultati</h3><div data-results></div></div>
+<div class="season-g"><div class="reveal"><div data-next-game></div>__LIVE__</div><div class="reveal"><h3 class="mini-t">Ultimi risultati</h3><div data-results></div></div>
 <div class="reveal"><h3 class="mini-t">Classifica</h3><div data-standings="mini"></div></div></div></div></section>
 <section class="stats"><div class="wrap"><div class="st reveal"><b data-count="%d">%d</b><span>anni di storia</span></div>
 <div class="st reveal"><b data-count="4">4</b><span>squadre in campo</span></div>

@@ -620,3 +620,21 @@ a.g-row:hover{transform:translateX(3px);box-shadow:0 6px 18px rgba(13,23,48,.14)
 .sb-grid .cal .month{margin:22px 0 8px}
 .sb-grid .cal .month:first-of-type{margin-top:6px}
 @media(max-width:900px){.sb-grid{grid-template-columns:1fr;gap:30px}.sb-cls{position:static;order:-1}}
+/* diretta YouTube */
+.content a.live-btn:not(.btn):not([data-lb]),a.live-btn{display:flex;align-items:center;gap:14px;margin-top:14px;background:#fff;color:var(--ink);text-decoration:none;font-weight:400;border-radius:8px;padding:14px 18px;border-left:5px solid #ff0033;box-shadow:0 6px 20px rgba(13,23,48,.12);transition:transform .18s,box-shadow .18s;text-align:left}
+a.live-btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(13,23,48,.18)}
+.live-dot{flex:none;width:14px;height:14px;border-radius:50%;background:#ff0033;box-shadow:0 0 0 0 rgba(255,0,51,.6);animation:livep 1.6s infinite}
+@keyframes livep{0%{box-shadow:0 0 0 0 rgba(255,0,51,.55)}70%{box-shadow:0 0 0 10px rgba(255,0,51,0)}100%{box-shadow:0 0 0 0 rgba(255,0,51,0)}}
+a.live-btn b{display:block;font-family:BC,sans-serif;font-weight:700;font-size:21px;text-transform:uppercase;letter-spacing:.04em;color:var(--navy);line-height:1.1}
+a.live-btn em{display:block;font-style:normal;font-size:13.5px;color:var(--mute)}
+.content p.live-p{max-width:460px;margin:6px auto 0}
+.content p.live-p a.live-btn{margin:0}
+@media(prefers-reduced-motion:reduce){.live-dot{animation:none}}
+a.live-btn[hidden],.content a.live-btn[hidden]{display:none}
+.content .live-p{max-width:520px;margin:6px auto 0}
+.content .live-p a.live-btn{margin:0}
+.live-bar{position:relative;z-index:60;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#ff0033;color:#fff;text-decoration:none;padding:9px 16px;font-size:15px;text-align:center}
+.live-bar b{font-family:BC,sans-serif;font-size:19px;text-transform:uppercase;letter-spacing:.06em}
+.live-bar .live-dot{background:#fff;animation:livew 1.6s infinite}
+.live-bar:hover span:last-child{text-decoration:underline}
+@keyframes livew{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
