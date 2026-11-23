@@ -589,8 +589,8 @@ LIVE = 'https://www.youtube.com/@LancersBC-nh4wu/live'
 
 def live_btn(extra=''):
     """Pulsante per la diretta YouTube delle partite (il link /live apre la diretta in corso, se c'è)."""
-    return ('<a class="live-btn%s" href="%s" target="_blank" rel="noopener" data-live hidden><span class="live-dot" aria-hidden="true"></span>'
-            '<span><b>Siamo in diretta: guarda la partita</b><em>In streaming ora sul canale YouTube dei Lancers</em></span></a>') % (extra, LIVE)
+    return ('<a class="live-btn%s" href="%s" target="_blank" rel="noopener"><span class="live-ico" aria-hidden="true">%s</span>'
+            '<span><b>Dirette YouTube</b><em>Segui le partite dei Lancers in streaming sul nostro canale</em></span></a>') % (extra, LIVE, ICO['play'])
 
 
 ICO['play'] = '<svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9v6l5-3z"/></svg>'
@@ -694,6 +694,7 @@ def pagina_speciale(path, content, root):
             ('cal', 'Calendario e classifica', 'Partite, risultati e girone', 'squadre-senior/risultati/'),
             ('star', 'Piazzamenti', 'Le stagioni dal 2002 a oggi', 'societa/piazzamenti/'),
             ('hist', 'Giocatori passati', 'Chi ha vestito la nostra maglia', GPAS if GIOC else None),
+            ('play', 'Dirette YouTube', 'Le partite in streaming', LIVE),
         ])
     if path == 'area-download/':
         sq = BeautifulSoup(content, 'html.parser')

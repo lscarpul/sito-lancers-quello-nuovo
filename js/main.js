@@ -328,23 +328,4 @@
     lay();
   });
 
-  /* diretta YouTube: il pulsante e la barra compaiono solo se data/diretta.json dice che il canale è in live */
-  (function () {
-    var sc = document.querySelector('script[src*="js/main.js"]');
-    if (!sc || !window.fetch) return;
-    var root = sc.getAttribute('src').replace(/js\/main\.js.*$/, '');
-    fetch(root + 'data/diretta.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (d) {
-      var dal = Date.parse(d.dal || '');
-      if (!d.live || (dal && Date.now() - dal > 6 * 3600e3)) return;
-      $$('[data-live]').forEach(function (a) {
-        a.href = d.url;
-        if (d.titolo) { var em = $('em', a); if (em) em.textContent = d.titolo; }
-        a.hidden = false;
-      });
-      var bar = document.createElement('a');
-      bar.className = 'live-bar'; bar.href = d.url; bar.target = '_blank'; bar.rel = 'noopener';
-      bar.innerHTML = '<span class="live-dot" aria-hidden="true"></span><b>In diretta ora</b><span>Guarda la partita dei Lancers su YouTube →</span>';
-      document.body.insertBefore(bar, document.body.firstChild);
-    }).catch(function () {});
-  })();
 })();

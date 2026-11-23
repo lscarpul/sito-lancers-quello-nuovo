@@ -638,3 +638,6 @@ a.live-btn[hidden],.content a.live-btn[hidden]{display:none}
 .live-bar .live-dot{background:#fff;animation:livew 1.6s infinite}
 .live-bar:hover span:last-child{text-decoration:underline}
 @keyframes livew{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.live-ico{flex:none;width:44px;height:44px;border-radius:50%;background:#ff0033;display:grid;place-items:center}
+.live-ico svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linejoin:round}
+.live-ico svg path{fill:#fff}
