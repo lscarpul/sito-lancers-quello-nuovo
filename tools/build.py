@@ -941,6 +941,101 @@ def regole_card(p):
 
 
 
+
+QUIZ_REGOLE = [
+    ('La partita', [
+        ('Quanti inning dura una partita di baseball?', ['7', '9', '12'], 1,
+         'Si gioca nell’arco di 9 inning, o riprese.'),
+        ('Quando finisce una mezza ripresa?', ['Quando l’attacco segna un punto', 'Quando la difesa esegue tre eliminazioni', 'Dopo dieci lanci'], 1,
+         'Con tre eliminazioni la squadra in difesa passa all’attacco.'),
+        ('Dopo 9 inning le squadre sono in parità. Cosa succede?', ['La partita finisce pari', 'Si giocano riprese supplementari', 'Vince chi ha fatto più valide'], 1,
+         'Il pareggio non è ammesso: si gioca finché una squadra non è avanti.'),
+    ]),
+    ('La squadra', [
+        ('Quanti giocatori schiera in campo una squadra?', ['9', '10', '11'], 0,
+         'Una squadra è composta da 9 giocatori, più le riserve.'),
+        ('Si può cambiare l’ordine di battuta durante la partita?', ['Sì, a ogni inning', 'No, resta lo stesso per tutto l’incontro', 'Solo dopo il quinto inning'], 1,
+         'Il line-up non si altera: un sostituto batte nella stessa posizione di chi esce.'),
+        ('Cos’è il battitore designato (DH)?', ['Il capitano della squadra', 'Un giocatore che batte al posto del lanciatore', 'Il primo battitore del line-up'], 1,
+         'Il DH va solo in battuta, così il lanciatore può riposare.'),
+    ]),
+    ('Le posizioni in campo', [
+        ('Che numero ha il lanciatore?', ['1', '2', '9'], 0,
+         'Il lanciatore è il numero 1, il ricevitore il 2.'),
+        ('Chi è il numero 6?', ['L’esterno centro', 'L’interbase', 'La terza base'], 1,
+         'Il 6 è l’interbase, tra la seconda e la terza base.'),
+        ('Quanti sono gli esterni?', ['2', '3', '4'], 1,
+         'Esterno sinistro (7), centro (8) e destro (9).'),
+    ]),
+    ('La difesa', [
+        ('Quanti strike servono per eliminare il battitore?', ['2', '3', '4'], 1,
+         'Con tre strike il battitore è eliminato per strikeout.'),
+        ('Con due strike, il battitore manda la palla foul. È eliminato?', ['Sì, è il terzo strike', 'No, il foul non vale come terzo strike', 'Solo se la palla esce dal campo'], 1,
+         'Il foul conta come strike, ma non come terzo strike.'),
+        ('Un difensore prende la palla battuta prima che rimbalzi. Cosa succede?', ['Il battitore è eliminato', 'Il battitore va in prima base', 'Si ripete il lancio'], 0,
+         'È l’eliminazione per presa al volo.'),
+    ]),
+    ('L’attacco', [
+        ('Quando si segna un punto?', ['Quando il battitore colpisce la palla', 'Quando un corridore completa il giro delle basi', 'Quando si arriva in terza base'], 1,
+         'Il punto arriva quando il corridore completa il giro delle basi senza essere eliminato.'),
+        ('Quanti ball servono per la base su ball?', ['3', '4', '5'], 1,
+         'Con quattro ball il battitore va in prima base.'),
+        ('Come si chiama la corsa alla base successiva anticipando il lancio?', ['Battuta di sacrificio', 'Gioco forzato', 'Base rubata'], 2,
+         'È la base rubata.'),
+    ]),
+]
+
+
+def regole_a_step(sq):
+    """Le regole diventano capitoli da seguire uno alla volta, ognuno con un quiz finale. I testi restano gli stessi."""
+    kids = [c for c in sq.contents if getattr(c, 'name', None)]
+    inizi = []
+    for i, el in enumerate(kids):
+        t = el.get_text(' ', strip=True)
+        cls = el.get('class', [])
+        if el.name == 'h2':
+            continue
+        if not inizi and el.name in ('div', 'p'):
+            inizi.append(i)
+        elif t.startswith('Una squadra baseball'):
+            j = i - 1 if i > 0 and kids[i - 1].name == 'div' and not kids[i - 1].get_text(strip=True) else i
+            inizi.append(j)
+        elif t.startswith('In fase di difesa'):
+            inizi.append(i)
+        elif 'rule' in cls:
+            inizi.append(i)
+    if len(inizi) != len(QUIZ_REGOLE):
+        return None
+    fine_ult = next((i for i in range(len(kids) - 1, inizi[-1], -1) if 'fibs.it' in str(kids[i])), len(kids))
+    n = len(QUIZ_REGOLE)
+    nav = ''.join('<li><button type="button" data-go="%d"><b>%d</b><span>%s</span></button></li>' % (k, k + 1, e(t)) for k, (t, _) in enumerate(QUIZ_REGOLE))
+    steps = []
+    for k, (tit, qs) in enumerate(QUIZ_REGOLE):
+        a, b = inizi[k], (inizi[k + 1] if k + 1 < n else fine_ult)
+        corpo = ''.join(str(x) for x in kids[a:b])
+        domande = ''.join(
+            '<fieldset class="q" data-ok="%d"><legend>%s</legend>%s<p class="q-why" hidden>%s</p></fieldset>' % (
+                ok, e(d), ''.join('<button type="button" class="q-a" data-i="%d">%s</button>' % (i, e(r)) for i, r in enumerate(rs)), e(why))
+            for d, rs, ok, why in qs)
+        steps.append(
+            '<section class="step" data-step="%d" id="capitolo-%d"><header class="st-h"><span class="st-k">Capitolo %d di %d</span><h2>%s</h2></header>'
+            '<div class="st-body">%s</div>'
+            '<div class="quiz" data-quiz><div class="quiz-h"><span class="st-k">Quiz del capitolo</span><h3>Hai capito %s?</h3></div>%s'
+            '<p class="quiz-res" aria-live="polite"></p></div>'
+            '<div class="st-ctl">%s%s</div></section>' % (
+                k, k + 1, k + 1, n, e(tit), corpo, e(tit.lower()), domande,
+                '<button type="button" class="btn o" data-prev>← Capitolo precedente</button>' if k else '<span></span>',
+                '<button type="button" class="btn r" data-next>Capitolo successivo →</button>' if k + 1 < n else
+                '<button type="button" class="btn r" data-finish>Vedi il risultato finale</button>'))
+    fine = ('<div class="st-end" hidden><span class="st-k">Percorso completato</span><h2>Ora conosci le regole del baseball</h2>'
+            '<p class="st-score"></p><p><button type="button" class="btn o" data-restart>Ricomincia dal primo capitolo</button> '
+            '<a class="btn r" href="../../gioca-anche-tu/">Vieni a provarlo in campo</a></p></div>')
+    blocco = ('<div class="rg-steps" data-steps><div class="st-prog"><span></span></div><ol class="st-nav">%s</ol>%s%s</div>' % (nav, ''.join(steps), fine))
+    testa = ''.join(str(x) for x in kids[:inizi[0]])
+    coda = ''.join(str(x) for x in kids[fine_ult:])
+    return testa + blocco + coda
+
+
 def griglia_pulsanti(html):
     """Gruppi di 4 o più pulsanti del vecchio sito diventano una griglia ordinata di schede (stesse scritte e collegamenti)."""
     if 'wp-block-buttons' not in html:
@@ -1071,6 +1166,9 @@ def ritocchi_extra(path, content, root):
                 p['class'] = ['has-text-align-center']
         for f in sq.find_all('figure'):
             f['class'] = f.get('class', []) + ['pic']
+        passi = regole_a_step(sq)
+        if passi:
+            return nav + '<article class="essay rules stepped">%s</article>' % passi
         return nav + '<article class="essay rules">%s</article>' % str(sq)
     if path == 'baseball-2/al-cinema/':
         sq = BeautifulSoup(content, 'html.parser')

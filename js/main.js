@@ -328,4 +328,68 @@
     lay();
   });
 
+  /* Regole a capitoli con quiz */
+  $$('[data-steps]').forEach(function (box) {
+    var steps = $$('.step', box), nav = $$('.st-nav button', box), bar = box.querySelector('.st-prog span'),
+      end = box.querySelector('.st-end'), cur = 0, voti = {};
+    box.classList.add('js');
+    function show(i, scroll) {
+      cur = Math.max(0, Math.min(steps.length - 1, i));
+      steps.forEach(function (s, k) { s.hidden = k !== cur; });
+      nav.forEach(function (b, k) { b.classList.toggle('on', k === cur); b.classList.toggle('done', !!voti[k] && voti[k].fatte === voti[k].tot); });
+      end.hidden = true;
+      bar.style.width = ((cur + 1) / steps.length * 100) + '%';
+      if (scroll) box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    steps.forEach(function (s, k) {
+      var qs = $$('.q', s), res = s.querySelector('.quiz-res');
+      voti[k] = { tot: qs.length, fatte: 0, giuste: 0 };
+      qs.forEach(function (q) {
+        var ok = +q.getAttribute('data-ok');
+        $$('.q-a', q).forEach(function (b) {
+          b.addEventListener('click', function () {
+            if (q.classList.contains('answered')) return;
+            q.classList.add('answered');
+            var i = +b.getAttribute('data-i');
+            $$('.q-a', q).forEach(function (x) { x.disabled = true; if (+x.getAttribute('data-i') === ok) x.classList.add('right'); });
+            if (i !== ok) b.classList.add('wrong'); else voti[k].giuste++;
+            q.classList.add(i === ok ? 'is-ok' : 'is-ko');
+            q.querySelector('.q-why').hidden = false;
+            voti[k].fatte++;
+            if (voti[k].fatte === voti[k].tot) {
+              var g = voti[k].giuste, t = voti[k].tot;
+              res.textContent = (g === t ? 'Perfetto! ' : g ? 'Bene! ' : 'Riprova a rileggere il capitolo. ') + g + ' risposte giuste su ' + t + '.';
+              res.className = 'quiz-res show' + (g === t ? ' full' : '');
+              nav[k].classList.add('done');
+            }
+          });
+        });
+      });
+      var p = s.querySelector('[data-prev]'), n = s.querySelector('[data-next]'), f = s.querySelector('[data-finish]');
+      if (p) p.addEventListener('click', function () { show(k - 1, true); });
+      if (n) n.addEventListener('click', function () { show(k + 1, true); });
+      if (f) f.addEventListener('click', function () {
+        var g = 0, t = 0;
+        Object.keys(voti).forEach(function (x) { g += voti[x].giuste; t += voti[x].tot; });
+        steps.forEach(function (st) { st.hidden = true; });
+        end.hidden = false;
+        end.querySelector('.st-score').innerHTML = '<b>' + g + '</b> su ' + t + ' risposte giuste' +
+          (g === t ? ': sei pronto per scendere in campo!' : g >= t * 0.6 ? ': ottimo lavoro!' : ': rileggi qualche capitolo e riprova.');
+        bar.style.width = '100%';
+        box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    nav.forEach(function (b, k) { b.addEventListener('click', function () { show(k, false); }); });
+    end.querySelector('[data-restart]').addEventListener('click', function () {
+      steps.forEach(function (s, k) {
+        voti[k].fatte = voti[k].giuste = 0;
+        $$('.q', s).forEach(function (q) { q.className = 'q'; q.querySelector('.q-why').hidden = true; $$('.q-a', q).forEach(function (x) { x.disabled = false; x.className = 'q-a'; }); });
+        var r = s.querySelector('.quiz-res'); r.textContent = ''; r.className = 'quiz-res';
+      });
+      show(0, true);
+    });
+    var h = location.hash.match(/^#capitolo-(\d+)$/);
+    show(h ? +h[1] - 1 : 0, false);
+  });
+
 })();
