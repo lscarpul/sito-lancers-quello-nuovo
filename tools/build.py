@@ -1209,6 +1209,92 @@ def build_news():
     shell(path, 'Notizie', body, cls='page')
 
 
+CONTOUR = ('<svg class="contour" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">%s</svg>' % ''.join(
+    '<path d="M-50 %d C 200 %d, 380 %d, 600 %d S 1000 %d, 1250 %d"/>' % (y, y - 70 + i * 9, y + 60 - i * 7, y - 10, y + 50 - i * 5, y - 30)
+    for i, y in enumerate(range(60, 600, 34))))
+
+
+def ticker(txt, n=14):
+    t = ''.join('<span>%s</span>' % txt for _ in range(n))
+    return '<div class="ticker" aria-hidden="true"><div>%s%s</div></div>' % (t, t)
+
+
+def final_card(root):
+    """Ultima partita giocata in stile tabellone 'FINAL'."""
+    L, games, table = _stagione()
+    played = [g for g in games if g['played']]
+    if not played:
+        return ''
+    g = played[-1]
+    sig = lambda k: 'LAN' if k == 'LAN' else k
+    righe = [(g['ospiti'], g['puntiOspiti']), (g['casa'], g['puntiCasa'])]
+    rows = ''.join('<div class="fs-r%s"><span class="fs-k">%s</span><span class="fs-n">%s</span><b>%d</b></div>' % (
+        ' me' if k == 'LAN' else '', e(sig(k)), e(L['squadre'].get(k, k)), p) for k, p in righe)
+    d = g['when']
+    href = (L['stagione']['boxscore'] + str(g['boxscore'])) if g.get('boxscore') else link(root, 'squadre-senior/risultati/')
+    return ('<a class="poster final reveal" href="%s"%s><div class="pk">Ultima partita</div><div class="echo" aria-hidden="true"><i>Final</i><i>Final</i></div>'
+            '<h3>Final</h3><div class="fs">%s</div><p class="fs-d">%s %d %s %d · %s%s</p><span class="more">%s →</span></a>') % (
+        href, ' target="_blank" rel="noopener"' if g.get('boxscore') else '', rows, GIORNI[d.weekday()], d.day, MESI[d.month - 1], d.year,
+        e(g['campo']), (' · ' + e(g['nota'])) if g.get('nota') else '', 'Tabellino FIBS' if g.get('boxscore') else 'Tutti i risultati')
+
+
+def spotlight(root):
+    """Due protagonisti della stagione: miglior battitore (media, almeno 40 turni) e lanciatore con più strikeout."""
+    try:
+        t = open(_D + 'data/statistiche.js', encoding='utf-8').read()
+        S = json.loads(t[t.index('{'):t.rindex('}') + 1])
+    except Exception:
+        return ''
+    col = {k: [c[0] for c in v] for k, v in S['colonne'].items()}
+    anno = max((r['anno'] for p in S['giocatori'].values() for r in p.get('batting', []) if r.get('sq') == 'LAN'), default=None)
+    if not anno:
+        return ''
+
+    def riga(p, k):
+        return next((r['v'] for r in p.get(k, []) if r['anno'] == anno and r.get('sq') == 'LAN'), None)
+
+    def foto(slug):
+        m = GIOC.get(slug, {})
+        pg = PAGES.get(m.get('pagina') or '')
+        if pg and pg.get('thumb') and media_ok(pg['thumb']):
+            return pg, root + 'media/t/' + pg['thumb'], m.get('nome', pg['title'])
+        return None, '', ''
+    cand_b, cand_p = [], []
+    for slug, p in S['giocatori'].items():
+        pg, im, nome = foto(slug)
+        if not pg:
+            continue
+        b = riga(p, 'batting')
+        if b and b[col['batting'].index('AB')] >= 40:
+            cand_b.append((float(b[col['batting'].index('AVG')]), slug, pg, im, nome, b))
+        q = riga(p, 'pitching')
+        if q and q[col['pitching'].index('SO')]:
+            cand_p.append((q[col['pitching'].index('SO')], slug, pg, im, nome, q))
+    out = []
+    if cand_b:
+        avg, slug, pg, im, nome, b = max(cand_b)
+        c = col['batting']
+        out.append((pg, im, nome, 'Miglior media battuta', [(b[c.index('AVG')], 'Media'), (b[c.index('H')], 'Valide'), (b[c.index('RBI')], 'Punti battuti')]))
+    if cand_p:
+        so, slug, pg, im, nome, q = max(cand_p)
+        c = col['pitching']
+        if not out or out[0][0] is not pg:
+            out.append((pg, im, nome, 'Più strikeout', [(q[c.index('SO')], 'Strikeout'), (q[c.index('IP')], 'Inning'), (q[c.index('ERA')], 'ERA')]))
+    cards = []
+    for pg, im, nome, lab, st in out:
+        cog = nome.split()[0]
+        cards.append(('<a class="spot reveal" href="%s"><span class="spot-im" style="background-image:url(%s)"></span>'
+                      '<span class="spot-b"><span class="pk">%s · %s</span><span class="echo" aria-hidden="true"><i>%s</i><i>%s</i></span>'
+                      '<strong>%s</strong><span class="spot-s">%s</span></span></a>') % (
+            link(root, pg['path']), im, anno, e(lab), e(cog), e(cog), e(nome),
+            ''.join('<span><b>%s</b><em>%s</em></span>' % (e(str(v)), e(k)) for v, k in st)))
+    if not cards:
+        return ''
+    return ('<section class="h-sec"><div class="wrap"><div class="h-sh reveal"><span class="pk">Serie B %s</span><h2>I protagonisti</h2></div>'
+            '<div class="spots">%s</div><p class="h-more"><a class="btn o" href="%s">Tutta la rosa</a></p></div></section>') % (
+        anno, ''.join(cards), link(root, 'squadre-senior/serie-a2/'))
+
+
 def build_home():
     root = ''
     news = ''.join(post_card(root, p, big=i == 0) for i, p in enumerate(POSTS[:3]))
@@ -1218,11 +1304,12 @@ def build_home():
              ('Senior', 'Amatori', 'squadre-senior/amatoriale/', 'squadra-amatori.jpg')]
     tm = ''.join('<a class="team reveal" href="%s" style="background-image:url(images/%s)"><div><span>%s</span><h3>%s</h3></div></a>'
                  % (link(root, p), im, k, t) for k, t, p, im in teams)
-    quick = [('Prova il baseball', 'Corsi a partire da 6 anni. Vieni al campo per un allenamento di prova.', 'Scopri come', 'gioca-anche-tu/'),
-             ('Orari allenamenti', 'Giorni e orari di tutte le squadre, dalle giovanili alla Serie B.', 'Vedi gli orari', 'ballpark/orari-allenamenti/'),
-             ('Dove siamo', 'Lancers Field, Porto di Mezzo, Lastra a Signa. Contatti e indicazioni.', 'Contatti', 'societa/contatti/')]
-    qc = ''.join('<a class="card reveal" href="%s"><h3>%s</h3><p>%s</p><span class="more">%s →</span></a>' % (link(root, p), t, d, m)
-                 for t, d, m, p in quick)
+    quick = [('Prova il baseball', 'Corsi a partire da 6 anni', 'gioca-anche-tu/'),
+             ('Orari allenamenti', 'Tutte le squadre, dalle giovanili alla Serie B', 'ballpark/orari-allenamenti/'),
+             ('Dove siamo', 'Lancers Field, Porto di Mezzo, Lastra a Signa', 'ballpark/'),
+             ('Dirette YouTube', 'Le partite in streaming sul nostro canale', LIVE)]
+    ql = ''.join('<a href="%s"%s><b>%s</b><span>%s</span></a>' % (
+        p if p.startswith('http') else link(root, p), ' target="_blank" rel="noopener"' if p.startswith('http') else '', t, d) for t, d, p in quick)
     years = 2026 - 1982
     seen, ph = set(), []
     for p in POSTS:
@@ -1232,40 +1319,54 @@ def build_home():
                 ph.append('<a href="media/%s" data-lb="%s"><img src="media/t/%s" alt="%s" loading="lazy"></a>' % (n, e(p['title']), n, e(p['title'])))
                 break
     photos = ''.join(ph)
-    body = '''<div class="hero"><div class="wrap">
-<div class="kick">Lastra a Signa · dal 1982</div>
-<h1>Lancers <span>Baseball</span> Club</h1>
-<p>Il sito ufficiale dei Lancieri di Lastra a Signa: prima squadra in Serie B, settore giovanile e un campo aperto a tutti.</p>
-<a class="btn r" href="%s">Gioca con noi</a><a class="btn o" href="%s">Calendario e classifica</a>
-</div></div>
-<div class="wrap"><div class="quick">%s</div></div>
-<section><div class="wrap">
-<div class="sh"><h2>Ultime notizie</h2><a class="more" href="%s">Tutte le notizie →</a></div>
-<div class="news">%s</div></div></section>
-<section class="season alt"><div class="wrap">
-<div class="sh"><h2>La stagione</h2><a class="more" href="%s">Calendario completo →</a></div>
-<div class="season-g"><div class="reveal"><div data-next-game></div>__LIVE__</div><div class="reveal"><h3 class="mini-t">Ultimi risultati</h3><div data-results></div></div>
-<div class="reveal"><h3 class="mini-t">Classifica</h3><div data-standings="mini"></div></div></div></div></section>
-<section class="stats"><div class="wrap"><div class="st reveal"><b data-count="%d">%d</b><span>anni di storia</span></div>
+    L, games, table = _stagione()
+    body = ("""<section class="h-hero">%(contour)s%(tick)s
+<div class="wrap h-hero-in">
+<div class="h-pre reveal">Benvenuti ai</div>
+<h1 class="h-title reveal"><span class="sr">Lancers Baseball Club</span><span aria-hidden="true">Lancers</span></h1>
+<div class="h-photo reveal"><img src="images/hero-squadra.jpg" alt="La prima squadra dei Lancers" fetchpriority="high"></div>
+<p class="h-tag reveal">Baseball Club · Lastra a Signa · dal 1982</p>
+<p class="h-lead reveal">Il sito ufficiale dei Lancieri di Lastra a Signa: prima squadra in Serie B, settore giovanile e un campo aperto a tutti.</p>
+<p class="h-cta reveal"><a class="btn r" href="%(gioca)s">Gioca con noi</a><a class="btn o" href="%(ris)s">Calendario e classifica</a></p>
+</div>%(tick)s</section>
+<section class="h-sec h-game"><div class="wrap">
+<div class="h-sh reveal"><span class="pk">%(stag)s · %(gir)s</span><h2>Gameday</h2><a class="more" href="%(ris)s">Calendario completo →</a></div>
+<div class="h-grid">
+<div class="poster season-p reveal"><div class="echo" aria-hidden="true"><i>Stagione</i><i>Stagione</i></div><div data-next-game></div></div>
+%(final)s
+<nav class="h-list reveal" aria-label="Collegamenti rapidi">%(ql)s</nav>
+</div>
+<div class="h-two">
+<div class="reveal"><h3 class="mini-t">Ultimi risultati</h3><div data-results></div></div>
+<div class="reveal"><h3 class="mini-t">Classifica</h3><div data-standings="mini"></div></div>
+</div></div></section>
+%(spot)s
+<section class="h-sec h-alt"><div class="wrap">
+<div class="h-sh reveal"><span class="pk">Dal club</span><h2>Ultime notizie</h2><a class="more" href="%(not)s">Tutte le notizie →</a></div>
+<div class="news">%(news)s</div></div></section>
+<section class="stats"><div class="wrap"><div class="st reveal"><b data-count="%(years)d">%(years)d</b><span>anni di storia</span></div>
 <div class="st reveal"><b data-count="4">4</b><span>squadre in campo</span></div>
 <div class="st reveal"><b data-count="6">6</b><span>anni: l’età per iniziare</span></div>
-<div class="st reveal"><b data-count="%d">%d</b><span>notizie in archivio</span></div></div></section>
-%s
-<section><div class="wrap">
-<div class="sh"><h2>Le nostre squadre</h2></div>
-<div class="teams">%s</div></div></section>
-<section class="alt"><div class="wrap">
-<div class="sh"><h2>Dal campo</h2><div class="social big" data-social="label"></div></div>
-<div class="gallery-x strip-g">%s</div></div></section>
+<div class="st reveal"><b data-count="%(np)d">%(np)d</b><span>notizie in archivio</span></div></div></section>
+<section class="h-sec"><div class="wrap">
+<div class="h-sh reveal"><span class="pk">Una famiglia, quattro squadre</span><h2>Le nostre squadre</h2></div>
+<div class="teams">%(tm)s</div>
+<div class="h-ban">
+<a class="ban reveal" href="%(gioca)s"><span class="ban-k">Corsi da 6 anni in su</span><b>Prova<br>il baseball</b><span class="more">Vieni al campo →</span></a>
+<a class="ban yt reveal" href="%(live)s" target="_blank" rel="noopener"><span class="ban-k">Sul nostro canale YouTube</span><b>Le partite<br>in diretta</b><span class="more">Guarda le dirette →</span></a>
+</div></div></section>
+<section class="h-sec h-alt"><div class="wrap">
+<div class="h-sh reveal"><span class="pk">Foto e video</span><h2>Dal campo</h2><div class="social big" data-social="label"></div></div>
+<div class="gallery-x strip-g">%(photos)s</div></div></section>
 <div class="spons"><div class="wrap"><h2>I nostri sponsor</h2>
-<a href="%s"><img src="images/banner-sponsor-cso.jpg" alt="CSO Costruzione Strumenti Oftalmici sostiene i Lancers" loading="lazy">
+<a href="%(spons)s"><img src="images/banner-sponsor-cso.jpg" alt="CSO Costruzione Strumenti Oftalmici sostiene i Lancers" loading="lazy">
 <img src="images/banner-sponsor-edilpoggianti.jpg" alt="Edilpoggianti sostiene i Lancers" loading="lazy">
 <img src="images/banner-sponsor-panamed.jpg" alt="Panamed sostiene i Lancers" loading="lazy"></a>
-<p><a class="btn o" href="%s">Diventa nostro sponsor</a></p></div></div>''' % (
-        link(root, 'gioca-anche-tu/'), link(root, 'squadre-senior/risultati/'), qc, link(root, 'notizie/'), news,
-        link(root, 'squadre-senior/risultati/'),
-        years, years, len(POSTS), len(POSTS), cta(root), tm, photos, link(root, 'societa/sponsor/'),
-        link(root, 'societa/diventa-nostro-sponsor/'))
+<p><a class="btn o" href="%(diventa)s">Diventa nostro sponsor</a></p></div></div>""") % dict(
+        contour=CONTOUR, tick=ticker('Lancers Baseball Club'), gioca=link(root, 'gioca-anche-tu/'), ris=link(root, 'squadre-senior/risultati/'),
+        stag=e(L['stagione']['nome']), gir=e(L['stagione']['girone']), final=final_card(root), ql=ql, spot=spotlight(root),
+        news=news, years=years, np=len(POSTS), tm=tm, live=LIVE, photos=photos, spons=link(root, 'societa/sponsor/'),
+        diventa=link(root, 'societa/diventa-nostro-sponsor/'), **{'not': link(root, 'notizie/')})
     shell('', '', body, cls='home')
 
 
