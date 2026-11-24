@@ -209,7 +209,7 @@
           '° posto. Il nuovo calendario comparirà qui appena la FIBS lo pubblica.</p><div class="rec"><div><b>' + W + '</b><span>vittorie</span></div><div><b>' + Lo + '</b><span>sconfitte</span></div><div><b>' + pos + '°</b><span>posto</span></div></div></div>';
       }
     });
-    $$('[data-results]').forEach(function (el) { el.innerHTML = '<div class="res">' + played.slice(-4).reverse().map(row).join('') + '</div>'; });
+    $$('[data-results]').forEach(function (el) { el.innerHTML = '<div class="res">' + played.slice(-6).reverse().map(row).join('') + '</div>'; });
     $$('[data-season-head]').forEach(function (el) {
       el.innerHTML = '<h2 class="has-text-align-center">' + esc(L.stagione.nome) + ' – ' + esc(L.stagione.girone) + '</h2><div class="season-h"><div><b>' + W + '</b><span>vittorie</span></div><div><b>' + Lo + '</b><span>sconfitte</span></div><div><b>' + pos + '°</b><span>in classifica</span></div></div>';
     });

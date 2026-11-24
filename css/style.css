@@ -783,3 +783,13 @@ body.home .stand table tbody tr.me td{background:rgba(227,6,19,.28);color:#fff}
 .h-photo:after{display:none}
 body.home .stand table tbody tr{background:transparent}
 .h-photo img{-webkit-mask-image:radial-gradient(#000 42%,transparent 71%);mask-image:radial-gradient(#000 42%,transparent 71%)}
+/* barra in alto scura (tutto il sito) */
+.site-h{background:var(--navy2);border-bottom-color:var(--red)}
+.site-h.stuck{box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.menu{color:#fff}
+.menu>li>a:hover,.menu>li>a.on{color:#ff5a63}
+.sub{background:var(--navy);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.sub a{color:#dfe5f2}
+.sub a:hover{background:rgba(255,255,255,.07);color:#ff5a63}
+.burger span{background:#fff}
+@media(max-width:1180px){#nav{background:var(--navy2)}.menu>li{border-bottom-color:rgba(255,255,255,.1)}}

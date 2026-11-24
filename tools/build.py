@@ -122,7 +122,7 @@ def header(root, cur):
             items.append('<li><a href="%s"%s>%s</a></li>' % (link(root, path), act, e(label)))
     return '''<a class="skip" href="#main">Vai al contenuto</a>
 <header class="site-h"><div class="wrap">
-<a class="logo" href="%sindex.html"><img src="%simages/logo-lancers.jpg" alt="Lancers Baseball Club 1982" width="122" height="76"></a>
+<a class="logo" href="%sindex.html"><img src="%simages/logo-lancers.png" alt="Lancers Baseball Club 1982" width="122" height="76"></a>
 <button class="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
 <nav id="nav" aria-label="Menu principale"><ul class="menu">%s<li class="cta-li"><a class="cta" href="%s">Gioca con noi</a></li></ul></nav>
 </div></header>''' % (root, root, ''.join(items), link(root, 'gioca-anche-tu/'))
@@ -247,7 +247,7 @@ def prerender(doc):
     y, mo, d = L['stagione']['aggiornato'].split('-')
     src = 'Dati aggiornati al %d %s %s. Fonte: <a href="%s" target="_blank" rel="noopener">FIBS</a> · <a href="%s" target="_blank" rel="noopener">calendario ufficiale</a>' % (
         int(d), MESI[int(mo) - 1], y, L['stagione']['fonte'], L['stagione']['calendarioFibs'])
-    res = '<div class="res">%s</div>' % ''.join(row(g) for g in played[-4:][::-1])
+    res = '<div class="res">%s</div>' % ''.join(row(g) for g in played[-6:][::-1])
 
     doc = re.sub(r'(<div[^>]*\bdata-next-game(?:="")?[^>]*>)(</div>)', lambda m: m.group(1) + ng + m.group(2), doc)
     doc = re.sub(r'(<div data-results(?:="")?>)(</div>)', lambda m: m.group(1) + res + m.group(2), doc)
