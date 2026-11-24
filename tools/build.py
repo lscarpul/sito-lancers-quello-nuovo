@@ -392,6 +392,36 @@ def info(html):
     return d
 
 
+FOTO_GIOC = {
+    'vergara-pinto-daniel-alejandro': '2026-03-2d6a40ba-ba43-46f2-8121-933e2f9d7e78.jpg',
+    'tutino-sifontes-giuseppe-antonell': '2026-03-c41a9d1d-0f1d-4611-bafb-c6035a3e000f.jpg',
+}
+
+
+def nome_breve(n):
+    """'Vergara Pinto Daniel Alejandro' -> 'Vergara Daniel': cognome e primo nome, come le schede del sito."""
+    p = n.split()
+    if len(p) <= 2:
+        return n
+    return '%s %s' % (p[0], p[2] if len(p) > 3 else p[-1])
+
+
+def roster_extra(root):
+    """Giocatori della rosa FIBS dell'anno in corso che non hanno una scheda sul vecchio sito."""
+    out = []
+    for slug, v in sorted(GIOC.items(), key=lambda x: x[1]['nome']):
+        sv = v.get('stagioni', {}).get(str(ULTIMA), {})
+        if v.get('pagina') or not sv.get('rosa'):
+            continue
+        f = FOTO_GIOC.get(slug)
+        img = ('<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)) if f and media_ok(f) else '<span class="im ph"></span>'
+        num = sv.get('n', '') if re.match(r'^[1-9]\d*$', sv.get('n', '')) else ''
+        out.append((nome_breve(v['nome']), '<a class="player reveal" href="%s">%s<span class="b">%s<strong>%s</strong><em>%s</em></span></a>' % (
+            link(root, 'squadre-senior/giocatori/%s/' % slug), img, '<span class="num">%s</span>' % num if num else '',
+            e(nome_breve(v['nome'])), e(sv.get('ruolo', '')))))
+    return out
+
+
 def roster(root, path):
     cards = []
     for p in sorted(children(path), key=lambda x: x['title']):
@@ -403,7 +433,9 @@ def roster(root, path):
         cards.append('<a class="player reveal" href="%s">%s<span class="b">%s<strong>%s</strong><em>%s</em></span></a>' % (
             link(root, p['path']), img, '<span class="num">%s</span>' % num if num else '', e(p['title']),
             e(d.get('ruolo', ''))))
-    return '<div class="players">%s</div>' % ''.join(cards)
+    tutte = [(re.sub(r'<.*?>', '', c.split('<strong>')[1].split('</strong>')[0]), c) for c in cards] + roster_extra(root)
+    tutte.sort(key=lambda x: x[0].lower())
+    return '<div class="players">%s</div>' % ''.join(c for _, c in tutte)
 
 
 def player(content):
@@ -535,6 +567,10 @@ def build_giocatore(slug, v):
     tab = '<div class="table-wrap"><table><tbody>%s</tbody></table></div>' % ''.join(
         '<tr><td>%s</td><td>%s</td></tr>' % (a, b) for a, b in righe if b)
     pas = passato(v)
+    f = FOTO_GIOC.get(slug)
+    if f and media_ok(f):
+        tab = '<div class="gp-head"><a class="gp-ph" href="%smedia/%s" data-lb=""><img src="%smedia/%s" alt="%s"></a><div>%s</div></div>' % (
+            root, f, root, f, e(v['nome']), tab)
     content = ('%s<p class="pstats-leg has-text-align-center">Dati della scheda dal sito FIBS, che pubblica le rose dal 2020.</p>'
                '<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>' % (tab, slug, root))
     back = (GPAS, 'Tutti i giocatori passati') if pas else ('squadre-senior/serie-a2/', 'Roster Serie B')
