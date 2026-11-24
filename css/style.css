@@ -931,3 +931,14 @@ tbody tr:hover td,tbody tr:hover th,tbody tr:hover td *,tbody tr:hover th *{colo
 @media(max-width:700px){.h-stage{aspect-ratio:10/11}.h-cut{bottom:-6%}}
 @media(max-width:700px){.h-pre2{top:11%}.h-big{top:19%}}
 @media(max-width:700px){.h-big{top:21.5%}}
+/* hero telefono v2: gruppo intero a tutta larghezza, scritta sopra */
+@media(max-width:700px){
+.h-hero-in{padding-left:0;padding-right:0}
+.h-stage{aspect-ratio:100/74;max-width:none}
+.h-cut{width:105.5%;left:-5.5%;bottom:-9.1cqw}
+.h-stage:after{left:2%;right:2%;bottom:1%}
+.h-pre2{top:3cqw;font-size:9cqw}
+.h-big{top:11.5cqw;font-size:31cqw}
+}
+@media(max-width:700px){.h-pre2{top:4cqw;font-size:8.5cqw}.h-big{top:13cqw;font-size:27cqw}.h-stage{aspect-ratio:100/72}.h-stage+.h-tag,.h-tag{margin-top:18px}}
+@media(max-width:700px){.h-pre2{top:7cqw}.h-big{top:16.5cqw}}
