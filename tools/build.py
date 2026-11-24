@@ -392,6 +392,7 @@ def info(html):
     return d
 
 
+FOTO_GENERICA = '2026-01-giocatore-medievale-nella-squadra-moderna.jpg'  # la foto 'generica' (scheda di Rinaldi Cosimo) per chi non ha la sua
 FOTO_GIOC = {
     'vergara-pinto-daniel-alejandro': '2026-03-2d6a40ba-ba43-46f2-8121-933e2f9d7e78.jpg',
     'tutino-sifontes-giuseppe-antonell': '2026-03-c41a9d1d-0f1d-4611-bafb-c6035a3e000f.jpg',
@@ -414,7 +415,8 @@ def roster_extra(root):
         if v.get('pagina') or not sv.get('rosa'):
             continue
         f = FOTO_GIOC.get(slug)
-        img = ('<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)) if f and media_ok(f) else '<span class="im ph"></span>'
+        f = f if f and media_ok(f) else FOTO_GENERICA
+        img = '<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)
         num = sv.get('n', '') if re.match(r'^[1-9]\d*$', sv.get('n', '')) else ''
         out.append((nome_breve(v['nome']), '<a class="player reveal" href="%s">%s<span class="b">%s<strong>%s</strong><em>%s</em></span></a>' % (
             link(root, 'squadre-senior/giocatori/%s/' % slug), img, '<span class="num">%s</span>' % num if num else '',
