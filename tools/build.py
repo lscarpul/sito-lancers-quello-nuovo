@@ -455,6 +455,8 @@ def foto_cut(root, f, nome, cls='im'):
     from PIL import Image
     w, h = Image.open(os.path.join(ROOT, 'media', c)).size
     full = ' full' if h / w > 1.5 else ''
+    import hashlib
+    c = c + '?v=' + hashlib.md5(open(os.path.join(ROOT, 'media', c.split('?')[0]), 'rb').read()).hexdigest()[:8]
     return ('<span class="%s cut%s"><span class="nm" aria-hidden="true" style="font-size:%scqw">%s</span>'
             '<img src="%smedia/%s" alt="%s" loading="lazy" width="%d" height="%d"></span>') % (cls, full, size, e(cg), root, c, e(nome), w, h)
 
@@ -1452,6 +1454,10 @@ def spotlight(root):
         pg = PAGES.get(m.get('pagina') or '')
         if pg and pg.get('thumb') and media_ok(pg['thumb']):
             return pg, pg['thumb'], m.get('nome', pg['title'])
+        f = FOTO_GIOC.get(slug)
+        if m and f and media_ok(f):
+            # giocatori senza pagina sul vecchio sito ma con la loro foto (es. Vergara)
+            return {'path': m['path'], 'title': nome_breve(m['nome'])}, f, nome_breve(m['nome'])
         return None, '', ''
     cand_b, cand_p = [], []
     for slug, p in S['giocatori'].items():
