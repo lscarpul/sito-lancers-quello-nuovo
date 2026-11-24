@@ -911,3 +911,23 @@ tbody tr:hover td,tbody tr:hover th,tbody tr:hover td *,tbody tr:hover th *{colo
 .st-end .btn.o{background:transparent;color:#fff;border:2px solid #fff}.st-end .btn.o:hover{background:#fff;color:var(--navy)}
 .st-score b{display:block;margin:0 0 4px}
 .st-ctl .btn.o{background:transparent;color:#fff}
+
+/* ===== Hero: Benvenuti ai LANCERS con i giocatori davanti alle lettere ===== */
+.h-hero-in{padding-top:18px}
+.h-stage{position:relative;max-width:1400px;margin:0 auto;aspect-ratio:1400/860;container-type:inline-size;overflow:hidden}
+.h-stage:after{content:"";position:absolute;left:8%;right:4%;bottom:1.5%;height:7%;z-index:1;background:radial-gradient(closest-side,rgba(0,0,0,.55),transparent);pointer-events:none}
+.h-pre2{position:absolute;left:0;right:0;top:3%;margin:0;z-index:1;font-family:BC,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:5.6cqw;line-height:1;color:var(--red)}
+.h-big{position:absolute;left:0;right:0;top:9.5%;margin:0;z-index:1;font-family:BC,sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:23cqw;line-height:.82;letter-spacing:-.005em;color:var(--red);text-shadow:0 1.2cqw 3cqw rgba(0,0,0,.35)}
+.h-cut{position:absolute;z-index:2;left:0;bottom:0;width:100%;height:auto;display:block;filter:drop-shadow(0 .6cqw 1.4cqw rgba(0,0,0,.45))}
+@media(max-width:700px){
+.h-stage{aspect-ratio:1/1}
+.h-cut{width:168%;left:-38%}
+.h-stage:after{left:-10%;right:-10%}
+.h-pre2{top:6%;font-size:9cqw}
+.h-big{top:14%;font-size:30cqw}
+}
+.h-cut{max-width:none;bottom:-9%}
+.h-stage{aspect-ratio:1400/790}
+@media(max-width:700px){.h-stage{aspect-ratio:10/11}.h-cut{bottom:-6%}}
+@media(max-width:700px){.h-pre2{top:11%}.h-big{top:19%}}
+@media(max-width:700px){.h-big{top:21.5%}}
