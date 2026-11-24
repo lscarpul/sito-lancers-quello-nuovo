@@ -306,6 +306,23 @@ def children(path):
     return [p for k, p in PAGES.items() if k.startswith(path) and k != path and k.count('/') == path.count('/') + 1]
 
 
+_CHIARE = {}
+
+
+def foto_chiara(f):
+    """True se la miniatura ha i bordi quasi bianchi (loghi su fondo bianco): sul tema scuro si usa il segnaposto scuro."""
+    if f not in _CHIARE:
+        try:
+            from PIL import Image
+            im = Image.open(os.path.join(ROOT, 'media', f)).convert('L')
+            w, h = im.size
+            px = [im.getpixel((x, y)) for x in (2, w // 2, w - 3) for y in (2, h - 3)]
+            _CHIARE[f] = sum(px) / len(px) > 225
+        except Exception:
+            _CHIARE[f] = False
+    return _CHIARE[f]
+
+
 def child_cards(root, path):
     ch = children(path)
     if not ch or path == 'squadre-senior/serie-a2/':
@@ -315,7 +332,7 @@ def child_cards(root, path):
     cards = []
     for p in ch:
         img = ('<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, p['thumb'])
-               if p['thumb'] and media_ok(p['thumb']) else '<span class="im ph"></span>')
+               if p['thumb'] and media_ok(p['thumb']) and not foto_chiara(p['thumb']) else '<span class="im ph"></span>')
         cards.append('<a class="tile reveal" href="%s">%s<span class="t">%s<b>→</b></span></a>'
                      % (link(root, p['path']), img, e(p['title'])))
     return '<section class="alt"><div class="wrap"><div class="sh"><h2>In questa sezione</h2></div><div class="tiles">%s</div></div></section>' % ''.join(cards)
@@ -345,7 +362,7 @@ def build_page(p):
     elif path.startswith('squadre-senior/serie-a2/'):
         _slug = path[len('squadre-senior/serie-a2/'):].strip('/')
         _anni = anni_link(root, GIOC.get(_slug, {}))
-        content = player(content) + ('<p class="pl-sea"><b>Stagioni in prima squadra</b> %s</p>' % _anni if _anni else '') + (
+        content = player(content, title) + ('<p class="pl-sea"><b>Stagioni in prima squadra</b> %s</p>' % _anni if _anni else '') + (
             '<div class="pstats" data-player-stats="%s"></div><script src="%sdata/statistiche.js"></script>' % (_slug, root))
         cls += ' wide'
     elif path == 'societa/':
@@ -353,6 +370,7 @@ def build_page(p):
         cls += ' wide'
     content = pagina_speciale(path, content, root)
     content = spezza_a_capo(content, path)
+    content = griglia_pulsanti(content)
     content = ritocchi_extra(path, content, root)
     if path in ('giovanili/', 'squadre-senior/', 'giovanili/calendario-u12-2020/', 'giovanili/calendario-u15-2020/', 'ballpark/',
                 'ballpark/open-field-diamanti-inclusivi/', 'squadre-senior/amatoriale/', 'baseball-2/al-cinema/'):
@@ -407,6 +425,36 @@ def nome_breve(n):
     return '%s %s' % (p[0], p[2] if len(p) > 3 else p[-1])
 
 
+
+PARTICELLE = ('da', 'de', 'di', 'del', 'della', 'dal', 'lo', 'la', 'van', 'von')
+
+
+def cognome(nome):
+    p = nome.split()
+    if len(p) > 2 and p[0].lower() in PARTICELLE:
+        return ' '.join(p[:2])
+    return p[0] if p else ''
+
+
+def cut_of(f):
+    """Versione scontornata (media/cut/*.webp) di una foto giocatore, se esiste."""
+    if not f:
+        return None
+    c = 'cut/' + os.path.splitext(os.path.basename(f))[0] + '.webp'
+    return c if media_ok(c) else None
+
+
+def foto_cut(root, f, nome, cls='im'):
+    """Giocatore scontornato su sfumatura Lancers, con il cognome grande che passa dietro la testa."""
+    c = cut_of(f)
+    if not c:
+        return None
+    cg = cognome(nome).upper()
+    size = min(34, round(150 / max(len(cg), 1), 1))
+    return ('<span class="%s cut"><span class="nm" aria-hidden="true" style="font-size:%scqw">%s</span>'
+            '<img src="%smedia/%s" alt="%s" loading="lazy"></span>') % (cls, size, e(cg), root, c, e(nome))
+
+
 def roster_extra(root):
     """Giocatori della rosa FIBS dell'anno in corso che non hanno una scheda sul vecchio sito."""
     out = []
@@ -416,7 +464,7 @@ def roster_extra(root):
             continue
         f = FOTO_GIOC.get(slug)
         f = f if f and media_ok(f) else FOTO_GENERICA
-        img = '<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)
+        img = foto_cut(root, f, nome_breve(v['nome'])) or '<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)
         num = sv.get('n', '') if re.match(r'^[1-9]\d*$', sv.get('n', '')) else ''
         out.append((nome_breve(v['nome']), '<a class="player reveal" href="%s">%s<span class="b">%s<strong>%s</strong><em>%s</em></span></a>' % (
             link(root, 'squadre-senior/giocatori/%s/' % slug), img, '<span class="num">%s</span>' % num if num else '',
@@ -430,8 +478,9 @@ def roster(root, path):
         d = info(p['html'])
         num = d.get('casacca #', '')
         num = num if re.match(r'^\d+$', num) else ''
-        img = ('<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, p['thumb'])
-               if p['thumb'] and media_ok(p['thumb']) else '<span class="im ph"></span>')
+        img = (foto_cut(root, p['thumb'], p['title']) or
+               ('<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, p['thumb'])
+                if p['thumb'] and media_ok(p['thumb']) else '<span class="im ph"></span>'))
         cards.append('<a class="player reveal" href="%s">%s<span class="b">%s<strong>%s</strong><em>%s</em></span></a>' % (
             link(root, p['path']), img, '<span class="num">%s</span>' % num if num else '', e(p['title']),
             e(d.get('ruolo', ''))))
@@ -440,13 +489,18 @@ def roster(root, path):
     return '<div class="players">%s</div>' % ''.join(c for _, c in tutte)
 
 
-def player(content):
+def player(content, nome=''):
     s = BeautifulSoup(content, 'html.parser')
     fig = s.find('figure') or s.find('img')
     tab = s.select_one('.table-wrap')
     if not (fig and tab):
         return content
+    im = fig if fig.name == 'img' else fig.find('img')
+    src = im.get('src', '') if im else ''
+    cut = foto_cut(src.rsplit('media/', 1)[0], src.rsplit('/', 1)[-1], nome, 'pl-cut') if 'media/' in src else None
     f, t = str(fig.extract()), str(tab.extract())
+    if cut:
+        f = cut
     return '<div class="pl-top"><div class="pl-photo">%s</div><div class="pl-info">%s</div></div>%s' % (f, t, str(s))
 
 
@@ -808,6 +862,34 @@ def regole_card(p):
         items.append('<li><b>%s</b> %s</li>' % (mm.group(1), mm.group(2).strip()) if mm else '<li>%s</li>' % x)
     return '<div class="rule reveal"><h3>%s</h3><p>%s</p>%s</div>' % (tit, intro, '<ul>%s</ul>' % ''.join(items) if items else '')
 
+
+
+
+def griglia_pulsanti(html):
+    """Gruppi di 4 o più pulsanti del vecchio sito diventano una griglia ordinata di schede (stesse scritte e collegamenti)."""
+    if 'wp-block-buttons' not in html:
+        return html
+    sq = BeautifulSoup(html, 'html.parser')
+    for g in sq.select('.wp-block-buttons'):
+        links = g.find_all('a')
+        if len(links) < 4:
+            continue
+        cards = []
+        for a in links:
+            t = a.get_text(' ', strip=True)
+            m = re.search(r'\b(19|20)\d\d\b', t)
+            ext = a.get('href', '').startswith('http')
+            attrs = ' target="_blank" rel="noopener"' if ext else ''
+            if m:
+                yr = m.group(0)
+                lab = (t[:m.start()] + t[m.end():]).strip()
+                lab = re.sub(r'\s*[–-]\s*', ' · ', lab).strip(' ·')
+                inner = '<b>%s</b><span>%s</span>' % (yr, e(lab.capitalize() if lab.isupper() else lab))
+            else:
+                inner = '<span class="only">%s</span>' % e(t.capitalize() if t.isupper() else t)
+            cards.append('<a class="yb" href="%s"%s>%s<i aria-hidden="true">%s</i></a>' % (e(a.get('href', '#')), attrs, inner, '↗' if ext else '→'))
+        g.replace_with(BeautifulSoup('<div class="yb-grid">%s</div>' % ''.join(cards), 'html.parser'))
+    return str(sq)
 
 
 def spezza_a_capo(html, path=''):
@@ -1295,7 +1377,7 @@ def spotlight(root):
         m = GIOC.get(slug, {})
         pg = PAGES.get(m.get('pagina') or '')
         if pg and pg.get('thumb') and media_ok(pg['thumb']):
-            return pg, root + 'media/t/' + pg['thumb'], m.get('nome', pg['title'])
+            return pg, pg['thumb'], m.get('nome', pg['title'])
         return None, '', ''
     cand_b, cand_p = [], []
     for slug, p in S['giocatori'].items():
@@ -1321,10 +1403,11 @@ def spotlight(root):
     cards = []
     for pg, im, nome, lab, st in out:
         cog = nome.split()[0]
-        cards.append(('<a class="spot reveal" href="%s"><span class="spot-im" style="background-image:url(%s)"></span>'
+        ph = foto_cut(root, im, pg['title'], 'spot-im') or '<span class="spot-im" style="background-image:url(%smedia/t/%s)"></span>' % (root, im)
+        cards.append(('<a class="spot reveal" href="%s">%s'
                       '<span class="spot-b"><span class="pk">%s · %s</span><span class="echo" aria-hidden="true"><i>%s</i><i>%s</i></span>'
                       '<strong>%s</strong><span class="spot-s">%s</span></span></a>') % (
-            link(root, pg['path']), im, anno, e(lab), e(cog), e(cog), e(nome),
+            link(root, pg['path']), ph, anno, e(lab), e(cog), e(cog), e(nome),
             ''.join('<span><b>%s</b><em>%s</em></span>' % (e(str(v)), e(k)) for v, k in st)))
     if not cards:
         return ''

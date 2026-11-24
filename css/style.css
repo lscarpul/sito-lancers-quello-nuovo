@@ -815,3 +815,33 @@ input[type=search],.contact input,.contact textarea{background:#0f1b38;color:#ff
 .post .ex,.card p{color:var(--mute)}
 .wp-block-separator,hr{border-color:rgba(255,255,255,.12)}
 .btn.n:hover{color:#fff}
+
+/* griglia di pulsanti (es. Le statistiche) */
+.yb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;max-width:980px;margin:10px auto 34px}
+.content a.yb{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:92px;padding:16px 44px 16px 18px;border-radius:10px;background:var(--sf);border:1px solid rgba(255,255,255,.08);border-left:4px solid var(--red);color:#fff;text-decoration:none;font-weight:400;transition:transform .18s,background .18s,border-color .18s}
+.content a.yb:hover{transform:translateY(-3px);background:#1d3160;border-left-color:#fff}
+.yb b{font-family:BC,sans-serif;font-style:italic;font-weight:800;font-size:38px;line-height:.95;color:#fff}
+.yb span{font-family:BC,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:#ff8a90;margin-top:4px}
+.yb span.only{font-size:18px;color:#fff;margin:0}
+.yb i{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-style:normal;font-size:20px;color:var(--red);transition:transform .18s}
+.content a.yb:hover i{transform:translate(3px,-50%);color:#fff}
+@media(max-width:560px){.yb-grid{grid-template-columns:1fr 1fr;gap:10px}.yb b{font-size:32px}.content a.yb{min-height:80px;padding:14px 34px 14px 14px}}
+
+/* ===== giocatori scontornati su sfumatura Lancers ===== */
+.cut{position:relative;display:block;overflow:hidden;container-type:inline-size;isolation:isolate;
+background:radial-gradient(120% 80% at 50% 26%,#2f5bb0 0%,#1c3670 38%,#122454 66%,#0b1531 100%)}
+.cut:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(0deg,rgba(227,6,19,.55) 0%,rgba(227,6,19,0) 34%),repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 14px)}
+.cut .nm{position:absolute;left:0;right:0;top:9%;z-index:1;text-align:center;white-space:nowrap;font-family:BC,sans-serif;font-style:italic;font-weight:800;line-height:.85;letter-spacing:-.01em;text-transform:uppercase;
+background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.35));-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.92}
+.cut img{position:absolute;z-index:2;left:50%;bottom:0;transform:translateX(-50%);height:84%;width:auto;max-width:none;filter:drop-shadow(0 10px 18px rgba(0,0,0,.45));
+-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 16%);mask-image:linear-gradient(0deg,transparent 0,#000 16%);transition:transform .3s}
+.player .im.cut{aspect-ratio:3/4}
+.player:hover .cut img{transform:translateX(-50%) scale(1.04);transform-origin:50% 100%}
+.pl-cut{aspect-ratio:4/5;border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.spot-im.cut{min-height:340px}
+.spot-im.cut:after{display:none}
+.spot-im.cut .nm{top:7%}
+@media(max-width:700px){.spot-im.cut{aspect-ratio:4/3;min-height:0}.spot-im.cut img{height:90%}}
+/* segnaposto e pulsanti chiari rimasti */
+.im.ph{background:url(../images/logo-lancers.png) center 46%/58% no-repeat,radial-gradient(120% 80% at 50% 30%,#2f5bb0 0%,#1c3670 40%,#0b1531 100%)!important;background-color:#122454!important}
+.btn.n{background:var(--red);color:#fff}.btn.n:hover{background:#fff;color:var(--navy)}
