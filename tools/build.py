@@ -356,6 +356,7 @@ def build_page(p):
     extra = ''
     cls = 'page'
     if path == 'squadre-senior/serie-a2/':
+        content = rosa_link(content, root)
         content = roster(root, path) + '<div class="filter"><input type="search" placeholder="Cerca un giocatore…" ' \
                                        'aria-label="Cerca un giocatore" data-filter-table></div>' + content
         cls += ' wide'
@@ -450,9 +451,12 @@ def foto_cut(root, f, nome, cls='im'):
     if not c:
         return None
     cg = cognome(nome).upper()
-    size = min(34, round(150 / max(len(cg), 1), 1))
-    return ('<span class="%s cut"><span class="nm" aria-hidden="true" style="font-size:%scqw">%s</span>'
-            '<img src="%smedia/%s" alt="%s" loading="lazy"></span>') % (cls, size, e(cg), root, c, e(nome))
+    size = min(30, round(140 / max(len(cg), 1), 1))
+    from PIL import Image
+    w, h = Image.open(os.path.join(ROOT, 'media', c)).size
+    full = ' full' if h / w > 1.5 else ''
+    return ('<span class="%s cut%s"><span class="nm" aria-hidden="true" style="font-size:%scqw">%s</span>'
+            '<img src="%smedia/%s" alt="%s" loading="lazy" width="%d" height="%d"></span>') % (cls, full, size, e(cg), root, c, e(nome), w, h)
 
 
 def roster_extra(root):
@@ -464,12 +468,82 @@ def roster_extra(root):
             continue
         f = FOTO_GIOC.get(slug)
         f = f if f and media_ok(f) else FOTO_GENERICA
-        img = foto_cut(root, f, nome_breve(v['nome'])) or '<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)
+        img = foto_cut(root, f, v['nome']) or '<span class="im" style="background-image:url(%smedia/t/%s)"></span>' % (root, f)
         num = sv.get('n', '') if re.match(r'^[1-9]\d*$', sv.get('n', '')) else ''
         out.append((nome_breve(v['nome']), '<a class="player reveal" href="%s">%s<span class="b">%s<strong>%s</strong><em>%s</em></span></a>' % (
             link(root, 'squadre-senior/giocatori/%s/' % slug), img, '<span class="num">%s</span>' % num if num else '',
             e(nome_breve(v['nome'])), e(sv.get('ruolo', '')))))
     return out
+
+
+
+def rosa_link(content, root):
+    """Tabella della rosa: collega alla scheda i giocatori che non hanno il link e aggiunge quelli della rosa FIBS che mancano."""
+    sq = BeautifulSoup(content, 'html.parser')
+    t = sq.select_one('table')
+    if not t:
+        return content
+    visti = set()
+    vuota = None
+    for tr in t.find_all('tr'):
+        td = tr.find_all('td')
+        if len(td) < 2:
+            continue
+        cg, nm = td[0].get_text(' ', strip=True), td[1].get_text(' ', strip=True)
+        if not cg and not nm:
+            vuota = vuota or tr
+            continue
+        if cg.upper() == 'COGNOME':
+            continue
+        a0 = td[0].find('a')
+        if a0:
+            h = a0.get('href', '').replace('index.html', '')
+            for slug, v in GIOC.items():
+                if h.rstrip('/').endswith(v['path'].rstrip('/')):
+                    visti.add(slug)
+        for slug, v in GIOC.items():
+            n = v['nome'].lower()
+            if n.startswith(cg.lower() + ' ') and nm.lower() in n.split():
+                visti.add(slug)
+                if not td[0].find('a'):
+                    a = sq.new_tag('a', href=link(root, v['path']))
+                    a.string = cg
+                    td[0].clear()
+                    td[0].append(a)
+                break
+    righe = []
+    for slug, v in sorted(GIOC.items(), key=lambda x: x[1]['nome']):
+        sv = v.get('stagioni', {}).get(str(ULTIMA), {})
+        if slug in visti or not sv.get('rosa'):
+            continue
+        p = v['nome'].split()
+        cg = ' '.join(p[:2]) if len(p) > 2 and p[0].lower() in PARTICELLE else p[0]
+        nm = nome_breve(v['nome']).split()[-1]
+        righe.append('<tr><td><a href="%s">%s</a></td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+            link(root, v['path']), e(cg), e(nm), e(sv.get('ruolo', '')), e(v.get('nascita', '')[-4:] or '//')))
+    if righe:
+        nuove = BeautifulSoup(''.join(righe), 'html.parser')
+        corpo = t.find('tbody') or t
+        if vuota is not None:
+            for r in list(nuove.find_all('tr')):
+                vuota.insert_before(r)
+        else:
+            for r in list(nuove.find_all('tr')):
+                corpo.append(r)
+        # ordine alfabetico come nelle schede
+        trs = [r for r in corpo.find_all('tr', recursive=False) if r.find('td') and r.find('td').get_text(strip=True)
+               and r.find('td').get_text(strip=True).upper() != 'COGNOME']
+        if trs:
+            ref = trs[-1].next_sibling
+            for r in trs:
+                r.extract()
+            trs.sort(key=lambda r: (r.find_all('td')[0].get_text(strip=True) + ' ' + r.find_all('td')[1].get_text(strip=True)).lower())
+            for r in trs:
+                if vuota is not None:
+                    vuota.insert_before(r)
+                else:
+                    corpo.append(r)
+    return str(sq)
 
 
 def roster(root, path):
@@ -1450,6 +1524,13 @@ def build_home():
 <p class="h-lead reveal">Il sito ufficiale dei Lancieri di Lastra a Signa: prima squadra in Serie B, settore giovanile e un campo aperto a tutti.</p>
 <p class="h-cta reveal"><a class="btn r" href="%(gioca)s">Gioca con noi</a><a class="btn o" href="%(ris)s">Calendario e classifica</a></p>
 </div>%(tick)s</section>
+<section class="h-sec"><div class="wrap">
+<div class="h-sh reveal"><span class="pk">Una famiglia, quattro squadre</span><h2>Le nostre squadre</h2></div>
+<div class="teams">%(tm)s</div>
+<div class="h-ban">
+<a class="ban reveal" href="%(gioca)s"><span class="ban-k">Corsi da 6 anni in su</span><b>Prova<br>il baseball</b><span class="more">Vieni al campo →</span></a>
+<a class="ban yt reveal" href="%(live)s" target="_blank" rel="noopener"><span class="ban-k">Sul nostro canale YouTube</span><b>Le partite<br>in diretta</b><span class="more">Guarda le dirette →</span></a>
+</div></div></section>
 <section class="h-sec h-game"><div class="wrap">
 <div class="h-sh reveal"><span class="pk">%(stag)s · %(gir)s</span><h2>Gameday</h2><a class="more" href="%(ris)s">Calendario completo →</a></div>
 <div class="h-grid">
@@ -1469,13 +1550,6 @@ def build_home():
 <div class="st reveal"><b data-count="4">4</b><span>squadre in campo</span></div>
 <div class="st reveal"><b data-count="6">6</b><span>anni: l’età per iniziare</span></div>
 <div class="st reveal"><b data-count="%(np)d">%(np)d</b><span>notizie in archivio</span></div></div></section>
-<section class="h-sec"><div class="wrap">
-<div class="h-sh reveal"><span class="pk">Una famiglia, quattro squadre</span><h2>Le nostre squadre</h2></div>
-<div class="teams">%(tm)s</div>
-<div class="h-ban">
-<a class="ban reveal" href="%(gioca)s"><span class="ban-k">Corsi da 6 anni in su</span><b>Prova<br>il baseball</b><span class="more">Vieni al campo →</span></a>
-<a class="ban yt reveal" href="%(live)s" target="_blank" rel="noopener"><span class="ban-k">Sul nostro canale YouTube</span><b>Le partite<br>in diretta</b><span class="more">Guarda le dirette →</span></a>
-</div></div></section>
 <section class="h-sec h-alt"><div class="wrap">
 <div class="h-sh reveal"><span class="pk">Foto e video</span><h2>Dal campo</h2><div class="social big" data-social="label"></div></div>
 <div class="gallery-x strip-g">%(photos)s</div></div></section>

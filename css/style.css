@@ -845,3 +845,16 @@ background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.35));-webkit-backgr
 /* segnaposto e pulsanti chiari rimasti */
 .im.ph{background:url(../images/logo-lancers.png) center 46%/58% no-repeat,radial-gradient(120% 80% at 50% 30%,#2f5bb0 0%,#1c3670 40%,#0b1531 100%)!important;background-color:#122454!important}
 .btn.n{background:var(--red);color:#fff}.btn.n:hover{background:#fff;color:var(--navy)}
+
+/* scontorno v2: mezzobusto a tutta larghezza, testa sempre intera */
+.cut img{left:0;right:0;bottom:0;width:100%;height:auto;transform:none;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 13%);mask-image:linear-gradient(0deg,transparent 0,#000 13%)}
+.cut.full img{left:50%;width:auto;height:92%;transform:translateX(-50%)}
+.player:hover .cut img{transform:scale(1.03)}
+.player:hover .cut.full img{transform:translateX(-50%) scale(1.03)}
+.cut .nm{top:6%}
+.spot-im.cut{min-height:0}
+@media(max-width:700px){.spot-im.cut{aspect-ratio:10/11}.spot-im.cut img{height:auto}}
+/* scontorno v2: inquadratura */
+.player .im.cut{aspect-ratio:4/5}
+.cut:not(.full) img{left:4%;width:92%;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 10%),linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(0deg,transparent 0,#000 10%),linear-gradient(90deg,transparent 0,#000 7%,#000 93%,transparent 100%);mask-composite:intersect}
+.cut .nm{top:8%}
