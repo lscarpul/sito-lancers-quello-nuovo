@@ -1621,11 +1621,9 @@ def build_home():
     L, games, table = _stagione()
     body = ("""<section class="h-hero">%(contour)s%(tick)s
 <div class="wrap h-hero-in">
-<div class="h-stage reveal"><p class="h-pre2" aria-hidden="true">Benvenuti ai</p>
+<div class="h-stage reveal"><img class="h-bg" src="images/hero-squadra.jpg" alt="" aria-hidden="true" width="1400" height="933"><p class="h-pre2" aria-hidden="true">Benvenuti ai</p>
 <h1 class="h-big"><span class="sr">Benvenuti ai Lancers Baseball Club</span><span aria-hidden="true">Lancers</span></h1>
 <img class="h-cut" src="images/hero-giocatori.webp" alt="I giocatori dei Lancers festeggiano in campo" width="1400" height="933" fetchpriority="high"></div>
-<p class="h-tag reveal">Baseball Club · Lastra a Signa · dal 1982</p>
-<p class="h-lead reveal">Il sito ufficiale dei Lancieri di Lastra a Signa: prima squadra in Serie B, settore giovanile e un campo aperto a tutti.</p>
 <p class="h-cta reveal"><a class="btn r" href="%(gioca)s">Gioca con noi</a><a class="btn o" href="%(ris)s">Calendario e classifica</a></p>
 </div>%(tick)s</section>
 <section class="h-sec"><div class="wrap">
